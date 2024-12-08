@@ -1,19 +1,17 @@
 import React from 'react';
 
+import './Home.css';
+
 const Home = () => {
   return (
-    <section style={styles.home}>
-      <h2>Welcome to gimmeanamepls!</h2>
-      <p>Experience fresh, sustainable, vegan and vegetarian meals.</p>
-    </section>
+    <div className="home-container">
+      <div className="home-background"></div>
+      <div className="home-content">
+        <h1>Welcome to Green Bites!</h1>
+        <p>Fresh, sustainable, and delicious vegan and vegetarian meals.</p>
+      </div>
+    </div>
   );
-};
-
-const styles = {
-  home: {
-    padding: '20px',
-    textAlign: 'center',
-  },
 };
 
 export default Home;
