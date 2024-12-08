@@ -1,0 +1,30 @@
+.app-header {
+	align-items: center;
+	backdrop-filter: blur(10px);
+	background: rgb(16, 15, 15);
+	display: flex;
+	flex: 0 0 auto;
+	height: 60px;
+	justify-content: space-between;
+	left: 0;
+	padding: 0px 15px 0px 20px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 4;
+}
+
+.left-header {
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+}
+
+.header-title {
+	align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
