@@ -23,10 +23,10 @@ const Home = () => {
         <p>Fresh, sustainable, and delicious vegan and vegetarian meals.</p>
 
         {/* Menu Section */}
-        <div className="menu-items">
+        <div className="preview-items">
           {menuItems.map((item) => (
-            <div key={item.id} className="menu-item">
-              <img src={item.image} alt={item.name} className="menu-item-image" />
+            <div key={item.id} className="preview-item">
+              <img src={item.image} alt={item.name} className="preview-item-image" />
               <h3>{item.name}</h3>
               <p>{item.description}</p>
             </div>

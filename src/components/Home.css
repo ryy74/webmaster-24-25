@@ -60,7 +60,7 @@ body, html {
 .home-content p {
   font-size: 2rem;
 }
-.menu-items {
+.preview-items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -68,7 +68,7 @@ body, html {
   margin-top: 40px;
 }
 
-.menu-item {
+.preview-item {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   overflow: hidden;
@@ -78,19 +78,19 @@ body, html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.menu-item img {
+.preview-item img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-.menu-item h3 {
+.preview-item h3 {
   color:black;
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
-.menu-item p {
+.preview-item p {
   font-size: 1rem;
   color: #555;
   padding: 0 10px;
