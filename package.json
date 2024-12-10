@@ -2,7 +2,6 @@
   "name": "webmaster",
   "version": "0.1.0",
   "main": "src/index.jsx",
-  "homepage": "https://ryy74.github.io/webmaster-24-25",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
