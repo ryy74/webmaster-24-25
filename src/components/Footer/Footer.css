@@ -82,3 +82,15 @@
     transform: translateY(0);
   }
 }
+
+@media(max-width: 1220px) {
+  .footer-link {
+    display: none;
+  }
+}
+
+@media(max-width: 950px) {
+  .app-footer {
+    display: none;
+  }
+}
