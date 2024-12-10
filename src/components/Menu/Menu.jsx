@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import DetailPopup from './DetailPopup';
+import DetailPopup from '../DetailPopup/DetailPopup';
+import menuItems from './menuItems.js';
 
-import menuItems from './Menu/menuItems.js'
-
-import "./Menu.css";
+import './Menu.css';
 
 const Menu = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -12,12 +11,19 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <div className="menu-header">
-        <h1>Our Menu</h1>
-        <p>Explore our delicious plant-based creations</p>
+        <h1 className="menu-title">Menu</h1>
+        <p className="menu-subtitle">
+          Explore our creations -- please take note of which are vegan and which
+          are vegetarian.
+        </p>
       </div>
       <div className="menu-grid">
         {menuItems.map((item) => (
-          <div key={item.id} className="menu-card" onClick={() => setSelectedItem(item)}>
+          <div
+            key={item.id}
+            className="menu-card"
+            onClick={() => setSelectedItem(item)}
+          >
             <div className="menu-card-image">
               <img src={item.image} alt={item.name} />
             </div>

@@ -1,11 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header';
-import Home from './components/Home';
-import Values from './components/Values';
-import Footer from './components/Footer';
-import Menu from './components/Menu' ;
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+
+import Menu from './components/Menu/Menu';
+import Process from './components/Process/Process';
+import Values from './components/Values/Values';
+
+import AccessibilityStatement from './components/Policies/AccessibilityStatement';
+import ApplicantPrivacyNotice from './components/Policies/ApplicantPrivacyNotice';
+import CookiePolicy from './components/Policies/CookiePolicy';
+import PrivacyPolicy from './components/Policies/PrivacyPolicy';
+import TermsOfUse from './components/Policies/TermsOfUse';
 
 import './App.css';
 
@@ -17,6 +24,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Values />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/process" element={<Process />} />
+
+        <Route path="/accessibility" element={<AccessibilityStatement />} />
+        <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfUse />} />
       </Routes>
       <Footer />
     </Router>

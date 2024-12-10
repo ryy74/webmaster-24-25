@@ -1,0 +1,84 @@
+.app-footer {
+  align-items: center;
+  background: rgb(0, 10, 0);
+  bottom: 0;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  left: 0;
+  padding: 15px;
+  position: fixed;
+  width: 100%
+}
+
+.footer-left {
+  flex: 1 1 200px;
+}
+
+.footer-content {
+  display: flex;
+  flex: 2 1 400px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.links-container {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-link {
+  align-self: center;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-link svg {
+  fill: #fff;
+  height: 24px;
+  width: 24px;
+  transition: opacity 0.2s;
+}
+
+.social-link:hover svg {
+  opacity: 0.8;
+}
+
+.social-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

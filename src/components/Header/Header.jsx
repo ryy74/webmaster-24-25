@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Header.css';
@@ -28,11 +28,19 @@ const Header = () => {
       </div>
       <div className="right-header">
         {isDesktop ? (
-          <nav className="nav-links-desktop">
-            <Link to="/menu" className="header-link">Menu</Link>
-            <Link to="/values" className="header-link">Our Values</Link>
-            <Link to="/nutrition" className="header-link">Nutrition</Link>
-            <Link to="/signin" className="header-link">Sign In</Link>
+          <nav className="nav-links">
+            <Link to="/menu" className="header-link">
+              Menu
+            </Link>
+            <Link to="/values" className="header-link">
+              Our Values
+            </Link>
+            <Link to="/process" className="header-link">
+              Process
+            </Link>
+            <Link to="/signin" className="header-link">
+              Sign In
+            </Link>
           </nav>
         ) : (
           <>
@@ -45,10 +53,18 @@ const Header = () => {
               <span className="bar bar3" />
             </div>
             <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-              <Link to="/menu" className="header-link">Menu</Link>
-              <Link to="/values" className="header-link">Our Values</Link>
-              <Link to="/nutrition" className="header-link">Nutrition</Link>
-              <Link to="/signin" className="header-link">Sign In</Link>
+              <Link to="/menu" className="header-link">
+                Menu
+              </Link>
+              <Link to="/values" className="header-link">
+                Our Values
+              </Link>
+              <Link to="/nutrition" className="header-link">
+                Nutrition
+              </Link>
+              <Link to="/signin" className="header-link">
+                Sign In
+              </Link>
             </nav>
           </>
         )}

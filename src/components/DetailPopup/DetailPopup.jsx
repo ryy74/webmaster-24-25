@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+
 import './DetailPopup.css';
 
 const DetailPopup = ({ menuItem, onClose }) => {
@@ -10,17 +11,17 @@ const DetailPopup = ({ menuItem, onClose }) => {
 
   useEffect(() => {
     const scrollY = window.scrollY;
-    
+
     const bodyContent = document.createElement('div');
     bodyContent.style.position = 'fixed';
     bodyContent.style.width = '100%';
     bodyContent.style.top = `-${scrollY}px`;
-    
+
     document.body.insertBefore(bodyContent, document.body.firstChild);
     while (document.body.childNodes.length > 1) {
       bodyContent.appendChild(document.body.childNodes[1]);
     }
-    
+
     document.body.style.overflow = 'hidden';
 
     return () => {
@@ -33,32 +34,30 @@ const DetailPopup = ({ menuItem, onClose }) => {
     };
   }, []);
 
-
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, []);
-
   return (
     <div className="popup-backdrop" onClick={handleBackdropClick}>
       <div className="popup-content">
-        <button className="popup-close" onClick={onClose}>×</button>
-        
+        <button className="popup-close" onClick={onClose}>
+          ×
+        </button>
+
         <div className="popup-grid">
           <div className="popup-left-column">
             <div className="popup-image-container">
-              <img src={menuItem.image} alt={menuItem.name} className="popup-image" />
+              <img
+                src={menuItem.image}
+                alt={menuItem.name}
+                className="popup-image"
+              />
             </div>
-            
+
             {menuItem.nutritionalInfo && (
               <div className="popup-section">
                 <h3>Nutritional Information</h3>
                 <p>{menuItem.nutritionalInfo}</p>
               </div>
             )}
-            
+
             {menuItem.allergens && menuItem.allergens.length > 0 && (
               <div className="popup-section">
                 <h3>Allergens</h3>
@@ -66,21 +65,22 @@ const DetailPopup = ({ menuItem, onClose }) => {
               </div>
             )}
           </div>
-          
+
           <div className="popup-details">
             <h2>{menuItem.name}</h2>
-            
+
             <div className="popup-section">
               <h3>Description</h3>
               <p>{menuItem.longDescription}</p>
             </div>
-            
+
             <div className="popup-section">
               <h3>Ingredients</h3>
               <ul className="ingredients-list">
-                {menuItem.ingredients && menuItem.ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
+                {menuItem.ingredients &&
+                  menuItem.ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))}
               </ul>
             </div>
           </div>
