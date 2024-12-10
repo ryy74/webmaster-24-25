@@ -1,0 +1,247 @@
+.process-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  padding: 120px 40px 60px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #1e293b;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.process-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.process-step {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  margin-bottom: 80px;
+}
+
+.process-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.process-step:nth-child(even) .step-content {
+  flex-direction: row-reverse;
+}
+
+.step-image-container {
+  flex: 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s ease;
+}
+
+.step-image-container:hover {
+  transform: perspective(1000px) rotateY(5deg);
+}
+
+.process-step:nth-child(even) .step-image-container:hover {
+  transform: perspective(1000px) rotateY(-5deg);
+}
+
+.step-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.step-image-container:hover .step-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+.step-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.step-text h2 {
+  font-size: 32px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.step-text p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.step-connector {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connector-icon {
+  width: 32px;
+  height: 32px;
+  color: #64748b;
+  animation: bounce 2s infinite;
+}
+
+.background-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #e2e8f0 10%, #e2e8f0 90%, transparent);
+  opacity: 0.5;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(203,213,225,0.3) 0%, rgba(203,213,225,0) 70%);
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  left: -200px;
+}
+
+.circle-2 {
+  width: 600px;
+  height: 600px;
+  top: 40%;
+  right: -300px;
+}
+
+.circle-3 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: 10%;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .step-content {
+    gap: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px 40px;
+  }
+
+  .step-content {
+    flex-direction: column !important;
+    gap: 30px;
+  }
+
+  .step-image {
+    height: 300px;
+  }
+
+  .step-text {
+    text-align: center;
+  }
+
+  .bg-line {
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .step-text h2 {
+    font-size: 24px;
+  }
+}
+
+@media print {
+  .process-container {
+    background: none;
+  }
+
+  .step-image-container {
+    box-shadow: none;
+  }
+
+  .background-elements,
+  .step-connector {
+    display: none;
+  }
+}

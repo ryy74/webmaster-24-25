@@ -46,15 +46,6 @@ const Values = () => {
 
   return (
     <div className="values-container">
-      {/* Decorative Wave Pattern */}
-      <div className="wave-pattern">
-        <svg className="wave" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path className="wave-top" d="M0,0 C30,40 70,40 100,0 V100 H0 V0" />
-          <path className="wave-bottom" d="M0,100 C30,60 70,60 100,100 V0 H0 V100" />
-        </svg>
-      </div>
-
-      {/* Main Content */}
       <div className="content-wrapper">
         <div className="values-header">
           <h1 className="main-heading">Our Core Values</h1>
@@ -103,7 +94,6 @@ const Values = () => {
         </div>
       </div>
 
-      {/* Decorative Corner Element */}
       <div className="corner-decoration"></div>
     </div>
   );
