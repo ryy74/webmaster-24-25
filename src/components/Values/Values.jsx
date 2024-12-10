@@ -1,48 +1,110 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+
 import sustainability from '../../assets/Sustainability.jpg';
 import community from '../../assets/Community.jpg';
 import innovation from '../../assets/innovation.jpg';
+
 import './Values.css';
+
 const Values = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
   const values = [
     {
       id: 1,
       title: 'Sustainability',
-      description:
-        'Our commitment to sustainability drives us to minimize our environmental impact in every aspect of what we do. We carefully source local, organic ingredients to support sustainable agriculture and reduce our carbon footprint while ensuring the highest quality for our customers. In addition, we prioritize the use of eco-friendly packaging, striving to eliminate waste and protect our planet for future generations. By combining these efforts, we aim to create a business that not only delivers exceptional products but also champions environmental responsibility, paving the way for a healthier, greener future.',
+      subtitle: 'Nurturing Our Planet',
+      description: 'Our commitment to sustainability drives us to minimize our environmental impact in every aspect of what we do. We carefully source local, organic ingredients to support sustainable agriculture and reduce our carbon footprint while ensuring the highest quality for our customers.',
+      stats: ['45% Carbon Reduction', '100% Eco Packaging', '0 Food Waste'],
       image: sustainability,
     },
     {
       id: 2,
       title: 'Community',
-      description:
-        'At the heart of everything we do lies a commitment to building lasting connections. We take pride in supporting local farmers, partnering with them to bring fresh, high-quality products to our community. Beyond that, we strive to foster meaningful, long-term relationships with our customers, creating a sense of trust, loyalty, and shared purpose. By bridging the gap between the fields and the families we serve, we aim to strengthen not just our food systems but also the bonds that unite us as a community, ensuring that every interaction reflects our dedication to care, quality, and connection.',
+      subtitle: 'Growing Together',
+      description: 'At the heart of everything we do lies a commitment to building lasting connections. We take pride in supporting local farmers, partnering with them to bring fresh, high-quality products to our community.',
+      stats: ['50+ Local Partners', '10K+ Members', '25 Community Events'],
       image: community,
     },
     {
       id: 3,
       title: 'Innovation',
-      description:
-        'Innovation drives everything we do as we constantly push boundaries to craft delicious, plant-based dishes that nourish both people and the planet. Our passion lies in blending creativity with sustainability, ensuring that every meal we create is not only bursting with flavor but also thoughtfully designed to promote health and well-being. By prioritizing environmentally friendly practices and wholesome ingredients, we aim to make a positive impact—one dish at a time—on both the lives of our customers and the future of our planet. Through continuous improvement and dedication, we aspire to set new standards for healthy, sustainable dining experiences.',
+      subtitle: 'Shaping Tomorrow',
+      description: 'Innovation drives everything we do as we constantly push boundaries to craft delicious, plant-based dishes that nourish both people and the planet. Our passion lies in blending creativity with sustainability.',
+      stats: ['10+ Recipes Monthly', '3 R&D Labs', '24/7 Innovation'],
       image: innovation,
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="values-container">
-      <h1 className="values-heading">Our Core Values</h1>
-      <p className="values-intro">
-        At Green Bites, our values guide every decision we make. We are dedicated to creating a better world for future generations.
-      </p>
-      <div className="values-grid">
-        {values.map((value) => (
-          <div key={value.id} className="value-card">
-            <img src={value.image} alt={value.title} className="value-image" />
-            <h3 className="value-title">{value.title}</h3>
-            <p className="value-description">{value.description}</p>
-          </div>
-        ))}
+      {/* Decorative Wave Pattern */}
+      <div className="wave-pattern">
+        <svg className="wave" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path className="wave-top" d="M0,0 C30,40 70,40 100,0 V100 H0 V0" />
+          <path className="wave-bottom" d="M0,100 C30,60 70,60 100,100 V0 H0 V100" />
+        </svg>
       </div>
+
+      {/* Main Content */}
+      <div className="content-wrapper">
+        <div className="values-header">
+          <h1 className="main-heading">Our Core Values</h1>
+          <p className="header-description">
+            At Green Bites, our values guide every decision we make. We are dedicated to creating a better world for future generations through sustainable practices, community engagement, and constant innovation.
+          </p>
+        </div>
+
+        <div className="values-grid">
+          {values.map((value, index) => (
+            <div
+              key={value.id}
+              className={`value-card ${index % 2 === 0 ? 'card-left' : 'card-right'}`}
+              style={{
+                transform: `translateY(${Math.max(0, (scrollPosition - 400 * index) * 0.1)}px)`,
+                opacity: Math.min(1, Math.max(0.2, 1 - (scrollPosition - 400 * index) * 0.001)),
+              }}
+            >
+              <div className="image-container">
+                <div className="image-glow"></div>
+                <img
+                  src={value.image}
+                  alt={value.title}
+                  className="value-image"
+                />
+              </div>
+              
+              <div className="card-content">
+                <div className="title-group">
+                  <h3 className="value-subtitle">{value.subtitle}</h3>
+                  <h2 className="value-title">{value.title}</h2>
+                </div>
+                
+                <p className="value-description">{value.description}</p>
+                
+                <div className="stats-grid">
+                  {value.stats.map((stat, i) => (
+                    <div key={i} className="stat-card">
+                      <p className="stat-text">{stat}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Decorative Corner Element */}
+      <div className="corner-decoration"></div>
     </div>
   );
 };

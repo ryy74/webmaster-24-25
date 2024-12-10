@@ -10,7 +10,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 878);
   
-  const { isSignedIn, setIsSignedIn } = useAuth();
+  const { isSignedIn } = useAuth();
   const { cartCount } = useCart();
 
   useEffect(() => {
@@ -25,34 +25,34 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isDesktop]);
 
+  const closeDropdown = () => {
+    setIsMenuOpen(false);
+  };
+
   const renderLinks = () => {
     return (
       <>
-        <Link to="/menu" className="header-link">
+        <Link to="/menu" className="header-link" onClick={closeDropdown}>
           Menu
         </Link>
-        <Link to="/values" className="header-link">
+        <Link to="/values" className="header-link" onClick={closeDropdown}>
           Our Values
         </Link>
-        {isDesktop && (
-          <Link to="/process" className="header-link">
-            Process
-          </Link>
-        )}
-        {isSignedIn ? (
-          <div className="auth-links">
-            <Link to="/cart" className="header-link cart-link">
+        <Link to="/process" className="header-link" onClick={closeDropdown}>
+          Process
+        </Link>
+        {isSignedIn && (
+          <>
+            <Link to="/cart" className="header-link cart-link" onClick={closeDropdown}>
               Cart ({cartCount})
             </Link>
-            <button
-              className="signout-btn"
-              onClick={() => setIsSignedIn(false)}
-            >
+            <Link to="/" className="header-link" onClick={closeDropdown}>
               Sign Out
-            </button>
-          </div>
-        ) : (
-          <Link to="/signin" className="header-link">
+            </Link>
+          </>
+        )}
+        {!isSignedIn && (
+          <Link to="/signin" className="header-link" onClick={closeDropdown}>
             Sign In
           </Link>
         )}
@@ -63,7 +63,7 @@ const Header = () => {
   return (
     <header className="app-header">
       <div className="left-header">
-        <Link to="/" className="header-title">
+        <Link to="/" className="header-title" onClick={closeDropdown}>
           Green Bites
         </Link>
       </div>

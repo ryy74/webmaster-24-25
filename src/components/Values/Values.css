@@ -1,66 +1,214 @@
-/* General styling for the values section */
 .values-container {
-    padding: 60px 20px;
-    background-color: #f0f8f3; /* Soft green background */
-    text-align: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 1.25rem;
+  background: linear-gradient(180deg, #f0f9f1 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+/* Wave Pattern Styling */
+.wave-pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.wave {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.wave-top {
+  fill: #34d399;
+}
+
+.wave-bottom {
+  fill: #6ee7b7;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Styling */
+.values-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #065f46;
+  margin-bottom: 1.5rem;
+}
+
+.header-description {
+  font-size: 1.25rem;
+  color: #047857;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* Values Grid */
+.values-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Value Card Styling */
+.value-card {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card-right {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+  .value-card, .card-right {
+    flex-direction: column;
   }
-  
-  .values-heading {
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  flex: 1;
+}
+
+.image-glow {
+  position: absolute;
+  inset: -0.25rem;
+  background: linear-gradient(to right, #059669, #0d9488);
+  border-radius: 0.5rem;
+  opacity: 0.25;
+  filter: blur(0.5rem);
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-glow {
+  opacity: 0.75;
+}
+
+.value-image {
+  position: relative;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title-group {
+  margin-bottom: 1rem;
+}
+
+.value-subtitle {
+  font-size: 1.125rem;
+  color: #059669;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.value-title {
+  font-size: 2.5rem;
+  color: #111827;
+  font-weight: bold;
+}
+
+.value-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.stat-text {
+  color: #059669;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Corner Decoration */
+.corner-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  margin-bottom: -8rem;
+  margin-right: -8rem;
+  transform: rotate(45deg);
+  background: linear-gradient(to bottom right, rgba(167, 243, 208, 0.5), transparent);
+}
+
+@media (max-width: 768px) {
+  .main-heading {
     font-size: 2.5rem;
-    color: #2b5931; /* Deep green for the heading */
-    margin-bottom: 10px;
   }
   
-  .values-intro {
-    font-size: 1.2rem;
-    color: #4f704d; /* Muted green for intro text */
-    margin-bottom: 40px;
+  .header-description {
+    font-size: 1.125rem;
   }
   
-  /* Grid layout for value cards */
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-  }
-  
-  /* Styling for each value card */
-  .value-card {
-    background-color: white;
-    border: 1px solid #cce5cc; /* Light green border */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    max-width: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Image styling */
-  .value-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
-  
-  /* Title styling */
   .value-title {
-    font-size: 1.5rem;
-    color: #2b5931; /* Same deep green as heading */
-    margin-bottom: 10px;
+    font-size: 2rem;
   }
   
-  /* Description styling */
-  .value-description {
-    font-size: 1rem;
-    color: #4f704d; /* Muted green */
-    line-height: 1.6;
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .values-container {
+    padding: 3rem 1rem;
   }
   
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .value-card {
+    gap: 2rem;
+  }
+}

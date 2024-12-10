@@ -71,13 +71,6 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.cart-link {
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  margin-left: 15px;
-}
-
 .hamburger {
   background: none;
   border: none;
