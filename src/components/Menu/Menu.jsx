@@ -13,6 +13,19 @@ const Menu = () => {
   const { isSignedIn } = useAuth();
   const { addToCart } = useCart();
 
+  const [justAddedMap, setJustAddedMap] = useState({});
+
+  const handleAddToCart = (e, itemId) => {
+    e.stopPropagation();
+    addToCart(itemId);
+
+    setJustAddedMap((prev) => ({ ...prev, [itemId]: true }));
+
+    setTimeout(() => {
+      setJustAddedMap((prev) => ({ ...prev, [itemId]: false }));
+    }, 2000);
+  };
+
   return (
     <div className="menu-container">
       <div className="menu-header">
@@ -27,33 +40,42 @@ const Menu = () => {
         )}
       </div>
       <div className="menu-grid">
-        {menuItems.map((item) => (
-          <div
-            key={item.id}
-            className="menu-card"
-            onClick={() => setSelectedItem(item)}
-          >
-            <div className="menu-card-image">
-              <img src={item.image} alt={item.name} />
-              <div className="menu-card-price">${item.price}</div>
+        {menuItems.map((item) => {
+          const justAdded = justAddedMap[item.id];
+          return (
+            <div
+              key={item.id}
+              className="menu-card"
+              onClick={() => setSelectedItem(item)}
+            >
+              <div className="menu-card-image">
+                <img src={item.image} alt={item.name} />
+                <div className="menu-card-price">${item.price}</div>
+              </div>
+              <div className="menu-card-content">
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                {isSignedIn && (
+                  !justAdded ? (
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={(e) => handleAddToCart(e, item.id)}
+                    >
+                      Add to Cart
+                    </button>
+                  ) : (
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={(e) => handleAddToCart(e, item.id)}
+                    >
+                      Added!
+                    </button>
+                  )
+                )}
+              </div>
             </div>
-            <div className="menu-card-content">
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-              {isSignedIn && (
-                <button
-                  className="add-to-cart-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    addToCart(item.id);
-                  }}
-                >
-                  Add to Cart
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
+          );
+        })}
         {selectedItem && (
           <DetailPopup
             menuItem={selectedItem}

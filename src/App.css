@@ -10,6 +10,7 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
 body {
   background: linear-gradient(to top, #e1c4c4, #e3f0e3);
   color: #333;

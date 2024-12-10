@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './CartItem.css';
 
 const CartItem = ({ item, quantity, onChangeQuantity, onRemove }) => {
@@ -25,7 +24,7 @@ const CartItem = ({ item, quantity, onChangeQuantity, onRemove }) => {
           value={quantity}
           onChange={(e) => onChangeQuantity(item.id, parseInt(e.target.value))}
         >
-          {Array.from({ length: 11 }, (_, i) => (
+          {Array.from({ length: 31 }, (_, i) => (
             <option value={i} key={i}>{i}</option>
           ))}
         </select>

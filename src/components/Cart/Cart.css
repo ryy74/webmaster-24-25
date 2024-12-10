@@ -8,7 +8,7 @@
 
 .cart-inner {
   display: flex;
-  width: 80%;
+  width: 65%;
   gap: 20px;
 }
 
@@ -18,20 +18,17 @@
   padding: 20px;
 }
 
-/* The left takes up remaining space, the right is narrower */
 .cart-left {
   flex: 3;
 }
 
-.cart-right {
-  flex: 1;
-  max-width: 250px; /* Make it narrower */
+.cart-left.empty {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  justify-content: flex-start;
-  height: fit-content; /* Just enough space for content */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 200px;
 }
 
 .cart-left h1 {
@@ -50,6 +47,33 @@
   margin: 0;
 }
 
+.return-to-menu {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.menu-return-link {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.menu-return-link:hover {
+  text-decoration: underline;
+}
+
+.cart-right {
+  flex: 1;
+  max-width: 250px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: flex-start;
+  height: fit-content;
+}
+
 .cart-right h2 {
   margin: 0;
   font-size: 1.5rem;
@@ -59,6 +83,34 @@
 .cart-time {
   font-size: 1rem;
   color: #666;
+}
+
+.cart-summary-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.cart-summary-item span:first-child {
+  flex: 1;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.cart-summary-item span:last-child {
+  margin-left: 5px;
+  white-space: nowrap;
 }
 
 .cart-total-price {
@@ -75,10 +127,25 @@
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .checkout-btn:hover {
   background: #45a049;
+}
+
+.checkout-btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+.menu-link {
+  color: #45a049;
+  text-decoration: underline;
+  font-weight: normal;
 }
 
 @media (max-width: 768px) {
