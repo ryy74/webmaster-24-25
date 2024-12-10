@@ -1,0 +1,66 @@
+/* General styling for the values section */
+.values-container {
+    padding: 60px 20px;
+    background-color: #f0f8f3; /* Soft green background */
+    text-align: center;
+  }
+  
+  .values-heading {
+    font-size: 2.5rem;
+    color: #2b5931; /* Deep green for the heading */
+    margin-bottom: 10px;
+  }
+  
+  .values-intro {
+    font-size: 1.2rem;
+    color: #4f704d; /* Muted green for intro text */
+    margin-bottom: 40px;
+  }
+  
+  /* Grid layout for value cards */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Styling for each value card */
+  .value-card {
+    background-color: white;
+    border: 1px solid #cce5cc; /* Light green border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image styling */
+  .value-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title styling */
+  .value-title {
+    font-size: 1.5rem;
+    color: #2b5931; /* Same deep green as heading */
+    margin-bottom: 10px;
+  }
+  
+  /* Description styling */
+  .value-description {
+    font-size: 1rem;
+    color: #4f704d; /* Muted green */
+    line-height: 1.6;
+  }
+  
