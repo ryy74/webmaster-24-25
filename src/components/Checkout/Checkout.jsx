@@ -35,7 +35,7 @@ const Checkout = () => {
   const [country, setCountry] = useState('USA');
   const [state, setState] = useState('Washington');
   const [address, updateAddress] = useState('');
-  const [zipCode, setZipCode] = useState(''); // Added zip code
+  const [zipCode, setZipCode] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
@@ -97,7 +97,6 @@ const Checkout = () => {
     }
 
     if (!zipCode || zipCode.length < 5) {
-      // Simple validation
       setErrorMessage('Please enter a valid zip code.');
       return;
     }
