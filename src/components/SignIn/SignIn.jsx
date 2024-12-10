@@ -30,8 +30,12 @@ function SignInPage() {
           <h1>Welcome!</h1>
           <p>You are now signed in.</p>
           <p>
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/menu" className="nav-link">Menu</Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/menu" className="nav-link">
+              Menu
+            </Link>
           </p>
         </div>
       </div>
@@ -75,11 +79,12 @@ function SignInPage() {
           <p>
             Sign in to order items, view pricing, add products to your cart,
             manage your rewards points, and more. By signing in, you’ll have
-            access to all the features and benefits our platform provides
-            for a personalized shopping experience.
+            access to all the features and benefits our platform provides for a
+            personalized shopping experience.
           </p>
           <p className="credentials">
-            <strong>Username:</strong> tsajudges2024<br />
+            <strong>Username:</strong> tsajudges2024
+            <br />
             <strong>Password:</strong> webmaster2425!
           </p>
         </div>

@@ -31,7 +31,8 @@ const Menu = () => {
       <div className="menu-header">
         <h1 className="menu-title">Menu</h1>
         <h6 className="menu-subtitle">
-          Explore our creations -- please take note of which are vegan and which are vegetarian.
+          Explore our creations -- please take note of which are vegan and which
+          are vegetarian.
         </h6>
         {!isSignedIn && (
           <p className="menu-tooltip">
@@ -55,8 +56,8 @@ const Menu = () => {
               <div className="menu-card-content">
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                {isSignedIn && (
-                  !justAdded ? (
+                {isSignedIn &&
+                  (!justAdded ? (
                     <button
                       className="add-to-cart-btn"
                       onClick={(e) => handleAddToCart(e, item.id)}
@@ -70,8 +71,7 @@ const Menu = () => {
                     >
                       Added!
                     </button>
-                  )
-                )}
+                  ))}
               </div>
             </div>
           );

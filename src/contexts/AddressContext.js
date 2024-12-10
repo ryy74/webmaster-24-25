@@ -1,8 +1,8 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AddressContext = createContext({
   address: '',
-  setAddress: () => {}
+  setAddress: () => {},
 });
 
 export const AddressProvider = ({ children }) => {

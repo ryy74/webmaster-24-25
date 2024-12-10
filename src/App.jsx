@@ -4,23 +4,22 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
-import Menu from './components/Menu/Menu';
-import Process from './components/Process/Process';
-import Values from './components/Values/Values';
-import SignIn from './components/SignIn/SignIn';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Confirmation from './components/Confirmation/Confirmation';
+import Menu from './components/Menu/Menu';
+import Process from './components/Process/Process';
+import SignIn from './components/SignIn/SignIn';
+import Values from './components/Values/Values';
 
 import AccessibilityStatement from './components/Policies/AccessibilityStatement';
 import ApplicantPrivacyNotice from './components/Policies/ApplicantPrivacyNotice';
-import CookiePolicy from './components/Policies/CookiePolicy';
 import PrivacyPolicy from './components/Policies/PrivacyPolicy';
 import TermsOfUse from './components/Policies/TermsOfUse';
 
+import { AddressProvider } from './contexts/AddressContext';
 import { AuthProvider } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
-import { AddressProvider } from './contexts/AddressContext';
 
 import './App.css';
 
@@ -41,9 +40,14 @@ const App = () => {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/confirmation" element={<Confirmation />} />
 
-              <Route path="/accessibility" element={<AccessibilityStatement />} />
-              <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
-              <Route path="/cookies" element={<CookiePolicy />} />
+              <Route
+                path="/accessibility"
+                element={<AccessibilityStatement />}
+              />
+              <Route
+                path="/privacynotice"
+                element={<ApplicantPrivacyNotice />}
+              />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsOfUse />} />
             </Routes>

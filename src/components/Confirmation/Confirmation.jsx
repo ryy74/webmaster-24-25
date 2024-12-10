@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useCart } from '../../contexts/CartContext';
+import { useEffect, useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import { useAddress } from '../../contexts/AddressContext';
 import { useAuth } from '../../contexts/AuthContext';
-import { Navigate, Link } from 'react-router-dom';
+import { useCart } from '../../contexts/CartContext';
 import menuItems from '../Menu/menuItems';
 import './Confirmation.css';
-import { clear } from '@testing-library/user-event/dist/clear';
 
 const Confirmation = () => {
   const { isSignedIn } = useAuth();
   const { cart, clearCart } = useCart();
-  const { address, setAddress: setGlobalAddress } = useAddress(); 
+  const { address, setAddress: setGlobalAddress } = useAddress();
 
-
-  const itemsInCart = Object.keys(cart).filter(itemId => cart[itemId] > 0);
+  const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
 
   const totalPrice = itemsInCart.reduce((acc, id) => {
-    const item = menuItems.find(m => m.id === parseInt(id));
-    return acc + (item.price * cart[id]);
+    const item = menuItems.find((m) => m.id === parseInt(id));
+    return acc + item.price * cart[id];
   }, 0);
 
   const summaryItems = itemsInCart.map((id) => {
-    const item = menuItems.find(m => m.id === parseInt(id));
+    const item = menuItems.find((m) => m.id === parseInt(id));
     const quantity = cart[id];
     const itemTotal = item.price * quantity;
     return { id, name: item.name, quantity, itemTotal };
@@ -38,6 +36,8 @@ const Confirmation = () => {
     const now = new Date();
     now.setMinutes(now.getMinutes() + randomMinutes);
     setDeliveryTime(now);
+
+    clearCart();
   }, [address]);
 
   if (!isSignedIn) {
@@ -52,30 +52,38 @@ const Confirmation = () => {
     return <div>Loading...</div>;
   }
 
-  const deliveryTimeString = deliveryTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-  clearCart();
-  setGlobalAddress('');
+  const deliveryTimeString = deliveryTime.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 
   return (
     <div className="confirmation-page">
       <div className="confirmation-container">
         <h1>Order Confirmed!</h1>
         <p className="delivery-address">Delivering to: {savedAddress}</p>
-        
+
         <h2>Your Order</h2>
         <div className="confirmation-summary-list">
           {savedSummaryItems.map((item) => (
             <div className="confirmation-summary-item" key={item.id}>
-              <span>{item.quantity} x {item.name}</span>
+              <span>
+                {item.quantity} x {item.name}
+              </span>
               <span>${item.itemTotal.toFixed(2)}</span>
             </div>
           ))}
         </div>
-        <p className="confirmation-total-price">Total: ${savedTotalPrice.toFixed(2)}</p>
-        <p className="estimated-time">Estimated Delivery: {deliveryTimeString}</p>
+        <p className="confirmation-total-price">
+          Total: ${savedTotalPrice.toFixed(2)}
+        </p>
+        <p className="estimated-time">
+          Estimated Delivery: {deliveryTimeString}
+        </p>
         <p className="thanks">Thanks for ordering!</p>
-        <Link to="/menu" className="back-to-menu">Back to Menu</Link>
+        <Link to="/menu" className="back-to-menu">
+          Back to Menu
+        </Link>
       </div>
     </div>
   );

@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { useAddress } from '../../contexts/AddressContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
-import { useAddress } from '../../contexts/AddressContext';
 import menuItems from '../Menu/menuItems';
-import { countries, usStates, canadaProvinces, mexicoStates } from './consts.js';
 import './Checkout.css';
+import {
+  canadaProvinces,
+  countries,
+  mexicoStates,
+  usStates,
+} from './consts.js';
 
-const REQUIRED_CARD_NUMBER_DISPLAY = "4112 8197 5823 2024"; 
-const REQUIRED_CARD_NUMBER_NORMALIZED = "4112819758232024"; 
-const REQUIRED_EXPIRATION = "06/27";
-const REQUIRED_CVV = "074";
+const REQUIRED_CARD_NUMBER_DISPLAY = '4112 8197 5823 2024';
+const REQUIRED_CARD_NUMBER_NORMALIZED = '4112819758232024';
+const REQUIRED_EXPIRATION = '06/27';
+const REQUIRED_CVV = '074';
 
 const formatAddressLists = (country) => {
-  if (country === "USA") return usStates;
-  if (country === "Canada") return canadaProvinces;
-  if (country === "Mexico") return mexicoStates;
+  if (country === 'USA') return usStates;
+  if (country === 'Canada') return canadaProvinces;
+  if (country === 'Mexico') return mexicoStates;
   return [];
 };
 
@@ -33,7 +38,7 @@ const Checkout = () => {
   const [zipCode, setZipCode] = useState(''); // Added zip code
   const [errorMessage, setErrorMessage] = useState('');
 
-  const itemsInCart = Object.keys(cart).filter(itemId => cart[itemId] > 0);
+  const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
 
   if (!isSignedIn) {
     return <Navigate to="/signin" replace />;
@@ -44,17 +49,19 @@ const Checkout = () => {
   }
 
   const totalPrice = itemsInCart.reduce((acc, id) => {
-    const item = menuItems.find(m => m.id === parseInt(id));
-    return acc + (item.price * cart[id]);
+    const item = menuItems.find((m) => m.id === parseInt(id));
+    return acc + item.price * cart[id];
   }, 0);
 
   const summaryItems = itemsInCart.map((id) => {
-    const item = menuItems.find(m => m.id === parseInt(id));
+    const item = menuItems.find((m) => m.id === parseInt(id));
     const quantity = cart[id];
     const itemTotal = item.price * quantity;
     return (
       <div className="checkout-summary-item" key={id}>
-        <span>{quantity} x {item.name}</span>
+        <span>
+          {quantity} x {item.name}
+        </span>
         <span>${itemTotal.toFixed(2)}</span>
       </div>
     );
@@ -89,14 +96,15 @@ const Checkout = () => {
       return;
     }
 
-    if (!zipCode || zipCode.length < 5) { // Simple validation
+    if (!zipCode || zipCode.length < 5) {
+      // Simple validation
       setErrorMessage('Please enter a valid zip code.');
       return;
     }
 
     const fullAddress = `${address}, ${state}, ${country}, ${zipCode}`;
     setAddress(fullAddress);
-    console.log("address set to:", fullAddress);
+    console.log('address set to:', fullAddress);
 
     navigate('/confirmation');
   };
@@ -107,16 +115,20 @@ const Checkout = () => {
         <div className="checkout-left">
           <h1>Checkout</h1>
           <p className="checkout-instructions">
-            * For the TSA demonstration, please use:<br/>
-            Card Number: {REQUIRED_CARD_NUMBER_DISPLAY}<br/>
-            Expiration: {REQUIRED_EXPIRATION}<br/>
+            * For the TSA demonstration, please use:
+            <br />
+            Card Number: {REQUIRED_CARD_NUMBER_DISPLAY}
+            <br />
+            Expiration: {REQUIRED_EXPIRATION}
+            <br />
             CVV: {REQUIRED_CVV}
           </p>
           <form className="payment-form">
             <h2>Payment Details</h2>
             <label>
-              Card Number<br />
-              <input 
+              Card Number
+              <br />
+              <input
                 type="text"
                 value={cardNumber}
                 onChange={(e) => setCardNumber(e.target.value)}
@@ -125,8 +137,9 @@ const Checkout = () => {
               />
             </label>
             <label>
-              Expiration (MM/YY)<br />
-              <input 
+              Expiration (MM/YY)
+              <br />
+              <input
                 type="text"
                 value={expiration}
                 onChange={(e) => setExpiration(e.target.value)}
@@ -135,8 +148,9 @@ const Checkout = () => {
               />
             </label>
             <label>
-              CVV<br />
-              <input 
+              CVV
+              <br />
+              <input
                 type="text"
                 value={cvv}
                 onChange={(e) => setCvv(e.target.value)}
@@ -147,8 +161,9 @@ const Checkout = () => {
 
             <h2>Address</h2>
             <label>
-              Street Address<br />
-              <input 
+              Street Address
+              <br />
+              <input
                 type="text"
                 value={address}
                 onChange={(e) => updateAddress(e.target.value)}
@@ -157,8 +172,9 @@ const Checkout = () => {
               />
             </label>
             <label>
-              Zip Code<br />
-              <input 
+              Zip Code
+              <br />
+              <input
                 type="text"
                 value={zipCode}
                 onChange={(e) => setZipCode(e.target.value)}
@@ -167,50 +183,65 @@ const Checkout = () => {
               />
             </label>
             <label>
-              Country<br />
-              <select value={country} onChange={(e) => {
-                setCountry(e.target.value);
-                setState('');
-              }}>
-                {countries.map(c => <option key={c} value={c}>{c}</option>)}
+              Country
+              <br />
+              <select
+                value={country}
+                onChange={(e) => {
+                  setCountry(e.target.value);
+                  setState('');
+                }}
+              >
+                {countries.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
               </select>
             </label>
             <label>
-              State/Province<br />
-              <select 
-                value={state} 
+              State/Province
+              <br />
+              <select
+                value={state}
                 onChange={(e) => setState(e.target.value)}
                 disabled={statesList.length === 0}
               >
-                {statesList.map(s => <option key={s} value={s}>{s}</option>)}
+                {statesList.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
               </select>
             </label>
           </form>
         </div>
         <div className="checkout-right">
           <h2>Your Order</h2>
-          <div className="checkout-summary-list">
-            {summaryItems}
-          </div>
+          <div className="checkout-summary-list">{summaryItems}</div>
           {taxRate > 0 && (
             <div className="checkout-summary-item tax-line">
               <span>Tax (8.5%)</span>
               <span>${taxAmount.toFixed(2)}</span>
             </div>
           )}
-          <p className="checkout-total-price">Total: ${finalTotal.toFixed(2)}</p>
+          <p className="checkout-total-price">
+            Total: ${finalTotal.toFixed(2)}
+          </p>
           {!isSupportedRegion && (
-            <p className="region-error">We currently don't deliver outside of WA, USA.</p>
+            <p className="region-error">
+              We currently don't deliver outside of WA, USA.
+            </p>
           )}
-          {errorMessage && (
-            <p className="card-error">{errorMessage}</p>
-          )}
+          {errorMessage && <p className="card-error">{errorMessage}</p>}
           {isSupportedRegion ? (
             <button className="pay-btn" onClick={handlePay}>
               Pay ${finalTotal.toFixed(2)}
             </button>
           ) : (
-            <button className="pay-btn disabled" disabled>Unsupported Region</button>
+            <button className="pay-btn disabled" disabled>
+              Unsupported Region
+            </button>
           )}
         </div>
       </div>

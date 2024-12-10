@@ -6,10 +6,10 @@
   color: #fff;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 5px 20px;
   position: fixed;
   width: 100%;
-  justify-content: space-between;
 }
 
 .footer-left {
@@ -18,19 +18,19 @@
 }
 
 .footer-content {
-  flex: 2;
-  display: flex;
   align-items: center;
+  display: flex;
+  flex: 2;
 }
 
 .links-container {
-  position: absolute;
-  left: 50%; 
-  transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .footer-link {
@@ -41,20 +41,20 @@
 }
 
 .footer-link:hover {
-  text-decoration: underline;;
+  text-decoration: underline;
 }
 
 .social-icons {
+  align-items: center;
   display: flex;
   gap: 25px;
-  align-items: center;
 }
 
 .social-link svg {
   fill: #fff;
   height: 24px;
-  width: 24px;
   transition: opacity 0.2s;
+  width: 24px;
 }
 
 .social-link:hover svg {
@@ -62,14 +62,14 @@
 }
 
 .social-popup {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
+  animation: fadeIn 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  bottom: 80px;
   color: white;
   padding: 10px 20px;
-  border-radius: 4px;
-  animation: fadeIn 0.3s ease-in-out;
+  position: fixed;
+  right: 20px;
 }
 
 @keyframes fadeIn {
@@ -83,13 +83,13 @@
   }
 }
 
-@media(max-width: 1300px) {
+@media (max-width: 1300px) {
   .footer-link {
     display: none;
   }
 }
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
   .app-footer {
     display: none;
   }

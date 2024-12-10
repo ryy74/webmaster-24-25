@@ -9,7 +9,7 @@ import './Header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 878);
-  
+
   const { isSignedIn } = useAuth();
   const { cartCount } = useCart();
 
@@ -43,7 +43,11 @@ const Header = () => {
         </Link>
         {isSignedIn && (
           <>
-            <Link to="/cart" className="header-link cart-link" onClick={closeDropdown}>
+            <Link
+              to="/cart"
+              className="header-link cart-link"
+              onClick={closeDropdown}
+            >
               Cart ({cartCount})
             </Link>
             <Link to="/" className="header-link" onClick={closeDropdown}>
