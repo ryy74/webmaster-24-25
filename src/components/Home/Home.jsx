@@ -1,43 +1,14 @@
-import burger from '../../assets/vegan-burger.jpg';
-import burrito from '../../assets/vegan-burrito.jpg';
-import salad from '../../assets/vegan-salad.jpg';
-import tacos from '../../assets/vegan-tacos.jpg';
 import farm from '../../assets/farm.jpg';
 import produce from '../../assets/produce.jpg'
 import vegan from '../../assets/vegan.jpg';
 import homeBg from '../../assets/home-bg.jpg';
 import sustainabilityBg from '../../assets/sustainability-bg.jpg'; 
 
+import { menuItems } from './previewItems';
+
 import './Home.css';
 
 const Home = () => {
-  const menuItems = [
-    {
-      id: 1,
-      name: 'Vegan Tacos',
-      description: 'Delicious plant-based tacos with fresh veggies and salsa.',
-      image: tacos,
-    },
-    {
-      id: 2,
-      name: 'Vegetarian Burrito',
-      description: 'A hearty burrito packed with rice, beans, and guacamole.',
-      image: burrito,
-    },
-    {
-      id: 3,
-      name: 'Vegan Salad',
-      description: 'A fresh salad with mixed greens, chickpeas, and tahini dressing.',
-      image: salad,
-    },
-    {
-      id: 4,
-      name: 'Vegan Burger',
-      description: 'A delicious vegan patty with lettuce, tomato, and a smoky sauce.',
-      image: burger,
-    },
-  ];
-
   return (
     <div className="home-container">
       <div className="hero-section">
@@ -83,7 +54,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div id="featured" className="featured-section">
+      <div className="featured-section">
         <h2 className="section-heading">Featured Dishes</h2>
         <div className="preview-items">
           {menuItems.map((item) => (
@@ -106,18 +77,30 @@ const Home = () => {
         <h2>What Our Customers Say</h2>
         <div className="testimonials-container">
           <div className="testimonial">
-            <p>"The best vegan tacos I've ever tasted! Truly amazing."</p>
+            <p>
+              "The vegan tacos here are absolutely phenomenal! The combination of fresh ingredients and perfectly balanced flavors is unlike anything I've ever had. 
+              Every bite is a burst of deliciousness that leaves you wanting more. I never thought plant-based food could be this satisfying."
+            </p>
             <span>- Alex Johnson</span>
           </div>
           <div className="testimonial">
-            <p>"I love their commitment to sustainability and local sourcing. Highly recommended!"</p>
+            <p>
+              "Green Bites has completely redefined what it means to eat sustainably. Their dedication to supporting local farmers and using eco-friendly practices is truly admirable. 
+              On top of that, the food is exceptional—every dish feels like a celebration of nature’s finest ingredients. I always leave with a happy heart and a full stomach."
+            </p>
             <span>- Maria Smith</span>
           </div>
           <div className="testimonial">
-            <p>"Green Bites proves that plant-based meals can be both healthy and mouth-watering."</p>
+            <p>
+              "I was skeptical about plant-based meals until I tried Green Bites. Their dishes are an absolute revelation! The creativity in their recipes and the boldness of the flavors are unmatched. 
+              It’s amazing to see how they turn simple, wholesome ingredients into culinary masterpieces. Highly recommend to anyone, vegan or not!"
+            </p>
             <span>- David Lee</span>
           </div>
         </div>
+        <p className="testimonial-disclaimer">
+          Disclaimer: These people do not exist, and these quotes were created purely for contest purposes.
+        </p>
       </div>
 
       <div className="banner-section">

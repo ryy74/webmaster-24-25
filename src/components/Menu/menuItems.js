@@ -18,7 +18,7 @@ import tacos from '../../assets/vegan-tacos.jpg';
 const menuItems = [
   {
     id: 1,
-    name: 'Vegan Tacos',
+    name: 'Tacos de Vida',
     description: 'Delicious plant-based tacos with fresh veggies and salsa.',
     image: tacos,
     longDescription:
@@ -54,7 +54,7 @@ const menuItems = [
 
   {
     id: 2,
-    name: 'Vegetarian Burrito',
+    name: 'El Jardin Burrito',
     description: 'A hearty burrito packed with rice, beans, and guacamole.',
     image: burrito,
     longDescription:
@@ -90,7 +90,7 @@ const menuItems = [
 
   {
     id: 3,
-    name: 'Vegan Salad',
+    name: 'Verdure Salad',
     description:
       'A fresh salad with mixed greens, chickpeas, and tahini dressing.',
     image: salad,
@@ -124,7 +124,7 @@ const menuItems = [
 
   {
     id: 4,
-    name: 'Vegan Burger',
+    name: 'The Smoky Maple Burger',
     description:
       'A delicious vegan patty with lettuce, tomato, and a smoky sauce.',
     image: burger,
@@ -152,7 +152,7 @@ const menuItems = [
 
   {
     id: 5,
-    name: 'Vegan Pizza',
+    name: 'Pomodoro Verde Pizza',
     description:
       'A crispy thin crust topped with marinara, vegan cheese, mushrooms, and spinach.',
     image: pizza,
@@ -181,7 +181,7 @@ const menuItems = [
 
   {
     id: 6,
-    name: 'Vegan Mac and Cheese',
+    name: 'Golden Cashew Mac',
     description:
       'Creamy, cheesy, and comforting made from cashews, nutritional yeast, and turmeric.',
     image: mc,
@@ -206,7 +206,7 @@ const menuItems = [
 
   {
     id: 7,
-    name: 'Vegetarian Lasagna',
+    name: 'Florentine Lasagna',
     description: 'Layers of noodles, ricotta, spinach, and marinara sauce.',
     image: lasagna,
     longDescription:
@@ -236,7 +236,7 @@ const menuItems = [
 
   {
     id: 8,
-    name: 'Chickpea Curry',
+    name: 'Bombay Chickpea Curry',
     description:
       'A warm, aromatic curry made with chickpeas, coconut milk, and a blend of spices.',
     image: curry,
@@ -270,7 +270,7 @@ const menuItems = [
 
   {
     id: 9,
-    name: 'Vegan Burrito Bowl',
+    name: 'Burrito Bowl Fresca',
     description: 'A bowl of rice, black beans, corn, guacamole, and salsa.',
     image: bbowl,
     longDescription:
@@ -296,7 +296,7 @@ const menuItems = [
 
   {
     id: 10,
-    name: 'Grilled Veggie Skewers',
+    name: 'Tuscan Grilled Skewers',
     description:
       'Skewers of marinated zucchini, bell peppers, onions, and mushrooms.',
     image: kabob,
@@ -320,7 +320,7 @@ const menuItems = [
 
   {
     id: 11,
-    name: 'Vegan Stir Fry',
+    name: 'Teriyaki Sunrise Stir Fry',
     description:
       'A mix of fresh vegetables stir-fried in a savory soy-based sauce, served over jasmine rice.',
     image: stirfry,
@@ -354,7 +354,7 @@ const menuItems = [
 
   {
     id: 12,
-    name: 'Vegetarian Sushi Rolls',
+    name: 'Avocado Maki',
     description:
       'Sushi rolls with avocado, cucumber, and pickled radish, served with soy sauce.',
     image: sushi,
@@ -384,7 +384,7 @@ const menuItems = [
 
   {
     id: 13,
-    name: 'Sweet Potato Tacos',
+    name: 'Sweet Sol Tacos',
     description:
       'Soft tortillas filled with roasted sweet potatoes, black beans, avocado, and slaw.',
     image: staco,
@@ -415,7 +415,7 @@ const menuItems = [
 
   {
     id: 14,
-    name: 'Vegan Quesadilla',
+    name: 'Quesadilla del Campo',
     description:
       'A crispy tortilla filled with vegan cheese, beans, and sautéed vegetables.',
     image: quesadillas,
@@ -444,7 +444,7 @@ const menuItems = [
 
   {
     id: 15,
-    name: 'Lentil Soup',
+    name: 'Tuscan Lentil Soup',
     description:
       'A hearty soup made with lentils, carrots, celery, and tomatoes.',
     image: soup,
@@ -472,7 +472,7 @@ const menuItems = [
 
   {
     id: 16,
-    name: 'Cauliflower Tikka Masala',
+    name: 'Masala Roasted Cauliflower',
     description: 'Roasted cauliflower in a rich, flavorful tomato-based sauce.',
     image: masala,
     longDescription:
