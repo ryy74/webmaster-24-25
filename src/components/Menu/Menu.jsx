@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import { useAuth } from '../../contexts/AuthContext';
+import { useCart } from '../../contexts/CartContext';
+
 import DetailPopup from '../DetailPopup/DetailPopup';
 import menuItems from './menuItems.js';
 
@@ -7,15 +10,21 @@ import './Menu.css';
 
 const Menu = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  const { isSignedIn } = useAuth();
+  const { addToCart } = useCart();
 
   return (
     <div className="menu-container">
       <div className="menu-header">
         <h1 className="menu-title">Menu</h1>
-        <p className="menu-subtitle">
-          Explore our creations -- please take note of which are vegan and which
-          are vegetarian.
-        </p>
+        <h6 className="menu-subtitle">
+          Explore our creations -- please take note of which are vegan and which are vegetarian.
+        </h6>
+        {!isSignedIn && (
+          <p className="menu-tooltip">
+            Please sign in to unlock ordering and delivery.
+          </p>
+        )}
       </div>
       <div className="menu-grid">
         {menuItems.map((item) => (
@@ -26,10 +35,22 @@ const Menu = () => {
           >
             <div className="menu-card-image">
               <img src={item.image} alt={item.name} />
+              <div className="menu-card-price">${item.price}</div>
             </div>
             <div className="menu-card-content">
               <h3>{item.name}</h3>
               <p>{item.description}</p>
+              {isSignedIn && (
+                <button
+                  className="add-to-cart-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    addToCart(item.id);
+                  }}
+                >
+                  Add to Cart
+                </button>
+              )}
             </div>
           </div>
         ))}

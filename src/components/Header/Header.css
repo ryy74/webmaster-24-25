@@ -51,8 +51,31 @@
   user-select: none;
 }
 
+.signout-btn {
+  background: none;
+  border: none;
+  color: white; 
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 0.1rem;
+  padding: 5px 17px;
+}
+
+.signout-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .header-link:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 15px;
 }
 
 .hamburger {

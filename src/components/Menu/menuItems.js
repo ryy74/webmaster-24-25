@@ -19,6 +19,7 @@ const menuItems = [
   {
     id: 1,
     name: 'Tacos de Vida',
+    price: 9.99,
     description: 'Delicious plant-based tacos with fresh veggies and salsa.',
     image: tacos,
     longDescription:
@@ -55,6 +56,7 @@ const menuItems = [
   {
     id: 2,
     name: 'El Jardin Burrito',
+    price: 10.99,
     description: 'A hearty burrito packed with rice, beans, and guacamole.',
     image: burrito,
     longDescription:
@@ -91,6 +93,7 @@ const menuItems = [
   {
     id: 3,
     name: 'Verdure Salad',
+    price: 8.49,
     description:
       'A fresh salad with mixed greens, chickpeas, and tahini dressing.',
     image: salad,
@@ -125,6 +128,7 @@ const menuItems = [
   {
     id: 4,
     name: 'The Smoky Maple Burger',
+    price: 11.49,
     description:
       'A delicious vegan patty with lettuce, tomato, and a smoky sauce.',
     image: burger,
@@ -153,6 +157,7 @@ const menuItems = [
   {
     id: 5,
     name: 'Pomodoro Verde Pizza',
+    price: 12.99,
     description:
       'A crispy thin crust topped with marinara, vegan cheese, mushrooms, and spinach.',
     image: pizza,
@@ -182,6 +187,7 @@ const menuItems = [
   {
     id: 6,
     name: 'Golden Cashew Mac',
+    price: 9.99,
     description:
       'Creamy, cheesy, and comforting made from cashews, nutritional yeast, and turmeric.',
     image: mc,
@@ -207,6 +213,7 @@ const menuItems = [
   {
     id: 7,
     name: 'Florentine Lasagna',
+    price: 13.49,
     description: 'Layers of noodles, ricotta, spinach, and marinara sauce.',
     image: lasagna,
     longDescription:
@@ -237,6 +244,7 @@ const menuItems = [
   {
     id: 8,
     name: 'Bombay Chickpea Curry',
+    price: 10.99,
     description:
       'A warm, aromatic curry made with chickpeas, coconut milk, and a blend of spices.',
     image: curry,
@@ -271,6 +279,7 @@ const menuItems = [
   {
     id: 9,
     name: 'Burrito Bowl Fresca',
+    price: 11.99,
     description: 'A bowl of rice, black beans, corn, guacamole, and salsa.',
     image: bbowl,
     longDescription:
@@ -297,6 +306,7 @@ const menuItems = [
   {
     id: 10,
     name: 'Tuscan Grilled Skewers',
+    price: 8.99,
     description:
       'Skewers of marinated zucchini, bell peppers, onions, and mushrooms.',
     image: kabob,
@@ -321,6 +331,7 @@ const menuItems = [
   {
     id: 11,
     name: 'Teriyaki Sunrise Stir Fry',
+    price: 9.49,
     description:
       'A mix of fresh vegetables stir-fried in a savory soy-based sauce, served over jasmine rice.',
     image: stirfry,
@@ -355,6 +366,7 @@ const menuItems = [
   {
     id: 12,
     name: 'Avocado Maki',
+    price: 8.99,
     description:
       'Sushi rolls with avocado, cucumber, and pickled radish, served with soy sauce.',
     image: sushi,
@@ -385,6 +397,7 @@ const menuItems = [
   {
     id: 13,
     name: 'Sweet Sol Tacos',
+    price: 10.49,
     description:
       'Soft tortillas filled with roasted sweet potatoes, black beans, avocado, and slaw.',
     image: staco,
@@ -416,6 +429,7 @@ const menuItems = [
   {
     id: 14,
     name: 'Quesadilla del Campo',
+    price: 9.49,
     description:
       'A crispy tortilla filled with vegan cheese, beans, and sautéed vegetables.',
     image: quesadillas,
@@ -445,6 +459,7 @@ const menuItems = [
   {
     id: 15,
     name: 'Tuscan Lentil Soup',
+    price: 7.99,
     description:
       'A hearty soup made with lentils, carrots, celery, and tomatoes.',
     image: soup,
@@ -473,6 +488,7 @@ const menuItems = [
   {
     id: 16,
     name: 'Masala Roasted Cauliflower',
+    price: 10.99,
     description: 'Roasted cauliflower in a rich, flavorful tomato-based sauce.',
     image: masala,
     longDescription:

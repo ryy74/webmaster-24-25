@@ -18,9 +18,14 @@
   margin-bottom: 0.5rem;
 }
 
-.menu-header p {
+.menu-header h6 {
   color: #666;
   font-size: 1.2rem;
+}
+
+.menu-header p {
+  color: #666;
+  font-size: 1rem;
 }
 
 .menu-grid {
@@ -31,6 +36,7 @@
 }
 
 .menu-card {
+  position: relative;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
@@ -49,6 +55,7 @@
 }
 
 .menu-card-image {
+  position: relative;
   height: 175px;
   min-width: 200px;
   overflow: hidden;
@@ -61,10 +68,22 @@
   width: 100%;
 }
 
+.menu-card-price {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4caf50;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
 .menu-card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1.5rem;
 }
 
@@ -78,6 +97,23 @@
   color: #666;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.add-to-cart-btn {
+  align-self: flex-end;
+  background: #ff9800;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background: #e68900;
 }
 
 @media (max-width: 1200px) {
