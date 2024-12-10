@@ -67,13 +67,6 @@ const Process = () => {
 
   return (
     <div className="process-container">
-      <div class="background-elements">
-        <div class="mint-blob"></div>
-        <div class="mint-blob"></div>
-        <div class="mint-blob"></div>
-        <div class="mint-blob"></div>
-        <div class="mint-blob"></div>
-      </div>
       <div className="hero">
         <div className="hero-content">
           <h1>From Farm to Your Table</h1>

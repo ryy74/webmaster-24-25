@@ -1,6 +1,12 @@
 TSA Washington Webmaster 24-25
 Ryan Li, Lucas Huang, Wesley Lu, Ansh Mohindru, Rain Jia
 
+Current improvements planned:
+-> map implementation upon confirmation page
+-> cookies to save sign-in state
+-> better landing styling overall
+-> extended menu and more detailed descriptions
+
 Photo Sources:
 
 https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Kale-salad-1b22634.jpg?quality=90&webp=true&resize=600,545

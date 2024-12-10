@@ -40,7 +40,7 @@ const DetailPopup = ({ menuItem, onClose }) => {
         <button className="popup-close" onClick={onClose}>
           ×
         </button>
-
+        
         <div className="popup-grid">
           <div className="popup-left-column">
             <div className="popup-image-container">
