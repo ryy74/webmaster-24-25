@@ -1,0 +1,9 @@
+.Footer {
+  background-color: #4CAF50; /* Match Header color */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 3px solid #388E3C; /* Matching dark green border */
+  width: 100%;
+}
