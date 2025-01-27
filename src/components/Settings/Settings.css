@@ -1,0 +1,96 @@
+.overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.popup {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  width: 320px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
+.setting-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.setting-row span {
+  color: #333;
+}
+
+.toggle {
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 24px;
+  padding: 4px;
+  position: relative;
+  transition: background-color 0.2s ease;
+  width: 48px;
+}
+
+.toggle.active {
+  background-color: #65b383;
+}
+
+.toggle-circle {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  height: 16px;
+  transition: transform 0.2s ease;
+  width: 16px;
+}
+
+.toggle.active .toggle-circle {
+  transform: translateX(24px);
+}
+
+.language-select {
+  appearance: none;
+  background-color: #f5f5f5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 12px;
+  padding-right: 32px;
+  transition: border-color 0.2s ease;
+}
+
+.language-select:hover {
+  border-color: #c0c0c0;
+}
+
+.language-select:focus {
+  border-color: #65b383;
+  box-shadow: 0 0 0 2px rgba(50, 154, 89, 0.1);
+  outline: none;
+}
+
+.language-select option {
+  background-color: white;
+  padding: 8px;
+}
