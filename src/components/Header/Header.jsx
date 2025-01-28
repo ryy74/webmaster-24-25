@@ -5,6 +5,8 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
+import settings from '../../assets/settings.svg';
+
 import './Header.css';
 
 function Header() {
@@ -60,6 +62,15 @@ function Header() {
         {!isSignedIn && (
           <Link to="/signin" className="header-link" onClick={closeDropdown}>
             {t('signIn')}
+          </Link>
+        )}
+        {isDesktop ? (
+          <Link to="/settings" className="settings-link" onClick={closeDropdown}>
+            <img src={settings} className="settings-icon" />
+          </Link>
+        ) : (
+          <Link to="/settings" className="header-link" onClick={closeDropdown}>
+            {t('settings')}
           </Link>
         )}
       </>

@@ -55,6 +55,28 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+.settings-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.settings-link:hover {
+  transform: scale(1.1);;
+}
+
+.settings-icon {
+  height: 20px;
+  width: 20px;
+  transition: transform 0.5s ease;
+}
+
+.settings-link:hover .settings-icon {
+  filter: invert(0.1);
+  transform: rotate(360deg);
+}
+
 .hamburger {
   background: none;
   border: none;
