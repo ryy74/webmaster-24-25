@@ -1,7 +1,7 @@
-### web/1.0.0 (01-23-25)
+### web/1.0.1 (27-01-25)
 
 ### notes
-attempted to fix mobile zoom error
+fixed variety of unaddressed bugs and minor changes
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
-**You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [webmaster-24-25-xi.vercel.app/](https://webmaster-24-25-xi.vercel.app/).
+**You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).
