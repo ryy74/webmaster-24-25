@@ -1,3 +1,6 @@
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import farm from '../../assets/farm.jpg';
@@ -81,6 +84,23 @@ function Home() {
             </div>
           ))}
         </div>
+
+        <motion.button
+          className="menu-redirect"
+          whileHover="hover"
+          initial="initial"
+        >
+          <span className="menu-redirect-text">{t('menu')}</span>
+          <motion.span
+            className="menu-redirect-arrow"
+            variants={{
+              initial: { x: 0 },
+              hover: { x: 5 },
+            }}
+          >
+            <ArrowRight size={20} />
+          </motion.span>
+        </motion.button>
       </div>
 
       <div className="testimonials-section">
