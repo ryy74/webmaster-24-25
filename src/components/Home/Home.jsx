@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -13,6 +14,61 @@ import useMenuItems from '../../consts/previewItems';
 
 import './Home.css';
 
+function AnimatedTitle({ text }) {
+  const words = useMemo(() => 
+    text.split(' ').map(word => ({
+      word,
+      characters: Array.from(word)
+    })), 
+    [text]
+  );
+  
+  return (
+    <h1 className="hero__title">
+      {words.map((wordObj, wordIndex) => (
+        <span
+          key={wordIndex}
+          className="hero__title-word"
+          style={{
+            display: 'inline-block',
+            whiteSpace: 'nowrap',
+            marginRight: '0.3em',
+          }}
+        >
+          {wordObj.characters.map((char, charIndex) => (
+            <motion.span
+              key={`${wordIndex}-${charIndex}`}
+              className="hero__title-char"
+              style={{ display: 'inline-block' }}
+              initial={{ 
+                opacity: 0,
+                scale: 3,
+                filter: "blur(10px)",
+                z: 100
+              }}
+              animate={{ 
+                opacity: 1,
+                scale: 1,
+                filter: "blur(0px)",
+                z: 0
+              }}
+              transition={{
+                duration: 0.8,
+                delay: (wordIndex * wordObj.characters.length + charIndex) * 0.04,
+                type: "spring",
+                damping: 12,
+                stiffness: 75
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </span>
+      ))}
+    </h1>
+  );
+}
+
 function Home() {
   const { t } = useLanguage();
 
@@ -21,20 +77,43 @@ function Home() {
   return (
     <div className="home-container">
       <div className="hero-section">
-        <div className="hero-overlay"></div>
+        <div className="hero-overlay" />
         <img
           src={homeBg}
           alt="Green Bites Background"
           className="hero-background"
         />
         <div className="hero-content">
-          <h1>{t('title')}</h1>
-          <p>
+          <AnimatedTitle text={t('title')} />
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 1,
+              ease: "easeOut"
+            }}
+          >
             {t('subTitle')}
-          </p>
-          <a href="/menu" className="hero-cta">
+          </motion.p>
+          
+          <motion.a
+            href="/menu"
+            className="hero-cta"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: 1,
+              ease: "easeOut"
+            }}
+            whileHover={{ 
+              scale: 1.05,
+              backgroundColor: "#698451"
+            }}
+          >
             {t('menuCTA')}
-          </a>
+          </motion.a>
         </div>
       </div>
 
