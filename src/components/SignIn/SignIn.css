@@ -16,7 +16,7 @@ html {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 122px);
 }
 
 .signin-container {
@@ -90,7 +90,7 @@ html {
 }
 
 .signin-right {
-  background: #fafafa;
+  background: #fff;
 }
 
 .signin-right h2 {
@@ -138,4 +138,26 @@ html {
 
 .signedin-container a:hover {
   text-decoration: underline;
+}
+
+@media(max-width: 878px) {
+  .signin-page {
+    min-height: calc(100vh - 60px);
+    margin-top: 30px;
+  }
+
+  .signin-container {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .signin-right {
+    border-top: 1px solid #ddd;
+  }
+}
+
+@media(max-width: 440px) {
+  .signin-container {
+    width: 100%;
+  }
 }

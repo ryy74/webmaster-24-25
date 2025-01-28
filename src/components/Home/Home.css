@@ -238,6 +238,63 @@ html {
   line-height: 1.4;
 }
 
+.menu-redirect {
+  background: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  margin: 50px 0 0;
+}
+
+.menu-redirect:hover {
+  background: #222;
+}
+
+.menu-redirect-text {
+  margin-right: 10px;
+}
+
+.menu-redirect-arrow {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-redirect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+.menu-redirect:hover::after {
+  left: 100%;
+  transition: all 0.4s ease;
+}
+
 .testimonials-section {
   animation: fadeIn 1.5s ease-in-out;
   background: #f0f0f0;
@@ -347,11 +404,17 @@ html {
   .about-section {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+  }
+
+  .about-image-grid {
+    display: none;
   }
 
   .about-content {
     margin-top: 20px;
     padding: 0;
+    flex: 1 1;
   }
 
   .sustainability-section {
@@ -362,5 +425,18 @@ html {
 
   .sustainability-content {
     width: 100%;
+  }
+
+  .preview-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preview-item {
+    width: auto;
+  }
+
+  .preview-item p {
+    display: none;
   }
 }

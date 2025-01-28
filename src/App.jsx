@@ -27,22 +27,24 @@ const App = () => {
     <Providers>
       <Router>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/values" element={<Values />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/confirmation" element={<Confirmation />} />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/values" element={<Values />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/confirmation" element={<Confirmation />} />
 
-          <Route path="/accessibility" element={<AccessibilityStatement />} />
-          <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfUse />} />
-          <Route path="/settings" element={<Settings />} />
-        </Routes>
+            <Route path="/accessibility" element={<AccessibilityStatement />} />
+            <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfUse />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </Providers>
