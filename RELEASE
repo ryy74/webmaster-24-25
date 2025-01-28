@@ -1,7 +1,7 @@
-### web/1.0.1 (27-01-25)
+### web/1.0.2 (28-01-25)
 
 ### notes
-fixed variety of unaddressed bugs and minor changes
+minor changes on initial load of landing page
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).
