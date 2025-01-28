@@ -56,18 +56,35 @@ html {
 
 .hero-content h1 {
   animation: fadeIn 1.5s ease-in-out;
-  font-size: 7rem;
+  font-size: 6rem;
   margin: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
   animation: fadeIn 2s ease-in-out;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   margin: 20px 0;
   max-width: 600px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero__title {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.hero__title-char {
+  display: inline-block;
+  transform-style: preserve-3d;
+  white-space: pre;
 }
 
 .hero-cta {
