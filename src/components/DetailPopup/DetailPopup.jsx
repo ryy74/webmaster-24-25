@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiX } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -39,58 +41,130 @@ function DetailPopup({ menuItem, onClose }) {
   }, []);
 
   return (
-    <div className="popup-backdrop" onClick={handleBackdropClick}>
-      <div className="popup-content">
-        <button className="popup-close" onClick={onClose}>
-          ×
-        </button>
+    <AnimatePresence>
+      <motion.div 
+        className="popup-backdrop"
+        onClick={handleBackdropClick}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div 
+          className="popup-content"
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 20 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 300, 
+            damping: 25 
+          }}
+        >
+          <motion.button 
+            className="popup-close"
+            onClick={onClose}
+            whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FiX />
+          </motion.button>
 
-        <div className="popup-grid">
-          <div className="popup-left-column">
-            <div className="popup-image-container">
-              <img
-                src={menuItem.image}
-                alt={menuItem.name}
-                className="popup-image"
-              />
-            </div>
+          <div className="popup-grid">
+            <motion.div 
+              className="popup-left-column"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.div 
+                className="popup-image-container"
+                whileHover={{ 
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                }}
+              >
+                <img 
+                  src={menuItem.image} 
+                  alt={menuItem.name} 
+                  className="popup-image" 
+                />
+              </motion.div>
 
-            {menuItem.nutritionalInfo && (
-              <div className="popup-section">
-                <h3>{t('nutritionInfo')}</h3>
-                <p>{menuItem.nutritionalInfo}</p>
-              </div>
-            )}
+              {menuItem.nutritionalInfo && (
+                <motion.div 
+                  className="popup-section"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <h3>{t('nutritionInfo')}</h3>
+                  <p>{menuItem.nutritionalInfo}</p>
+                </motion.div>
+              )}
 
-            {menuItem.allergens && menuItem.allergens.length > 0 && (
-              <div className="popup-section">
-                <h3>{t('allergens')}</h3>
-                <p>{menuItem.allergens.join(', ')}</p>
-              </div>
-            )}
+              {menuItem.allergens && menuItem.allergens.length > 0 && (
+                <motion.div 
+                  className="popup-section"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <h3>{t('allergens')}</h3>
+                  <p>{menuItem.allergens.join(', ')}</p>
+                </motion.div>
+              )}
+            </motion.div>
+
+            <motion.div 
+              className="popup-details"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <motion.h2
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                {menuItem.name}
+              </motion.h2>
+
+              <motion.div 
+                className="popup-section"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <h3>{t('desc')}</h3>
+                <p>{menuItem.longDescription}</p>
+              </motion.div>
+
+              <motion.div 
+                className="popup-section"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <h3>{t('ingredients')}</h3>
+                <ul className="ingredients-list">
+                  {menuItem.ingredients &&
+                    menuItem.ingredients.map((ingredient, index) => (
+                      <motion.li 
+                        key={index}
+                        initial={{ opacity: 0, x: -5 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.6 + (index * 0.05) }}
+                      >
+                        {ingredient}
+                      </motion.li>
+                    ))}
+                </ul>
+              </motion.div>
+            </motion.div>
           </div>
-
-          <div className="popup-details">
-            <h2>{menuItem.name}</h2>
-
-            <div className="popup-section">
-              <h3>{t('desc')}</h3>
-              <p>{menuItem.longDescription}</p>
-            </div>
-
-            <div className="popup-section">
-              <h3>{t('ingredients')}</h3>
-              <ul className="ingredients-list">
-                {menuItem.ingredients &&
-                  menuItem.ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
