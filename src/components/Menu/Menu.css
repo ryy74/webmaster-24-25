@@ -2,123 +2,228 @@
   background-color: #fff;
   margin: 0 auto 60px auto;
   max-width: 1400px;
+  width: 80vw;
   min-height: 100vh;
   padding: 2rem;
 }
 
 .menu-header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   margin-top: 5rem;
   text-align: center;
+  position: relative;
 }
 
-.menu-header h1 {
+.menu-title {
   color: #333;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
 }
 
-.menu-header h6 {
+.menu-title-underline {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff9800, #4caf50);
+  margin: 0 auto;
+  transition: width 0.3s ease;
+}
+
+.menu-header:hover .menu-title-underline {
+  width: 120px;
+}
+
+.menu-subtitle {
   color: #666;
   font-size: 1.2rem;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
 
-.menu-header p {
+.menu-tooltip {
   color: #666;
   font-size: 1rem;
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease;
 }
 
 .menu-grid {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
   padding: 1rem;
 }
 
 .menu-card {
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
-.menu-card:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transform: scale(1.02);
+.menu-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.menu-card:hover .menu-card-inner {
+  transform: translateY(-10px);
+}
+
+.menu-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
 }
 
 .menu-card-image {
-  height: 175px;
-  min-width: 200px;
-  overflow: hidden;
+  width: 40%;
   position: relative;
-  width: 200px;
+  overflow: hidden;
 }
 
 .menu-card-image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.1);
 }
 
 .menu-card-price {
-  background: #4caf50;
-  border-radius: 4px;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 4px 8px;
   position: absolute;
-  right: 8px;
-  top: 8px;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+  animation: slideIn 0.3s ease;
 }
 
 .menu-card-content {
+  width: 60%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
 }
 
 .menu-card-content h3 {
   color: #333;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.menu-card-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #ff9800;
+  transition: width 0.3s ease;
+}
+
+.menu-card:hover .menu-card-content h3::after {
+  width: 60px;
 }
 
 .menu-card-content p {
   color: #666;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .add-to-cart-btn {
   align-self: flex-end;
-  background: #ff9800;
+  background: linear-gradient(135deg, #ff9800, #f57c00);
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   color: white;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 8px 16px;
-  transition: background 0.2s;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 .add-to-cart-btn:hover {
-  background: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.add-to-cart-btn.added {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+.button-text {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.button-icon {
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover .button-text {
+  transform: translateX(-10px);
+}
+
+.add-to-cart-btn:hover .button-icon {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1200px) {
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
@@ -127,23 +232,36 @@
     padding: 1rem;
   }
 
-  .menu-header h1 {
-    font-size: 2rem;
+  .menu-title {
+    font-size: 2.5rem;
   }
 
   .menu-card {
+    height: auto;
+  }
+
+  .menu-card-front {
     flex-direction: column;
+    height: auto;
+  }
+
+  .menu-card-image,
+  .menu-card-content {
+    width: 100%;
   }
 
   .menu-card-image {
     height: 200px;
-    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .menu-header h1 {
-    font-size: 1.75rem;
+  .menu-title {
+    font-size: 2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 
   .menu-card-content {
