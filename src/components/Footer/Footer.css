@@ -39,6 +39,9 @@
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .footer-link:hover {

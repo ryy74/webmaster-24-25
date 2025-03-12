@@ -9,7 +9,7 @@ import settings from '../../assets/settings.svg';
 
 import './Header.css';
 
-function Header() {
+function Header({ onSettingsClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 878);
 
@@ -65,13 +65,25 @@ function Header() {
           </Link>
         )}
         {isDesktop ? (
-          <Link to="/settings" className="settings-link" onClick={closeDropdown}>
-            <img src={settings} className="settings-icon" />
-          </Link>
+          <button
+            className="settings-link"
+            onClick={() => {
+              closeDropdown();
+              onSettingsClick();
+            }}
+          >
+            <img src={settings} className="settings-icon" alt="Settings" />
+          </button>
         ) : (
-          <Link to="/settings" className="header-link" onClick={closeDropdown}>
+          <button
+            className="header-link"
+            onClick={() => {
+              closeDropdown();
+              onSettingsClick();
+            }}
+          >
             {t('settings')}
-          </Link>
+          </button>
         )}
       </>
     );

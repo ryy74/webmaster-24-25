@@ -60,6 +60,10 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .settings-link:hover {

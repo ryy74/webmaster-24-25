@@ -8,6 +8,10 @@
   margin-top: 60px;
 }
 
+html.dark-mode .confirmation-page {
+  background: linear-gradient(135deg, #1a1c20 0%, #23262e 100%);
+}
+
 .loading-container {
   background: white;
   border-radius: 20px;
@@ -22,6 +26,11 @@
   justify-content: center;
 }
 
+html.dark-mode .loading-container {
+  background: #1a1a1a;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
 .loading-spinner {
   margin-bottom: 1.5rem;
 }
@@ -31,9 +40,17 @@
   color: #3498db;
 }
 
+html.dark-mode .loading-icon {
+  color: #54a9ee;
+}
+
 .loading-container p {
   font-size: 1.2rem;
   color: #555;
+}
+
+html.dark-mode .loading-container p {
+  color: #aaa;
 }
 
 .confirmation-container {
@@ -49,10 +66,19 @@
   align-items: center;
 }
 
+html.dark-mode .confirmation-container {
+  background: #1a1a1a;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
 .success-icon {
   font-size: 4rem;
   color: #2ecc71;
   margin-bottom: 1.5rem;
+}
+
+html.dark-mode .success-icon {
+  color: #4eda8e;
 }
 
 .confirmation-container h1 {
@@ -66,6 +92,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+html.dark-mode .confirmation-container h1 {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .address-container {
   display: flex;
   align-items: center;
@@ -77,9 +109,18 @@
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+html.dark-mode .address-container {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .address-icon {
   color: #3498db;
   font-size: 1.2rem;
+}
+
+html.dark-mode .address-icon {
+  color: #54a9ee;
 }
 
 .delivery-address {
@@ -87,6 +128,10 @@
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
+}
+
+html.dark-mode .delivery-address {
+  color: #e0e0e0;
 }
 
 .order-summary-container {
@@ -98,6 +143,11 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
 }
 
+html.dark-mode .order-summary-container {
+  background: rgba(84, 169, 238, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
 .order-summary-header {
   display: flex;
   align-items: center;
@@ -107,15 +157,27 @@
   padding-bottom: 0.75rem;
 }
 
+html.dark-mode .order-summary-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .order-icon {
   color: #3498db;
   font-size: 1.2rem;
+}
+
+html.dark-mode .order-icon {
+  color: #54a9ee;
 }
 
 .confirmation-container h2 {
   color: #333;
   font-size: 1.5rem;
   margin: 0;
+}
+
+html.dark-mode .confirmation-container h2 {
+  color: #e0e0e0;
 }
 
 .confirmation-summary-list {
@@ -135,6 +197,11 @@
   padding-bottom: 0.8rem;
 }
 
+html.dark-mode .confirmation-summary-item {
+  color: #aaa;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
 .confirmation-summary-item:last-child {
   border-bottom: none;
 }
@@ -152,6 +219,10 @@
   color: #333;
 }
 
+html.dark-mode .confirmation-summary-item span:last-child {
+  color: #e0e0e0;
+}
+
 .confirmation-total-price {
   text-align: right;
   width: 100%;
@@ -161,6 +232,11 @@
   margin: 0;
   padding-top: 0.5rem;
   border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+html.dark-mode .confirmation-total-price {
+  color: #e0e0e0;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .delivery-time-container {
@@ -173,9 +249,17 @@
   border-radius: 50px;
 }
 
+html.dark-mode .delivery-time-container {
+  background: rgba(78, 218, 142, 0.1);
+}
+
 .time-icon {
   color: #2ecc71;
   font-size: 1.2rem;
+}
+
+html.dark-mode .time-icon {
+  color: #4eda8e;
 }
 
 .estimated-time {
@@ -184,11 +268,19 @@
   margin: 0;
 }
 
+html.dark-mode .estimated-time {
+  color: #4eda8e;
+}
+
 .thanks {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 2rem;
   line-height: 1.6;
+}
+
+html.dark-mode .thanks {
+  color: #aaa;
 }
 
 .back-to-menu {
@@ -205,6 +297,11 @@
   box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
   position: relative;
   overflow: hidden;
+}
+
+html.dark-mode .back-to-menu {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  box-shadow: 0 4px 6px rgba(84, 169, 238, 0.3);
 }
 
 .back-to-menu::after {
@@ -225,6 +322,18 @@
 
 .menu-icon {
   font-size: 1.2rem;
+}
+
+/* Fix for the dark mode flash issue */
+.cart-page {
+  transition: background 0.3s ease;
+}
+
+.cart-left,
+.cart-right,
+.confirmation-container,
+.loading-container {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 768px) {
