@@ -4,13 +4,13 @@ const SettingsContext = createContext();
 
 export const SettingsProvider = ({ children }) => {
   const [settings, setSettings] = useState({
-    darkMode: false,
+    isDarkMode: false,
   });
 
   const toggleDarkMode = () => {
     setSettings((prevSettings) => ({
       ...prevSettings,
-      darkMode: !prevSettings.darkMode,
+      isDarkMode: !prevSettings.isDarkMode,
     }));
   };
 

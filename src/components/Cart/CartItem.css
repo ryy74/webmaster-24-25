@@ -11,9 +11,18 @@
   transition: all 0.3s ease;
 }
 
+html.dark-mode .cart-item {
+  background: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 .cart-item:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
+}
+
+html.dark-mode .cart-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cart-item-left {
@@ -31,6 +40,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+html.dark-mode .cart-item-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .cart-item-details {
   display: flex;
   flex-direction: column;
@@ -43,6 +56,10 @@
   margin: 0 0 5px 0;
 }
 
+html.dark-mode .cart-item-name {
+  color: #e0e0e0;
+}
+
 .cart-item-description {
   color: #666;
   font-size: 0.95rem;
@@ -50,10 +67,18 @@
   line-height: 1.4;
 }
 
+html.dark-mode .cart-item-description {
+  color: #aaa;
+}
+
 .cart-item-price-single {
   color: #888;
   font-size: 0.9rem;
   margin: 5px 0 0 0;
+}
+
+html.dark-mode .cart-item-price-single {
+  color: #999;
 }
 
 .cart-item-right {
@@ -74,6 +99,10 @@
   transition: all 0.2s ease;
 }
 
+html.dark-mode .cart-item-remove {
+  color: #999;
+}
+
 .cart-item-quantity-controls {
   display: flex;
   align-items: center;
@@ -81,6 +110,11 @@
   border-radius: 50px;
   overflow: hidden;
   background: white;
+}
+
+html.dark-mode .cart-item-quantity-controls {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .quantity-btn {
@@ -97,8 +131,16 @@
   transition: all 0.2s ease;
 }
 
+html.dark-mode .quantity-btn {
+  color: #54a9ee;
+}
+
 .quantity-btn:hover {
   background: rgba(52, 152, 219, 0.1);
+}
+
+html.dark-mode .quantity-btn:hover {
+  background: rgba(84, 169, 238, 0.2);
 }
 
 .quantity-btn:disabled {
@@ -106,12 +148,24 @@
   cursor: not-allowed;
 }
 
+html.dark-mode .quantity-btn:disabled {
+  color: #555;
+}
+
 .quantity-btn.decrease {
   border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+html.dark-mode .quantity-btn.decrease {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .quantity-btn.increase {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.dark-mode .quantity-btn.increase {
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cart-item-quantity {
@@ -123,6 +177,10 @@
   height: 35px;
   text-align: center;
   width: 45px;
+}
+
+html.dark-mode .cart-item-quantity {
+  color: #e0e0e0;
 }
 
 .cart-item-quantity:focus {
@@ -137,6 +195,10 @@
   font-weight: 600;
   margin: 0;
   padding: 8px 12px;
+}
+
+html.dark-mode .cart-item-price {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
 }
 
 @media (max-width: 768px) {
