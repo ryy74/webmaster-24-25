@@ -9,10 +9,19 @@
   text-align: left;
 }
 
+html.dark-mode .policy-container {
+  background-color: rgba(26, 26, 26, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .policy-container h1 {
   color: black;
   font-size: 2rem;
   margin-bottom: 20px;
+}
+
+html.dark-mode .policy-container h1 {
+  color: #e0e0e0;
 }
 
 .policy-container h3,
@@ -22,9 +31,18 @@
   margin: 15px 0 10px;
 }
 
+html.dark-mode .policy-container h3,
+html.dark-mode .policy-container h4 {
+  color: #ccc;
+}
+
 .policy-container p {
   color: #555;
   font-size: 1rem;
   line-height: 1.5;
   margin: 10px 0;
+}
+
+html.dark-mode .policy-container p {
+  color: #aaa;
 }

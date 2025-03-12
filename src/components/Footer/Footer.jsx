@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Footer.css';
 
-function Footer() {
+function Footer({ onSettingsClick }) {
   const [showPopup, setShowPopup] = useState(false);
 
   const { t } = useLanguage();
@@ -35,9 +35,14 @@ function Footer() {
           <Link to="/privacynotice" className="footer-link">
             {t('apn')}
           </Link>
-          <Link to="/settings" className="footer-link">
+          <button
+            className="footer-link"
+            onClick={() => {
+              onSettingsClick();
+            }}
+          >
             {t('settings')}
-          </Link>
+          </button>
         </div>
       </div>
       <div className="footer-socials">

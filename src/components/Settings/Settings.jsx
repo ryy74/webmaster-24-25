@@ -3,16 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiMoon, FiSun, FiGlobe, FiChevronDown } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useSettings } from '../../contexts/SettingsContext';
 
 import './Settings.css';
 
-function Settings() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+function Settings({ onClose }) {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   
   const { t, language, setLanguage } = useLanguage();
+  const { settings, toggleDarkMode } = useSettings();
+  const isDarkMode = settings.isDarkMode;
   
   const languageDropdownRef = useRef(null);
+  const popupRef = useRef(null);
   
   const languages = [
     { code: 'en', name: 'English' },
@@ -26,37 +29,49 @@ function Settings() {
     setLanguage(langCode);
     setShowLanguageDropdown(false);
   };
-  
-  const handleClickOutside = (e) => {
+
+  const handleLanguageClickOutside = (e) => {
     if (languageDropdownRef.current && !languageDropdownRef.current.contains(e.target)) {
       setShowLanguageDropdown(false);
     }
   };
   
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleLanguageClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleLanguageClickOutside);
     };
   }, []);
+  
+  useEffect(() => {
+    const handleClickOutsidePopup = (e) => {
+      if (popupRef.current && !popupRef.current.contains(e.target)) {
+        onClose && onClose();
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutsidePopup);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsidePopup);
+    };
+  }, [onClose]);
   
   const getCurrentLanguageName = () => {
     const lang = languages.find(l => l.code === language);
     return lang ? lang.name : 'English';
   };
 
+  useEffect(() => {
+    console.log(isDarkMode);
+  }, [isDarkMode])
+
   return (
-    <motion.div 
-      className="settings-overlay"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div className="settings-overlay">
       <motion.div 
         className="settings-popup"
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: 20 }}
+        ref={popupRef}
+        initial={{ scale: 0.8, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.8, y: 20 }}
         transition={{
           type: "spring",
           stiffness: 300,
@@ -65,8 +80,8 @@ function Settings() {
       >
         <motion.h2 
           className="settings-title"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -20 , opacity: 0 }}
+          animate={{ y: 0 , opacity: 1 }}
           transition={{ delay: 0.1 }}
         >
           {t('siteSettings')}
@@ -84,7 +99,7 @@ function Settings() {
           </div>
           <motion.button
             className={`toggle-button ${isDarkMode ? 'active' : ''}`}
-            onClick={() => setIsDarkMode(!isDarkMode)}
+            onClick={toggleDarkMode}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -95,15 +110,19 @@ function Settings() {
             >
               {isDarkMode ? <FiMoon /> : <FiSun />}
             </motion.div>
-            <motion.div 
-              className="toggle-slider"
-              layout
-            >
+            <div className="toggle-slider">
               <motion.div 
                 className="toggle-circle"
-                layout
+                animate={{ 
+                  x: isDarkMode ? "24px" : 0 
+                }}
+                transition={{ 
+                  type: "tween", 
+                  duration: 0.2,
+                  ease: [0.32, 0, 0.67, 1],
+                }}
               />
-            </motion.div>
+            </div>
           </motion.button>
         </motion.div>
 

@@ -12,6 +12,10 @@
   z-index: 1000;
 }
 
+html.dark-mode .popup-backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
 .popup-content {
   background: white;
   border-radius: 20px;
@@ -25,6 +29,11 @@
   width: calc(100% - 40px);
 }
 
+html.dark-mode .popup-content {
+  background: #1a1a1a;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
 .popup-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -34,13 +43,25 @@
   border-radius: 4px;
 }
 
+html.dark-mode .popup-content::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
 .popup-content::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #2ecc71, #3498db);
   border-radius: 4px;
 }
 
+html.dark-mode .popup-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4eda8e, #54a9ee);
+}
+
 .popup-content::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #27ae60, #2980b9);
+}
+
+html.dark-mode .popup-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #3ebb7a, #2f8fd5);
 }
 
 .popup-close {
@@ -63,9 +84,19 @@
   color: #444;
 }
 
+html.dark-mode .popup-close {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
 .popup-close:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: #000;
+}
+
+html.dark-mode .popup-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 .popup-grid {
@@ -92,6 +123,10 @@
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+html.dark-mode .popup-image-container {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
 .popup-image {
   height: 100%;
   object-fit: cover;
@@ -115,6 +150,10 @@
   padding-left: 14px;
 }
 
+html.dark-mode .popup-section h3 {
+  color: #aaa;
+}
+
 .popup-section h3::before {
   content: '';
   position: absolute;
@@ -126,11 +165,19 @@
   border-radius: 4px;
 }
 
+html.dark-mode .popup-section h3::before {
+  background: linear-gradient(to bottom, #4eda8e, #54a9ee);
+}
+
 .popup-section p {
   color: #444;
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
+}
+
+html.dark-mode .popup-section p {
+  color: #ccc;
 }
 
 .popup-details {
@@ -148,6 +195,12 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+html.dark-mode .popup-details h2 {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .ingredients-list {
@@ -168,12 +221,20 @@
   break-inside: avoid-column;
 }
 
+html.dark-mode .ingredients-list li {
+  color: #bbb;
+}
+
 .ingredients-list li::before {
   content: '•';
   position: absolute;
   left: 8px;
   color: #3498db;
   font-size: 18px;
+}
+
+html.dark-mode .ingredients-list li::before {
+  color: #54a9ee;
 }
 
 @media (max-width: 768px) {

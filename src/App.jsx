@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
@@ -18,36 +19,50 @@ import PrivacyPolicy from './components/Policies/PrivacyPolicy';
 import TermsOfUse from './components/Policies/TermsOfUse';
 import Settings from './components/Settings/Settings';
 
-import Providers from './Providers';
+import { useSettings } from './contexts/SettingsContext';
 
 import './App.css';
 
-const App = () => {
-  return (
-    <Providers>
-      <Router>
-        <Header />
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/values" element={<Values />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/confirmation" element={<Confirmation />} />
+function App() {
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
-            <Route path="/accessibility" element={<AccessibilityStatement />} />
-            <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfUse />} />
-            <Route path="/settings" element={<Settings />} />
-          </Routes>
-        </div>
-        <Footer />
-      </Router>
-    </Providers>
+  const { settings } = useSettings();
+
+  const openSettings = () => setIsSettingsOpen(true);
+  const closeSettings = () => setIsSettingsOpen(false);
+
+  useEffect(() => {
+    if (settings.isDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+      console.log('Added dark-mode:', document.documentElement.className);
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+    }
+  }, [settings.isDarkMode]);
+
+  return (
+    <Router>
+      <Header onSettingsClick={openSettings} />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/values" element={<Values />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmation" element={<Confirmation />} />
+
+          <Route path="/accessibility" element={<AccessibilityStatement />} />
+          <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfUse />} />
+        </Routes>
+      </div>
+      <Footer onSettingsClick={openSettings} />
+      {isSettingsOpen && <Settings onClose={closeSettings} />}
+    </Router>
   );
 };
 
