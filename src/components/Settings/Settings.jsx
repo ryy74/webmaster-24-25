@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiMoon, FiSun, FiGlobe, FiChevronDown } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -6,43 +8,165 @@ import './Settings.css';
 
 function Settings() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  
   const { t, language, setLanguage } = useLanguage();
-
-  const handleLanguageChange = (e) => {
-    setLanguage(e.target.value);
+  
+  const languageDropdownRef = useRef(null);
+  
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Español' },
+    { code: 'ch', name: '中文（简体）' },
+    { code: 'tw', name: '中文（繁體）' },
+    { code: 'jp', name: '日本語' }
+  ];
+  
+  const handleLanguageChange = (langCode) => {
+    setLanguage(langCode);
+    setShowLanguageDropdown(false);
+  };
+  
+  const handleClickOutside = (e) => {
+    if (languageDropdownRef.current && !languageDropdownRef.current.contains(e.target)) {
+      setShowLanguageDropdown(false);
+    }
+  };
+  
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+  
+  const getCurrentLanguageName = () => {
+    const lang = languages.find(l => l.code === language);
+    return lang ? lang.name : 'English';
   };
 
   return (
-    <div className="overlay">
-      <div className="popup">
-        <h2>{t('siteSettings')}</h2>
+    <motion.div 
+      className="settings-overlay"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div 
+        className="settings-popup"
+        initial={{ opacity: 0, scale: 0.8, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.8, y: 20 }}
+        transition={{
+          type: "spring",
+          stiffness: 300,
+          damping: 25
+        }}
+      >
+        <motion.h2 
+          className="settings-title"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+        >
+          {t('siteSettings')}
+        </motion.h2>
 
-        <div className="setting-row">
-          <span>{t('darkMode')}</span>
-          <button
-            className={`toggle ${isDarkMode ? 'active' : ''}`}
+        <motion.div 
+          className="settings-row"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="setting-label">
+            <span>{t('darkMode')}</span>
+            <small>{isDarkMode ? t('on') : t('off')}</small>
+          </div>
+          <motion.button
+            className={`toggle-button ${isDarkMode ? 'active' : ''}`}
             onClick={() => setIsDarkMode(!isDarkMode)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="toggle-circle" />
-          </button>
-        </div>
+            <motion.div 
+              className="toggle-icon"
+              animate={{ rotate: isDarkMode ? 180 : 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {isDarkMode ? <FiMoon /> : <FiSun />}
+            </motion.div>
+            <motion.div 
+              className="toggle-slider"
+              layout
+            >
+              <motion.div 
+                className="toggle-circle"
+                layout
+              />
+            </motion.div>
+          </motion.button>
+        </motion.div>
 
-        <div className="setting-row">
-          <span>{t('language')}</span>
-          <select
-            className="language-select"
-            value={language}
-            onChange={handleLanguageChange}
-          >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="ch">中文（简体）</option>
-            <option value="tw">中文（繁體）</option>
-            <option value="jp">日本語</option>
-          </select>
-        </div>
-      </div>
-    </div>
+        <motion.div 
+          className="settings-row"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+          ref={languageDropdownRef}
+        >
+          <div className="setting-label">
+            <span>{t('language')}</span>
+            <small>{getCurrentLanguageName()}</small>
+          </div>
+          <motion.div className="language-dropdown-container">
+            <motion.button 
+              className="language-dropdown-button"
+              onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiGlobe />
+              <span>{getCurrentLanguageName()}</span>
+              <motion.div
+                animate={{ rotate: showLanguageDropdown ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <FiChevronDown />
+              </motion.div>
+            </motion.button>
+            
+            <AnimatePresence>
+              {showLanguageDropdown && (
+                <motion.div 
+                  className="language-dropdown"
+                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {languages.map(lang => (
+                    <motion.div
+                      key={lang.code}
+                      className={`language-option ${language === lang.code ? 'active' : ''}`}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
+                    >
+                      <span>{lang.name}</span>
+                      {language === lang.code && (
+                        <motion.div 
+                          className="active-indicator"
+                          layoutId="activeLanguageIndicator"
+                        />
+                      )}
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
 
