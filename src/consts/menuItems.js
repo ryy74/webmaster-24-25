@@ -15,7 +15,18 @@ import soup from '../assets/Vegan-soup.jpg';
 import staco from '../assets/Vegan-staco.jpg';
 import stirfry from '../assets/vegan-stirfry.jpg';
 import sushi from '../assets/Vegan-sushi.jpg';
-import tacos from '../assets/vegan-tacos.jpg'
+import tacos from '../assets/vegan-tacos.jpg';
+import quinoa from '../assets/vegan-quinoa.jpg';
+import sandwich from '../assets/vegan-sandwich.jpg';
+import quesadilla from '../assets/vegan-quesadilla2.webp';
+import chili from '../assets/vegan-chili.avif';
+import tofu from '../assets/vegan-tofu.jpg';
+import pepper from '../assets/vegan-pepper.webp';
+import lentil from '../assets/vegan-lentil.jpg';
+import banana from '../assets/vegan-banana.jpeg';
+import oats from '../assets/vegan-oats.webp';
+import tofuWrap from '../assets/vegan-wrap.webp';
+import pancake from '../assets/vegan-pancake.webp';
 
 const useMenuItems = () => {
   const { t } = useLanguage();
@@ -31,6 +42,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients1'),
       nutritionalInfo: t('menuNutrition1'),
       allergens: t('menuAllergens1'),
+      category: 'l',
     },
     {
       id: 2,
@@ -42,6 +54,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients2'),
       nutritionalInfo: t('menuNutrition2'),
       allergens: t('menuAllergens2'),
+      category: 'l',
     },
     {
       id: 3,
@@ -53,6 +66,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients3'),
       nutritionalInfo: t('menuNutrition3'),
       allergens: t('menuAllergens3'),
+      category: 'l',
     },
     {
       id: 4,
@@ -64,6 +78,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients4'),
       nutritionalInfo: t('menuNutrition4'),
       allergens: t('menuAllergens4'),
+      category: 'l',
     },
     {
       id: 5,
@@ -75,6 +90,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients5'),
       nutritionalInfo: t('menuNutrition5'),
       allergens: t('menuAllergens5'),
+      category: 'd',
     },
     {
       id: 6,
@@ -86,6 +102,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients6'),
       nutritionalInfo: t('menuNutrition6'),
       allergens: t('menuAllergens6'),
+      category: 'd',
     },
     {
       id: 7,
@@ -97,6 +114,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients7'),
       nutritionalInfo: t('menuNutrition7'),
       allergens: t('menuAllergens7'),
+      category: 'd',
     },
     {
       id: 8,
@@ -108,6 +126,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients8'),
       nutritionalInfo: t('menuNutrition8'),
       allergens: t('menuAllergens8'),
+      category: 'd',
     },
     {
       id: 9,
@@ -119,6 +138,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients9'),
       nutritionalInfo: t('menuNutrition9'),
       allergens: t('menuAllergens9'),
+      category: 'l',
     },
     {
       id: 10,
@@ -130,6 +150,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients10'),
       nutritionalInfo: t('menuNutrition10'),
       allergens: t('menuAllergens10'),
+      category: 'l',
     },
     {
       id: 11,
@@ -141,6 +162,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients11'),
       nutritionalInfo: t('menuNutrition11'),
       allergens: t('menuAllergens11'),
+      category: 'd',
     },
     {
       id: 12,
@@ -152,6 +174,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients12'),
       nutritionalInfo: t('menuNutrition12'),
       allergens: t('menuAllergens12'),
+      category: 'l',
     },
     {
       id: 13,
@@ -163,6 +186,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients13'),
       nutritionalInfo: t('menuNutrition13'),
       allergens: t('menuAllergens13'),
+      category: 'l',
     },
     {
       id: 14,
@@ -174,6 +198,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients14'),
       nutritionalInfo: t('menuNutrition14'),
       allergens: t('menuAllergens14'),
+      category: 'l',
     },
     {
       id: 15,
@@ -185,6 +210,7 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients15'),
       nutritionalInfo: t('menuNutrition15'),
       allergens: t('menuAllergens15'),
+      category: 'l',
     },
     {
       id: 16,
@@ -196,6 +222,139 @@ const useMenuItems = () => {
       ingredients: t('menuIngredients16'),
       nutritionalInfo: t('menuNutrition16'),
       allergens: t('menuAllergens16'),
+      category: 'l',
+    },
+    {
+      id: 17,
+      name: t('menuItem17'),
+      price: 9.99,
+      description: t('menuDesc17'),
+      image: quinoa,
+      longDescription: t('menuLD17'),
+      ingredients: t('menuIngredients17'),
+      nutritionalInfo: t('menuNutrition17'),
+      allergens: t('menuAllergens17'),
+      category: 'l',
+    },
+    {
+      id: 18,
+      name: t('menuItem18'),
+      price: 10.49,
+      description: t('menuDesc18'),
+      image: sandwich,
+      longDescription: t('menuLD18'),
+      ingredients: t('menuIngredients18'),
+      nutritionalInfo: t('menuNutrition18'),
+      allergens: t('menuAllergens18'),
+      category: 'l',
+    },
+    {
+      id: 19,
+      name: t('menuItem19'),
+      price: 10.99,
+      description: t('menuDesc19'),
+      image: quesadilla,
+      longDescription: t('menuLD19'),
+      ingredients: t('menuIngredients19'),
+      nutritionalInfo: t('menuNutrition19'),
+      allergens: t('menuAllergens19'),
+      category: 'l',
+    },
+    {
+      id: 20,
+      name: t('menuItem20'),
+      price: 11.49,
+      description: t('menuDesc20'),
+      image: chili,
+      longDescription: t('menuLD20'),
+      ingredients: t('menuIngredients20'),
+      nutritionalInfo: t('menuNutrition20'),
+      allergens: t('menuAllergens20'),
+      category: 'd',
+    },
+    {
+      id: 21,
+      name: t('menuItem21'),
+      price: 8.99,
+      description: t('menuDesc21'),
+      image: tofu,
+      longDescription: t('menuLD21'),
+      ingredients: t('menuIngredients21'),
+      nutritionalInfo: t('menuNutrition21'),
+      allergens: t('menuAllergens21'),
+      category: 'b',
+    },
+    {
+      id: 22,
+      name: t('menuItem22'),
+      price: 11.99,
+      description: t('menuDesc22'),
+      image: pepper,
+      longDescription: t('menuLD22'),
+      ingredients: t('menuIngredients22'),
+      nutritionalInfo: t('menuNutrition22'),
+      allergens: t('menuAllergens22'),
+      category: 'd',
+    },
+    {
+      id: 23,
+      name: t('menuItem23'),
+      price: 12.49,
+      description: t('menuDesc23'),
+      image: lentil,
+      longDescription: t('menuLD23'),
+      ingredients: t('menuIngredients23'),
+      nutritionalInfo: t('menuNutrition23'),
+      allergens: t('menuAllergens23'),
+      category: 'd',
+    },
+    {
+      id: 24,
+      name: t('menuItem24'),
+      price: 12.99,
+      description: t('menuDesc24'),
+      image: banana,
+      longDescription: t('menuLD24'),
+      ingredients: t('menuIngredients24'),
+      nutritionalInfo: t('menuNutrition24'),
+      allergens: t('menuAllergens24'),
+      category: 'b',
+    },
+    {
+      id: 25,
+      name: t('menuItem25'),
+      price: 8.99,
+      description: t('menuDesc25'),
+      image: oats,
+      longDescription: t('menuLD25'),
+      ingredients: t('menuIngredients25'),
+      nutritionalInfo: t('menuNutrition25'),
+      allergens: t('menuAllergens25'),
+      category: 'b',
+    },
+    {
+      id: 26,
+      name: t('menuItem26'),
+      price: 9.49,
+      description: t('menuDesc26'),
+      image: tofuWrap,
+      longDescription: t('menuLD26'),
+      ingredients: t('menuIngredients26'),
+      nutritionalInfo: t('menuNutrition26'),
+      allergens: t('menuAllergens26'),
+      category: 'b',
+    },
+    {
+      id: 27,
+      name: t('menuItem27'),
+      price: 10.99,
+      description: t('menuDesc27'),
+      image: pancake,
+      longDescription: t('menuLD27'),
+      ingredients: t('menuIngredients27'),
+      nutritionalInfo: t('menuNutrition27'),
+      allergens: t('menuAllergens27'),
+      category: 'b',
     },
   ];
 

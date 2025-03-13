@@ -1,7 +1,7 @@
 .app-footer {
   position: relative;
   width: 100%;
-  background: rgb(0, 10, 0);
+  background: rgba(16, 15, 15);
   color: #fff;
   display: flex;
   align-items: center;

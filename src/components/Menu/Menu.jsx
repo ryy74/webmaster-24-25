@@ -20,7 +20,7 @@ function Menu() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOption, setSortOption] = useState('default');
   const [showSortDropdown, setShowSortDropdown] = useState(false);
-  
+
   const menuRef = useRef(null);
   const sortRef = useRef(null);
 
@@ -30,8 +30,16 @@ function Menu() {
   const { addToCart } = useCart();
   const { t } = useLanguage();
   const menuItems = useMenuItems();
-  
+
   const categories = ['all', 'breakfast', 'lunch', 'dinner', 'other'];
+
+  const categoryMap = {
+    all: 'all',
+    breakfast: 'b',
+    lunch: 'l',
+    dinner: 'd',
+    other: 'o',
+  };
 
   const sortOptions = [
     { id: 'default', label: t('default'), icon: <FiAlignLeft /> },
@@ -40,7 +48,7 @@ function Menu() {
     { id: 'nameAsc', label: t('nameAZ'), icon: <FiAlignLeft /> },
     { id: 'nameDesc', label: t('nameZA'), icon: <FiAlignLeft /> },
   ];
-  
+
   const handleAddToCart = (e, itemId) => {
     e.stopPropagation();
     addToCart(itemId);
@@ -51,7 +59,7 @@ function Menu() {
       setJustAddedMap((prev) => ({ ...prev, [itemId]: false }));
     }, 2000);
   };
-  
+
   const toggleSortDropdown = () => {
     setShowSortDropdown(!showSortDropdown);
   };
@@ -77,12 +85,16 @@ function Menu() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-  
-  const filteredItems = menuItems.filter(item => {
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          item.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+
+  const filteredItems = menuItems.filter((item) => {
+    const catMatch =
+      activeCategory === 'all' || item.category === categoryMap[activeCategory];
+
+    const searchMatch =
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return catMatch && searchMatch;
   });
 
   const sortedItems = [...filteredItems].sort((a, b) => {
@@ -102,25 +114,25 @@ function Menu() {
 
   return (
     <div className="menu-wrapper" ref={menuRef}>
-      <motion.div 
+      <motion.div
         className="menu-hero"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.h1 
+        <motion.h1
           className="menu-title"
           initial={{ scale: 0.8 }}
           animate={{ scale: 1 }}
-          transition={{ 
-            type: "spring", 
-            stiffness: 200, 
-            damping: 10 
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 10,
           }}
         >
           {t('menu')}
         </motion.h1>
-        <motion.h6 
+        <motion.h6
           className="menu-subtitle"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -128,9 +140,9 @@ function Menu() {
         >
           {t('menuSub')}
         </motion.h6>
-        
+
         {!isSignedIn && (
-          <motion.button 
+          <motion.button
             className="sign-in-button"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -142,40 +154,42 @@ function Menu() {
             {t('menuTooltip')}
           </motion.button>
         )}
-        
+
         <div className="menu-controls">
           <div className="search-container">
-            <input 
-              type="text" 
-              placeholder={t('searchMenu')} 
+            <input
+              type="text"
+              placeholder={t('searchMenu')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
             />
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="category-tabs"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            {categories.map(category => (
+            {categories.map((cat) => (
               <motion.button
-                key={category}
-                className={`category-tab ${activeCategory === category ? 'active' : ''}`}
-                onClick={() => setActiveCategory(category)}
+                key={cat}
+                className={`category-tab ${
+                  activeCategory === cat ? 'active' : ''
+                }`}
+                onClick={() => setActiveCategory(cat)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t(category)}
+                {t(cat)}
               </motion.button>
             ))}
           </motion.div>
         </div>
       </motion.div>
-      
-      <motion.div 
+
+      <motion.div
         className="menu-container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -183,11 +197,12 @@ function Menu() {
       >
         <div className="menu-options-bar">
           <div className="results-count">
-            {filteredItems.length} {filteredItems.length === 1 ? t('item') : t('items')}
+            {filteredItems.length}{' '}
+            {filteredItems.length === 1 ? t('item') : t('items')}
           </div>
-          
+
           <div className="sort-container" ref={sortRef}>
-            <motion.button 
+            <motion.button
               className="sort-icon-button"
               onClick={toggleSortDropdown}
               whileHover={{ scale: 1.1 }}
@@ -196,10 +211,10 @@ function Menu() {
             >
               <FiSliders />
             </motion.button>
-            
+
             <AnimatePresence>
               {showSortDropdown && (
-                <motion.div 
+                <motion.div
                   className="sort-dropdown"
                   initial={{ opacity: 0, y: -10, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -207,17 +222,19 @@ function Menu() {
                   transition={{ duration: 0.2 }}
                 >
                   <div className="sort-dropdown-header">{t('sortBy')}</div>
-                  {sortOptions.map(option => (
+                  {sortOptions.map((option) => (
                     <motion.div
                       key={option.id}
-                      className={`sort-option ${sortOption === option.id ? 'active' : ''}`}
+                      className={`sort-option ${
+                        sortOption === option.id ? 'active' : ''
+                      }`}
                       onClick={() => handleSortChange(option.id)}
                       whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
                     >
                       <span className="sort-option-icon">{option.icon}</span>
                       <span>{option.label}</span>
                       {sortOption === option.id && (
-                        <motion.div 
+                        <motion.div
                           className="active-indicator"
                           layoutId="activeIndicator"
                         />
@@ -229,7 +246,7 @@ function Menu() {
             </AnimatePresence>
           </div>
         </div>
-        
+
         <motion.div className="menu-grid">
           {sortedItems.map((item) => {
             const justAdded = justAddedMap[item.id];
@@ -240,31 +257,42 @@ function Menu() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
-                  type: "spring",
+                  type: 'spring',
                   stiffness: 300,
-                  damping: 20
+                  damping: 20,
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -10,
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                  boxShadow:
+                    '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
                 }}
                 onClick={() => setSelectedItem(item)}
                 layout={false}
               >
                 <div className="menu-card-content">
                   <div className="menu-card-image-container">
-                    <img src={item.image} alt={item.name} className="menu-card-image" />
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="menu-card-image"
+                    />
                     <div className="menu-card-badges">
-                      {item.isNew && <span className="badge new-badge">{t('new')}</span>}
-                      {item.isPopular && <span className="badge popular-badge">{t('popular')}</span>}
+                      {item.isNew && (
+                        <span className="badge new-badge">{t('new')}</span>
+                      )}
+                      {item.isPopular && (
+                        <span className="badge popular-badge">
+                          {t('popular')}
+                        </span>
+                      )}
                     </div>
                     <div className="menu-card-price">${item.price}</div>
                   </div>
-                  
+
                   <div className="menu-card-details">
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
-                    
+
                     {isSignedIn && (
                       <motion.button
                         className={`cart-button ${justAdded ? 'added' : ''}`}
@@ -291,9 +319,9 @@ function Menu() {
             );
           })}
         </motion.div>
-        
+
         {sortedItems.length === 0 && (
-          <motion.div 
+          <motion.div
             className="no-results"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -303,12 +331,9 @@ function Menu() {
           </motion.div>
         )}
       </motion.div>
-      
+
       {selectedItem && (
-        <DetailPopup
-          menuItem={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
+        <DetailPopup menuItem={selectedItem} onClose={() => setSelectedItem(null)} />
       )}
     </div>
   );

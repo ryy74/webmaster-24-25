@@ -13,7 +13,7 @@ function Header({ onSettingsClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 878);
 
-  const { isSignedIn } = useAuth();
+  const { isSignedIn, setIsSignedIn } = useAuth();
   const { cartCount } = useCart();
   const { t } = useLanguage();
 
@@ -54,7 +54,14 @@ function Header({ onSettingsClick }) {
             >
               {t('cart')} ({cartCount})
             </Link>
-            <Link to="/" className="header-link" onClick={closeDropdown}>
+            <Link 
+              to="/" 
+              className="header-link" 
+              onClick={() => {
+                closeDropdown();
+                setIsSignedIn(false);
+              }}              
+            >
               {t('signOut')}
             </Link>
           </>
