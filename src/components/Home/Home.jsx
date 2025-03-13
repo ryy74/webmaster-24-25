@@ -5,12 +5,6 @@ import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 import { useLanguage } from '../../contexts/LanguageContext';
 import useMenuItems from '../../consts/previewItems';
 
-import farm from '../../assets/farm.jpg';
-import homeBg from '../../assets/home-bg.jpg';
-import produce from '../../assets/produce.jpg';
-import sustainabilityBg from '../../assets/sustainability-bg.jpg';
-import vegan from '../../assets/vegan.jpg';
-
 import './Home.css';
 
 function Home() {  
@@ -33,7 +27,7 @@ function Home() {
   return (
     <div className="home-container">
       <motion.div className="hero-section">
-        <img src={homeBg} alt="" className="hero-background" />
+        <img src='/assets/home-bg.jpg' alt="" className="hero-background" />
         <div className="hero-overlay" />
         
         <div className="hero-content">
@@ -106,21 +100,21 @@ function Home() {
           transition={{ duration: 0.8 }}
         >
           <motion.img 
-            src={farm} 
+            src='/assets/farm.jpg'
             alt="Farm" 
             className="about-image"
             whileHover={{ scale: 1.05, rotate: -2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img 
-            src={produce}
+            src='/assets/produce.jpg'
             alt="Fresh Salad" 
             className="about-image"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img 
-            src={vegan} 
+            src='/assets/vegan.jpg' 
             alt="Vegan Burger" 
             className="about-image"
             whileHover={{ scale: 1.05, rotate: -2 }}
@@ -197,8 +191,8 @@ function Home() {
 
       <motion.div
         className="sustainability-section"
-        style={{ 
-          backgroundImage: `url(${sustainabilityBg})`,
+        style={{
+          backgroundImage: `url('/assets/sustainability-bg.jpg')`,
         }}
       >
         <div 

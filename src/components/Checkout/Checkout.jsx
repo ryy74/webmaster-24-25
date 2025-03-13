@@ -1,7 +1,17 @@
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiCreditCard, FiCalendar, FiShield, FiHome, FiMapPin, FiGlobe, FiMap, FiArrowRight } from 'react-icons/fi';
+import {
+  FiCreditCard,
+  FiCalendar,
+  FiShield,
+  FiHome,
+  FiMapPin,
+  FiGlobe,
+  FiMap,
+  FiArrowRight,
+  FiArrowLeft,
+} from 'react-icons/fi';
 
 import useMenuItems from '../../consts/menuItems';
 
@@ -14,7 +24,7 @@ import {
   useCountries,
   useUSStates,
   useCanadaProvinces,
-  useMexicoStates
+  useMexicoStates,
 } from '../../consts/checkout.js';
 
 import './Checkout.css';
@@ -47,12 +57,24 @@ function Checkout() {
   const mexicoStates = useMexicoStates();
   const usStates = useUSStates();
 
-  function formatAddressLists(country) {
-    if (country === 'USA') return usStates;
-    if (country === 'Canada') return canadaProvinces;
-    if (country === 'Mexico') return mexicoStates;
+  function formatAddressLists(countryVal) {
+    if (countryVal === 'USA') return usStates;
+    if (countryVal === 'Canada') return canadaProvinces;
+    if (countryVal === 'Mexico') return mexicoStates;
     return [];
   }
+
+  const handleCountryChange = (e) => {
+    const newCountry = e.target.value;
+    setCountry(newCountry);
+
+    const newStateList = formatAddressLists(newCountry);
+    if (newStateList.length > 0) {
+      setState(newStateList[0]);
+    } else {
+      setState('');
+    }
+  };
 
   const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
 
@@ -74,12 +96,12 @@ function Checkout() {
     const quantity = cart[id];
     const itemTotal = item.price * quantity;
     return (
-      <motion.div 
-        className="checkout-summary-item" 
+      <motion.div
+        className="checkout-summary-item"
         key={id}
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2 + (index * 0.1) }}
+        transition={{ delay: 0.2 + index * 0.1 }}
       >
         <span>
           {quantity} x {item.name}
@@ -145,11 +167,7 @@ function Checkout() {
       parts.push(match.substring(i, i + 4));
     }
 
-    if (parts.length) {
-      return parts.join(' ');
-    } else {
-      return value;
-    }
+    return parts.length ? parts.join(' ') : value;
   };
 
   const handleCardNumberChange = (e) => {
@@ -160,32 +178,32 @@ function Checkout() {
   const handleExpirationChange = (e) => {
     let value = e.target.value;
     value = value.replace(/[^\d]/g, '');
-    
+
     if (value.length > 2) {
       value = value.slice(0, 2) + '/' + value.slice(2, 4);
     }
-    
+
     setExpiration(value);
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="checkout-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.div 
+      <motion.div
         className="checkout-inner"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ 
-          type: "spring",
+        transition={{
+          type: 'spring',
           stiffness: 100,
-          damping: 20
+          damping: 20,
         }}
       >
-        <motion.div 
+        <motion.div
           className="checkout-left"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -198,8 +216,8 @@ function Checkout() {
           >
             {t('checkout')}
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="checkout-instructions"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -207,28 +225,33 @@ function Checkout() {
           >
             {t('disclaimer')}
             <br />
-            {t('cardNumberD')} <span className="credential-value">{REQUIRED_CARD_NUMBER_DISPLAY}</span>
+            {t('cardNumberD')}{' '}
+            <span className="credential-value">
+              {REQUIRED_CARD_NUMBER_DISPLAY}
+            </span>
             <br />
-            {t('expirationD')} <span className="credential-value">{REQUIRED_EXPIRATION}</span>
+            {t('expirationD')}{' '}
+            <span className="credential-value">{REQUIRED_EXPIRATION}</span>
             <br />
-            {t('sec')} <span className="credential-value">{REQUIRED_CVV}</span>
+            {t('sec')}{' '}
+            <span className="credential-value">{REQUIRED_CVV}</span>
           </motion.p>
-          
+
           <AnimatePresence>
             {errorMessage && (
-              <motion.div 
+              <motion.div
                 className="error-message"
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
               >
                 {errorMessage}
               </motion.div>
             )}
           </AnimatePresence>
-          
-          <motion.form 
+
+          <motion.form
             className="payment-form"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -241,8 +264,8 @@ function Checkout() {
             >
               {t('paymentDetails')}
             </motion.h2>
-            
-            <motion.div 
+
+            <motion.div
               className="input-group"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -262,8 +285,8 @@ function Checkout() {
                 />
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="input-group-row"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -284,7 +307,7 @@ function Checkout() {
                   />
                 </div>
               </div>
-              
+
               <div className="input-group">
                 <label htmlFor="cvv">{t('cvv')}</label>
                 <div className="input-wrapper">
@@ -293,7 +316,9 @@ function Checkout() {
                     id="cvv"
                     type="text"
                     value={cvv}
-                    onChange={(e) => setCvv(e.target.value.replace(/\D/g, '').slice(0, 3))}
+                    onChange={(e) =>
+                      setCvv(e.target.value.replace(/\D/g, '').slice(0, 3))
+                    }
                     placeholder={t('cvc')}
                     maxLength="3"
                     required
@@ -309,8 +334,8 @@ function Checkout() {
             >
               {t('address')}
             </motion.h2>
-            
-            <motion.div 
+
+            <motion.div
               className="input-group"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -329,8 +354,8 @@ function Checkout() {
                 />
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="input-group"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -343,15 +368,17 @@ function Checkout() {
                   id="zipCode"
                   type="text"
                   value={zipCode}
-                  onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
+                  onChange={(e) =>
+                    setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))
+                  }
                   placeholder="12345"
                   maxLength="5"
                   required
                 />
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="input-group-row"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -364,10 +391,7 @@ function Checkout() {
                   <select
                     id="country"
                     value={country}
-                    onChange={(e) => {
-                      setCountry(e.target.value);
-                      setState('');
-                    }}
+                    onChange={handleCountryChange}
                   >
                     {countries.map((c) => (
                       <option key={c} value={c}>
@@ -377,7 +401,7 @@ function Checkout() {
                   </select>
                 </div>
               </div>
-              
+
               <div className="input-group">
                 <label htmlFor="state">{t('sp')}</label>
                 <div className="input-wrapper">
@@ -398,9 +422,22 @@ function Checkout() {
               </div>
             </motion.div>
           </motion.form>
+
+          <motion.div
+            className="return-to-menu"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <motion.div whileHover={{ x: -5 }} whileTap={{ scale: 0.97 }}>
+              <Link to="/cart" className="menu-return-link">
+                <FiArrowLeft className="return-icon" /> {t('returnCart')}
+              </Link>
+            </motion.div>
+          </motion.div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="checkout-right"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -419,58 +456,65 @@ function Checkout() {
             >
               {t('yourOrder')}
             </motion.h2>
-            
+
             <div className="checkout-summary-list">
               {summaryItems}
-              
+
               {taxRate > 0 && (
-                <motion.div 
+                <motion.div
                   className="checkout-summary-item tax-line"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 + (summaryItems.length * 0.1) }}
+                  transition={{
+                    delay: 0.2 + summaryItems.length * 0.1,
+                  }}
                 >
                   <span>{t('tax')}</span>
                   <span>${taxAmount.toFixed(2)}</span>
                 </motion.div>
               )}
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="checkout-total"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 + ((summaryItems.length + 1) * 0.1) }}
+              transition={{
+                delay: 0.2 + (summaryItems.length + 1) * 0.1,
+              }}
             >
               <p className="checkout-total-price">
-                {t('cartTotal')} <span className="final-price">${finalTotal.toFixed(2)}</span>
+                {t('cartTotal')}{' '}
+                <span className="final-price">${finalTotal.toFixed(2)}</span>
               </p>
             </motion.div>
-            
+
             {!isSupportedRegion && (
-              <motion.p 
+              <motion.p
                 className="region-error"
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
               >
                 {t('regionError')}
               </motion.p>
             )}
-            
+
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
               {isSupportedRegion ? (
-                <motion.button 
+                <motion.button
                   className={`pay-btn ${isProcessing ? t('processing') : ''}`}
                   onClick={handlePay}
                   disabled={isProcessing}
-                  whileHover={{ 
+                  whileHover={{
                     scale: isProcessing ? 1 : 1.03,
-                    boxShadow: isProcessing ? "none" : "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+                    boxShadow: isProcessing
+                      ? 'none'
+                      : '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
                   }}
                   whileTap={{ scale: isProcessing ? 1 : 0.97 }}
                 >
@@ -487,10 +531,7 @@ function Checkout() {
                   )}
                 </motion.button>
               ) : (
-                <motion.button 
-                  className="pay-btn disabled" 
-                  disabled
-                >
+                <motion.button className="pay-btn disabled" disabled>
                   {t('unsupportedRegion')}
                 </motion.button>
               )}

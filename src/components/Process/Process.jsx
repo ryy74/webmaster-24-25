@@ -3,11 +3,6 @@ import { useEffect, useRef } from 'react';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
-import deliveryImg from '../../assets/deliveryImg.png';
-import farmingImg from '../../assets/farmingImg.jpg';
-import mealImg from '../../assets/mealImg.jpg';
-import processingImg from '../../assets/processingImg.jpg';
-
 import './Process.css';
 
 function Process() {
@@ -20,25 +15,25 @@ function Process() {
       id: 'farming',
       title: t('processT1'),
       description: t('processD1'),
-      image: farmingImg,
+      image: '/assets/farmingImg.jpg',
     },
     {
       id: 'processing',
       title: t('processT2'),
       description: t('processD2'),
-      image: processingImg,
+      image: '/assets/processingImg.jpg',
     },
     {
       id: 'delivery',
       title: t('processT3'),
       description: t('processD3'),
-      image: deliveryImg,
+      image: '/assets/deliveryImg.png',
     },
     {
       id: 'meal',
       title: t('processT4'),
       description: t('processD4'),
-      image: mealImg,
+      image: '/assets/mealImg.jpg',
     },
   ];
 
