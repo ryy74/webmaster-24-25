@@ -188,7 +188,7 @@ function SignInPage() {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Enter Username"
+                  placeholder={t('usernameF')}
                   ref={inputRef}
                   required
                 />
@@ -209,7 +209,7 @@ function SignInPage() {
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter Password"
+                  placeholder={t('passwordF')}
                   required
                 />
                 <div 

@@ -465,7 +465,7 @@ function Checkout() {
             >
               {isSupportedRegion ? (
                 <motion.button 
-                  className={`pay-btn ${isProcessing ? 'processing' : ''}`}
+                  className={`pay-btn ${isProcessing ? t('processing') : ''}`}
                   onClick={handlePay}
                   disabled={isProcessing}
                   whileHover={{ 

@@ -1,8 +1,8 @@
-### web/1.1.1
+### web/1.1.2
 
 ### notes
-bugs still unfixed
-added dark mode
+menu items revamp
+additionally, significant bug fixes to dark mode and animations
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).
