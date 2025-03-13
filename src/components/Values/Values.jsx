@@ -2,10 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
-import community from '../../assets/Community.jpg';
-import innovation from '../../assets/innovation.jpg';
-import sustainability from '../../assets/Sustainability.jpg';
-
 import './Values.css';
 
 const Values = () => {
@@ -20,7 +16,7 @@ const Values = () => {
       subtitle: t('valueS1'),
       description: t('valueC1'),
       stats: [t('valueSt1_1'), t('valueSt1_2'), t('valueSt1_3')],
-      image: sustainability,
+      image: '/assets/Sustainability.jpg',
     },
     {
       id: 2,
@@ -28,7 +24,7 @@ const Values = () => {
       subtitle: t('valueS2'),
       description: t('valueC2'),
       stats: [t('valueSt2_1'), t('valueSt2_2'), t('valueSt2_3')],
-      image: community,
+      image: '/assets/Community.jpg',
     },
     {
       id: 3,
@@ -36,7 +32,7 @@ const Values = () => {
       subtitle: t('valueS3'),
       description: t('valueC3'),
       stats: [t('valueSt3_1'), t('valueSt3_2'), t('valueSt3_3')],
-      image: innovation,
+      image: '/assets/innovation.jpg',
     },
   ];
 

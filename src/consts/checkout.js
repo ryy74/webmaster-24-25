@@ -94,6 +94,15 @@ export const useCanadaProvinces = () => {
     t('quebec'),
     t('britishColumbia'),
     t('alberta'),
+    t('saskatchewan'),
+    t('manitoba'),
+    t('nflal'),
+    t('novaScotia'),
+    t('newBrunswick'),
+    t('pei'),
+    t('nunavut'),
+    t('northwest'),
+    t('yukon'),
   ];
 };
 
@@ -101,9 +110,38 @@ export const useMexicoStates = () => {
   const { t } = useLanguage();
 
   return [
-    t('jalisco'),
-    t('nuevoLeon'),
+    t('aguascalientes'),
+    t('bajaCalifornia'),
+    t('bajaCaliforniaSur'),
+    t('campeche'),
+    t('chiapas'),
     t('chihuahua'),
+    t('cdmx'),
+    t('coahuila'),
+    t('colima'),
+    t('durango'),
+    t('guanajuato'),
+    t('guerrero'),
+    t('hidalgo'),
+    t('jalisco'),
+    t('edoMexico'),
+    t('michoacan'),
+    t('morelos'),
+    t('nayarit'),
+    t('nuevoLeon'),
+    t('oaxaca'),
+    t('puebla'),
+    t('queretaro'),
+    t('quintanaRoo'),
+    t('sanLuisPotosi'),
+    t('sinaloa'),
+    t('sonora'),
+    t('tabasco'),
+    t('tamaulipas'),
+    t('tlaxcala'),
+    t('veracruz'),
     t('yucatan'),
+    t('zacatecas'),
   ];
+  
 };

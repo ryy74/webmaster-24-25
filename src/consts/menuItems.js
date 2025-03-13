@@ -1,33 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
 
-import bbowl from '../assets/vegan-bbowl.jpg';
-import burger from '../assets/vegan-burger.jpg';
-import burrito from '../assets/vegan-burrito.jpg';
-import curry from '../assets/Vegan-curry.jpg';
-import kabob from '../assets/Vegan-kabob.jpg';
-import lasagna from '../assets/Vegan-lasagna.jpg';
-import masala from '../assets/Vegan-masala.jpg';
-import mc from '../assets/Vegan-mc.jpg';
-import pizza from '../assets/Vegan-pizza.jpg';
-import quesadillas from '../assets/Vegan-quesadillas.jpg';
-import salad from '../assets/vegan-salad.jpg';
-import soup from '../assets/Vegan-soup.jpg';
-import staco from '../assets/Vegan-staco.jpg';
-import stirfry from '../assets/vegan-stirfry.jpg';
-import sushi from '../assets/Vegan-sushi.jpg';
-import tacos from '../assets/vegan-tacos.jpg';
-import quinoa from '../assets/vegan-quinoa.jpg';
-import sandwich from '../assets/vegan-sandwich.jpg';
-import quesadilla from '../assets/vegan-quesadilla2.webp';
-import chili from '../assets/vegan-chili.avif';
-import tofu from '../assets/vegan-tofu.jpg';
-import pepper from '../assets/vegan-pepper.webp';
-import lentil from '../assets/vegan-lentil.jpg';
-import banana from '../assets/vegan-banana.jpeg';
-import oats from '../assets/vegan-oats.webp';
-import tofuWrap from '../assets/vegan-wrap.webp';
-import pancake from '../assets/vegan-pancake.webp';
-
 const useMenuItems = () => {
   const { t } = useLanguage();
 
@@ -37,7 +9,7 @@ const useMenuItems = () => {
       name: t('menuItem1'),
       price: 9.99,
       description: t('menuDesc1'),
-      image: tacos,
+      image: '/assets/vegan-tacos.jpg',
       longDescription: t('menuLD1'),
       ingredients: t('menuIngredients1'),
       nutritionalInfo: t('menuNutrition1'),
@@ -49,7 +21,7 @@ const useMenuItems = () => {
       name: t('menuItem2'),
       price: 10.99,
       description: t('menuDesc2'),
-      image: burrito,
+      image: '/assets/vegan-burrito.jpg',
       longDescription: t('menuLD2'),
       ingredients: t('menuIngredients2'),
       nutritionalInfo: t('menuNutrition2'),
@@ -61,7 +33,7 @@ const useMenuItems = () => {
       name: t('menuItem3'),
       price: 8.49,
       description: t('menuDesc3'),
-      image: salad,
+      image: '/assets/vegan-salad.jpg',
       longDescription: t('menuLD3'),
       ingredients: t('menuIngredients3'),
       nutritionalInfo: t('menuNutrition3'),
@@ -73,7 +45,7 @@ const useMenuItems = () => {
       name: t('menuItem4'),
       price: 11.49,
       description: t('menuDesc4'),
-      image: burger,
+      image: '/assets/vegan-burger.jpg',
       longDescription: t('menuLD4'),
       ingredients: t('menuIngredients4'),
       nutritionalInfo: t('menuNutrition4'),
@@ -85,7 +57,7 @@ const useMenuItems = () => {
       name: t('menuItem5'),
       price: 12.99,
       description: t('menuDesc5'),
-      image: pizza,
+      image: '/assets/Vegan-pizza.jpg',
       longDescription: t('menuLD5'),
       ingredients: t('menuIngredients5'),
       nutritionalInfo: t('menuNutrition5'),
@@ -97,7 +69,7 @@ const useMenuItems = () => {
       name: t('menuItem6'),
       price: 9.99,
       description: t('menuDesc6'),
-      image: mc,
+      image: '/assets/Vegan-mc.jpg',
       longDescription: t('menuLD6'),
       ingredients: t('menuIngredients6'),
       nutritionalInfo: t('menuNutrition6'),
@@ -109,7 +81,7 @@ const useMenuItems = () => {
       name: t('menuItem7'),
       price: 13.49,
       description: t('menuDesc7'),
-      image: lasagna,
+      image: '/assets/Vegan-lasagna.jpg',
       longDescription: t('menuLD7'),
       ingredients: t('menuIngredients7'),
       nutritionalInfo: t('menuNutrition7'),
@@ -121,7 +93,7 @@ const useMenuItems = () => {
       name: t('menuItem8'),
       price: 10.99,
       description: t('menuDesc8'),
-      image: curry,
+      image: '/assets/Vegan-curry.jpg',
       longDescription: t('menuLD8'),
       ingredients: t('menuIngredients8'),
       nutritionalInfo: t('menuNutrition8'),
@@ -133,7 +105,7 @@ const useMenuItems = () => {
       name: t('menuItem9'),
       price: 11.99,
       description: t('menuDesc9'),
-      image: bbowl,
+      image: '/assets/vegan-bbowl.jpg',
       longDescription: t('menuLD9'),
       ingredients: t('menuIngredients9'),
       nutritionalInfo: t('menuNutrition9'),
@@ -145,7 +117,7 @@ const useMenuItems = () => {
       name: t('menuItem10'),
       price: 8.99,
       description: t('menuDesc10'),
-      image: kabob,
+      image: '/assets/Vegan-kabob.jpg',
       longDescription: t('menuLD10'),
       ingredients: t('menuIngredients10'),
       nutritionalInfo: t('menuNutrition10'),
@@ -157,7 +129,7 @@ const useMenuItems = () => {
       name: t('menuItem11'),
       price: 9.49,
       description: t('menuDesc11'),
-      image: stirfry,
+      image: '/assets/vegan-stirfry.jpg',
       longDescription: t('menuLD11'),
       ingredients: t('menuIngredients11'),
       nutritionalInfo: t('menuNutrition11'),
@@ -169,7 +141,7 @@ const useMenuItems = () => {
       name: t('menuItem12'),
       price: 8.99,
       description: t('menuDesc12'),
-      image: sushi,
+      image: '/assets/Vegan-sushi.jpg',
       longDescription: t('menuLD12'),
       ingredients: t('menuIngredients12'),
       nutritionalInfo: t('menuNutrition12'),
@@ -181,7 +153,7 @@ const useMenuItems = () => {
       name: t('menuItem13'),
       price: 10.49,
       description: t('menuDesc13'),
-      image: staco,
+      image: '/assets/Vegan-staco.jpg',
       longDescription: t('menuLD13'),
       ingredients: t('menuIngredients13'),
       nutritionalInfo: t('menuNutrition13'),
@@ -193,7 +165,7 @@ const useMenuItems = () => {
       name: t('menuItem14'),
       price: 9.49,
       description: t('menuDesc14'),
-      image: quesadillas,
+      image: '/assets/Vegan-quesadillas.jpg',
       longDescription: t('menuLD14'),
       ingredients: t('menuIngredients14'),
       nutritionalInfo: t('menuNutrition14'),
@@ -205,7 +177,7 @@ const useMenuItems = () => {
       name: t('menuItem15'),
       price: 7.99,
       description: t('menuDesc15'),
-      image: soup,
+      image: '/assets/Vegan-soup.jpg',
       longDescription: t('menuLD15'),
       ingredients: t('menuIngredients15'),
       nutritionalInfo: t('menuNutrition15'),
@@ -217,7 +189,7 @@ const useMenuItems = () => {
       name: t('menuItem16'),
       price: 10.99,
       description: t('menuDesc16'),
-      image: masala,
+      image: '/assets/Vegan-masala.jpg',
       longDescription: t('menuLD16'),
       ingredients: t('menuIngredients16'),
       nutritionalInfo: t('menuNutrition16'),
@@ -229,7 +201,7 @@ const useMenuItems = () => {
       name: t('menuItem17'),
       price: 9.99,
       description: t('menuDesc17'),
-      image: quinoa,
+      image: '/assets/vegan-quinoa.jpg',
       longDescription: t('menuLD17'),
       ingredients: t('menuIngredients17'),
       nutritionalInfo: t('menuNutrition17'),
@@ -241,7 +213,7 @@ const useMenuItems = () => {
       name: t('menuItem18'),
       price: 10.49,
       description: t('menuDesc18'),
-      image: sandwich,
+      image: '/assets/vegan-sandwich.jpg',
       longDescription: t('menuLD18'),
       ingredients: t('menuIngredients18'),
       nutritionalInfo: t('menuNutrition18'),
@@ -253,7 +225,7 @@ const useMenuItems = () => {
       name: t('menuItem19'),
       price: 10.99,
       description: t('menuDesc19'),
-      image: quesadilla,
+      image: '/assets/vegan-quesadilla2.webp',
       longDescription: t('menuLD19'),
       ingredients: t('menuIngredients19'),
       nutritionalInfo: t('menuNutrition19'),
@@ -265,7 +237,7 @@ const useMenuItems = () => {
       name: t('menuItem20'),
       price: 11.49,
       description: t('menuDesc20'),
-      image: chili,
+      image: '/assets/vegan-chili.avif',
       longDescription: t('menuLD20'),
       ingredients: t('menuIngredients20'),
       nutritionalInfo: t('menuNutrition20'),
@@ -277,7 +249,7 @@ const useMenuItems = () => {
       name: t('menuItem21'),
       price: 8.99,
       description: t('menuDesc21'),
-      image: tofu,
+      image: '/assets/vegan-tofu.jpg',
       longDescription: t('menuLD21'),
       ingredients: t('menuIngredients21'),
       nutritionalInfo: t('menuNutrition21'),
@@ -289,7 +261,7 @@ const useMenuItems = () => {
       name: t('menuItem22'),
       price: 11.99,
       description: t('menuDesc22'),
-      image: pepper,
+      image: '/assets/vegan-pepper.webp',
       longDescription: t('menuLD22'),
       ingredients: t('menuIngredients22'),
       nutritionalInfo: t('menuNutrition22'),
@@ -301,7 +273,7 @@ const useMenuItems = () => {
       name: t('menuItem23'),
       price: 12.49,
       description: t('menuDesc23'),
-      image: lentil,
+      image: '/assets/vegan-lentil.jpg',
       longDescription: t('menuLD23'),
       ingredients: t('menuIngredients23'),
       nutritionalInfo: t('menuNutrition23'),
@@ -313,7 +285,7 @@ const useMenuItems = () => {
       name: t('menuItem24'),
       price: 12.99,
       description: t('menuDesc24'),
-      image: banana,
+      image: '/assets/vegan-banana.jpeg',
       longDescription: t('menuLD24'),
       ingredients: t('menuIngredients24'),
       nutritionalInfo: t('menuNutrition24'),
@@ -325,7 +297,7 @@ const useMenuItems = () => {
       name: t('menuItem25'),
       price: 8.99,
       description: t('menuDesc25'),
-      image: oats,
+      image: '/assets/vegan-oats.webp',
       longDescription: t('menuLD25'),
       ingredients: t('menuIngredients25'),
       nutritionalInfo: t('menuNutrition25'),
@@ -337,7 +309,7 @@ const useMenuItems = () => {
       name: t('menuItem26'),
       price: 9.49,
       description: t('menuDesc26'),
-      image: tofuWrap,
+      image: '/assets/vegan-wrap.webp',
       longDescription: t('menuLD26'),
       ingredients: t('menuIngredients26'),
       nutritionalInfo: t('menuNutrition26'),
@@ -349,7 +321,7 @@ const useMenuItems = () => {
       name: t('menuItem27'),
       price: 10.99,
       description: t('menuDesc27'),
-      image: pancake,
+      image: '/assets/vegan-pancake.webp',
       longDescription: t('menuLD27'),
       ingredients: t('menuIngredients27'),
       nutritionalInfo: t('menuNutrition27'),
