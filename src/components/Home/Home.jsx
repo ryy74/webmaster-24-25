@@ -16,6 +16,30 @@ function Home() {
   const menuItems = useMenuItems();
   const { t } = useLanguage();
 
+  const testimonials = [
+    {
+      id: 0,
+      text: t('testimonialsP1'),
+      initials: 'AJ',
+      name: t('testimonialsPer1'),
+      color: '#3498db'
+    },
+    {
+      id: 1,
+      text: t('testimonialsP2'),
+      initials: 'MS',
+      name: t('testimonialsPer2'),
+      color: '#2ecc71'
+    },
+    {
+      id: 2,
+      text: t('testimonialsP3'),
+      initials: 'DL',
+      name: t('testimonialsPer3'),
+      color: '#e74c3c'
+    }
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTestimonial(prev => (prev + 1) % 3);
@@ -26,35 +50,64 @@ function Home() {
 
   return (
     <div className="home-container">
-      <motion.div className="hero-section">
-        <img src='/assets/home-bg.jpg' alt="" className="hero-background" />
-        <div className="hero-overlay" />
+      <motion.div 
+        className="hero-section"
+      >
+        <motion.img 
+          src='/assets/home-bg.jpg' 
+          alt="" 
+          className="hero-background" 
+        />
         
-        <div className="hero-content">
+        <motion.div 
+          className="hero-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
+        />
+        
+        <motion.div className="decorative-line left" />
+        <motion.div className="decorative-line right" />
+        
+        <motion.div 
+          className="hero-content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
           <motion.h1 
             className="hero__title"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             {t('title')}
           </motion.h1>
           
+          <motion.div 
+            className="title-underline"
+            initial={{ width: 0, opacity: 0 }}
+            animate={{ width: "80px", opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          />
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             {t('subTitle')}
           </motion.p>
           
-          <motion.div className="hero-cta-container">
+          <motion.div 
+            className="hero-cta-container"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+          >
             <motion.a
               href="/menu"
               className="hero-cta primary"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(52, 152, 219, 0.5)"
@@ -62,132 +115,180 @@ function Home() {
               whileTap={{ scale: 0.95 }}
             >
               <span>{t('menuCTA')}</span>
-              <FiArrowRight className="cta-icon" />
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ 
+                  duration: 1.5, 
+                  repeat: Infinity, 
+                  repeatType: "mirror", 
+                  ease: "easeInOut" 
+                }}
+              >
+                <FiArrowRight className="cta-icon" />
+              </motion.span>
             </motion.a>
             
             <motion.a
               href="#about"
               className="hero-cta secondary"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: "rgba(255, 255, 255, 0.15)",
+                backgroundColor: "rgba(255, 255, 255, 0.15)"
               }}
               whileTap={{ scale: 0.95 }}
               onClick={(e) => {
                 e.preventDefault();
-                aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+                if (aboutRef.current) {
+                  const yOffset = -60;
+                  const y = aboutRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
               }}
             >
               {t('learnMore')}
             </motion.a>
           </motion.div>
-        </div>
+        </motion.div>
+        
+        <motion.div 
+          className="corner-accent top-left"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        />
+        <motion.div 
+          className="corner-accent top-right"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1.7 }}
+        />
+        <motion.div 
+          className="corner-accent bottom-left"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 1.9 }}
+        />
+        <motion.div 
+          className="corner-accent bottom-right"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 2.1 }}
+        />
       </motion.div>
 
-      <motion.div
+      <motion.section
         id="about"
         className="about-section"
         ref={aboutRef}
       >
-        <motion.div 
-          className="about-image-grid"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.img 
-            src='/assets/farm.jpg'
-            alt="Farm" 
-            className="about-image"
-            whileHover={{ scale: 1.05, rotate: -2 }}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.img 
-            src='/assets/produce.jpg'
-            alt="Fresh Salad" 
-            className="about-image"
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.img 
-            src='/assets/vegan.jpg' 
-            alt="Vegan Burger" 
-            className="about-image"
-            whileHover={{ scale: 1.05, rotate: -2 }}
-            transition={{ duration: 0.3 }}
-          />
-        </motion.div>
-        
-        <motion.div 
-          className="about-content"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >         
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          >
-            {t('aboutHeader')}
-          </motion.h2>
+        <div className="about-container">
+          <motion.div 
+            className="about-content"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >           
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              {t('aboutHeader')}
+            </motion.h2>
+            
+            <motion.div
+              className="text-highlight"
+              initial={{ width: 0 }}
+              whileInView={{ width: "120px" }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+            />
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              {t('aboutDesc')}
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              {t('aboutDesc2')}
+            </motion.p>
+            
+            <motion.div className="about-stats">
+              {[
+                { number: "100%", label: t('organic') },
+                { number: "10+", label: t('years') },
+                { number: "50+", label: t('dishes') }
+              ].map((stat, index) => (
+                <motion.div 
+                  key={stat.label}
+                  className="stat-item"
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
+                  <motion.span 
+                    className="stat-number"
+                    initial={{ backgroundPosition: "0% 0%" }}
+                    animate={{ backgroundPosition: "100% 100%" }}
+                    transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+                  >
+                    {stat.number}
+                  </motion.span>
+                  <span className="stat-label">{stat.label}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
           
           <motion.div 
-            className="text-highlight"
-            initial={{ width: 0 }}
-            whileInView={{ width: "120px" }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          />
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8, duration: 0.5 }}
+            className="about-image-container"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
           >
-            {t('aboutDesc')}
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            {t('aboutDesc2')}
-          </motion.p>
-          
-          <motion.div 
-            className="about-stats"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-          >
-            <div className="stat-item">
-              <span className="stat-number">100%</span>
-              <span className="stat-label">{t('organic')}</span>
-            </div>
-            
-            <div className="stat-item">
-              <span className="stat-number">10+</span>
-              <span className="stat-label">{t('years')}</span>
-            </div>
-            
-            <div className="stat-item">
-              <span className="stat-number">50+</span>
-              <span className="stat-label">{t('dishes')}</span>
+            <div className="image-grid">
+              {[
+                { src: '/assets/farm.jpg', alt: 'Farm', span: true },
+                { src: '/assets/produce.jpg', alt: 'Fresh Salad' },
+                { src: '/assets/vegan.jpg', alt: 'Vegan Burger' }
+              ].map((img, index) => (
+                <motion.div 
+                  key={img.alt}
+                  className={`image-wrapper ${img.span ? 'span-2' : ''}`}
+                  custom={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  whileHover="hover"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
+                  <img src={img.src} alt={img.alt} className="about-image" />
+                  <motion.div 
+                    className="image-overlay"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <span>{img.alt}</span>
+                  </motion.div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </motion.section>
 
       <motion.div
         className="sustainability-section"
@@ -318,7 +419,6 @@ function Home() {
         <motion.div 
           className="section-badge gradient-badge"
           initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         />
@@ -372,14 +472,38 @@ function Home() {
                 {item.isPopular && <span className="badge popular-badge">{t('popular')}</span>}
               </div>
               
-              <div className="image-container">
-                <img
+              <motion.a 
+                href="/menu" 
+                className="image-container"
+                whileHover="hover"
+              >
+                <motion.img
                   src={item.image}
                   alt={item.name}
                   className="preview-item-image"
+                  variants={{
+                    hover: { scale: 1.1, transition: { duration: 0.5 } }
+                  }}
                 />
+                <motion.div 
+                  className="preview-item-overlay"
+                  variants={{
+                    hover: { opacity: 0.4, transition: { duration: 0.3 } }
+                  }}
+                  initial={{ opacity: 0 }}
+                >
+                  <motion.div 
+                    className="view-details"
+                    variants={{
+                      hover: { opacity: 1, y: 0, transition: { duration: 0.3, delay: 0.1 } }
+                    }}
+                    initial={{ opacity: 0, y: 20 }}
+                  >
+                    {t('viewDetails')}
+                  </motion.div>
+                </motion.div>
                 <div className="preview-item-price">${item.price}</div>
-              </div>
+              </motion.a>
               
               <h3>{item.name}</h3>
               <p>{item.description}</p>
@@ -387,108 +511,191 @@ function Home() {
           ))}
         </motion.div>
 
-        <motion.a
-          href="/menu"
-          className="menu-redirect"
+        <motion.div
+          className="menu-link-container"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          whileHover="hover"
         >
-          <span className="menu-redirect-text">{t('bannerLink')}</span>
-          <motion.span
-            className="menu-redirect-arrow"
-            variants={{
-              initial: { x: 0 },
-              hover: { x: 5 },
-            }}
+          <motion.a
+            href="/menu"
+            className="menu-redirect"
+            whileHover="hover"
           >
-            <FiArrowRight size={20} />
-          </motion.span>
-        </motion.a>
+            <motion.span 
+              className="menu-redirect-text"
+              variants={{
+                hover: { 
+                  backgroundPosition: "0 100%",
+                  transition: { duration: 0.6 }
+                }
+              }}
+            >
+              {t('bannerLink')}
+            </motion.span>
+            <motion.div
+              className="arrow-container"
+              variants={{
+                hover: { x: 8, transition: { type: "spring", stiffness: 400, damping: 10 } }
+              }}
+            >
+              <motion.span 
+                className="arrow-icon"
+                initial={{ rotate: 0 }}
+                variants={{
+                  hover: { 
+                    rotate: [0, -10, 0, -10, 0],
+                    transition: { delay: 0.2, duration: 0.6, ease: "easeInOut" }
+                  }
+                }}
+              >
+                <FiArrowRight size={22} />
+              </motion.span>
+              <motion.span 
+                className="arrow-trail"
+                variants={{
+                  hover: { 
+                    width: "20px", 
+                    opacity: [0, 0.5, 0], 
+                    transition: { delay: 0.2, duration: 0.6, ease: "easeInOut", repeat: Infinity, repeatDelay: 0.5 } 
+                  }
+                }}
+                initial={{ width: "0px", opacity: 0 }}
+              />
+            </motion.div>
+          </motion.a>
+        </motion.div>
       </div>
 
-      <div className="testimonials-section">       
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+      <section className="testimonials-section">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
           {t('testimonialsHeader')}
         </motion.h2>
         
         <motion.div 
-          className="text-highlight centered"
-          initial={{ width: 0 }}
-          whileInView={{ width: "120px" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        />
-        
-        <div className="testimonials-container">
+          className="testimonials-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <AnimatePresence mode="wait">
             <motion.div 
               key={activeTestimonial}
-              className="testimonial active"
-              initial={{ opacity: 0, x: 50 }}
+              className="testimonial"
+              initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="testimonial-quote">"</div>
-              <p>
-                {activeTestimonial === 0 && t('testimonialsP1')}
-                {activeTestimonial === 1 && t('testimonialsP2')}
-                {activeTestimonial === 2 && t('testimonialsP3')}
-              </p>
+              <motion.div 
+                className="testimonial-accent-line"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.6 }}
+              />
+              
+              <motion.div 
+                className="testimonial-quote"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+              >
+                "
+              </motion.div>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                {testimonials[activeTestimonial].text}
+              </motion.p>
+              
               <div className="testimonial-author">
-                <div className="testimonial-avatar" style={{ 
-                  backgroundColor: activeTestimonial === 0 ? '#3498db' : 
-                                  activeTestimonial === 1 ? '#2ecc71' : '#e74c3c' 
-                }}>
-                  {activeTestimonial === 0 && 'JD'}
-                  {activeTestimonial === 1 && 'SL'}
-                  {activeTestimonial === 2 && 'MC'}
-                </div>
-                <div className="testimonial-info">
+                <motion.div 
+                  className="testimonial-avatar"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  style={{ backgroundColor: testimonials[activeTestimonial].color }}
+                >
+                  {testimonials[activeTestimonial].initials}
+                </motion.div>
+                
+                <motion.div 
+                  className="testimonial-info"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
                   <span className="testimonial-name">
-                    {activeTestimonial === 0 && t('testimonialsPer1')}
-                    {activeTestimonial === 1 && t('testimonialsPer2')}
-                    {activeTestimonial === 2 && t('testimonialsPer3')}
+                    {testimonials[activeTestimonial].name}
                   </span>
-                  <div className="testimonial-stars">
+                  <span className="testimonial-role">
+                    {testimonials[activeTestimonial].role}
+                  </span>
+                  <motion.div 
+                    className="testimonial-stars"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                  >
                     ★★★★★
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.div>
           </AnimatePresence>
           
+          <div className="testimonial-navigation">
+            <motion.button 
+              className="nav-button prev"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
+              aria-label="Previous testimonial"
+            >
+              ‹
+            </motion.button>
+            <motion.button 
+              className="nav-button next"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
+              aria-label="Next testimonial"
+            >
+              ›
+            </motion.button>
+          </div>
+          
           <div className="testimonial-dots">
-            {[0, 1, 2].map(index => (
+            {testimonials.map((testimonial, index) => (
               <motion.button
                 key={index}
                 className={`testimonial-dot ${activeTestimonial === index ? 'active' : ''}`}
-                onClick={() => setActiveTestimonial(index)}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
+                onClick={() => setActiveTestimonial(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
-        </div>
+        </motion.div>
         
         <motion.p 
           className="testimonial-disclaimer"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.7 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >
           {t('tDisclaimer')}
         </motion.p>
-      </div>
+      </section>
 
       <motion.div 
         className="banner-section"
@@ -497,17 +704,9 @@ function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div
-          className="banner-wave"
-          initial={{ y: 100 }}
-          whileInView={{ y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#f9f9f9" fillOpacity="1" d="M0,192L80,181.3C160,171,320,149,480,154.7C640,160,800,192,960,202.7C1120,213,1280,203,1360,197.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-          </svg>
-        </motion.div>
+        <div className="banner-blob" />
+        <div className="banner-blob secondary" />
+        <div className="banner-gradient-overlay" />
         
         <div className="banner-content">
           <motion.h2
@@ -519,6 +718,8 @@ function Home() {
             {t('bannerHeader')}
           </motion.h2>
           
+          <div className="banner-accent"></div>
+          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -528,22 +729,26 @@ function Home() {
             {t('bannerP')}
           </motion.p>
           
-          <motion.a 
-            href="/signin" 
-            className="banner-cta"
+          <motion.div 
+            className="banner-cta-container"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(255, 255, 255, 0.3)"
-            }}
-            whileTap={{ scale: 0.95 }}
           >
-            <FiCheckCircle className="cta-icon" />
-            <span>{t('bannerLink')}</span>
-          </motion.a>
+            <motion.a 
+              href="/signin" 
+              className="banner-cta primary"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 15px 25px rgba(52, 152, 219, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FiCheckCircle className="cta-icon" />
+              <span>{t('bannerLink')}</span>
+            </motion.a>
+          </motion.div>
         </div>
       </motion.div>
     </div>

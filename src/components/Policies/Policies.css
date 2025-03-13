@@ -46,3 +46,7 @@ html.dark-mode .policy-container h4 {
 html.dark-mode .policy-container p {
   color: #aaa;
 }
+
+html.dark-mode .policy-container a {
+  color: #fff;
+}
