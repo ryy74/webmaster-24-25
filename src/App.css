@@ -4,11 +4,25 @@
   font-family: 'Funnel Display', sans-serif;
   -ms-overflow-style: none;
   overscroll-behavior: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
-*::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 12px;
+  display: block;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {

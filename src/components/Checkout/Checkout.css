@@ -59,10 +59,6 @@ html.dark-mode .checkout-left {
   flex-direction: column;
 }
 
-html.dark-mode .checkout-right {
-  background: rgba(84, 169, 238, 0.05);
-}
-
 .checkout-left h1 {
   font-size: 2.5rem;
   font-weight: 800;

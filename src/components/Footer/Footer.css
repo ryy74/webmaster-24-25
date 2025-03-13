@@ -48,45 +48,6 @@
   text-decoration: underline;
 }
 
-.social-icons {
-  align-items: center;
-  display: flex;
-  gap: 25px;
-}
-
-.social-link svg {
-  fill: #fff;
-  height: 24px;
-  transition: opacity 0.2s;
-  width: 24px;
-}
-
-.social-link:hover svg {
-  opacity: 0.8;
-}
-
-.social-popup {
-  animation: fadeIn 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
-  bottom: 80px;
-  color: white;
-  padding: 10px 20px;
-  position: fixed;
-  right: 20px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 1300px) {
   .footer-link {
     display: none;

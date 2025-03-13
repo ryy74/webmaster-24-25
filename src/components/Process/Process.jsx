@@ -18,36 +18,32 @@ function Process() {
   const processes = [
     {
       id: 'farming',
-      title: 'Harvested at Peak Freshness',
-      description:
-        'The quality of a dish is directly tied to the freshness of its ingredients. That is why we work closely with our farming partners to ensure that all produce, dairy, and proteins are harvested at their peak. By selecting ingredients at the height of ripeness, we preserve their natural flavor, texture, and nutritional value. Once harvested, our ingredients are swiftly transported to our kitchen, reducing storage time and eliminating the need for artificial preservatives.',
+      title: t('processT1'),
+      description: t('processD1'),
       image: '/assets/farmingImg.jpg',
     },
     {
       id: 'processing',
-      title: 'Minimal Handling, Maximum Quality',
-      description: 'We believe that the best ingredients require minimal intervention. Once our fresh produce and proteins arrive, they undergo careful washing, trimming, and portioning to ensure consistency and quality. Unlike mass-produced food that relies on heavy processing, our approach maintains the integrity of each ingredient. We do not use artificial additives, preservatives, or unnecessary modifications—only natural, high-quality components prepared with care. Every step is designed to enhance the ingredient\'s natural appeal while upholding the high standards of our kitchen. This commitment to minimal processing ensures that every dish we serve reflects the true essence of farm-fresh cuisine.',
+      title: t('processT2'),
+      description: t('processD2'),
       image: '/assets/processingImg.jpg',
     },
     {
       id: 'cooking',
-      title: 'Expert Culinary Craftsmanship',
-      description:
-        'Once our ingredients are prepared, they are transformed by our team of skilled chefs into thoughtfully curated dishes. Our culinary philosophy emphasizes precision, balance, and respect for natural flavors. Through time-honored techniques such as slow roasting, delicate seasoning, and precision cooking, we bring out the best in every ingredient. Whether it\'s a vibrant seasonal salad, a carefully seared protein, or a comforting, slow-simmered dish, our meals are designed to highlight both taste and nutrition. Our chefs approach each dish with artistry and expertise, ensuring that every plate is as visually appealing as it is delicious.',
+      title: t('processT3'),
+      description: t('processD3'),
       image: '/assets/cookingImg.jpg',
     },
     {
       id: 'delivery',
-      title: 'Sustainable Packaging & Thoughtful Delivery',
-      description:
-        'Our responsibility to the environment extends beyond ingredient sourcing and food preparation. We are committed to using sustainable packaging and environmentally conscious delivery methods to reduce our ecological footprint. Our meals are packaged in 100% compostable containers made from renewable materials, ensuring that waste is minimized. Additionally, our delivery system is designed with sustainability in mind, utilizing carbon-neutral routes and innovative cooling technology to maintain freshness without excess energy consumption. By prioritizing eco-friendly solutions, we ensure that our commitment to sustainability remains consistent from farm to table.',
+      title: t('processT4'),
+      description: t('processD4'),
       image: '/assets/deliveryImg.png',
     },
     {
       id: 'meal',
-      title: 'A Refined Dining Experience Rooted in Freshness',
-      description:
-        'At the heart of our philosophy is a dedication to delivering an exceptional dining experience centered on fresh, responsibly sourced ingredients. Every meal we serve is a testament to our passion for quality, sustainability, and expert craftsmanship. From the way our ingredients are grown and harvested to the thoughtful preparation and presentation of each dish, we take pride in creating meals that nourish both the body and the soul. Our farm-to-table approach not only enhances the flavor of our dishes but also fosters a deeper connection between food, nature, and the community we serve.',
+      title: t('processT5'),
+      description: t('processD5'),
       image: '/assets/mealImg.jpg',
     },
   ];
