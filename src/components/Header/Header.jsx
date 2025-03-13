@@ -5,8 +5,6 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
-import settings from '../../assets/settings.svg';
-
 import './Header.css';
 
 function Header({ onSettingsClick }) {
@@ -79,7 +77,7 @@ function Header({ onSettingsClick }) {
               onSettingsClick();
             }}
           >
-            <img src={settings} className="settings-icon" alt="Settings" />
+            <img src='/assets/settings.svg' className="settings-icon" alt="Settings" />
           </button>
         ) : (
           <button
