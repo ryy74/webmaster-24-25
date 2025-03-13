@@ -464,11 +464,6 @@ function Home() {
                     {activeTestimonial === 1 && t('testimonialsPer2')}
                     {activeTestimonial === 2 && t('testimonialsPer3')}
                   </span>
-                  <span className="testimonial-title">
-                    {activeTestimonial === 0 && t('testimonialTitle1')}
-                    {activeTestimonial === 1 && t('testimonialTitle2')}
-                    {activeTestimonial === 2 && t('testimonialTitle3')}
-                  </span>
                   <div className="testimonial-stars">
                     ★★★★★
                   </div>

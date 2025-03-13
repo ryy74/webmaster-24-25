@@ -4,6 +4,7 @@ html {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 *,
@@ -20,6 +21,11 @@ html {
   background: linear-gradient(135deg, #f5f7fa 0%, #eef1f5 100%);
   padding: 2rem;
   margin-top: 60px;
+  transition: background 0.3s ease;
+}
+
+html.dark-mode .signin-page {
+  background: linear-gradient(135deg, #1a1c20 0%, #23262e 100%);
 }
 
 .signin-container {
@@ -32,6 +38,12 @@ html {
   overflow: hidden;
   width: 90%;
   position: relative;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark-mode .signin-container {
+  background: #1a1a1a;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .signin-left,
@@ -40,11 +52,17 @@ html {
   flex: 1;
   padding: 3rem;
   position: relative;
+  transition: background 0.3s ease;
 }
 
 .signin-left {
   background: white;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.dark-mode .signin-left {
+  background: #1a1a1a;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .signin-left h1 {
@@ -57,6 +75,12 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+html.dark-mode .signin-left h1 {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .input-group {
   margin-bottom: 1.5rem;
 }
@@ -67,6 +91,11 @@ html {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .input-group label {
+  color: #aaa;
 }
 
 .input-wrapper {
@@ -80,6 +109,11 @@ html {
   left: 1rem;
   color: #888;
   font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .input-icon {
+  color: #aaa;
 }
 
 .signin-form input {
@@ -93,10 +127,21 @@ html {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+html.dark-mode .signin-form input {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #e0e0e0;
+}
+
 .signin-form input:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.05);
   background: white;
+}
+
+html.dark-mode .signin-form input:focus {
+  box-shadow: 0 0 0 2px rgba(84, 169, 238, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .password-toggle {
@@ -108,6 +153,10 @@ html {
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.3s ease;
+}
+
+html.dark-mode .password-toggle {
+  color: #54a9ee;
 }
 
 .password-toggle:hover {
@@ -132,6 +181,10 @@ html {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+}
+
+html.dark-mode .signin-button {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
 }
 
 .signin-button::after {
@@ -163,10 +216,17 @@ html {
   padding: 1rem;
   font-weight: 500;
   overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+html.dark-mode .error-message {
+  background-color: rgba(255, 82, 82, 0.2);
+  color: #ff7575;
 }
 
 .signin-right {
   background: rgba(52, 152, 219, 0.02);
+  transition: background 0.3s ease;
 }
 
 .signin-right h2 {
@@ -174,6 +234,11 @@ html {
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #333;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .signin-right h2 {
+  color: #e0e0e0;
 }
 
 .signin-right p {
@@ -181,6 +246,11 @@ html {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .signin-right p {
+  color: #aaa;
 }
 
 .credentials-card {
@@ -188,6 +258,12 @@ html {
   border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark-mode .credentials-card {
+  background: #1f1f1f;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .credentials-card h3 {
@@ -197,6 +273,12 @@ html {
   color: #333;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding-bottom: 0.75rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+html.dark-mode .credentials-card h3 {
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .credential-item {
@@ -209,6 +291,11 @@ html {
   font-weight: 600;
   color: #555;
   min-width: 100px;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .credential-label {
+  color: #aaa;
 }
 
 .credential-value {
@@ -216,8 +303,15 @@ html {
   font-size: 1.1rem;
   background: rgba(0, 0, 0, 0.03);
   padding: 0.25rem 0.75rem;
+  margin: 0 0.5rem;
   border-radius: 4px;
   flex-grow: 1;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html.dark-mode .credential-value {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
 }
 
 .signedin-container {
@@ -228,12 +322,23 @@ html {
   text-align: center;
   max-width: 600px;
   width: 90%;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark-mode .signedin-container {
+  background: #1a1a1a;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .success-icon {
   font-size: 4rem;
   color: #2ecc71;
   margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .success-icon {
+  color: #4eda8e;
 }
 
 .signedin-container h1 {
@@ -246,11 +351,22 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+html.dark-mode .signedin-container h1 {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .signedin-container p {
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 2rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .signedin-container p {
+  color: #aaa;
 }
 
 .nav-buttons {
@@ -274,20 +390,41 @@ html {
   background: white;
   color: #555;
   border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+html.dark-mode .home-button {
+  background: #1f1f1f;
+  color: #aaa;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .home-button:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
+html.dark-mode .home-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .menu-button {
   background: linear-gradient(45deg, #2ecc71, #3498db);
   color: white;
   box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark-mode .menu-button {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  box-shadow: 0 4px 6px rgba(84, 169, 238, 0.3);
 }
 
 .menu-button:hover {
   box-shadow: 0 7px 10px rgba(52, 152, 219, 0.4);
+}
+
+html.dark-mode .menu-button:hover {
+  box-shadow: 0 7px 10px rgba(84, 169, 238, 0.4);
 }
 
 @media (max-width: 900px) {
@@ -303,6 +440,10 @@ html {
   .signin-right {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     border-right: none;
+  }
+  
+  html.dark-mode .signin-right {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
