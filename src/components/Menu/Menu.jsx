@@ -1,6 +1,13 @@
-import { useState, useRef, useEffect } from 'react';
-import { FiShoppingCart, FiCheck, FiSliders, FiArrowUp, FiArrowDown, FiAlignLeft } from 'react-icons/fi';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import {
+  FiAlignLeft,
+  FiArrowDown,
+  FiArrowUp,
+  FiCheck,
+  FiShoppingCart,
+  FiSliders,
+} from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
 import DetailPopup from '../DetailPopup/DetailPopup';
@@ -333,7 +340,10 @@ function Menu() {
       </motion.div>
 
       {selectedItem && (
-        <DetailPopup menuItem={selectedItem} onClose={() => setSelectedItem(null)} />
+        <DetailPopup
+          menuItem={selectedItem}
+          onClose={() => setSelectedItem(null)}
+        />
       )}
     </div>
   );

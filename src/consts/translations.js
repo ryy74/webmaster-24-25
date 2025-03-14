@@ -16,12 +16,12 @@ const translations = {
 
     // apply
     joinTeam: 'Join Our Team',
-    applySub: 'Complete the form below to apply for a position with us. We\'ll review your application shortly.',
+    applySub: "Complete the form below to apply for a position with us. We'll review your application shortly.",
     firstName: 'First Name *',
     lastName: 'Last Name *',
     email: 'Email Address *',
     phoneNumber: 'Phone Number *',
-    position: 'Position You\'re Applying For *',
+    position: "Position You're Applying For *",
     yearsExp: 'Years of Experience *',
     selectTitle: 'Select',
     softwareEngineer: 'Software Engineer',
@@ -42,11 +42,11 @@ const translations = {
     pwSample: 'Portfolio/Work Samples',
     acceptPZJP: 'Accepted formats: PDF, ZIP, JPG, PNG',
     additionalInfo: 'Additional Information',
-    placeholder: 'Tell us why you\'re interested in joining our team...',
+    placeholder: "Tell us why you're interested in joining our team...",
     loadingSubmit: 'Submitting...',
     submitButton: 'Submit Application',
     appReceived: 'Application Received!',
-    appRecievedSubtitle: 'Thank you for your interest in joining our team. We have received your application and will review it shortly. If your qualifications match our requirements, we\'ll contact you for the next steps.',
+    appRecievedSubtitle: "Thank you for your interest in joining our team. We have received your application and will review it shortly. If your qualifications match our requirements, we'll contact you for the next steps.",
     submitAppAgain: 'Submit Another Application',
 
     // cart
@@ -80,7 +80,7 @@ const translations = {
     country: 'Country',
     sp: 'State/Province',
     tax: 'Tax (8.5%)',
-    regionError: 'We currently don\'t deliver outside of WA, USA',
+    regionError: "We currently don't deliver outside of WA, USA",
     processing: 'Processing',
     pay: 'Pay',
     unsupportedRegion: 'Unsupported Region',
@@ -130,7 +130,7 @@ const translations = {
     bannerHeader: 'Ready to Experience the Difference?',
     bannerP: 'Visit us or order online today and taste what nature has to offer.',
     bannerLink: 'Order Now',
-    
+
     // menu
     menuSub: 'Explore our creations -- please take note of which are vegan and which are vegetarian.',
     menuTooltip: 'Please sign in to unlock ordering and delivery',
@@ -159,7 +159,7 @@ const translations = {
     aTitle3: 'Feedback and Assistance',
     aContent3_1: 'If you encounter any accessibility barriers or require assistance, please contact us at',
     aContent3_2: '. We value your feedback and are dedicated to improving your experience on our website.',
-  
+
     // apn
     apnTitle1: 'Information We Collect',
     apnContent1: 'When you apply for a position at Green Bites, we collect personal information such as your name, contact details, resume, cover letter, and references. We may also gather additional details, including background check information and records of communication during the hiring process.',
@@ -193,9 +193,9 @@ const translations = {
 
     // process
     processT1: 'Harvested at Peak Freshness',
-    processD1: 'We believe the freshness of ingredients directly impacts the quality of the dish. That\'s why we work closely with our partner farms to make sure that all produce is harvested at its peak. By using ingredients collected at the height of ripeness, we provide customers with the best natural flavor, texture, and nutritional value. Once harvested, our ingredients are swiftly transported to our kitchen, with low storage times and no artificial preservatives.',
+    processD1: "We believe the freshness of ingredients directly impacts the quality of the dish. That's why we work closely with our partner farms to make sure that all produce is harvested at its peak. By using ingredients collected at the height of ripeness, we provide customers with the best natural flavor, texture, and nutritional value. Once harvested, our ingredients are swiftly transported to our kitchen, with low storage times and no artificial preservatives.",
     processT2: 'Minimal Handling, Maximum Quality',
-    processD2: 'We believe that the best ingredients require little to no intervention. Once our ingredients arrive, they go through careful washing, trimming, and portioning to ensure consistency and quality. Unlike mass-produced food that relies on heavy processing, our approach ensures the integrity of each ingredient. We don’t use artificial additives, preservatives, or any other unnecessary modifications—only natural, high-quality components prepared with care. Every step is designed to keep the ingredient\'s natural goodness while upholding the high standards of our kitchen.',
+    processD2: "We believe that the best ingredients require little to no intervention. Once our ingredients arrive, they go through careful washing, trimming, and portioning to ensure consistency and quality. Unlike mass-produced food that relies on heavy processing, our approach ensures the integrity of each ingredient. We don’t use artificial additives, preservatives, or any other unnecessary modifications—only natural, high-quality components prepared with care. Every step is designed to keep the ingredient's natural goodness while upholding the high standards of our kitchen.",
     processT3: 'Expert Culinary Craftsmanship',
     processD3: 'Once our ingredients are prepared, they are transformed by our team of skilled chefs into thoughtfully made dishes. Our culinary philosophy holds the values of precision, balance, and respect for natural flavors highly. Through conventional techniques such as slow roasting, delicate seasoning, and precision cooking, we bring out the best in every ingredient. Whether it be a vibrant seasonal salad or a comforting dish, our meals are designed to highlight both taste and nutrition. Our chefs approach each dish with a high level of expertise, ensuring that every dish is as visually appealing as it is delicious.',
     processT4: 'Sustainable Packaging & Thoughtful Delivery',
@@ -221,7 +221,7 @@ const translations = {
     username: 'Username',
     pw: 'Password',
     whySI: 'Why Sign In?',
-    whySIHelp: 'By signing in, you\'ll get access to a more personalized shopping experience and get the most out of your visit.',
+    whySIHelp: "By signing in, you'll get access to a more personalized shopping experience and get the most out of your visit.",
     demoCred: 'Demo Credentials',
     usernameF: 'Enter Username',
     passwordF: 'Enter Password',
@@ -249,7 +249,7 @@ const translations = {
     valueSt3_3: '24/7 Innovation',
     valueHeader: 'Our Core Values',
     valueSub: 'At the core of who we are and what we do is a deep commitment to sustainability, community, and innovation. With every decision, we aim to make a positive impact—on our planet, for the people we serve, and for the future of food.',
-  
+
     // checkout consts
     usa: 'USA',
     canada: 'Canada',
@@ -388,7 +388,7 @@ const translations = {
       'Salt',
       'Pepper',
     ],
-    menuNutrition1: 'Each taco provides 220 kcal, 8 grams of total fat (with 2 grams being saturated fat), 15 mg of cholesterol, and 250 mg of sodium. The carbohydrate content is 28 grams, of which 4 grams are dietary fiber and 3 grams come from sugars, along with 10 grams of protein per taco.',
+    menuNutrition1: 'Each taco provides 220 calories, 8 grams of total fat (with 2 grams being saturated fat), 15 mg of cholesterol, and 250 mg of sodium. The carbohydrate content is 28 grams, of which 4 grams are dietary fiber and 3 grams come from sugars, along with 10 grams of protein per taco.',
     menuAllergens1: [
       'Corn (tortilla)',
       'Soy (filling)',
@@ -396,7 +396,7 @@ const translations = {
     ],
 
     menuItem2: 'El Jardin Burrito',
-    menuDesc2: 'A hearty vegan burrito featuring savory tofu, crisp cucumber, shredded carrots, and creamy avocado, all wrapped in a soft, plant-based tortilla.',
+    menuDesc2: 'A hearty vegan burrito filled with savory tofu, crisp cucumber, shredded carrots, and creamy avocado, wrapped in a soft, plant-based tortilla.',
     menuLD2: 'This burrito is a vibrant and satisfying meal that harmonizes a variety of textures and flavors. Tofu, lightly seasoned and cooked to perfection, provides a protein-rich center that pairs perfectly with the refreshing crunch of sliced cucumber and shredded carrots. Creamy avocado adds a rich, smooth contrast that ties all the elements together, while the soft vegan tortilla wrap holds everything in a neat, portable package. This burrito delivers not only on taste but on nutritional balance, making it a fulfilling and nutritious choice for anyone looking for a wholesome, plant-based meal.',
     menuIngredients2: [
       'Vegan tortilla wrap',
@@ -406,9 +406,9 @@ const translations = {
       'Avocado',
       'Salt',
       'Pepper',
-      'Miscellaneous Spices',
+      'Microgreens',
     ],
-    menuNutrition2: 'This vegan burrito provides 420 kcal, with 18 grams of total fat (4 grams of which are saturated) and 450 mg of sodium, while containing no cholesterol. It provides 50 grams of carbohydrates, including 8 grams of dietary fiber and 5 grams of sugars, along with 20 grams of protein.',
+    menuNutrition2: 'Each burrito provides 420 calories, with 18 grams of total fat (4 grams of which are saturated) and 450 mg of sodium, and containins no cholesterol. It provides 50 grams of carbohydrates, including 8 grams of dietary fiber and 5 grams of sugars, along with 20 grams of protein.',
     menuAllergens2: [
       'Wheat (tortilla wrap)',
       'Gluten (tortilla wrap)',
@@ -417,33 +417,30 @@ const translations = {
 
     menuItem3: 'Verdure Salad',
     menuDesc3: 'A vibrant salad bowl featuring roasted carrots, quinoa, fresh vegetables, avocado, and a sprinkle of seeds.',
-    menuLD3: 'This colorful salad brings together a medley of textures and flavors in one wholesome bowl. Tender cubes of roasted carrots lend a caramelized sweetness, while protein-packed quinoa forms a hearty base. Bright red peppers, crunchy cabbage, and crisp microgreens add a refreshing bite and vivid pops of color. Topped off with a scattering of seeds for extra crunch, this bowl is a nutrient-dense, plant-forward option that\'s both visually appealing and deeply satisfying.',
+    menuLD3: "This colorful salad brings together a medley of textures and flavors in one wholesome bowl. Tender cubes of roasted carrots lend a caramelized sweetness, while protein-packed quinoa forms a hearty base. Bright red peppers, crunchy cabbage, and crisp microgreens add a refreshing bite and vivid pops of color. Topped off with a scattering of seeds for extra crunch, this bowl is a nutrient-dense, plant-forward option that's both visually appealing and deeply satisfying.",
     menuIngredients3: [
       'Roasted carrots',
       'Quinoa',
       'Red bell peppers',
-      'Cabbage',
+      'Red cabbage',
       'Edamame',
       'Avocado',
+      'Tomato',
       'Microgreens',
       'Seed mix',
       'Salt',
       'Pepper',
       'Vinaigrette dressing',
     ],
-    menuNutrition3: 'This salad bowl comes in at 460 kcal per serving, offering 16 grams of protein (thanks to the quinoa and edamame), 56 grams of carbohydrates (including fiber from the vegetables and quinoa), and 22 grams of total fat (largely from the avocado and seeds). The dish provides an array of vitamins (notably vitamins A, C, and K) and various minerals (including potassium and iron).',
-    menuAllergens3: [
-      'Soy',
-      'Seeds',
-      'Nightshades (if peppers are a concern)',
-    ],
+    menuNutrition3: 'This salad contains 460 calories per bowl, offering 16 grams of protein (thanks to the quinoa and edamame), 56 grams of carbohydrates, and 22 grams of total fat (largely from the avocado and seeds). The dish provides an array of vitamins (most notably vitamins A, C, and K), potassium, and iron.',
+    menuAllergens3: ['Soy', 'Seeds', 'Nightshades (if peppers are a concern)'],
 
     menuItem4: 'The Smoky Maple Burger',
     menuDesc4: 'A hearty vegan burger featuring a savory, plant-based patty layered with fresh lettuce, juicy tomato slices, crisp red onion, and a creamy vegan sauce, all tucked inside a soft, seeded bun.',
-    menuLD4: 'This vegan burger offers a satisfying balance of flavors and textures. The patty, made from a blend of legumes, grains, and vegetables, delivers a slightly smoky taste and a meaty bite. Fresh lettuce provides a crisp contrast, while thick-cut tomato and red onion add bright flavors, and a creamy vegan sauce ties everything together. Served on a soft, seeded whole wheat bun, this burger makes for a filling meal that doesn’t compromise on taste or nutrition—perfect for plant-based enthusiasts and curious diners alike.',
+    menuLD4: 'This burger offers a satisfying balance of flavors and textures. The patty, made from a blend of legumes, grains, and vegetables, delivers a slightly smoky taste and a meaty bite. Fresh lettuce provides a crisp contrast, while thick-cut tomato and red onion add bright flavors, and a creamy vegan sauce ties everything together. Served on a soft, seeded whole wheat bun, this burger makes for a filling meal that doesn’t compromise on taste or nutrition—perfect for plant-based enthusiasts and curious diners alike.',
     menuIngredients4: [
       'Whole-grain burger bun',
-      'Plant-based burger patty (made from pea protein, mushrooms, and seasonings)',
+      'Plant-based burger patty (pea protein, mushrooms, seasonings)',
       'Romaine lettuce',
       'Tomato slices',
       'Pickles',
@@ -452,11 +449,8 @@ const translations = {
       'Salt',
       'Pepper',
     ],
-    menuNutrition4: 'Each vegan burger provides 450 calories, including 20 grams of protein from the patty’s legume and grain blend. The burger contains 55 grams of carbohydrates, coming from the bun and vegetable fillers in the patty. Fat content is 15 grams. This burger also contains essential nutrients like dietary fiber, iron, and various vitamins from the vegetables, making it both flavorful and nourishing.',
-    menuAllergens4: [
-      'Gluten (bun)',
-      'Seeds (bun)',
-    ],
+    menuNutrition4: 'Each vegan burger provides 450 calories, including 20 grams of protein from the patty’s legume and grain blend. The burger contains 55 grams of carbohydrates, coming from the bun and vegetable fillers in the patty, as well as 15 grams of fat. This burger also contains essential nutrients like dietary fiber, iron, and various vitamins from the vegetables.',
+    menuAllergens4: ['Gluten (bun)', 'Seeds (bun)'],
 
     menuItem5: 'Pomodoro Verde Pizza',
     menuDesc5: 'A classic-style vegan pizza topped with a rich tomato sauce, melty plant-based cheese, and sliced tomatoes, finished with fresh basil for a burst of flavor.',
@@ -470,23 +464,21 @@ const translations = {
       'Garlic powder',
       'Oregano',
       'Salt',
+      'Basil',
     ],
-    menuNutrition5: 'Each slice provides 180 calories, largely from the crust and vegan cheese, containing 5-8 grams of protein. Carbohydrates range around 20–25 grams per slice, while total fat sits between 6–10 grams. This pizza also offers some vitamins from the fresh tomatoes and basil, contributing a boost of antioxidants like lycopene and vitamin K.',
-    menuAllergens5: [
-      'Gluten (dough)',
-      'Soy (vegan cheese)',
-    ],
+    menuNutrition5: 'Each slice provides 130 calories, contains 5-8 grams of protein, and 20-25 grams of carbohydrates. Total fat ranges between 6–10 grams per slice. This pizza also offers vitamins from the fresh tomatoes and basil, contributing a boost of antioxidants such as lycopene and vitamin K.',
+    menuAllergens5: ['Gluten (dough)', 'Soy (vegan cheese)'],
 
     menuItem6: 'Golden Cashew Mac',
-    menuDesc6: 'A creamy, comforting macaroni and cheese dish featuring tender pasta, a rich cheese sauce, and fresh spinach for added color and nutrients.',
+    menuDesc6: 'A creamy, comforting macaroni and cheese dish featuring tender pasta, a rich cheese sauce, and fresh spinach.',
     menuLD6: 'This vegetarian mac and cheese combines classic elbow pasta with a velvety cheese sauce made from real dairy products. The sauce coats each piece of pasta, offering a smooth, indulgent bite. Fresh spinach is folded in, providing a subtle earthy flavor and a pop of vibrant green that complements the richness of the cheese. Perfect as a hearty main course or a side dish, this spin on mac and cheese is a cozy, satisfying meal that can be enjoyed by vegetarians and cheese lovers alike.',
     menuIngredients6: [
       'Elbow pasta (semolina flour, water)',
-      'Parmesan cheese sauce (milk, butter, cheddar cheese, flour, salt, pepper)',
+      'Parmesan cheese sauce (milk, butter, cheese, flour, salt, pepper)',
       'Spinach',
       'Garlic powder',
     ],
-    menuNutrition6: 'Each serving provides 400 calories, including 18 grams of protein (largely from the cheese and milk) and  55 grams of carbohydrates from the pasta. Total fat content sits at 16 grams, with 10 grams coming from saturated fats in the dairy. The fresh spinach contributes some dietary fiber, vitamins (especially vitamins A and K), and minerals like iron, making this dish a bit more nutrient-dense than the standard version of mac and cheese.',
+    menuNutrition6: 'Each serving provides 400 calories, including 18 grams of protein and 55 grams of carbohydrates. Total fat content sits at 16 grams per bowl, with 10 grams coming from saturated fats in the dairy. The fresh spinach contributes some dietary fiber, vitamins (especially vitamins A and K), and minerals like iron, making this dish a bit more nutrient-dense than the standard version of mac and cheese.',
     menuAllergens6: [
       'Wheat (from the pasta)',
       'Gluten (from the pasta)',
@@ -494,7 +486,7 @@ const translations = {
     ],
 
     menuItem7: 'Florentine Lasagna',
-    menuDesc7: 'A hearty vegetarian lasagna made with layers of pasta, tomato sauce, and a blend of cheeses, complemented by fresh spinach and basil for added flavor and nutrition.',
+    menuDesc7: 'A hearty vegetarian lasagna made with layers of pasta, tomato sauce, and a blend of cheeses, complemented by fresh spinach and basil.',
     menuLD7: 'This vegetarian lasagna features the classic layers of tender lasagna noodles, a tomato sauce seasoned with garlic and herbs, and generous helpings of mozzarella and ricotta cheeses. Fresh spinach and basil leaves are interspersed between the layers, adding a pleasant, earthy note and a burst of green color. Baked until golden on top and bubbling at the edges, this comforting dish offers a satisfying balance of tangy tomatoes, creamy cheese, and soft, chewy pasta in every bite. Ideal as a main course for a cozy family meal or a gathering with friends.',
     menuIngredients7: [
       'Lasagna noodles (made from semolina flour, water)',
@@ -503,16 +495,16 @@ const translations = {
       'Marinara sauce (crushed tomatoes, onions, garlic, olive oil, oregano, basil, salt)',
       'Baby spinach',
     ],
-    menuNutrition7: 'A slice provides around 300 calories, including 15 grams of protein from the cheese and noodles. Carbohydrates typically range between 40–50 grams, mostly from the pasta and tomato sauce, while total fat sits at 15 grams (with 8–10 grams of that being saturated fat from the dairy). The spinach and basil offer vitamins A, C, and K, as well as iron, contributing additional nutrients to this comforting meal.',
+    menuNutrition7: 'A slice provides around 300 calories, including 15 grams of protein from the cheese and noodles. Carbohydrates typically range between 40–50 grams, mostly from the pasta and tomato sauce, while total fat sits at 15 grams, with 8–10 grams of that being saturated fat from the dairy. The spinach and basil offer vitamins A, C, and K, as well as iron.',
     menuAllergens7: [
       'Wheat (from the lasagna noodles)',
       'Dairy (from ricotta and mozzarella cheese)',
       'Garlic (a potential sensitivity for some individuals)',
     ],
 
-    menuItem8: 'Bombay Chickpea Curry',
-    menuDesc8: 'A fragrant, comforting curry featuring tender sweet potatoes and cauliflower florets simmered in a creamy coconut milk sauce, served alongside white rice.',
-    menuLD8: 'This sweet potato and cauliflower curry strikes a delicious balance of sweet, savory, and spicy flavors. Chunks of sweet potato provide a natural sweetness that pairs perfectly with the subtle earthiness of cauliflower, all brought together by a velvety coconut milk sauce. A blend of aromatic spices—such as curry powder, turmeric, cumin, and coriander—lends warmth and depth, while onions, garlic, and ginger build a robust foundation. Garnished with fresh herbs or sliced chili peppers, each bowl offers a nourishing, plant-based meal that’s rich in flavor and satisfying in texture.',
+    menuItem8: 'Bombay Curry',
+    menuDesc8: 'A fragrant, comforting curry, containing tender sweet potatoes and cauliflower florets simmered in a creamy coconut milk sauce, served alongside white rice.',
+    menuLD8: 'This sweet potato and cauliflower curry strikes a delicious balance of sweet, savory, and spicy flavors. Chunks of sweet potato provide a natural sweetness that pairs perfectly with the subtle earthiness of cauliflower, all brought together by a velvety coconut milk sauce. A blend of aromatic spices lends warmth and depth, while onions, garlic, and ginger build a foundation. Garnished with fresh herbs or sliced chili peppers, each bowl offers a nourishing, plant-based meal that’s rich in flavor and satisfying in texture.',
     menuIngredients8: [
       'Sweet potatoes',
       'Cauliflower florets',
@@ -522,18 +514,16 @@ const translations = {
       'Curry powder (tumeric, cumin, coriander, chili powder)',
       'Coconut oil',
       'Salt',
-      'Papper',
+      'Pepper',
       'Steamed white rice',
       'Vegetable stock',
     ],
     menuNutrition8: 'Each serving provides 400 calories, with 8 grams of protein and 60 grams of carbohydrates, primarily from the sweet potatoes and accompanying rice. Total fat content amounts to 16 grams, mainly from the coconut milk. This curry is a good source of vitamins A and C, as well as dietary fiber and potassium.',
-    menuAllergens8: [
-      'Coconut (from coconut milk)',
-    ],
+    menuAllergens8: ['Coconut (from coconut milk)'],
 
     menuItem9: 'Burrito Bowl Fresca',
     menuDesc9: 'A colorful vegan burrito bowl packed with plant-based protein, fresh vegetables, and a creamy drizzle, topped off with guacamole and a squeeze of lime.',
-    menuLD9: 'This vegan burrito bowl features a vibrant mix of flavors and textures. The base includes seasoned beans and grains, complemented by shredded cabbage or lettuce, crunchy peppers, onions, and edamame for extra protein. A shredded, plant-based meat alternative may be added for heartiness. A drizzle of creamy, plant-based sauce ties the bowl together, while a dollop of guacamole adds richness and healthy fats. Finished with fresh sprouts or herbs and a lime wedge, it’s a wholesome, customizable meal that’s both satisfying and nutritious.',
+    menuLD9: 'This vegan burrito bowl features a vibrant mix of flavors and textures. The base includes seasoned beans and grains, complemented by shredded cabbage or lettuce, crunchy peppers, onions, and edamame for extra protein. A drizzle of creamy, plant-based sauce ties the bowl together, while a dollop of guacamole adds richness and healthy fats. Finished with fresh sprouts, herbs and a lime wedge, it’s a wholesome, customizable meal that’s both satisfying and nutritious.',
     menuIngredients9: [
       'Rice',
       'Black beans',
@@ -550,14 +540,11 @@ const translations = {
       'Cumin',
     ],
     menuNutrition9: 'Each bowl contains 550 calories, offering 20 grams of protein from beans, edamame, and plant-based meat. The bowl also contains 50 grams of carbohydrates from the grains and beans, while total fat is typically 25 grams, from the guacamole and creamy dressing. The assorted vegetables contribute fiber, vitamins (especially vitamins A, C, and K), and minerals like potassium and iron, making it a balanced, plant-based meal.',
-    menuAllergens9: [
-      'Soy (edamame)',
-      'Gluten',
-    ],
+    menuAllergens9: ['Soy (edamame)', 'Gluten'],
 
     menuItem10: 'Tuscan Grilled Skewers',
-    menuDesc10: 'Vibrant skewers of colorful vegetables like corn, zucchini, peppers, and cherry tomatoes, marinated in herbs and spices, then grilled to perfection.',
-    menuLD10: 'These vegan kabobs showcase a medley of fresh produce threaded onto skewers: sweet bell peppers, juicy cherry tomatoes, zucchini slices, and sweet corn rounds. A simple yet flavorful marinade—often including olive oil, garlic, and herbs—enhances the natural sweetness of the vegetables. Once grilled, the edges caramelize, adding a lightly smoky and charred flavor that contrasts beautifully with the vegetables’ tender interiors. Perfect as a light main course or a colorful side dish.',
+    menuDesc10: 'Vibrant skewers of corn, zucchini, peppers, and cherry tomatoes, marinated in herbs and spices, then grilled to perfection.',
+    menuLD10: 'These vegan kabobs showcase a medley of fresh produce, threaded onto skewers: sweet bell peppers, juicy cherry tomatoes, zucchini slices, and sweet corn rounds. A simple yet flavorful marinade enhances the natural sweetness of the vegetables. Once grilled, the edges caramelize, adding a lightly smoky and charred flavor that contrasts beautifully with the vegetables’ tender interiors. Perfect as a colorful side dish.',
     menuIngredients10: [
       'Zucchini (sliced into thick rounds)',
       'Bell peppers (red, yellow, and green, cut into chunks)',
@@ -565,34 +552,28 @@ const translations = {
       'Cherry tomatoes',
       'Marinade (olive oil, garlic, salt, pepper, herbs)',
     ],
-    menuNutrition10: 'Each skewer provides around 120 calories from the natural carbohydrates in the vegetables, and a small amount of fat from the olive oil. It offers 4–6 grams of protein (depending on the mix of vegetables), along with fiber, vitamins (especially vitamins A and C), and minerals like potassium. The grilled vegetables also deliver beneficial antioxidants, making this a nutritious option that’s both light and satisfying.',
-    menuAllergens10: [
-      'None inherent to the vegetables themselves, but check marinades for potential allergens.',
-    ],
+    menuNutrition10: 'Each skewer provides around 120 calories from the natural carbohydrates in the vegetables, and a small amount of fat from the olive oil. It offers 4–6 grams of protein (depending on the mix of vegetables), along with fiber, vitamins (especially vitamins A and C), potassium, and various antioxidants.',
+    menuAllergens10: ['Corn'],
 
     menuItem11: 'Teriyaki Sunrise Stir Fry',
     menuDesc11: 'A savory vegan teriyaki dish featuring tender noodles, tofu, and a colorful assortment of vegetables, all coated in a sweet and tangy teriyaki sauce and garnished with sesame seeds.',
-    menuLD11: 'This dish brings together a balance of flavors and textures: chewy noodles, lightly crispy tofu cubes, and a medley of fresh vegetables—often including carrots, broccoli, and mushrooms—for added crunch and earthy notes. The star is a vegan teriyaki sauce that blends soy sauce, sweetener, and a hint of ginger and garlic to create a glossy, mouthwatering coating on every ingredient. Finished with a sprinkle of sesame seeds for extra nuttiness and visual appeal, this plant-based teriyaki bowl delivers a satisfying meal that can be enjoyed as a quick lunch or a hearty dinner.',
+    menuLD11: 'This dish brings together a balance of flavors and textures: chewy noodles, lightly crispy tofu cubes, and a medley of fresh vegetables for added crunch and earthy notes. The star is a vegan teriyaki sauce that blends soy sauce, sweetener, and a hint of ginger and garlic to create a glossy, mouthwatering coating on every ingredient. Finished with a sprinkle of sesame seeds for extra nuttiness and visual appeal, this plant-based teriyaki bowl delivers a satisfying meal that can be enjoyed as a quick lunch or a hearty dinner.',
     menuIngredients11: [
       'Noodles (udon)',
       'Tofu (cubed)',
       'Carrots',
       'Broccoli',
-      'Bok choy',
-      'Tofu',
       'Vegan teriyaki sauce (soy sauce, sweetener, garlic, ginger, cornstarch)',
       'Vegetable oil',
       'Pepper',
+      'Bok choy',
     ],
-    menuNutrition11: 'Each serving provides 400 calories, with 15 grams of protein from the tofu and noodles. Carbohydrates  range between 50–60 grams, mostly from the noodles and vegetables, while total fat sits at 10 grams from the tofu and any added oil. This dish also delivers essential vitamins (A, C) and minerals (iron, calcium) from the vegetables and tofu, making it a balanced, plant-based meal option.',
-    menuAllergens11: [
-      'Soy (tofu, teriyaki sauce)',
-      'Wheat (noodles)',
-    ],
+    menuNutrition11: 'Each serving provides 400 calories, with 15 grams of protein from the tofu and noodles. Carbohydrates  range between 50–60 grams, mostly from the noodles and vegetables, while total fat sits at 10 grams from the tofu and added oils. This dish also contains essential vitamins, iron, and calcium from the vegetables and tofu.',
+    menuAllergens11: ['Soy (tofu, teriyaki sauce)', 'Wheat (noodles)'],
 
     menuItem12: 'Avocado Maki',
     menuDesc12: 'A light and refreshing vegan sushi roll featuring creamy avocado, crunchy vegetables, and seasoned sushi rice, wrapped in a thin layer of nori and garnished with sesame seeds.',
-    menuLD12: 'This vegan sushi roll highlights the smooth, buttery texture of ripe avocado as its star ingredient. Inside, crisp vegetables like cucumber or carrots may provide extra crunch and flavor, while seasoned sushi rice delivers a delicate, slightly vinegary note. A thin sheet of nori holds everything together, lending a subtle hint of ocean brininess. Topped with additional avocado slices and sesame seeds, these rolls offer a fresh, plant-based take on traditional sushi. Perfect as a light lunch or appetizer.',
+    menuLD12: 'This vegan sushi roll highlights the smooth, buttery texture of ripe avocado as its star ingredient. Inside, sliced cucumber provides extra crunch and flavor, while seasoned sushi rice delivers a delicate, slightly vinegary note. A thin sheet of nori holds everything together, lending a subtle hint of ocean brininess. Topped with additional avocado slices and sesame seeds, these rolls offer a fresh, plant-based take on traditional sushi. Perfect as a light lunch or appetizer.',
     menuIngredients12: [
       'Sushi rice (seasoned with rice vinegar, sugar, and salt)',
       'Nori sheets (seaweed)',
@@ -617,168 +598,156 @@ const translations = {
       'Corn tortillas',
       'Marinated bell peppers',
       'Onions',
-      'Mushrooms',
       'Lime marinade (lime juice, chili powder, paprika, garlic, salt, pepper)',
       'Guacamole',
       'Pico de gallo (tomatoes, red onions, cilantro, lime juice)',
       'Lime wedges (for garnish)',
     ],
-    menuNutrition13: 'Each taco typically provides 150 calories, with 8 grams of protein. Carbohydrates range around 20–25 grams, mostly from the corn tortilla and vegetables, while total fat sits at 6 grams, largely from the guacamole and added oils. This dish offers fiber, vitamins A and C, and minerals like potassium, making it a nutritious option for those looking for a plant-based meal.',
-    menuAllergens13: [
-      'Corn (from tortillas)',
-    ],
+    menuNutrition13: 'Each taco provides 150 calories, with 8 grams of protein. Carbohydrates range around 20–25 grams, mostly from the corn tortilla and vegetables, while total fat sits at 6 grams, largely from the guacamole and added oils. This dish also provides fiber, vitamins A and C, and minerals, particularly potassium.',
+    menuAllergens13: ['Corn (from tortillas)'],
 
     menuItem14: 'Quesadilla del Campo',
     menuDesc14: 'A crispy tortilla filled with vegan cheese, beans, and sautéed vegetables.',
-    menuLD14: 'Our vegan quesadilla is a delicious, plant-based take on a classic favorite. It features a crispy flour tortilla filled with seasoned black beans, sautéed bell peppers, roasted corn, and a blend of fresh tomatoes and red cabbage for added crunch. Melty vegan cheese ties everything together, while a hint of jalapeño adds a touch of spice. Perfectly grilled to golden perfection, this quesadilla is served with a side of salsa and lime wedges for a refreshing finish.',
+    menuLD14: 'Our vegan quesadilla is a delicious, plant-based take on a classic favorite. It features a crispy flour tortilla filled with seasoned black beans, sautéed bell peppers, roasted corn, and a blend of fresh tomatoes. Melty vegan cheese ties everything together, while a hint of jalapeño adds a touch of spice. Perfectly grilled to golden perfection, this quesadilla is served with a side of salsa and lime wedges for a refreshing finish.',
     menuIngredients14: [
-      'Tortillas', 
-      'Vegan cheese alternative', 
-      'Diced tomatoess', 
-      'Onions', 
-      'Black beans', 
-      'Corn kernels', 
+      'Tortillas',
+      'Vegan cheese alternative',
+      'Diced tomatoess',
+      'Onions',
+      'Black beans',
+      'Corn kernels',
       'Cumin',
       'Salt',
-      'Pepper', 
-      'Cilantro'
+      'Pepper',
+      'Cilantro',
     ],
-    menuNutrition14: 'A single vegan quesadilla contains 450 calories, with roughly 10–15 grams of protein (from the beans and vegan cheese). It provides 44 grams of carbohydrates and roughly 12 grams of total fat, depending on the cheese alternative and any added oil. The vegetables offer dietary fiber, vitamins (A and C), and minerals like iron, contributing to a balanced, plant-based meal.',
-    menuAllergens14: [
-      'Cilantro (if added in optional garnish)',
-      'Corn',
-    ],
+    menuNutrition14: 'A single vegan quesadilla contains 450 calories, with roughly 10–15 grams of protein. It provides 44 grams of carbohydrates, 12 grams of total fat, dietary fiber, vitamins (A and C), and minerals, primarily iron.',
+    menuAllergens14: ['Cilantro (if added in optional garnish)', 'Corn'],
 
     menuItem15: 'Tuscan Lentil Soup',
     menuDesc15: 'A comforting lentil soup packed with hearty beans, vegetables, and flavorful spices, offering a nutritious and warming meal.',
-    menuLD15: 'This vegan lentil soup features a rich, tomato-based broth simmered with tender lentils and white beans. Onions, carrots, and celery add depth and sweetness, while herbs and spices—such as cumin, paprika, or bay leaves—lend a fragrant, savory note. The result is a protein- and fiber-rich soup that’s both satisfying and nourishing, perfect for chilly days or whenever you crave a comforting bowl of goodness. Enjoy it on its own or pair it with crusty bread for a more substantial meal.',
+    menuLD15: 'This vegan lentil soup features a rich, tomato-based broth simmered with tender lentils and white beans. Onions, carrots, and celery add depth and sweetness, while herbs and spices lend a fragrant, savory note. The result is a protein- and fiber-rich soup that’s both satisfying and nourishing, perfect for chilly days or whenever you crave a comforting bowl of goodness. Enjoy it on its own or pair it with crusty bread for a more substantial meal.',
     menuIngredients15: [
-      'Lentils', 
-      'White beans', 
-      'Onions', 
-      'Chopped carrots', 
-      'Celery', 
-      'Tomato paste or crushed tomatoes', 
-      'Vegetable broth', 
-      'Minced garlic', 
-      'Cumin', 
+      'Lentils',
+      'White beans',
+      'Onions',
+      'Chopped carrots',
+      'Celery',
+      'Tomato paste or crushed tomatoes',
+      'Vegetable broth',
+      'Minced garlic',
+      'Cumin',
       'Paprika',
-      'Salt and pepper'
+      'Salt and pepper',
     ],
-    menuNutrition15: 'One serving of this lentil soup typically contains 250 calories, with 15 grams of protein from the combination of lentils and white beans. It also provides 40 grams of carbohydrates, including dietary fiber that supports digestion. The total fat content is relatively low—usually under 5 grams—depending on the amount of oil used for sautéing. The vegetables and lentils offer essential vitamins, minerals (like iron and folate), and antioxidants, making this a wholesome, plant-based option.',
+    menuNutrition15: 'One serving of this lentil soup typically contains 250 calories, with 15 grams of protein from the combination of lentils and white beans. It also provides 40 grams of carbohydrates, including dietary fiber that supports digestion. The total fat content is relatively low—usually under 5 grams—depending on the amount of oil used for sautéing. The vegetables and lentils offer essential vitamins, minerals (like iron and folate), and antioxidants.',
     menuAllergens15: [
-      'Legumes (lentils, beans)', 
-      'Nightshades (tomatoes, paprika)'
+      'Legumes (lentils, beans)',
+      'Nightshades (tomatoes, paprika)',
     ],
 
     menuItem16: 'Masala Roasted Cauliflower',
     menuDesc16: 'A fragrant cauliflower tikka masala, simmered in a spiced tomato sauce with chickpeas and served over rice, delivering a hearty and aromatic meal.',
-    menuLD16: 'This cauliflower tikka masala showcases tender florets coated in a bold blend of spices, then simmered in a rich, tomato-based sauce. Chickpeas contribute extra protein and a creamy texture, while onions, garlic, and ginger infuse the dish with layers of savory depth. Coconut milk (or another plant-based cream) adds a velvety finish, balancing the warming spices. Served over fluffy rice and garnished with fresh cilantro and peanuts (optional), this comforting curry offers a satisfying plant-based twist on a classic favorite.',
+    menuLD16: 'This cauliflower tikka masala showcases tender florets coated in a bold blend of spices, then simmered in a rich, tomato-based sauce. Chickpeas contribute extra protein and a creamy texture, while garlic and ginger infuse the dish with layers of savory depth. Coconut milk adds a velvety finish, balancing the warming spices. Served over fluffy rice and garnished with cilantro, this comforting curry offers a satisfying plant-based twist on a classic favorite.',
     menuIngredients16: [
-      'Cauliflower florets', 
-      'Chickpeas', 
-      'Onions', 
-      'Tomatoes or tomato puree', 
-      'Coconut milk', 
-      'Garlic', 
-      'Ginger', 
-      'Spice blend (garam masala, turmeric, cumin, chili powder)', 
-      'Olive oil', 
+      'Cauliflower florets',
+      'Chickpeas',
+      'Onions',
+      'Tomatoes or tomato puree',
+      'Coconut milk',
+      'Garlic',
+      'Ginger',
+      'Spice blend (garam masala, turmeric, cumin, chili powder)',
+      'Olive oil',
       'Salt',
       'Pepper',
     ],
     menuNutrition16: 'Each serving contains 380 calories, including 14 grams of protein, 55 grams of carbohydrates, and 10 grams of fat. The cauliflower and chickpeas offer dietary fiber, while the tomatoes and spices provide antioxidants. Coconut milk contributes a creamy texture along with medium-chain triglycerides (MCTs), making this a nourishing and satisfying plant-based meal.',
     menuAllergens16: [
-      'Coconut', 
-      'Nightshades (tomatoes, chili powder)', 
+      'Coconut',
+      'Nightshades (tomatoes, chili powder)',
+      'Cilantro (a potential sensitivity to some individuals)',
     ],
 
     menuItem17: 'Rainbow Harvest Quinoa Bowl',
     menuDesc17: 'A nourishing vegan quinoa bowl packed with fresh vegetables, chickpeas, and creamy avocado for a balanced, plant-based meal.',
     menuLD17: 'This vibrant quinoa bowl brings together fluffy quinoa, crisp cucumbers, sweet cherry tomatoes, and hearty chickpeas. Creamy avocado adds healthy fats and a smooth texture, while a simple dressing made from olive oil, lemon juice, and vinegar ties everything together. Topped with greens and fresh herbs, this bowl provides a satisfying blend of flavors and nutrients, making it an ideal lunch or light dinner option for anyone seeking a wholesome plant-based meal.',
     menuIngredients17: [
-      'Quinoa', 
-      'Chickpeas', 
-      'Cucumbers', 
-      'Cherry tomatoes', 
-      'Avocado', 
-      'Leafy greens', 
-      'Olive oil', 
+      'Quinoa',
+      'Chickpeas',
+      'Cucumbers',
+      'Cherry tomatoes',
+      'Leafy greens',
+      'Olive oil',
       'Salt',
-      'Pepper',
+      'Avocado',
     ],
     menuNutrition17: 'Each quinoa bowl contains 420 calories, 16 grams of protein, 60 grams of carbohydrates, and 14 grams of fat. It also provides dietary fiber, vitamins A and C, and minerals like iron and potassium, making it a well-rounded plant-based option.',
-    menuAllergens17: [
-      'Legumes (chickpeas)', 
-      'Seeds', 
-      'Nightshades (tomatoes)',
-    ],
+    menuAllergens17: ['Legumes (chickpeas)', 'Seeds', 'Nightshades (tomatoes)'],
 
     menuItem18: 'Chickpea Deli Melt',
-    menuDesc18: 'A hearty vegan sandwich featuring a mashed chickpea filling blended with creamy avocado or vegan mayo, topped with crisp greens and served on whole-grain bread.',
-    menuLD18: 'This chickpea sandwich offers a protein-rich alternative to traditional deli fillings. Cooked chickpeas are lightly mashed with avocado or a vegan mayonnaise, seasoned with herbs and spices, then layered with fresh microgreens or lettuce. Whole-grain bread provides a nutty crunch, while the chickpea mixture delivers a savory, satisfying bite. Perfect for a quick lunch, this sandwich is both flavorful and nutritious.',
+    menuDesc18: 'A hearty vegan sandwich featuring a mashed chickpea filling blended with creamy avocado and vegan mayo, topped with crisp greens and served on whole-grain bread.',
+    menuLD18: 'This chickpea sandwich offers a protein-rich alternative to traditional deli fillings. Cooked chickpeas are lightly mashed with avocado and a vegan mayonnaise, seasoned with herbs and spices, then layered with fresh microgreens. Whole-grain bread provides a nutty crunch, while the chickpea mixture delivers a savory, satisfying bite. Perfect for a quick lunch, this sandwich is both flavorful and nutritious.',
     menuIngredients18: [
-      'Whole-grain bread', 
-      'Chickpeas (cooked)', 
-      'Avocado', 
+      'Whole-grain bread',
+      'Chickpeas (cooked)',
+      'Avocado',
       'Vegan mayo',
-      'Microgreens', 
+      'Microgreens',
       'Salt',
       'Pepper',
-      'Seasonings (garlic powder, onion powder)', 
+      'Seasonings (garlic powder, onion powder)',
       'Lemon juice',
     ],
-    menuNutrition18: 'Each sandwich has 380 calories, 14 grams of protein, 48 grams of carbohydrates, and 12 grams of fat. The chickpeas contribute fiber and plant-based protein, while avocado or vegan mayo adds creaminess and healthy fats, making it a filling and balanced meal.',
-    menuAllergens18: [
-      'Legumes (chickpeas)', 
-      'Gluten (in bread)', 
-    ],
+    menuNutrition18: 'Each sandwich has 380 calories, 14 grams of protein, 48 grams of carbohydrates, and 12 grams of fat. The chickpeas contribute fiber and plant-based protein, while avocado or vegan mayo adds creaminess and healthy fats.',
+    menuAllergens18: ['Legumes (chickpeas)', 'Gluten (in bread)'],
 
     menuItem19: 'Forest Fusion Quesadillas',
-    menuDesc19: 'A flavorful, creamy black bean quesadilla packed with sweet corn, avocado, red onion, chili pepper, and fresh coriander, all folded into warm tortillas for a satisfying Mexican-inspired meal.',
-    menuLD19: 'These quesadillas showcase a delicious blend of textures and tastes. Mashed black beans form a creamy base, complemented by the sweetness of corn kernels, the buttery smoothness of avocado, and the bright crunch of red onions. Chili peppers add a kick of heat, while chopped coriander (cilantro) brings a fresh, citrusy note. The mixture is then spread onto tortillas—optionally topped with a vegan or dairy-based cheese—before being lightly toasted until golden and crisp. Served hot, they make for a hearty lunch or dinner that highlights classic Mexican flavors in a plant-forward format.',
+    menuDesc19: 'A flavorful, creamy black bean quesadilla packed with sweet corn, avocado, red onion, chili pepper, and fresh coriander, all folded into warm tortillas for a satisfying meal.',
+    menuLD19: 'These quesadillas showcase a delicious blend of textures and tastes. Mashed black beans form a creamy base, complemented by the sweetness of corn kernels and the bright crunch of red onions. Chili peppers add a kick of heat, while chopped coriander (cilantro) brings a fresh, citrusy note. The mixture is then spread onto tortillas before being lightly toasted until golden and crisp. Served hot, they make for a hearty lunch or dinner that highlights classic flavors in a plant-forward format.',
     menuIngredients19: [
-      'Tortillas', 
-      'Black beans', 
-      'Sweet corn kernels', 
-      'Avocado', 
-      'Red onion', 
-      'Chili pepper', 
-      'Coriander', 
-      'Vegan cheese', 
+      'Tortillas',
+      'Black beans',
+      'Sweet corn kernels',
+      'Red onion',
+      'Chili pepper',
+      'Coriander',
+      'Vegan cheese',
       'Cumin',
       'Salt',
       'Pepper',
     ],
-    menuNutrition19: 'Each quesadilla contains 350 calories, with 15 grams of protein, 55 grams of carbohydrates, and 16 grams of fat. The black beans contribute fiber and plant-based protein, while avocado adds healthy fats. Corn and chili peppers supply vitamins and antioxidants, making this a balanced meal option.',
+    menuNutrition19: 'Each quesadilla contains 350 calories, with 15 grams of protein, 55 grams of carbohydrates, and 16 grams of fat. The black beans contribute fiber and plant-based protein, while corn and chili peppers supply vitamins and antioxidants.',
     menuAllergens19: [
-      'Gluten (wheat tortillas)', 
-      'Corn', 
-      'Nightshades (chili peppers)', 
-      'Soy (soy-based cheese)', 
+      'Gluten (wheat tortillas)',
+      'Corn',
+      'Nightshades (chili peppers)',
+      'Soy (soy-based cheese)',
     ],
 
     menuItem20: 'Hearty Homestyle Chili',
     menuDesc20: 'A hearty vegan chili packed with beans, tomatoes, and plant-based protein, simmered to a rich, spicy perfection.',
-    menuLD20: 'This vegan chili combines kidney beans, bell peppers, onions, and crumbled tofu for added texture and protein. A blend of spices—such as chili powder, cumin, and paprika—infuses the dish with smoky heat, while diced tomatoes create a thick, tangy sauce. Simmered until the flavors meld, this chili makes for a warming, comforting meal, perfect on its own or served over rice, quinoa, or cornbread. Top it with fresh cilantro or avocado slices for a bright, finishing touch.',
+    menuLD20: 'This vegan chili combines kidney beans, bell peppers, onions, and crumbled tofu for added texture and protein. A blend of spices infuses the dish with smoky heat, while diced tomatoes create a thick, tangy sauce. Simmered until the flavors meld, this chili makes for a warming, comforting meal, perfect on its own or served over rice, quinoa, or cornbread. Topped with fresh cilantro or avocado slices for a bright, finishing touch.',
     menuIngredients20: [
-      'Kidney beans', 
-      'Crumbled tofu', 
-      'Bell peppers', 
-      'Onions', 
-      'Diced tomatoes', 
-      'Tomato paste', 
-      'Chili powder', 
-      'Cumin', 
-      'Paprika', 
-      'Salt and pepper', 
+      'Kidney beans',
+      'Crumbled tofu',
+      'Bell peppers',
+      'Onions',
+      'Diced tomatoes',
+      'Tomato paste',
+      'Chili powder',
+      'Cumin',
+      'Paprika',
+      'Salt and pepper',
       'Oil',
+      'Cilantro',
     ],
     menuNutrition20: 'Each serving contains about 400 calories, 18 grams of protein, 55 grams of carbohydrates, and 10 grams of fat. This chili is also a good source of dietary fiber, iron, and vitamin C from the vegetables and beans.',
     menuAllergens20: [
-      'Soy (tofu)', 
-      'Nightshades (tomatoes, chili powder, peppers)', 
-      'Legumes (beans)'
+      'Soy (tofu)',
+      'Nightshades (tomatoes, chili powder, peppers)',
+      'Legumes (beans)',
+      'Cilantro (a potential sensitivity to some individuals)',
     ],
 
     menuItem21: 'Morning Glow Tofu Scramble',
@@ -898,14 +867,7 @@ const translations = {
     menuItem28: 'Refreshing Citrus Green Smoothie',
     menuDesc28: 'A revitalizing blend of citrus and greens for a healthy start.',
     menuLD28: 'This vibrant green smoothie combines the tang of orange and lemon with nutrient-rich spinach and a touch of honey. It delivers a burst of vitamin C and antioxidants, making it an energizing, refreshing drink perfect for any time of day.',
-    menuIngredients28: [
-      'Orange',
-      'Lemon',
-      'Spinach',
-      'Honey',
-      'Ice',
-      'Water',
-    ],
+    menuIngredients28: ['Orange', 'Lemon', 'Spinach', 'Honey', 'Ice', 'Water'],
     menuNutrition28: 'Each serving is about 180 kcal, packed with vitamin C and antioxidants from fresh fruits and greens.',
     menuAllergens28: [],
 
@@ -933,7 +895,8 @@ const translations = {
       'Cane sugar',
       'Mint',
     ],
-    menuNutrition30: 'Each serving is approximately 150 kcal, providing a refreshing dose of vitamin C with minimal fat.',
+    menuNutrition30:
+      'Each serving is approximately 150 kcal, providing a refreshing dose of vitamin C with minimal fat.',
     menuAllergens30: [],
   },
   es: {
@@ -1000,35 +963,45 @@ const translations = {
 
     // home
     title: '¡Bienvenido a Green Bites!',
-    subTitle: 'Comidas veganas y vegetarianas frescas, sostenibles y deliciosas.',
+    subTitle:
+      'Comidas veganas y vegetarianas frescas, sostenibles y deliciosas.',
     menuCTA: 'Explora Nuestro Menú',
     learnMore: 'Más Información',
     aboutHeader: 'Nuestra Filosofía',
-    aboutDesc: 'En Green Bites, creemos en nutrir tanto el cuerpo como el alma. Obtenemos los productos más frescos, celebramos los ingredientes de temporada y creamos platos de origen vegetal llenos de sabor. Cada bocado que tomas respalda a nuestros agricultores locales, esfuerzos de sostenibilidad y un planeta más saludable.',
-    aboutDesc2: 'Únete a nosotros para redefinir la forma en que comemos—un plato a la vez.',
+    aboutDesc:
+      'En Green Bites, creemos en nutrir tanto el cuerpo como el alma. Obtenemos los productos más frescos, celebramos los ingredientes de temporada y creamos platos de origen vegetal llenos de sabor. Cada bocado que tomas respalda a nuestros agricultores locales, esfuerzos de sostenibilidad y un planeta más saludable.',
+    aboutDesc2:
+      'Únete a nosotros para redefinir la forma en que comemos—un plato a la vez.',
     organic: 'orgánico',
     years: 'años',
     dishes: 'platos',
     sustainabilityHeader: 'Comprometidos con la Sostenibilidad',
-    sustainabilityDesc: 'Desde la granja hasta la mesa, nos aseguramos de que cada ingrediente se obtenga de manera ética y se procese mínimamente. Nuestro compromiso con el cuidado del medio ambiente va de la mano con nuestras creaciones culinarias. Únete a nosotros en nuestro camino hacia un futuro más verde y saludable—un delicioso plato a la vez.',
+    sustainabilityDesc:
+      'Desde la granja hasta la mesa, nos aseguramos de que cada ingrediente se obtenga de manera ética y se procese mínimamente. Nuestro compromiso con el cuidado del medio ambiente va de la mano con nuestras creaciones culinarias. Únete a nosotros en nuestro camino hacia un futuro más verde y saludable—un delicioso plato a la vez.',
     wasteSaved: 'Más Residuos Ahorrados', // full thing is 80% More Waste Saved
     localSourcing: 'De Origen Local',
     renewable: 'Renovable',
     featuredHeader: 'Platos Destacados',
     testimonialsHeader: 'Lo Que Dicen Nuestros Clientes',
-    testimonialsP1: '"¡Los tacos veganos aquí son absolutamente fenomenales! La combinación de ingredientes frescos y sabores perfectamente equilibrados es diferente a cualquier cosa que haya probado. Cada bocado es una explosión de sabor que te deja con ganas de más. Nunca pensé que la comida basada en plantas pudiera ser tan satisfactoria."',
+    testimonialsP1:
+      '"¡Los tacos veganos aquí son absolutamente fenomenales! La combinación de ingredientes frescos y sabores perfectamente equilibrados es diferente a cualquier cosa que haya probado. Cada bocado es una explosión de sabor que te deja con ganas de más. Nunca pensé que la comida basada en plantas pudiera ser tan satisfactoria."',
     testimonialsPer1: '- Alex Johnson',
-    testimonialsP2: '"Green Bites ha redefinido por completo lo que significa comer de forma sostenible. Su dedicación a apoyar a los agricultores locales y usar prácticas ecológicas es realmente admirable. Además, la comida es excepcional—cada plato se siente como una celebración de los mejores ingredientes de la naturaleza. Siempre me voy con el corazón contento y el estómago lleno."',
+    testimonialsP2:
+      '"Green Bites ha redefinido por completo lo que significa comer de forma sostenible. Su dedicación a apoyar a los agricultores locales y usar prácticas ecológicas es realmente admirable. Además, la comida es excepcional—cada plato se siente como una celebración de los mejores ingredientes de la naturaleza. Siempre me voy con el corazón contento y el estómago lleno."',
     testimonialsPer2: '- Maria Smith',
-    testimonialsP3: '"Era escéptico acerca de las comidas a base de plantas hasta que probé Green Bites. ¡Sus platos son una revelación absoluta! La creatividad en sus recetas y la audacia de los sabores son incomparables. Es sorprendente ver cómo convierten ingredientes simples y saludables en obras maestras culinarias. Lo recomiendo a todos, sean veganos o no."',
+    testimonialsP3:
+      '"Era escéptico acerca de las comidas a base de plantas hasta que probé Green Bites. ¡Sus platos son una revelación absoluta! La creatividad en sus recetas y la audacia de los sabores son incomparables. Es sorprendente ver cómo convierten ingredientes simples y saludables en obras maestras culinarias. Lo recomiendo a todos, sean veganos o no."',
     testimonialsPer3: '- David Lee',
-    tDisclaimer: 'Descargo de responsabilidad: Estas personas no existen y estas citas fueron creadas únicamente con fines de concurso.',
+    tDisclaimer:
+      'Descargo de responsabilidad: Estas personas no existen y estas citas fueron creadas únicamente con fines de concurso.',
     bannerHeader: '¿Listo para Experimentar la Diferencia?',
-    bannerP: 'Visítanos u ordena en línea hoy y prueba lo que la naturaleza tiene para ofrecer.',
+    bannerP:
+      'Visítanos u ordena en línea hoy y prueba lo que la naturaleza tiene para ofrecer.',
     bannerLink: 'Ordenar Ahora',
 
     // menu
-    menuSub: 'Explora nuestras creaciones — por favor ten en cuenta cuáles son veganas y cuáles son vegetarianas.',
+    menuSub:
+      'Explora nuestras creaciones — por favor ten en cuenta cuáles son veganas y cuáles son vegetarianas.',
     menuTooltip: 'Por favor, inicia sesión para desbloquear pedidos y entrega',
     addCart: 'Agregar al Carrito',
     added: '¡Agregado!',
@@ -1049,55 +1022,76 @@ const translations = {
 
     // accessibility
     aTitle1: 'Nuestro Compromiso',
-    aContent1: 'En Green Bites, estamos comprometidos a hacer nuestro sitio web accesible para todos, incluidas las personas con discapacidades. Continuamente nos esforzamos por mejorar la accesibilidad y la usabilidad de acuerdo con los estándares de la industria. Creemos que todos merecen un acceso equitativo a la información y los servicios, independientemente de sus capacidades.',
+    aContent1:
+      'En Green Bites, estamos comprometidos a hacer nuestro sitio web accesible para todos, incluidas las personas con discapacidades. Continuamente nos esforzamos por mejorar la accesibilidad y la usabilidad de acuerdo con los estándares de la industria. Creemos que todos merecen un acceso equitativo a la información y los servicios, independientemente de sus capacidades.',
     aTitle2: 'Estándares y Directrices',
-    aContent2: 'Nuestro sitio web está diseñado y desarrollado de acuerdo con las Pautas de Accesibilidad al Contenido Web (WCAG) 2.1, con el objetivo de cumplir con el nivel AA. Realizamos auditorías y pruebas periódicas para identificar y corregir cualquier barrera de accesibilidad.',
+    aContent2:
+      'Nuestro sitio web está diseñado y desarrollado de acuerdo con las Pautas de Accesibilidad al Contenido Web (WCAG) 2.1, con el objetivo de cumplir con el nivel AA. Realizamos auditorías y pruebas periódicas para identificar y corregir cualquier barrera de accesibilidad.',
     aTitle3: 'Comentarios y Asistencia',
-    aContent3_1: 'Si encuentras alguna barrera de accesibilidad o necesitas ayuda, contáctanos en',
-    aContent3_2: '. Valoramos tus comentarios y estamos dedicados a mejorar tu experiencia en nuestro sitio web.',
+    aContent3_1:
+      'Si encuentras alguna barrera de accesibilidad o necesitas ayuda, contáctanos en',
+    aContent3_2:
+      '. Valoramos tus comentarios y estamos dedicados a mejorar tu experiencia en nuestro sitio web.',
 
     // apn
     apnTitle1: 'Información que Recopilamos',
-    apnContent1: 'Cuando solicitas un puesto en Green Bites, recopilamos información personal como tu nombre, datos de contacto, currículum, carta de presentación y referencias. También podemos recopilar información adicional, incluyendo datos de verificación de antecedentes y registros de comunicación durante el proceso de contratación.',
+    apnContent1:
+      'Cuando solicitas un puesto en Green Bites, recopilamos información personal como tu nombre, datos de contacto, currículum, carta de presentación y referencias. También podemos recopilar información adicional, incluyendo datos de verificación de antecedentes y registros de comunicación durante el proceso de contratación.',
     apnTitle2: 'Cómo Usamos los Datos del Solicitante',
-    apnContent2: 'Los datos del solicitante se utilizan únicamente para evaluar las calificaciones, realizar entrevistas, evaluar la idoneidad para el empleo y comunicarnos sobre oportunidades de trabajo. Podemos retener tus datos para futuras ofertas de trabajo a menos que solicites su eliminación.',
+    apnContent2:
+      'Los datos del solicitante se utilizan únicamente para evaluar las calificaciones, realizar entrevistas, evaluar la idoneidad para el empleo y comunicarnos sobre oportunidades de trabajo. Podemos retener tus datos para futuras ofertas de trabajo a menos que solicites su eliminación.',
     apnTitle3: 'Retención y Seguridad de Datos',
-    apnContent3: 'Tus datos se almacenan de forma segura y solo son accesibles por personal autorizado. Conservamos tu información durante un período razonable para cumplir con las obligaciones legales y gestionar los procesos de contratación de manera efectiva.',
+    apnContent3:
+      'Tus datos se almacenan de forma segura y solo son accesibles por personal autorizado. Conservamos tu información durante un período razonable para cumplir con las obligaciones legales y gestionar los procesos de contratación de manera efectiva.',
     apnTitle4: 'Tus Derechos',
-    apnContent4_1: 'Como solicitante, tienes derecho a acceder, corregir o solicitar la eliminación de tu información personal. Por favor contacta a ',
+    apnContent4_1:
+      'Como solicitante, tienes derecho a acceder, corregir o solicitar la eliminación de tu información personal. Por favor contacta a ',
     apnContent4_2: ' para consultas o solicitudes relacionadas con tus datos.',
 
     // privacy policy
-    privacyContent1: 'Recopilamos información personal que proporcionas, como nombre, correo electrónico y detalles de pago. Además, recopilamos datos no personales como direcciones IP, tipos de navegador y actividad en el sitio a través de herramientas de análisis.',
+    privacyContent1:
+      'Recopilamos información personal que proporcionas, como nombre, correo electrónico y detalles de pago. Además, recopilamos datos no personales como direcciones IP, tipos de navegador y actividad en el sitio a través de herramientas de análisis.',
     privacyTitle2: 'Cómo Usamos la Información',
-    privacyContent2: 'Utilizamos tu información para procesar transacciones, brindar soporte al cliente y mejorar tu experiencia en nuestro sitio web. Esto incluye personalizar contenido y comunicaciones de marketing.',
+    privacyContent2:
+      'Utilizamos tu información para procesar transacciones, brindar soporte al cliente y mejorar tu experiencia en nuestro sitio web. Esto incluye personalizar contenido y comunicaciones de marketing.',
     privacyTitle3: 'Compartir Tu Información',
-    privacyContent3: 'Tu información puede ser compartida con terceros de confianza, como procesadores de pago y plataformas de marketing, para cumplir con los servicios. Nos aseguramos de que todas las partes cumplan con las leyes de privacidad.',
+    privacyContent3:
+      'Tu información puede ser compartida con terceros de confianza, como procesadores de pago y plataformas de marketing, para cumplir con los servicios. Nos aseguramos de que todas las partes cumplan con las leyes de privacidad.',
     privacyTitle4: 'Tus Derechos de Datos',
-    privacyContent4_1: 'Tienes derecho a acceder, modificar o eliminar tu información personal. Por favor, contacta a',
+    privacyContent4_1:
+      'Tienes derecho a acceder, modificar o eliminar tu información personal. Por favor, contacta a',
     privacyContent4_2: ' para cualquier solicitud.',
 
     // terms of use
     touTitle1: 'Aceptación de Términos',
-    touContent1: 'Al acceder o usar nuestro sitio web, aceptas cumplir con estos términos y condiciones. Si no estás de acuerdo, por favor deja de usar nuestros servicios de inmediato.',
+    touContent1:
+      'Al acceder o usar nuestro sitio web, aceptas cumplir con estos términos y condiciones. Si no estás de acuerdo, por favor deja de usar nuestros servicios de inmediato.',
     touTitle2: 'Responsabilidades del Usuario',
-    touContent2: 'Los usuarios son responsables de asegurarse de que sus acciones cumplan con las leyes aplicables. Cualquier uso indebido, incluidas las acciones para dañar nuestra plataforma, está estrictamente prohibido.',
+    touContent2:
+      'Los usuarios son responsables de asegurarse de que sus acciones cumplan con las leyes aplicables. Cualquier uso indebido, incluidas las acciones para dañar nuestra plataforma, está estrictamente prohibido.',
     touTitle3: 'Limitación de Responsabilidad',
-    touContent3: 'Green Bites no es responsable de los daños que surjan del uso de nuestro sitio web, incluidos, entre otros, interrupciones del servicio o pérdida de datos.',
+    touContent3:
+      'Green Bites no es responsable de los daños que surjan del uso de nuestro sitio web, incluidos, entre otros, interrupciones del servicio o pérdida de datos.',
     touTitle4: 'Cambios en los Términos',
-    touContent4: 'Podemos actualizar estos términos periódicamente. El uso continuo del sitio web después de las actualizaciones implica la aceptación de los términos revisados.',
+    touContent4:
+      'Podemos actualizar estos términos periódicamente. El uso continuo del sitio web después de las actualizaciones implica la aceptación de los términos revisados.',
 
     // process
     processT1: 'Prácticas Agrícolas Éticas',
-    processD1: 'Nuestra red de agricultores locales emplea prácticas sostenibles y ecológicas que minimizan el impacto ambiental al tiempo que maximizan la nutrición y el sabor. Seleccionamos cuidadosamente a cada socio en función de su compromiso con métodos de cultivo orgánicos y la salud del suelo.',
+    processD1:
+      'Nuestra red de agricultores locales emplea prácticas sostenibles y ecológicas que minimizan el impacto ambiental al tiempo que maximizan la nutrición y el sabor. Seleccionamos cuidadosamente a cada socio en función de su compromiso con métodos de cultivo orgánicos y la salud del suelo.',
     processT2: 'Procesamiento Rápido y Limpio',
-    processD2: 'A pocas horas de la cosecha, nuestros ingredientes se procesan cuidadosamente en nuestras instalaciones de última generación. Esta línea de tiempo rápida garantiza la máxima retención de nutrientes y los sabores más frescos en cada comida que preparamos.',
+    processD2:
+      'A pocas horas de la cosecha, nuestros ingredientes se procesan cuidadosamente en nuestras instalaciones de última generación. Esta línea de tiempo rápida garantiza la máxima retención de nutrientes y los sabores más frescos en cada comida que preparamos.',
     processT3: 'Empaque y Entrega Ecológicos',
-    processD3: 'Hemos revolucionado nuestro proceso de entrega con empaques 100% compostables y rutas de entrega con neutralidad de carbono. Nuestra innovadora tecnología de enfriamiento mantiene los alimentos frescos mientras minimiza el impacto ambiental.',
+    processD3:
+      'Hemos revolucionado nuestro proceso de entrega con empaques 100% compostables y rutas de entrega con neutralidad de carbono. Nuestra innovadora tecnología de enfriamiento mantiene los alimentos frescos mientras minimiza el impacto ambiental.',
     processT4: 'Comidas Frescas y Deliciosas',
-    processD4: 'El resultado de nuestro proceso son comidas nutritivas elaboradas por chefs que no solo saben bien, sino que también son buenas para ti y el planeta. Cada plato se crea cuidadosamente para proporcionar un equilibrio perfecto de sabores y nutrientes.',
+    processD4:
+      'El resultado de nuestro proceso son comidas nutritivas elaboradas por chefs que no solo saben bien, sino que también son buenas para ti y el planeta. Cada plato se crea cuidadosamente para proporcionar un equilibrio perfecto de sabores y nutrientes.',
     processHTitle: 'De la Granja a Tu Mesa',
-    processHDesc: 'Vive el viaje de tu comida desde granjas locales hasta tu plato. Mantenemos los estándares más altos de calidad y sostenibilidad en cada paso, asegurando que obtengas las comidas más deliciosas y nutritivas posibles.',
+    processHDesc:
+      'Vive el viaje de tu comida desde granjas locales hasta tu plato. Mantenemos los estándares más altos de calidad y sostenibilidad en cada paso, asegurando que obtengas las comidas más deliciosas y nutritivas posibles.',
 
     // settings
     settings: 'Configuración',
@@ -1113,33 +1107,38 @@ const translations = {
     username: 'Usuario',
     pw: 'Contraseña',
     whySI: '¿Por qué Iniciar Sesión?',
-    whySIHelp: 'Al iniciar sesión, obtendrás una experiencia de compra más personalizada y sacarás el máximo provecho de tu visita.',
+    whySIHelp:
+      'Al iniciar sesión, obtendrás una experiencia de compra más personalizada y sacarás el máximo provecho de tu visita.',
     demoCred: 'Credenciales de Demostración',
     usernameF: 'Ingrese Usuario',
     passwordF: 'Ingrese Contraseña',
-  
+
     // values
     valueT1: 'Sostenibilidad',
     valueS1: 'Cultivar Nuestro Planeta',
-    valueC1: 'Nuestro compromiso con la sostenibilidad impulsa todo lo que hacemos, minimizando nuestro impacto ambiental. Seleccionamos cuidadosamente ingredientes locales y orgánicos para apoyar la agricultura sostenible y reducir nuestra huella de carbono, mientras aseguramos ofrecer la más alta calidad a nuestros clientes.',
+    valueC1:
+      'Nuestro compromiso con la sostenibilidad impulsa todo lo que hacemos, minimizando nuestro impacto ambiental. Seleccionamos cuidadosamente ingredientes locales y orgánicos para apoyar la agricultura sostenible y reducir nuestra huella de carbono, mientras aseguramos ofrecer la más alta calidad a nuestros clientes.',
     valueSt1_1: 'Reducción de emisiones de carbono en 45%',
     valueSt1_2: 'Embalaje 100% ecológico',
     valueSt1_3: 'Cero desperdicio de alimentos',
     valueT2: 'Comunidad',
     valueS2: 'Creciendo Juntos',
-    valueC2: 'El centro de todo lo que hacemos es construir conexiones duraderas. Nos enorgullece apoyar a los agricultores locales, colaborando con ellos para llevar productos frescos y de alta calidad a nuestra comunidad.',
+    valueC2:
+      'El centro de todo lo que hacemos es construir conexiones duraderas. Nos enorgullece apoyar a los agricultores locales, colaborando con ellos para llevar productos frescos y de alta calidad a nuestra comunidad.',
     valueSt2_1: 'Más de 50 socios locales',
     valueSt2_2: 'Más de 10K miembros',
     valueSt2_3: '25 eventos comunitarios',
     valueT3: 'Innovación',
     valueS3: 'Dando Forma al Futuro',
-    valueC3: 'La innovación impulsa todo lo que hacemos, constantemente superando límites para crear deliciosos platos basados en plantas que nutren a las personas y al planeta. Nuestra pasión reside en combinar creatividad con sostenibilidad.',
+    valueC3:
+      'La innovación impulsa todo lo que hacemos, constantemente superando límites para crear deliciosos platos basados en plantas que nutren a las personas y al planeta. Nuestra pasión reside en combinar creatividad con sostenibilidad.',
     valueSt3_1: 'Más de 10 recetas al mes',
     valueSt3_2: '3 laboratorios de I+D',
     valueSt3_3: 'Innovación 24/7',
     valueHeader: 'Nuestros Valores Centrales',
-    valueSub: 'En Green Bites, nuestros valores guían cada una de nuestras decisiones. Estamos dedicados a crear un mundo mejor para las futuras generaciones a través de prácticas sostenibles, participación comunitaria e innovación continua.',
-  
+    valueSub:
+      'En Green Bites, nuestros valores guían cada una de nuestras decisiones. Estamos dedicados a crear un mundo mejor para las futuras generaciones a través de prácticas sostenibles, participación comunitaria e innovación continua.',
+
     // checkout consts
     usa: 'Estados Unidos',
     canada: 'Canadá',
@@ -1162,7 +1161,7 @@ const translations = {
     sl: 'Santa Lucía',
     svadtg: 'San Vicente y las Granadinas',
     tat: 'Trinidad y Tobago',
-  
+
     alabama: 'Alabama',
     alaska: 'Alaska',
     arizona: 'Arizona',
@@ -1214,21 +1213,22 @@ const translations = {
     westVirginia: 'Virginia Occidental',
     wisconsin: 'Wisconsin',
     wyoming: 'Wyoming',
-  
+
     ontario: 'Ontario',
     quebec: 'Quebec',
     britishColumbia: 'Columbia Británica',
     alberta: 'Alberta',
-  
+
     jalisco: 'Jalisco',
     nuevoLeon: 'Nuevo León',
     chihuahua: 'Chihuahua',
     yucatan: 'Yucatán',
-  
+
     // menu consts
     menuItem1: 'Taco de Vida',
     menuDesc1: 'Delicioso taco vegano con vegetales frescos y salsa.',
-    menuLD1: 'Nuestros tacos veganos cuentan con tortillas de maíz suaves rellenas de frijoles negros sazonados, pico de gallo fresco, lechuga crujiente, aguacate cremoso y una salsa de cilantro y lima refrescante. Se espolvorea con levadura nutricional y se acompaña con una cuña de limón. La combinación equilibrada de sabores y texturas crea una comida vegetal satisfactoria y llena de nutrientes.',
+    menuLD1:
+      'Nuestros tacos veganos cuentan con tortillas de maíz suaves rellenas de frijoles negros sazonados, pico de gallo fresco, lechuga crujiente, aguacate cremoso y una salsa de cilantro y lima refrescante. Se espolvorea con levadura nutricional y se acompaña con una cuña de limón. La combinación equilibrada de sabores y texturas crea una comida vegetal satisfactoria y llena de nutrientes.',
     menuIngredients1: [
       'Tortillas de maíz',
       'Frijoles negros sazonados',
@@ -1250,15 +1250,17 @@ const translations = {
       'Sal',
       'Pimienta negra',
     ],
-    menuNutrition1: 'Cada taco proporciona aproximadamente 280 calorías, con 8g de proteína, 6g de fibra y 12g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina C (de los pimientos y el jugo de lima), vitamina A (del cilantro y la lechuga) y hierro (de los frijoles negros y la levadura nutricional). Este taco es completamente vegano, usando ingredientes integrales llenos de sabor y nutrientes.',
+    menuNutrition1:
+      'Cada taco proporciona aproximadamente 280 calorías, con 8g de proteína, 6g de fibra y 12g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina C (de los pimientos y el jugo de lima), vitamina A (del cilantro y la lechuga) y hierro (de los frijoles negros y la levadura nutricional). Este taco es completamente vegano, usando ingredientes integrales llenos de sabor y nutrientes.',
     menuAllergens1: [
       'Soja de la levadura nutricional',
       'Cilantro (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem2: 'Burrito El Jardín',
     menuDesc2: 'Burrito vegetariano relleno de arroz, frijoles y guacamole.',
-    menuLD2: 'Nuestro burrito vegetariano es una comida saludable y llena de sabor, envuelta en una suave tortilla de trigo. Está lleno de frijoles negros sazonados, arroz de cilantro y lima esponjoso, pimientos asados y cebolla, lechuga crujiente, maíz dulce y salsa picante. Una salsa suroeste a base de aguacate crema une todos los ingredientes, proporcionando cada bocado vibrante y satisfactorio. Perfecto para el almuerzo, la cena o cuando deseas una comida reconfortante y deliciosa basada en plantas.',
+    menuLD2:
+      'Nuestro burrito vegetariano es una comida saludable y llena de sabor, envuelta en una suave tortilla de trigo. Está lleno de frijoles negros sazonados, arroz de cilantro y lima esponjoso, pimientos asados y cebolla, lechuga crujiente, maíz dulce y salsa picante. Una salsa suroeste a base de aguacate crema une todos los ingredientes, proporcionando cada bocado vibrante y satisfactorio. Perfecto para el almuerzo, la cena o cuando deseas una comida reconfortante y deliciosa basada en plantas.',
     menuIngredients2: [
       'Tortilla de trigo',
       'Arroz de cilantro y lima (arroz blanco, cilantro, jugo de lima, aceite de oliva)',
@@ -1279,16 +1281,19 @@ const translations = {
       'Sal para sazonar',
       'Cuñas de limón para decorar',
     ],
-    menuNutrition2: 'Cada burrito proporciona aproximadamente 450 calorías, con 15g de proteína, 10g de fibra y 18g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en hierro (de los frijoles negros), vitamina C (de los pimientos y el jugo de lima) y ácido fólico (del cilantro y la lechuga). El burrito equilibra carbohidratos complejos, proteínas y grasas, proporcionando una sensación de saciedad y nutrición.',
+    menuNutrition2:
+      'Cada burrito proporciona aproximadamente 450 calorías, con 15g de proteína, 10g de fibra y 18g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en hierro (de los frijoles negros), vitamina C (de los pimientos y el jugo de lima) y ácido fólico (del cilantro y la lechuga). El burrito equilibra carbohidratos complejos, proteínas y grasas, proporcionando una sensación de saciedad y nutrición.',
     menuAllergens2: [
       'Trigo de la tortilla',
       'Soja de los frijoles negros o la levadura nutricional',
       'Cilantro (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem3: 'Ensalada Verde',
-    menuDesc3: 'Ensalada fresca de hojas verdes mixtas, garbanzos y aderezo de tahini.',
-    menuLD3: 'Esta vibrante ensalada vegana combina perfectamente hojas verdes frescas, garbanzos abundantes y vegetales coloridos, todo acompañado de un aderezo cremoso de tahini y limón. Utiliza una mezcla de col rizada, espinacas bebé y lechuga romana crujiente, y está adornada con zanahorias ralladas, remolacha en rodajas finas, garbanzos asados y almendras crujientes. El aderezo está hecho de tahini, jugo de limón, ajo y un poco de jarabe de arce, añadiendo un sabor ácido y ligeramente dulce. Es una opción ligera y satisfactoria, rica en nutrientes y llena de sabor.',
+    menuDesc3:
+      'Ensalada fresca de hojas verdes mixtas, garbanzos y aderezo de tahini.',
+    menuLD3:
+      'Esta vibrante ensalada vegana combina perfectamente hojas verdes frescas, garbanzos abundantes y vegetales coloridos, todo acompañado de un aderezo cremoso de tahini y limón. Utiliza una mezcla de col rizada, espinacas bebé y lechuga romana crujiente, y está adornada con zanahorias ralladas, remolacha en rodajas finas, garbanzos asados y almendras crujientes. El aderezo está hecho de tahini, jugo de limón, ajo y un poco de jarabe de arce, añadiendo un sabor ácido y ligeramente dulce. Es una opción ligera y satisfactoria, rica en nutrientes y llena de sabor.',
     menuIngredients3: [
       'Hojas de espinaca bebé',
       'Col rizada picada',
@@ -1306,16 +1311,19 @@ const translations = {
       'Sal (para sazonar)',
       'Pimienta negra recién molida (para sazonar)',
     ],
-    menuNutrition3: 'Cada ensalada proporciona aproximadamente 300 calorías, con 10g de proteína, 8g de fibra y 12g de grasas saludables provenientes del tahini y las almendras. Rica en vitamina A, C y K (de las hojas verdes y las zanahorias), hierro (de los garbanzos y las espinacas) y magnesio (de las almendras). El aderezo contiene calcio del tahini, añadiendo una textura cremosa sin utilizar productos lácteos.',
+    menuNutrition3:
+      'Cada ensalada proporciona aproximadamente 300 calorías, con 10g de proteína, 8g de fibra y 12g de grasas saludables provenientes del tahini y las almendras. Rica en vitamina A, C y K (de las hojas verdes y las zanahorias), hierro (de los garbanzos y las espinacas) y magnesio (de las almendras). El aderezo contiene calcio del tahini, añadiendo una textura cremosa sin utilizar productos lácteos.',
     menuAllergens3: [
       'Tahini de sésamo',
       'Almendras (nueces)',
       'Garbanzos (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem4: 'Hamburguesa Ahumada de Maple',
-    menuDesc4: 'Sabrosa hamburguesa vegana con lechuga, tomate y salsa ahumada.',
-    menuLD4: 'Nuestra hamburguesa vegana es una opción rica en sabor y sustanciosa basada en plantas, perfecta para los amantes de las hamburguesas. Se monta en un pan integral suave con una jugosa hamburguesa vegana. La hamburguesa está cubierta con lechuga crujiente, rodajas de tomate maduras y cebolla caramelizada, añadiendo un toque de dulzura. El punto destacado es una salsa ahumada cremosa hecha de mayonesa vegana, pimentón ahumado, ajo y un poco de jugo de limón, añadiendo profundidad y riqueza a cada bocado. Satisfactoria y llena de sabor vegetal.',
+    menuDesc4:
+      'Sabrosa hamburguesa vegana con lechuga, tomate y salsa ahumada.',
+    menuLD4:
+      'Nuestra hamburguesa vegana es una opción rica en sabor y sustanciosa basada en plantas, perfecta para los amantes de las hamburguesas. Se monta en un pan integral suave con una jugosa hamburguesa vegana. La hamburguesa está cubierta con lechuga crujiente, rodajas de tomate maduras y cebolla caramelizada, añadiendo un toque de dulzura. El punto destacado es una salsa ahumada cremosa hecha de mayonesa vegana, pimentón ahumado, ajo y un poco de jugo de limón, añadiendo profundidad y riqueza a cada bocado. Satisfactoria y llena de sabor vegetal.',
     menuIngredients4: [
       'Pan de hamburguesa integral',
       'Hamburguesa vegana (hecha de proteína de guisante, champiñones y condimentos)',
@@ -1327,16 +1335,19 @@ const translations = {
       'Sal para sazonar',
       'Pimienta para sazonar',
     ],
-    menuNutrition4: 'Cada hamburguesa proporciona aproximadamente 350 calorías, con 15g de proteína, 5g de fibra y 10g de grasas saludables provenientes del aceite de oliva y la hamburguesa vegana. Rica en hierro (de la hamburguesa vegana y el pan integral) y vitamina C (del tomate y la salsa ahumada). Esta hamburguesa es satisfactoria y equilibrada, ofreciendo un placer saludable sin culpa.',
+    menuNutrition4:
+      'Cada hamburguesa proporciona aproximadamente 350 calorías, con 15g de proteína, 5g de fibra y 10g de grasas saludables provenientes del aceite de oliva y la hamburguesa vegana. Rica en hierro (de la hamburguesa vegana y el pan integral) y vitamina C (del tomate y la salsa ahumada). Esta hamburguesa es satisfactoria y equilibrada, ofreciendo un placer saludable sin culpa.',
     menuAllergens4: [
       'Trigo del pan',
       'Soja de la mayonesa vegana',
       'Proteína de guisante en la hamburguesa vegana (alérgeno común)',
     ],
-  
+
     menuItem5: 'Pizza Pomodoro Verde',
-    menuDesc5: 'Base de masa fina y crujiente cubierta con salsa marinara, queso vegano, champiñones y espinacas.',
-    menuLD5: 'Nuestra pizza vegana cuenta con una base de masa fina y crujiente, cubierta con deliciosos ingredientes basados en plantas. La rica salsa marinara de tomate se esparce uniformemente sobre la masa, seguida de una capa de queso mozzarella vegano que se derrite perfectamente. La pizza está cargada de hojas frescas de espinaca, champiñones salteados y cebolla caramelizada, añadiendo aún más sabor. Cada bocado ofrece una combinación perfecta de salinidad, sabor a queso y frescura, siendo una opción clásica y obligatoria para los amantes de la pizza vegana.',
+    menuDesc5:
+      'Base de masa fina y crujiente cubierta con salsa marinara, queso vegano, champiñones y espinacas.',
+    menuLD5:
+      'Nuestra pizza vegana cuenta con una base de masa fina y crujiente, cubierta con deliciosos ingredientes basados en plantas. La rica salsa marinara de tomate se esparce uniformemente sobre la masa, seguida de una capa de queso mozzarella vegano que se derrite perfectamente. La pizza está cargada de hojas frescas de espinaca, champiñones salteados y cebolla caramelizada, añadiendo aún más sabor. Cada bocado ofrece una combinación perfecta de salinidad, sabor a queso y frescura, siendo una opción clásica y obligatoria para los amantes de la pizza vegana.',
     menuIngredients5: [
       'Masa de pizza fina (hecha de harina integral, aceite de oliva, agua y levadura)',
       'Salsa marinara de tomate asado (tomate asado, ajo, aceite de oliva, sal, orégano)',
@@ -1349,16 +1360,19 @@ const translations = {
       'Orégano (para sazonar la salsa)',
       'Sal (para sazonar)',
     ],
-    menuNutrition5: 'Cada porción proporciona aproximadamente 280 calorías, con 6g de proteína, 3g de fibra y 12g de grasas saludables provenientes del aceite de oliva y el queso vegano. La pizza es rica en vitamina C (de las espinacas y los tomates), calcio (del mozzarella vegano) e hierro (de las espinacas y los champiñones). Es una opción balanceada, llena de sabor y sin comprometer el gusto o la satisfacción en una dieta basada en plantas.',
+    menuNutrition5:
+      'Cada porción proporciona aproximadamente 280 calorías, con 6g de proteína, 3g de fibra y 12g de grasas saludables provenientes del aceite de oliva y el queso vegano. La pizza es rica en vitamina C (de las espinacas y los tomates), calcio (del mozzarella vegano) e hierro (de las espinacas y los champiñones). Es una opción balanceada, llena de sabor y sin comprometer el gusto o la satisfacción en una dieta basada en plantas.',
     menuAllergens5: [
       'Trigo de la masa',
       'Soja del mozzarella vegano (puede haber contaminación cruzada)',
       'Coco del mozzarella vegano',
     ],
-  
+
     menuItem6: 'Macarrones con Queso de Anacardo Dorado',
-    menuDesc6: 'Comida reconfortante con salsa cremosa de queso vegano hecha de anacardos, levadura nutricional y cúrcuma.',
-    menuLD6: 'Estos macarrones con queso vegano son el máximo confort food, con fideos de macarrones suaves cubiertos de una rica y cremosa salsa de queso basada en plantas. La salsa está hecha de anacardos, levadura nutricional y un poco de cúrcuma para dar un color dorado natural. Se espolvorea con cebollín picado para añadir frescura y un poco de pimienta negra molida gruesa para equilibrar la cremosidad. Es una comida abundante, satisfactoria y perfecta para aquellos que siguen una dieta basada en plantas.',
+    menuDesc6:
+      'Comida reconfortante con salsa cremosa de queso vegano hecha de anacardos, levadura nutricional y cúrcuma.',
+    menuLD6:
+      'Estos macarrones con queso vegano son el máximo confort food, con fideos de macarrones suaves cubiertos de una rica y cremosa salsa de queso basada en plantas. La salsa está hecha de anacardos, levadura nutricional y un poco de cúrcuma para dar un color dorado natural. Se espolvorea con cebollín picado para añadir frescura y un poco de pimienta negra molida gruesa para equilibrar la cremosidad. Es una comida abundante, satisfactoria y perfecta para aquellos que siguen una dieta basada en plantas.',
     menuIngredients6: [
       'Macarrones (hechos de trigo duro)',
       'Salsa de queso de anacardo (anacardos, levadura nutricional, cúrcuma, ajo en polvo, jugo de limón, aceite de oliva, agua)',
@@ -1367,16 +1381,18 @@ const translations = {
       'Sal (para sazonar)',
       'Aceite de oliva (para la salsa)',
     ],
-    menuNutrition6: 'Cada porción proporciona aproximadamente 350 calorías, con 10g de proteína, 5g de fibra y 14g de grasas saludables provenientes de los anacardos y el aceite de oliva. Es una buena fuente de vitamina B12 (de la levadura nutricional), magnesio (de los anacardos) e hierro (de los macarrones y los anacardos). Este plato es indulgente pero nutritivo, ofreciendo un sabor clásico a queso sin necesidad de productos lácteos.',
+    menuNutrition6:
+      'Cada porción proporciona aproximadamente 350 calorías, con 10g de proteína, 5g de fibra y 14g de grasas saludables provenientes de los anacardos y el aceite de oliva. Es una buena fuente de vitamina B12 (de la levadura nutricional), magnesio (de los anacardos) e hierro (de los macarrones y los anacardos). Este plato es indulgente pero nutritivo, ofreciendo un sabor clásico a queso sin necesidad de productos lácteos.',
     menuAllergens6: [
       'Trigo de los macarrones',
       'Anacardos (nueces)',
       'Soja de la levadura nutricional (puede haber contaminación cruzada)',
     ],
-  
+
     menuItem7: 'Lasaña Florentina',
     menuDesc7: 'Capas de fideos, ricotta, espinacas y salsa marinara.',
-    menuLD7: 'Nuestra lasaña vegetariana es un clásico reconfortante, con capas de fideos anchos suaves, ricotta cremosa, rica salsa marinara y verduras frescas de hoja verde. El plato está cubierto con mozzarella vegana derretida y decorado con cilantro fresco, añadiendo un toque único de sabor. Las espinacas bebé y las hojas de perejil se entrelazan, añadiendo frescura y más sabor. Cada bocado combina perfectamente el sabor a queso, la salinidad y el aroma a hierbas.',
+    menuLD7:
+      'Nuestra lasaña vegetariana es un clásico reconfortante, con capas de fideos anchos suaves, ricotta cremosa, rica salsa marinara y verduras frescas de hoja verde. El plato está cubierto con mozzarella vegana derretida y decorado con cilantro fresco, añadiendo un toque único de sabor. Las espinacas bebé y las hojas de perejil se entrelazan, añadiendo frescura y más sabor. Cada bocado combina perfectamente el sabor a queso, la salinidad y el aroma a hierbas.',
     menuIngredients7: [
       'Fideos de lasaña (hechos de trigo duro)',
       'Ricotta',
@@ -1391,16 +1407,19 @@ const translations = {
       'Sal para sazonar',
       'Pimienta negra para sazonar',
     ],
-    menuNutrition7: 'Cada porción proporciona aproximadamente 400 calorías, con 15g de proteína, 4g de fibra y 12g de grasas provenientes del queso ricotta y mozzarella. Rica en calcio (de la ricotta y mozzarella), vitamina A (de las espinacas y perejil) e hierro (de las espinacas y los fideos de lasaña). Esta lasaña es abundante y satisfactoria, perfecta para una comida reconfortante.',
+    menuNutrition7:
+      'Cada porción proporciona aproximadamente 400 calorías, con 15g de proteína, 4g de fibra y 12g de grasas provenientes del queso ricotta y mozzarella. Rica en calcio (de la ricotta y mozzarella), vitamina A (de las espinacas y perejil) e hierro (de las espinacas y los fideos de lasaña). Esta lasaña es abundante y satisfactoria, perfecta para una comida reconfortante.',
     menuAllergens7: [
       'Trigo de los fideos de lasaña',
       'Productos lácteos de la ricotta y mozzarella',
       'Ajo (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem8: 'Curry de Garbanzos Bombay',
-    menuDesc8: 'Curry cálido y aromático hecho con garbanzos, leche de coco y una mezcla de especias.',
-    menuLD8: 'Nuestro curry de garbanzos es un plato reconfortante con garbanzos tiernos cocidos a fuego lento en una cremosa salsa de coco y especias ricas. La vibrante salsa de color naranja está llena de especias cálidas, y se espolvorea con cilantro fresco y cebolla verde para añadir un sabor brillante. Se sirve con una cuña de limón para un toque ácido, acompañado de maíz asado y salsa fresca para añadir una textura única y un contraste refrescante.',
+    menuDesc8:
+      'Curry cálido y aromático hecho con garbanzos, leche de coco y una mezcla de especias.',
+    menuLD8:
+      'Nuestro curry de garbanzos es un plato reconfortante con garbanzos tiernos cocidos a fuego lento en una cremosa salsa de coco y especias ricas. La vibrante salsa de color naranja está llena de especias cálidas, y se espolvorea con cilantro fresco y cebolla verde para añadir un sabor brillante. Se sirve con una cuña de limón para un toque ácido, acompañado de maíz asado y salsa fresca para añadir una textura única y un contraste refrescante.',
     menuIngredients8: [
       'Garbanzos (cocidos)',
       'Leche de coco (entera)',
@@ -1419,15 +1438,18 @@ const translations = {
       'Sal para sazonar',
       'Pimienta negra para sazonar',
     ],
-    menuNutrition8: 'Cada porción proporciona aproximadamente 350 calorías, con 12g de proteína, 8g de fibra y 15g de grasas saludables provenientes de la leche de coco y el aceite de oliva. Rico en vitamina C (de los limones y la salsa fresca), potasio (de los garbanzos) e hierro (de las especias y los garbanzos). Este plato es satisfactorio, cálido y lleno de componentes nutritivos.',
+    menuNutrition8:
+      'Cada porción proporciona aproximadamente 350 calorías, con 12g de proteína, 8g de fibra y 15g de grasas saludables provenientes de la leche de coco y el aceite de oliva. Rico en vitamina C (de los limones y la salsa fresca), potasio (de los garbanzos) e hierro (de las especias y los garbanzos). Este plato es satisfactorio, cálido y lleno de componentes nutritivos.',
     menuAllergens8: [
       'Coco de la leche de coco',
       'Ajo (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem9: 'Bowl de Burrito Fresca',
-    menuDesc9: 'Bowl vegano con arroz, frijoles negros, maíz, guacamole y salsa.',
-    menuLD9: 'Nuestro bowl de burrito vegano es una versión descompuesta del burrito, servido en un bowl vibrante y abundante. La base es un esponjoso arroz de cilantro y lima, cubierto con frijoles negros sazonados, guacamole fresco, espárragos asados coloridos, pimientos asados, maíz dulce y tomates en cubos. Se espolvorea con cilantro fresco y una cuña de limón, combinando perfectamente sabores y texturas.',
+    menuDesc9:
+      'Bowl vegano con arroz, frijoles negros, maíz, guacamole y salsa.',
+    menuLD9:
+      'Nuestro bowl de burrito vegano es una versión descompuesta del burrito, servido en un bowl vibrante y abundante. La base es un esponjoso arroz de cilantro y lima, cubierto con frijoles negros sazonados, guacamole fresco, espárragos asados coloridos, pimientos asados, maíz dulce y tomates en cubos. Se espolvorea con cilantro fresco y una cuña de limón, combinando perfectamente sabores y texturas.',
     menuIngredients9: [
       'Arroz de cilantro y lima (arroz blanco, cilantro, jugo de lima, aceite de oliva)',
       'Frijoles negros (sazonados con comino y ajo en polvo)',
@@ -1442,14 +1464,15 @@ const translations = {
       'Pimienta para sazonar',
       'Aceite de oliva (para asar y cocinar)',
     ],
-    menuNutrition9: 'Cada bowl proporciona aproximadamente 400 calorías, con 12g de proteína, 9g de fibra y 15g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina C (de los pimientos y la lima), potasio (de los espárragos y el aguacate) e hierro (de los frijoles negros).',
-    menuAllergens9: [
-      'Aguacate (puede ser un alérgeno para algunas personas)',
-    ],
-  
+    menuNutrition9:
+      'Cada bowl proporciona aproximadamente 400 calorías, con 12g de proteína, 9g de fibra y 15g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina C (de los pimientos y la lima), potasio (de los espárragos y el aguacate) e hierro (de los frijoles negros).',
+    menuAllergens9: ['Aguacate (puede ser un alérgeno para algunas personas)'],
+
     menuItem10: 'Brochetas Toscana',
-    menuDesc10: 'Brochetas de espárragos marinados, pimientos dulces, cebolla y champiñones a la parrilla.',
-    menuLD10: 'Nuestras brochetas de vegetales a la parrilla son un plato colorido, ahumado y delicioso basado en plantas. Espárragos marinados, pimientos dulces y champiñones se ensartan y se grillan hasta que estén tiernos y ligeramente carbonizados. Los vegetales están cubiertos con una marinada de aceite de oliva y ajo sazonada con pimentón ahumado y hierbas italianas, aportando un aroma exquisito. Estas brochetas son perfectas tanto como plato principal como guarnición rica en sabor.',
+    menuDesc10:
+      'Brochetas de espárragos marinados, pimientos dulces, cebolla y champiñones a la parrilla.',
+    menuLD10:
+      'Nuestras brochetas de vegetales a la parrilla son un plato colorido, ahumado y delicioso basado en plantas. Espárragos marinados, pimientos dulces y champiñones se ensartan y se grillan hasta que estén tiernos y ligeramente carbonizados. Los vegetales están cubiertos con una marinada de aceite de oliva y ajo sazonada con pimentón ahumado y hierbas italianas, aportando un aroma exquisito. Estas brochetas son perfectas tanto como plato principal como guarnición rica en sabor.',
     menuIngredients10: [
       'Espárragos (cortados en rodajas gruesas)',
       'Pimientos dulces (rojo, amarillo, verde, cortados en cubos)',
@@ -1458,15 +1481,18 @@ const translations = {
       'Perejil fresco (picado, para decorar)',
       'Cuñas de limón (para servir)',
     ],
-    menuNutrition10: 'Cada brocheta proporciona aproximadamente 150 calorías, con 4g de proteína, 3g de fibra y 8g de grasas saludables provenientes del aceite de oliva. Las brochetas son una excelente fuente de vitamina C (de los pimientos), potasio (de los espárragos) y antioxidantes (de los champiñones). Ligero y lleno de sabor, perfecto para los amantes de la parrilla.',
+    menuNutrition10:
+      'Cada brocheta proporciona aproximadamente 150 calorías, con 4g de proteína, 3g de fibra y 8g de grasas saludables provenientes del aceite de oliva. Las brochetas son una excelente fuente de vitamina C (de los pimientos), potasio (de los espárragos) y antioxidantes (de los champiñones). Ligero y lleno de sabor, perfecto para los amantes de la parrilla.',
     menuAllergens10: [
       'Ajo (puede ser un alérgeno para algunas personas)',
       'Champiñones (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem11: 'Salteado Amanecer Teriyaki',
-    menuDesc11: 'Vegetales frescos salteados en una salsa a base de soya salada, servido con arroz jazmín.',
-    menuLD11: 'Este salteado vegano es una combinación vibrante de vegetales coloridos y arroz integral, todos salteados en una sabrosa salsa a base de soya. Este plato incluye espárragos tiernos, pimientos dulces, guisantes, zanahorias y trozos de piña, acompañado de anacardos tostados para añadir un crujido. El ajo, el jengibre y la salsa de chile tailandés aportan un equilibrio agradable de sabores dulce, ácido y salado.',
+    menuDesc11:
+      'Vegetales frescos salteados en una salsa a base de soya salada, servido con arroz jazmín.',
+    menuLD11:
+      'Este salteado vegano es una combinación vibrante de vegetales coloridos y arroz integral, todos salteados en una sabrosa salsa a base de soya. Este plato incluye espárragos tiernos, pimientos dulces, guisantes, zanahorias y trozos de piña, acompañado de anacardos tostados para añadir un crujido. El ajo, el jengibre y la salsa de chile tailandés aportan un equilibrio agradable de sabores dulce, ácido y salado.',
     menuIngredients11: [
       'Arroz integral cocido',
       'Espárragos (cortados en media luna)',
@@ -1484,16 +1510,19 @@ const translations = {
       'Cebolla verde en rodajas (para decorar)',
       'Albahaca tailandesa fresca (para decorar)',
     ],
-    menuNutrition11: 'Cada porción proporciona aproximadamente 350 calorías, con 8g de proteína, 6g de fibra y 12g de grasas saludables provenientes del aceite de sésamo y los anacardos. Este salteado es una excelente fuente de vitamina A (de las zanahorias), vitamina C (de los pimientos) y potasio (de los espárragos y la piña). Ligero, lleno de sabor y nutritivo.',
+    menuNutrition11:
+      'Cada porción proporciona aproximadamente 350 calorías, con 8g de proteína, 6g de fibra y 12g de grasas saludables provenientes del aceite de sésamo y los anacardos. Este salteado es una excelente fuente de vitamina A (de las zanahorias), vitamina C (de los pimientos) y potasio (de los espárragos y la piña). Ligero, lleno de sabor y nutritivo.',
     menuAllergens11: [
       'Soya de la salsa de soya o tamari',
       'Anacardos (nueces)',
       'Aceite de sésamo (contiene sésamo)',
     ],
-  
+
     menuItem12: 'Rollos de Aguacate',
-    menuDesc12: 'Rollos de sushi rellenos de aguacate, pepino y rábanos encurtidos, servidos con salsa de soya.',
-    menuLD12: 'Nuestros rollos de sushi veganos son una vibrante combinación de sabores y texturas, destacando el cremoso aguacate, el crujiente pepino y los rábanos encurtidos dulces y ácidos, todo envuelto en arroz sazonado para sushi y nori. Los rollos están decorados con repollo morado finamente cortado, zanahorias y espárragos, añadiendo más color y textura crujiente. Se sirven con salsa de soya para mojar, ofreciendo un sushi fresco y ligero basado en plantas.',
+    menuDesc12:
+      'Rollos de sushi rellenos de aguacate, pepino y rábanos encurtidos, servidos con salsa de soya.',
+    menuLD12:
+      'Nuestros rollos de sushi veganos son una vibrante combinación de sabores y texturas, destacando el cremoso aguacate, el crujiente pepino y los rábanos encurtidos dulces y ácidos, todo envuelto en arroz sazonado para sushi y nori. Los rollos están decorados con repollo morado finamente cortado, zanahorias y espárragos, añadiendo más color y textura crujiente. Se sirven con salsa de soya para mojar, ofreciendo un sushi fresco y ligero basado en plantas.',
     menuIngredients12: [
       'Arroz para sushi (sazonado con vinagre de arroz, azúcar y sal)',
       'Hojas de nori',
@@ -1507,16 +1536,19 @@ const translations = {
       'Wasabi (decoración opcional)',
       'Jengibre encurtido (decoración opcional)',
     ],
-    menuNutrition12: 'Cada rollo de sushi proporciona aproximadamente 200 calorías, con 4g de proteína, 3g de fibra y 5g de grasas saludables provenientes del aguacate. Rico en vitamina C (de la col morada), potasio (del aguacate) y fibra (de los vegetales y el arroz para sushi). Este plato es fresco, ligero y lleno de ingredientes vegetales frescos.',
+    menuNutrition12:
+      'Cada rollo de sushi proporciona aproximadamente 200 calorías, con 4g de proteína, 3g de fibra y 5g de grasas saludables provenientes del aguacate. Rico en vitamina C (de la col morada), potasio (del aguacate) y fibra (de los vegetales y el arroz para sushi). Este plato es fresco, ligero y lleno de ingredientes vegetales frescos.',
     menuAllergens12: [
       'Soja de la salsa de soya',
       'Si no se usa salsa de soya sin gluten, contiene trigo',
       'Aguacate (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem13: 'Taco Dulce Sol',
-    menuDesc13: 'Tortilla de maíz suave rellena de batata asada, frijoles negros, aguacate y ensalada.',
-    menuLD13: 'Nuestros tacos de batata son una deliciosa opción basada en plantas, con tortillas de maíz suaves rellenas de batata asada, frijoles negros sazonados y rodajas cremosas de aguacate. Se coronan con una ensalada vibrante de col morada y crema de lima ácida, ofreciendo un equilibrio perfecto de texturas y sabores. Se espolvorea con cilantro fresco y una cuña de limón para añadir frescura. Es una comida saludable, ligera y satisfactoria.',
+    menuDesc13:
+      'Tortilla de maíz suave rellena de batata asada, frijoles negros, aguacate y ensalada.',
+    menuLD13:
+      'Nuestros tacos de batata son una deliciosa opción basada en plantas, con tortillas de maíz suaves rellenas de batata asada, frijoles negros sazonados y rodajas cremosas de aguacate. Se coronan con una ensalada vibrante de col morada y crema de lima ácida, ofreciendo un equilibrio perfecto de texturas y sabores. Se espolvorea con cilantro fresco y una cuña de limón para añadir frescura. Es una comida saludable, ligera y satisfactoria.',
     menuIngredients13: [
       'Tortillas de maíz',
       'Batata asada (sazonada con aceite de oliva, pimentón ahumado y comino)',
@@ -1531,16 +1563,19 @@ const translations = {
       'Cuñas de limón (para decorar)',
       'Sal (para sazonar)',
     ],
-    menuNutrition13: 'Cada taco proporciona aproximadamente 280 calorías, con 8g de proteína, 6g de fibra y 10g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina A (de la batata), vitamina C (de la col morada y la lima) y potasio (del aguacate). Colorido y nutritivo, es una comida tanto deliciosa como saludable.',
+    menuNutrition13:
+      'Cada taco proporciona aproximadamente 280 calorías, con 8g de proteína, 6g de fibra y 10g de grasas saludables provenientes del aguacate y el aceite de oliva. Rico en vitamina A (de la batata), vitamina C (de la col morada y la lima) y potasio (del aguacate). Colorido y nutritivo, es una comida tanto deliciosa como saludable.',
     menuAllergens13: [
       'Frijoles negros del tofu',
       'Tortillas de maíz',
       'Cilantro (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem14: 'Cocina Campesina de Cesiá',
-    menuDesc14: 'Tortilla de maíz crujiente rellena de queso vegano de aguacate, frijoles y vegetales salteados.',
-    menuLD14: 'Nuestra cesiá vegana es una versión deliciosa y mejorada del clásico, basada en plantas. Se monta en una crujiente tortilla de trigo, llena de una mezcla de frijoles negros sazonados, pimientos dulces salteados, maíz asado, tomates frescos y col morada, junto con queso vegano derretido y una pizca de jalapeño picante. Se asa hasta que esté dorada y crujiente, y se sirve con salsa fresca y una cuña de limón, ofreciendo un final fresco. Esta cesiá es ligera pero satisfactoria, llena de sabores vegetales deliciosos.',
+    menuDesc14:
+      'Tortilla de maíz crujiente rellena de queso vegano de aguacate, frijoles y vegetales salteados.',
+    menuLD14:
+      'Nuestra cesiá vegana es una versión deliciosa y mejorada del clásico, basada en plantas. Se monta en una crujiente tortilla de trigo, llena de una mezcla de frijoles negros sazonados, pimientos dulces salteados, maíz asado, tomates frescos y col morada, junto con queso vegano derretido y una pizca de jalapeño picante. Se asa hasta que esté dorada y crujiente, y se sirve con salsa fresca y una cuña de limón, ofreciendo un final fresco. Esta cesiá es ligera pero satisfactoria, llena de sabores vegetales deliciosos.',
     menuIngredients14: [
       'Tortillas de trigo',
       'Queso vegano (cortado en hebras)',
@@ -1553,16 +1588,19 @@ const translations = {
       'Aceite de oliva para asar',
       'Cuñas de limón (para decorar)',
     ],
-    menuNutrition14: 'Cada cesiá proporciona aproximadamente 300 calorías, con 10g de proteína, 7g de fibra y 12g de grasas saludables provenientes del aceite de oliva y el queso vegano. Rica en vitamina C (de los pimientos y los tomates), calcio (del queso vegano) y potasio (de los frijoles negros). Ligera y satisfactoria, ideal como snack o comida.',
+    menuNutrition14:
+      'Cada cesiá proporciona aproximadamente 300 calorías, con 10g de proteína, 7g de fibra y 12g de grasas saludables provenientes del aceite de oliva y el queso vegano. Rica en vitamina C (de los pimientos y los tomates), calcio (del queso vegano) y potasio (de los frijoles negros). Ligera y satisfactoria, ideal como snack o comida.',
     menuAllergens14: [
       'Trigo de la tortilla',
       'Soja del queso vegano',
       'Cilantro (si se añade como decoración)',
     ],
-  
+
     menuItem15: 'Sopa de Lentejas Toscana',
-    menuDesc15: 'Sopa abundante hecha con lentejas, zanahorias, apio y tomates.',
-    menuLD15: 'Nuestra sopa de lentejas es una taza reconfortante y cálida, con lentejas marrones tiernas cocidas en un sabroso caldo de verduras. La sopa incluye zanahorias picadas, tomates y papas doradas, y se añade espinaca fresca para dar frescura y sabor. Sazonada con ajo, comino y pimentón ahumado, ofrece un sabor rico y satisfactorio. Perfecta para los días fríos, proporcionando una comida reconfortante.',
+    menuDesc15:
+      'Sopa abundante hecha con lentejas, zanahorias, apio y tomates.',
+    menuLD15:
+      'Nuestra sopa de lentejas es una taza reconfortante y cálida, con lentejas marrones tiernas cocidas en un sabroso caldo de verduras. La sopa incluye zanahorias picadas, tomates y papas doradas, y se añade espinaca fresca para dar frescura y sabor. Sazonada con ajo, comino y pimentón ahumado, ofrece un sabor rico y satisfactorio. Perfecta para los días fríos, proporcionando una comida reconfortante.',
     menuIngredients15: [
       'Lentejas marrones (cocidas)',
       'Caldo de verduras',
@@ -1575,15 +1613,17 @@ const translations = {
       'Pimentón ahumado (para sazonar)',
       'Sal (para sazonar)',
     ],
-    menuNutrition15: 'Cada porción proporciona aproximadamente 250 calorías, con 12g de proteína, 8g de fibra y 4g de grasas saludables provenientes de la leche de coco y el aceite de oliva. La sopa es rica en hierro (de las lentejas y la espinaca), vitamina A (de las zanahorias y la espinaca) y potasio (de las papas). Ligera y nutritiva, ideal para una comida saludable.',
+    menuNutrition15:
+      'Cada porción proporciona aproximadamente 250 calorías, con 12g de proteína, 8g de fibra y 4g de grasas saludables provenientes de la leche de coco y el aceite de oliva. La sopa es rica en hierro (de las lentejas y la espinaca), vitamina A (de las zanahorias y la espinaca) y potasio (de las papas). Ligera y nutritiva, ideal para una comida saludable.',
     menuAllergens15: [
       'Apio (puede ser un alérgeno para algunas personas)',
       'Ajo (puede ser un alérgeno para algunas personas)',
     ],
-  
+
     menuItem16: 'Coliflor Asada Masala',
     menuDesc16: 'Coliflor asada en una salsa rica y sabrosa de tomate.',
-    menuLD16: 'Nuestra coliflor tikka masala es un plato audaz y lleno de sabor al estilo indio basado en plantas. Los floretes de coliflor asados se cocinan a fuego lento en una cremosa salsa de curry de tomate y coco, creando una base rica y aromática. Servida con arroz basmati al vapor, espolvoreada con semillas de sésamo negro y decorada con cilantro fresco y pimienta negra molida, esta tikka masala combina perfectamente especias ricas y sabores vibrantes, siendo una excelente variante clásica basada en plantas.',
+    menuLD16:
+      'Nuestra coliflor tikka masala es un plato audaz y lleno de sabor al estilo indio basado en plantas. Los floretes de coliflor asados se cocinan a fuego lento en una cremosa salsa de curry de tomate y coco, creando una base rica y aromática. Servida con arroz basmati al vapor, espolvoreada con semillas de sésamo negro y decorada con cilantro fresco y pimienta negra molida, esta tikka masala combina perfectamente especias ricas y sabores vibrantes, siendo una excelente variante clásica basada en plantas.',
     menuIngredients16: [
       'Floretes de coliflor asados (con aceite de oliva, pimentón ahumado y cúrcuma)',
       'Salsa de curry de tomate y coco (puré de tomate, leche de coco, ajo, jengibre, masala, comino, cilantro, chile en polvo, sal)',
@@ -1597,7 +1637,8 @@ const translations = {
       'Chile en polvo (para las especias)',
       'Sal (para sazonar)',
     ],
-    menuNutrition16: 'Cada porción proporciona aproximadamente 350 calorías, con 7g de proteína, 5g de fibra y 15g de grasas saludables provenientes de la leche de coco y el aceite de oliva. Este plato es rico en vitamina C (de los tomates y la coliflor), hierro (de las especias y la coliflor) y antioxidantes. Es una comida satisfactoria y llena de sabor basada en plantas.',
+    menuNutrition16:
+      'Cada porción proporciona aproximadamente 350 calorías, con 7g de proteína, 5g de fibra y 15g de grasas saludables provenientes de la leche de coco y el aceite de oliva. Este plato es rico en vitamina C (de los tomates y la coliflor), hierro (de las especias y la coliflor) y antioxidantes. Es una comida satisfactoria y llena de sabor basada en plantas.',
     menuAllergens16: [
       'Leche de coco (contiene coco)',
       'Semillas de sésamo negro (contiene sésamo)',
@@ -1672,23 +1713,28 @@ const translations = {
     menuCTA: '探索我们的菜单',
     learnMore: '了解更多',
     aboutHeader: '我们的理念',
-    aboutDesc: '在 Green Bites，我们相信身心同样需要滋养。我们选用最新鲜的农产品，推崇时令食材，并烹制口味丰富的植物性佳肴。您的每一口都支持了本地农民、可持续发展以及更健康的地球。',
+    aboutDesc:
+      '在 Green Bites，我们相信身心同样需要滋养。我们选用最新鲜的农产品，推崇时令食材，并烹制口味丰富的植物性佳肴。您的每一口都支持了本地农民、可持续发展以及更健康的地球。',
     aboutDesc2: '与我们一起重新定义饮食方式——一步一餐。',
     organic: '有机',
     years: '年',
     dishes: '道菜',
     sustainabilityHeader: '坚持可持续发展',
-    sustainabilityDesc: '从农场到餐桌，我们确保每一种食材都以合乎道德的方式获取，并进行最少的加工。我们对环境的承诺与我们的烹饪创意紧密相连。让我们一起踏上更绿色、更健康的未来之旅——从每一道美味开始。',
+    sustainabilityDesc:
+      '从农场到餐桌，我们确保每一种食材都以合乎道德的方式获取，并进行最少的加工。我们对环境的承诺与我们的烹饪创意紧密相连。让我们一起踏上更绿色、更健康的未来之旅——从每一道美味开始。',
     wasteSaved: '更多废弃物节约', // full thing is 80% More Waste Saved
     localSourcing: '本地采购',
     renewable: '可再生',
     featuredHeader: '精选菜品',
     testimonialsHeader: '顾客评价',
-    testimonialsP1: '"这里的纯素玉米饼非常棒！新鲜食材和完美平衡的风味组合，令人印象深刻。每一口都是美味的爆发，让人意犹未尽。我从未想过植物性食物可以如此令人满足。"',
+    testimonialsP1:
+      '"这里的纯素玉米饼非常棒！新鲜食材和完美平衡的风味组合，令人印象深刻。每一口都是美味的爆发，让人意犹未尽。我从未想过植物性食物可以如此令人满足。"',
     testimonialsPer1: '- Alex Johnson',
-    testimonialsP2: '"Green Bites 完全重新定义了可持续饮食的含义。他们对支持本地农户和采用环保做法的奉献精神令人钦佩。此外，食物也相当出色——每道菜都像在庆祝大自然的最佳食材。每次用餐后都能让我身心愉悦。"',
+    testimonialsP2:
+      '"Green Bites 完全重新定义了可持续饮食的含义。他们对支持本地农户和采用环保做法的奉献精神令人钦佩。此外，食物也相当出色——每道菜都像在庆祝大自然的最佳食材。每次用餐后都能让我身心愉悦。"',
     testimonialsPer2: '- Maria Smith',
-    testimonialsP3: '"我对植物性餐点持怀疑态度，直到我尝试了 Green Bites。他们的菜真是一次彻底的颠覆！食谱的创意和大胆的口味简直无可匹敌。令人惊讶的是，他们用简单又健康的食材就能做出烹饪杰作。不管你是否是素食主义者，都强烈推荐！"',
+    testimonialsP3:
+      '"我对植物性餐点持怀疑态度，直到我尝试了 Green Bites。他们的菜真是一次彻底的颠覆！食谱的创意和大胆的口味简直无可匹敌。令人惊讶的是，他们用简单又健康的食材就能做出烹饪杰作。不管你是否是素食主义者，都强烈推荐！"',
     testimonialsPer3: '- David Lee',
     tDisclaimer: '免责声明：这些人并不存在，以上引用仅供比赛使用。',
     bannerHeader: '准备好体验不同了吗？',
@@ -1717,55 +1763,74 @@ const translations = {
 
     // accessibility
     aTitle1: '我们的承诺',
-    aContent1: '在 Green Bites，我们致力于让所有人（包括残障人士）都能访问我们的网站。我们会不断努力，根据行业标准提升网站的可访问性和易用性。我们相信每个人都应享有平等的获取信息和服务的权利。',
+    aContent1:
+      '在 Green Bites，我们致力于让所有人（包括残障人士）都能访问我们的网站。我们会不断努力，根据行业标准提升网站的可访问性和易用性。我们相信每个人都应享有平等的获取信息和服务的权利。',
     aTitle2: '标准与准则',
-    aContent2: '我们根据《网络内容无障碍指南 (WCAG) 2.1》设计和开发我们的网站，目标是满足 AA 级别的合规性。我们会定期对网站进行审核和测试，以发现并修复任何无障碍障碍。',
+    aContent2:
+      '我们根据《网络内容无障碍指南 (WCAG) 2.1》设计和开发我们的网站，目标是满足 AA 级别的合规性。我们会定期对网站进行审核和测试，以发现并修复任何无障碍障碍。',
     aTitle3: '反馈与帮助',
-    aContent3_1: '如果您在访问我们网站时遇到无障碍障碍或需要帮助，请通过以下方式联系我们：',
+    aContent3_1:
+      '如果您在访问我们网站时遇到无障碍障碍或需要帮助，请通过以下方式联系我们：',
     aContent3_2: '。我们重视您的反馈，并致力于改善您的使用体验。',
 
     // apn
     apnTitle1: '我们收集的信息',
-    apnContent1: '当您申请 Green Bites 的职位时，我们会收集个人信息，如姓名、联系方式、简历、求职信和推荐人信息。我们可能还会收集其他信息，包括背景调查数据以及在招聘过程中的交流记录。',
+    apnContent1:
+      '当您申请 Green Bites 的职位时，我们会收集个人信息，如姓名、联系方式、简历、求职信和推荐人信息。我们可能还会收集其他信息，包括背景调查数据以及在招聘过程中的交流记录。',
     apnTitle2: '我们如何使用应聘者数据',
-    apnContent2: '应聘者数据仅用于评估资格、安排面试、评估就业适配性以及与就业机会相关的沟通。除非您要求删除，否则我们可能会保留您的数据以供未来的职位空缺参考。',
+    apnContent2:
+      '应聘者数据仅用于评估资格、安排面试、评估就业适配性以及与就业机会相关的沟通。除非您要求删除，否则我们可能会保留您的数据以供未来的职位空缺参考。',
     apnTitle3: '数据保留与安全',
-    apnContent3: '您的数据会被安全地存储，只有授权人员才可访问。我们会在合理的期限内保留您的信息，以满足法律义务并有效管理招聘流程。',
+    apnContent3:
+      '您的数据会被安全地存储，只有授权人员才可访问。我们会在合理的期限内保留您的信息，以满足法律义务并有效管理招聘流程。',
     apnTitle4: '您的权利',
-    apnContent4_1: '作为应聘者，您有权访问、纠正或请求删除您的个人信息。请联系 ',
+    apnContent4_1:
+      '作为应聘者，您有权访问、纠正或请求删除您的个人信息。请联系 ',
     apnContent4_2: ' 以获取有关您的数据的咨询或请求。',
 
     // privacy policy
-    privacyContent1: '我们收集您提供的个人信息，如姓名、电子邮件和支付信息。此外，我们还通过分析工具收集非个人数据，如 IP 地址、浏览器类型和网站活动。',
+    privacyContent1:
+      '我们收集您提供的个人信息，如姓名、电子邮件和支付信息。此外，我们还通过分析工具收集非个人数据，如 IP 地址、浏览器类型和网站活动。',
     privacyTitle2: '我们如何使用信息',
-    privacyContent2: '我们使用您的信息来处理交易，提供客户支持，并改善您在我们网站上的体验。这包括个性化内容和营销沟通。',
+    privacyContent2:
+      '我们使用您的信息来处理交易，提供客户支持，并改善您在我们网站上的体验。这包括个性化内容和营销沟通。',
     privacyTitle3: '共享您的信息',
-    privacyContent3: '我们可能会与值得信赖的第三方（例如支付处理商和营销平台）共享您的信息，以完成相关服务。我们会确保所有合作方都遵守隐私法律。',
+    privacyContent3:
+      '我们可能会与值得信赖的第三方（例如支付处理商和营销平台）共享您的信息，以完成相关服务。我们会确保所有合作方都遵守隐私法律。',
     privacyTitle4: '您的数据权利',
     privacyContent4_1: '您有权访问、修改或删除您的个人信息。请联系',
     privacyContent4_2: ' 处理任何请求。',
 
     // terms of use
     touTitle1: '接受条款',
-    touContent1: '当您访问或使用我们的网站时，即表示您同意遵守这些条款和条件。如果您不同意，请立即停止使用我们的服务。',
+    touContent1:
+      '当您访问或使用我们的网站时，即表示您同意遵守这些条款和条件。如果您不同意，请立即停止使用我们的服务。',
     touTitle2: '用户责任',
-    touContent2: '用户有责任确保其行为符合适用法律。任何滥用行为，包括试图破坏我们平台的行为，都是严格禁止的。',
+    touContent2:
+      '用户有责任确保其行为符合适用法律。任何滥用行为，包括试图破坏我们平台的行为，都是严格禁止的。',
     touTitle3: '责任限制',
-    touContent3: '对于因使用我们网站而产生的损害，包括但不限于服务中断或数据丢失，Green Bites 概不负责。',
+    touContent3:
+      '对于因使用我们网站而产生的损害，包括但不限于服务中断或数据丢失，Green Bites 概不负责。',
     touTitle4: '条款变更',
-    touContent4: '我们可能会不时更新这些条款。若在更新后继续使用本网站，则视为接受修订后的条款。',
+    touContent4:
+      '我们可能会不时更新这些条款。若在更新后继续使用本网站，则视为接受修订后的条款。',
 
     // process
     processT1: '道德耕作实践',
-    processD1: '我们与本地农户合作，他们采用可持续的环保方法，将环境影响降至最低，同时最大化营养和风味。我们会严格筛选每一家合作伙伴，以确保他们遵循有机耕作和健康土壤的理念。',
+    processD1:
+      '我们与本地农户合作，他们采用可持续的环保方法，将环境影响降至最低，同时最大化营养和风味。我们会严格筛选每一家合作伙伴，以确保他们遵循有机耕作和健康土壤的理念。',
     processT2: '快速且干净的加工',
-    processD2: '从收获到加工只需数小时，我们会在先进的设施中仔细处理食材。这种紧凑的时间安排可以最大程度地保留营养，并保证我们每道菜都使用最新鲜的口味。',
+    processD2:
+      '从收获到加工只需数小时，我们会在先进的设施中仔细处理食材。这种紧凑的时间安排可以最大程度地保留营养，并保证我们每道菜都使用最新鲜的口味。',
     processT3: '环保包装与派送',
-    processD3: '我们在派送流程中采用了 100% 可堆肥包装和碳中和的配送路线。我们的创新制冷技术可在减少环境影响的同时保持食物的新鲜度。',
+    processD3:
+      '我们在派送流程中采用了 100% 可堆肥包装和碳中和的配送路线。我们的创新制冷技术可在减少环境影响的同时保持食物的新鲜度。',
     processT4: '新鲜美味的餐点',
-    processD4: '通过我们的流程，每道餐点都由厨师精心打造，既美味又对您和地球都更友好。我们每道菜都注重风味和营养的完美平衡。',
+    processD4:
+      '通过我们的流程，每道餐点都由厨师精心打造，既美味又对您和地球都更友好。我们每道菜都注重风味和营养的完美平衡。',
     processHTitle: '从农场到您的餐桌',
-    processHDesc: '体验从本地农场到餐盘的整个食品旅程。我们在每一步都严格遵循最高的质量和可持续标准，确保您享用到最美味、最有营养的餐点。',
+    processHDesc:
+      '体验从本地农场到餐盘的整个食品旅程。我们在每一步都严格遵循最高的质量和可持续标准，确保您享用到最美味、最有营养的餐点。',
 
     // settings
     settings: '设置',
@@ -1781,7 +1846,8 @@ const translations = {
     username: '用户名',
     pw: '密码',
     whySI: '为什么要登录？',
-    whySIHelp: '登录后，您将获得更个性化的购物体验，并最大限度地享受您在我们网站的访问。',
+    whySIHelp:
+      '登录后，您将获得更个性化的购物体验，并最大限度地享受您在我们网站的访问。',
     demoCred: '演示凭证',
     usernameF: '输入用户名',
     passwordF: '输入密码',
@@ -1789,24 +1855,28 @@ const translations = {
     // values
     valueT1: '可持续性',
     valueS1: '滋养地球',
-    valueC1: '我们所做的一切以对可持续性的承诺为动力。我们精心采购本地有机食材，减少碳排放，同时为您提供最高质量的产品。',
+    valueC1:
+      '我们所做的一切以对可持续性的承诺为动力。我们精心采购本地有机食材，减少碳排放，同时为您提供最高质量的产品。',
     valueSt1_1: '碳减排45%',
     valueSt1_2: '100%环保包装',
     valueSt1_3: '零食物浪费',
     valueT2: '社区',
     valueS2: '共同成长',
-    valueC2: '建立持久联系是我们所有活动的核心。我们支持本地农户，并与他们合作，向社区提供新鲜高质量的产品，我们为此感到自豪。',
+    valueC2:
+      '建立持久联系是我们所有活动的核心。我们支持本地农户，并与他们合作，向社区提供新鲜高质量的产品，我们为此感到自豪。',
     valueSt2_1: '50多个本地合作伙伴',
     valueSt2_2: '超过10K会员',
     valueSt2_3: '25场社区活动',
     valueT3: '创新',
     valueS3: '塑造明天',
-    valueC3: '创新是我们所做一切的动力，我们不断突破边界，创造美味的植物性料理，滋养人们和地球。我们的热情在于将创造力与可持续性相结合。',
+    valueC3:
+      '创新是我们所做一切的动力，我们不断突破边界，创造美味的植物性料理，滋养人们和地球。我们的热情在于将创造力与可持续性相结合。',
     valueSt3_1: '每月10+个食谱',
     valueSt3_2: '3个研发实验室',
     valueSt3_3: '24/7创新',
     valueHeader: '我们的核心价值观',
-    valueSub: '在绿味坊，我们的价值观指导着所有决策。通过可持续实践、社区参与和不断创新，我们致力于为未来世代创造一个更美好的世界。',
+    valueSub:
+      '在绿味坊，我们的价值观指导着所有决策。通过可持续实践、社区参与和不断创新，我们致力于为未来世代创造一个更美好的世界。',
 
     // checkout consts
     usa: '美国',
@@ -1896,7 +1966,8 @@ const translations = {
     // menu consts
     menuItem1: '生命塔可',
     menuDesc1: '美味的纯素塔可，配有新鲜蔬菜和莎莎酱。',
-    menuLD1: '我们的纯素塔可特色是软玉米饼，里面装满了调味黑豆、新鲜的皮科德加洛、脆生菜、奶油鳄梨和酸辣的青柠香菜酱。最后撒上一些营养酵母，并配以青柠角。完美平衡的风味和口感结合在一起，创造出一道令人愉悦的餐点，满足您对丰富植物性食物的渴望。',
+    menuLD1:
+      '我们的纯素塔可特色是软玉米饼，里面装满了调味黑豆、新鲜的皮科德加洛、脆生菜、奶油鳄梨和酸辣的青柠香菜酱。最后撒上一些营养酵母，并配以青柠角。完美平衡的风味和口感结合在一起，创造出一道令人愉悦的餐点，满足您对丰富植物性食物的渴望。',
     menuIngredients1: [
       '玉米饼',
       '调味黑豆',
@@ -1918,15 +1989,14 @@ const translations = {
       '盐',
       '黑胡椒',
     ],
-    menuNutrition1: '每个塔可约提供280卡路里，含有8克蛋白质、6克纤维和12克来自鳄梨和橄榄油的健康脂肪。富含维生素C（来自甜椒和青柠）、维生素A（来自香菜和生菜）以及铁（来自黑豆和营养酵母）。此塔可完全植物性，使用的都是充满风味且营养丰富的全食材。',
-    menuAllergens1: [
-      '营养酵母中的大豆',
-      '香菜（某些人可能对香菜敏感）',
-    ],
-  
+    menuNutrition1:
+      '每个塔可约提供280卡路里，含有8克蛋白质、6克纤维和12克来自鳄梨和橄榄油的健康脂肪。富含维生素C（来自甜椒和青柠）、维生素A（来自香菜和生菜）以及铁（来自黑豆和营养酵母）。此塔可完全植物性，使用的都是充满风味且营养丰富的全食材。',
+    menuAllergens1: ['营养酵母中的大豆', '香菜（某些人可能对香菜敏感）'],
+
     menuItem2: '埃尔·哈尔丁·布里托',
     menuDesc2: '米饭、豆类和鳄梨酱充实的丰盛布里托。',
-    menuLD2: '我们的素食布里托是一顿健康且充满风味的餐点，包裹在柔软的小麦饼中。里面装满了调味黑豆、蓬松的青柠香菜米饭、烤甜椒和洋葱、脆生菜、甜玉米以及酸辣莎莎酱。奶油鳄梨基的西南酱汁将所有食材融合在一起，带来充满活力且满足的每一口。无论是午餐、晚餐，还是您渴望一份美味植物性舒适食物时，都是完美的选择。',
+    menuLD2:
+      '我们的素食布里托是一顿健康且充满风味的餐点，包裹在柔软的小麦饼中。里面装满了调味黑豆、蓬松的青柠香菜米饭、烤甜椒和洋葱、脆生菜、甜玉米以及酸辣莎莎酱。奶油鳄梨基的西南酱汁将所有食材融合在一起，带来充满活力且满足的每一口。无论是午餐、晚餐，还是您渴望一份美味植物性舒适食物时，都是完美的选择。',
     menuIngredients2: [
       '小麦饼',
       '青柠香菜米饭（白米、香菜、青柠汁、橄榄油）',
@@ -1947,16 +2017,18 @@ const translations = {
       '调味用盐',
       '装饰用青柠角',
     ],
-    menuNutrition2: '每个布里托约提供450卡路里，含有15克蛋白质、10克纤维和18克来自鳄梨和橄榄油的健康脂肪。富含铁（来自黑豆）、维生素C（来自甜椒和青柠汁）以及叶酸（来自香菜和生菜）。布里托平衡了复杂的碳水化合物、蛋白质和脂肪，既让人感到饱足，又营养丰富。',
+    menuNutrition2:
+      '每个布里托约提供450卡路里，含有15克蛋白质、10克纤维和18克来自鳄梨和橄榄油的健康脂肪。富含铁（来自黑豆）、维生素C（来自甜椒和青柠汁）以及叶酸（来自香菜和生菜）。布里托平衡了复杂的碳水化合物、蛋白质和脂肪，既让人感到饱足，又营养丰富。',
     menuAllergens2: [
       '小麦（来自饼）',
       '大豆（黑豆或营养酵母可能有交叉污染）',
       '香菜（某些人可能对香菜敏感）',
     ],
-  
+
     menuItem3: '维尔德鲁沙拉',
     menuDesc3: '混合绿叶、鹰嘴豆和芝麻酱的清新沙拉。',
-    menuLD3: '这道鲜艳的纯素沙拉完美结合了新鲜绿叶、丰富的鹰嘴豆和彩色蔬菜，全部搭配上奶油芝麻柠檬酱。使用了混合的甘蓝、婴儿菠菜和脆罗曼生菜，并以丝状胡萝卜、薄切甜菜、烤鹰嘴豆和脆杏仁作为配料。酱汁是由芝麻酱、柠檬汁、大蒜和少许枫糖浆混合而成，增添了酸辣微甜的风味。这是一个营养丰富且味道浓郁的轻盈满足的选择。',
+    menuLD3:
+      '这道鲜艳的纯素沙拉完美结合了新鲜绿叶、丰富的鹰嘴豆和彩色蔬菜，全部搭配上奶油芝麻柠檬酱。使用了混合的甘蓝、婴儿菠菜和脆罗曼生菜，并以丝状胡萝卜、薄切甜菜、烤鹰嘴豆和脆杏仁作为配料。酱汁是由芝麻酱、柠檬汁、大蒜和少许枫糖浆混合而成，增添了酸辣微甜的风味。这是一个营养丰富且味道浓郁的轻盈满足的选择。',
     menuIngredients3: [
       '婴儿菠菜叶',
       '切碎的甘蓝',
@@ -1974,16 +2046,18 @@ const translations = {
       '盐（调味用）',
       '新鲜研磨的黑胡椒（调味用）',
     ],
-    menuNutrition3: '每份沙拉约提供300卡路里，含有10克蛋白质、8克纤维和12克来自芝麻酱和杏仁的健康脂肪。丰富的维生素A、C、K（来自绿叶蔬菜和胡萝卜）、铁（来自鹰嘴豆和菠菜）以及镁（来自杏仁）。酱汁中含有来自芝麻酱的钙，并在不使用乳制品的情况下增添了奶油质地。',
+    menuNutrition3:
+      '每份沙拉约提供300卡路里，含有10克蛋白质、8克纤维和12克来自芝麻酱和杏仁的健康脂肪。丰富的维生素A、C、K（来自绿叶蔬菜和胡萝卜）、铁（来自鹰嘴豆和菠菜）以及镁（来自杏仁）。酱汁中含有来自芝麻酱的钙，并在不使用乳制品的情况下增添了奶油质地。',
     menuAllergens3: [
       '芝麻酱中的芝麻',
       '杏仁中的坚果',
       '鹰嘴豆（对某些人可能是过敏原）',
     ],
-  
+
     menuItem4: '烟熏枫糖汉堡',
     menuDesc4: '美味的纯素汉堡肉饼，配有生菜、番茄和烟熏酱汁。',
-    menuLD4: '我们的纯素汉堡是一款风味丰富且饱满的植物性选择，非常适合汉堡爱好者。它以柔软的全麦面包为基底，搭配多汁的植物性汉堡肉饼。汉堡上覆盖着脆生菜、成熟多汁的番茄片和焦糖化的洋葱，增添了一丝甜味。亮点是用纯素蛋黄酱、熏制红椒粉、大蒜和一点柠檬汁制成的奶油烟熏酱汁，为每一口增添了深度和丰富感。简单满足且充满植物性美味。',
+    menuLD4:
+      '我们的纯素汉堡是一款风味丰富且饱满的植物性选择，非常适合汉堡爱好者。它以柔软的全麦面包为基底，搭配多汁的植物性汉堡肉饼。汉堡上覆盖着脆生菜、成熟多汁的番茄片和焦糖化的洋葱，增添了一丝甜味。亮点是用纯素蛋黄酱、熏制红椒粉、大蒜和一点柠檬汁制成的奶油烟熏酱汁，为每一口增添了深度和丰富感。简单满足且充满植物性美味。',
     menuIngredients4: [
       '全麦汉堡面包',
       '植物性汉堡肉饼（由豌豆蛋白、蘑菇和调味料制成）',
@@ -1995,16 +2069,18 @@ const translations = {
       '调味用盐',
       '调味用胡椒',
     ],
-    menuNutrition4: '每个汉堡约提供350卡路里，含有15克蛋白质、5克纤维和10克来自橄榄油和植物性肉饼的健康脂肪。丰富的铁（来自植物性肉饼和全麦面包）和维生素C（来自番茄和烟熏酱汁）。这款汉堡既让人感到满足又平衡，提供了无负担的美味享受。',
+    menuNutrition4:
+      '每个汉堡约提供350卡路里，含有15克蛋白质、5克纤维和10克来自橄榄油和植物性肉饼的健康脂肪。丰富的铁（来自植物性肉饼和全麦面包）和维生素C（来自番茄和烟熏酱汁）。这款汉堡既让人感到满足又平衡，提供了无负担的美味享受。',
     menuAllergens4: [
       '全麦面包中的小麦',
       '纯素蛋黄酱中的大豆',
       '植物性肉饼中的豌豆蛋白（常见的过敏原）',
     ],
-  
+
     menuItem5: '绿色番茄披萨',
     menuDesc5: '薄脆的薄饼底上覆盖着马里纳拉酱、纯素奶酪、蘑菇和菠菜。',
-    menuLD5: '我们的纯素披萨以薄脆的饼皮为基底，搭配美味的植物性配料。丰富的烤番茄马里纳拉酱均匀地涂在饼皮上，然后覆盖一层融化的纯素莫扎里拉奶酪。披萨上铺满新鲜的菠菜叶、炒蘑菇和撒上一些焦糖化洋葱，增添了更多风味。每一口都带来咸香、奶酪味和新鲜的味道的完美结合，是披萨爱好者必试的经典纯素选择。',
+    menuLD5:
+      '我们的纯素披萨以薄脆的饼皮为基底，搭配美味的植物性配料。丰富的烤番茄马里纳拉酱均匀地涂在饼皮上，然后覆盖一层融化的纯素莫扎里拉奶酪。披萨上铺满新鲜的菠菜叶、炒蘑菇和撒上一些焦糖化洋葱，增添了更多风味。每一口都带来咸香、奶酪味和新鲜的味道的完美结合，是披萨爱好者必试的经典纯素选择。',
     menuIngredients5: [
       '薄饼皮（由全麦面粉、橄榄油、水和酵母制成）',
       '烤番茄马里纳拉酱（烤番茄、大蒜、橄榄油、盐、牛至）',
@@ -2017,16 +2093,18 @@ const translations = {
       '牛至（调味酱汁用）',
       '盐（调味）',
     ],
-    menuNutrition5: '每片约提供280卡路里，含有6克蛋白质、3克纤维和12克来自橄榄油和纯素奶酪的健康脂肪。披萨富含维生素C（来自菠菜和番茄）、钙（来自纯素莫扎里拉）和铁（来自菠菜和蘑菇）。这是一个平衡、风味丰富且不妥协于味道或满足感的植物性选择。',
+    menuNutrition5:
+      '每片约提供280卡路里，含有6克蛋白质、3克纤维和12克来自橄榄油和纯素奶酪的健康脂肪。披萨富含维生素C（来自菠菜和番茄）、钙（来自纯素莫扎里拉）和铁（来自菠菜和蘑菇）。这是一个平衡、风味丰富且不妥协于味道或满足感的植物性选择。',
     menuAllergens5: [
       '饼皮中的小麦',
       '纯素莫扎里拉中的大豆（可能有交叉污染）',
       '纯素莫扎里拉中的椰子',
     ],
-  
+
     menuItem6: '黄金腰果麦克',
     menuDesc6: '由腰果、营养酵母和姜黄制成的奶油、奶酪风味的舒适食物。',
-    menuLD6: '这款纯素麦克和奶酪是终极的舒适食物，特点是柔软的通心粉面条覆盖着浓郁丝滑的植物性奶酪酱。酱汁由腰果、营养酵母和少许姜黄制成，带来天然的金黄色泽。上面撒上细碎的青葱增添新鲜风味，再撒上些许粗磨黑胡椒平衡奶油感。这是一道丰盛、满足且非常适合植物性饮食者的菜肴。',
+    menuLD6:
+      '这款纯素麦克和奶酪是终极的舒适食物，特点是柔软的通心粉面条覆盖着浓郁丝滑的植物性奶酪酱。酱汁由腰果、营养酵母和少许姜黄制成，带来天然的金黄色泽。上面撒上细碎的青葱增添新鲜风味，再撒上些许粗磨黑胡椒平衡奶油感。这是一道丰盛、满足且非常适合植物性饮食者的菜肴。',
     menuIngredients6: [
       '通心粉（由杜兰小麦制成）',
       '腰果奶酪酱（腰果、营养酵母、姜黄、蒜粉、柠檬汁、橄榄油、水）',
@@ -2035,16 +2113,18 @@ const translations = {
       '盐（调味）',
       '橄榄油（用于酱汁）',
     ],
-    menuNutrition6: '每份约提供350卡路里，含有10克蛋白质、5克纤维和14克来自腰果和橄榄油的健康脂肪。这是维生素B12（来自营养酵母）、镁（来自腰果）和铁（来自通心粉和腰果）的良好来源。这道菜既 indulgent 又营养丰富，无需乳制品即可提供经典的奶酪风味。',
+    menuNutrition6:
+      '每份约提供350卡路里，含有10克蛋白质、5克纤维和14克来自腰果和橄榄油的健康脂肪。这是维生素B12（来自营养酵母）、镁（来自腰果）和铁（来自通心粉和腰果）的良好来源。这道菜既 indulgent 又营养丰富，无需乳制品即可提供经典的奶酪风味。',
     menuAllergens6: [
       '通心粉中的小麦',
       '腰果中的坚果',
       '营养酵母中的大豆（可能有交叉污染）',
     ],
-  
+
     menuItem7: '佛罗伦丁宽面条',
     menuDesc7: '面条、里科塔、菠菜和马里纳拉酱的层次。',
-    menuLD7: '我们的素食宽面条是一道舒适的经典，层层叠叠地排列着柔软的宽面条、奶油般的里科塔奶酪、丰富的马里纳拉酱和新鲜的绿叶蔬菜。这道菜最后撒上融化的莫扎里拉奶酪，并用新鲜香菜装饰，带来独特的风味。婴儿菠菜和欧芹叶层层交织，增添了更多的新鲜感和风味。每一口都完美结合了奶酪味、盐味和香草香味。',
+    menuLD7:
+      '我们的素食宽面条是一道舒适的经典，层层叠叠地排列着柔软的宽面条、奶油般的里科塔奶酪、丰富的马里纳拉酱和新鲜的绿叶蔬菜。这道菜最后撒上融化的莫扎里拉奶酪，并用新鲜香菜装饰，带来独特的风味。婴儿菠菜和欧芹叶层层交织，增添了更多的新鲜感和风味。每一口都完美结合了奶酪味、盐味和香草香味。',
     menuIngredients7: [
       '宽面条（由粗粒小麦制成）',
       '里科塔奶酪',
@@ -2059,16 +2139,18 @@ const translations = {
       '调味用盐',
       '调味用黑胡椒',
     ],
-    menuNutrition7: '每片约提供400卡路里，含有15克蛋白质、4克纤维和12克脂肪。富含钙（来自里科塔和莫扎里拉）、维生素A（来自菠菜和欧芹）和铁（来自菠菜和宽面条）。这款宽面条丰盛且令人满足，是一个完美的选择，提供满足感的餐点。',
+    menuNutrition7:
+      '每片约提供400卡路里，含有15克蛋白质、4克纤维和12克脂肪。富含钙（来自里科塔和莫扎里拉）、维生素A（来自菠菜和欧芹）和铁（来自菠菜和宽面条）。这款宽面条丰盛且令人满足，是一个完美的选择，提供满足感的餐点。',
     menuAllergens7: [
       '宽面条中的小麦',
       '里科塔和莫扎里拉奶酪中的乳制品',
       '酱汁用的大蒜（某些人可能对大蒜敏感）',
     ],
-  
+
     menuItem8: '孟买鹰嘴豆咖喱',
     menuDesc8: '用鹰嘴豆、椰奶和香料混合制成的温暖芳香咖喱。',
-    menuLD8: '我们的鹰嘴豆咖喱是一道令人心安的菜肴，特点是嫩滑的鹰嘴豆在浓郁香料的椰奶酱汁中慢炖。这款鲜艳的橙色酱汁充满了温暖的香料，最后撒上新鲜香菜和绿葱，带来明亮的风味。搭配青柠角，增添酸味转折，一旁还有烤玉米和新鲜莎莎酱，增添了独特的口感和清新的对比。',
+    menuLD8:
+      '我们的鹰嘴豆咖喱是一道令人心安的菜肴，特点是嫩滑的鹰嘴豆在浓郁香料的椰奶酱汁中慢炖。这款鲜艳的橙色酱汁充满了温暖的香料，最后撒上新鲜香菜和绿葱，带来明亮的风味。搭配青柠角，增添酸味转折，一旁还有烤玉米和新鲜莎莎酱，增添了独特的口感和清新的对比。',
     menuIngredients8: [
       '鹰嘴豆（煮熟）',
       '椰奶（全脂）',
@@ -2087,15 +2169,14 @@ const translations = {
       '调味用盐',
       '黑胡椒（调味用）',
     ],
-    menuNutrition8: '每份约提供350卡路里，含有12克蛋白质、8克纤维和15克来自椰奶和橄榄油的健康脂肪。富含维生素C（来自青柠和莎莎酱）、钾（来自鹰嘴豆）以及铁（来自香料和鹰嘴豆）。这道菜令人满足，温暖且充满营养成分。',
-    menuAllergens8: [
-      '椰奶中的椰子',
-      '大蒜（某些人可能对大蒜敏感）',
-    ],
-  
+    menuNutrition8:
+      '每份约提供350卡路里，含有12克蛋白质、8克纤维和15克来自椰奶和橄榄油的健康脂肪。富含维生素C（来自青柠和莎莎酱）、钾（来自鹰嘴豆）以及铁（来自香料和鹰嘴豆）。这道菜令人满足，温暖且充满营养成分。',
+    menuAllergens8: ['椰奶中的椰子', '大蒜（某些人可能对大蒜敏感）'],
+
     menuItem9: '弗雷斯卡布里托碗',
     menuDesc9: '米饭、黑豆、玉米、鳄梨酱和莎莎酱的碗装。',
-    menuLD9: '我们的纯素布里托碗是一个拆解式布里托，盛装在鲜艳而丰富的碗中。基底是蓬松的青柠香菜米饭，顶部覆盖着调味黑豆、新鲜鳄梨酱、色彩斑斓的烤西葫芦、烤甜椒、甜玉米和切丁番茄。最后撒上新鲜香菜和青柠角，这碗完美结合了风味和口感。',
+    menuLD9:
+      '我们的纯素布里托碗是一个拆解式布里托，盛装在鲜艳而丰富的碗中。基底是蓬松的青柠香菜米饭，顶部覆盖着调味黑豆、新鲜鳄梨酱、色彩斑斓的烤西葫芦、烤甜椒、甜玉米和切丁番茄。最后撒上新鲜香菜和青柠角，这碗完美结合了风味和口感。',
     menuIngredients9: [
       '青柠香菜米饭（白米、香菜、青柠汁、橄榄油）',
       '黑豆（孜然和蒜粉调味）',
@@ -2110,14 +2191,14 @@ const translations = {
       '黑胡椒（调味用）',
       '橄榄油（用于烤制和烹饪）',
     ],
-    menuNutrition9: '每碗约提供400卡路里，含有12克蛋白质、9克纤维和15克来自鳄梨和橄榄油的健康脂肪。富含维生素C（来自甜椒和青柠）、钾（来自西葫芦和鳄梨）以及铁分（来自黑豆）。',
-    menuAllergens9: [
-      '鳄梨（某些人可能对鳄梨过敏）',
-    ],
-  
+    menuNutrition9:
+      '每碗约提供400卡路里，含有12克蛋白质、9克纤维和15克来自鳄梨和橄榄油的健康脂肪。富含维生素C（来自甜椒和青柠）、钾（来自西葫芦和鳄梨）以及铁分（来自黑豆）。',
+    menuAllergens9: ['鳄梨（某些人可能对鳄梨过敏）'],
+
     menuItem10: '托斯坎烤串',
     menuDesc10: '腌制的西葫芦、甜椒、洋葱和蘑菇串烧。',
-    menuLD10: '我们的烤蔬菜串烧是一道色彩缤纷、烟熏且美味的植物性菜肴。腌制的西葫芦、甜椒和蘑菇串在串烧上，烤至柔软略微焦香。蔬菜裹上用橄榄油和大蒜调味的腌料，并带有熏制红椒粉和意大利香草的香气。这些串烧无论是作为主菜还是风味丰富的配菜都是完美的选择。',
+    menuLD10:
+      '我们的烤蔬菜串烧是一道色彩缤纷、烟熏且美味的植物性菜肴。腌制的西葫芦、甜椒和蘑菇串在串烧上，烤至柔软略微焦香。蔬菜裹上用橄榄油和大蒜调味的腌料，并带有熏制红椒粉和意大利香草的香气。这些串烧无论是作为主菜还是风味丰富的配菜都是完美的选择。',
     menuIngredients10: [
       '西葫芦（切片成厚圆形）',
       '甜椒（红色、黄色、绿色甜椒，切块）',
@@ -2126,15 +2207,17 @@ const translations = {
       '新鲜欧芹（切碎，装饰用）',
       '柠檬角（上桌用）',
     ],
-    menuNutrition10: '每份串烧约提供150卡路里，含有4克蛋白质、3克纤维和8克来自橄榄油的健康脂肪。串烧是维生素C（来自甜椒）、钾（来自西葫芦）和抗氧化剂（来自蘑菇）的重要来源。轻盈且风味丰富，非常适合烤肉爱好者。',
+    menuNutrition10:
+      '每份串烧约提供150卡路里，含有4克蛋白质、3克纤维和8克来自橄榄油的健康脂肪。串烧是维生素C（来自甜椒）、钾（来自西葫芦）和抗氧化剂（来自蘑菇）的重要来源。轻盈且风味丰富，非常适合烤肉爱好者。',
     menuAllergens10: [
       '大蒜（某些人可能对大蒜过敏）',
       '蘑菇（某些人可能对蘑菇过敏）',
     ],
-  
+
     menuItem11: '照烧日出炒',
     menuDesc11: '新鲜蔬菜在咸香的酱油基酱汁中炒制，配上茉莉米。',
-    menuLD11: '这道纯素炒菜是色彩缤纷的蔬菜和丰盈的糙米的完美结合，所有食材在咸香的酱油基酱汁中炒至完美。这道菜包括嫩滑的西葫芦、甜甜的甜椒、豌豆、胡萝卜和凤梨块，并搭配烤腰果增添酥脆口感。香蒜、姜和泰式辣椒酱为每一口带来愉悦的甜、酸、咸味平衡。',
+    menuLD11:
+      '这道纯素炒菜是色彩缤纷的蔬菜和丰盈的糙米的完美结合，所有食材在咸香的酱油基酱汁中炒至完美。这道菜包括嫩滑的西葫芦、甜甜的甜椒、豌豆、胡萝卜和凤梨块，并搭配烤腰果增添酥脆口感。香蒜、姜和泰式辣椒酱为每一口带来愉悦的甜、酸、咸味平衡。',
     menuIngredients11: [
       '煮熟的糙米',
       '西葫芦（半月切片）',
@@ -2152,16 +2235,14 @@ const translations = {
       '青葱片（装饰用）',
       '新鲜泰式罗勒（装饰用）',
     ],
-    menuNutrition11: '每份约提供350卡路里，含有8克蛋白质、6克纤维和12克来自芝麻油和腰果的健康脂肪。炒菜是维生素A（来自胡萝卜）、维生素C（来自甜椒）和钾（来自西葫芦和凤梨）的优秀来源。轻盈、风味丰富且营养丰富。',
-    menuAllergens11: [
-      '酱油或塔玛里的大豆',
-      '腰果中的坚果',
-      '芝麻油中的芝麻',
-    ],
-  
+    menuNutrition11:
+      '每份约提供350卡路里，含有8克蛋白质、6克纤维和12克来自芝麻油和腰果的健康脂肪。炒菜是维生素A（来自胡萝卜）、维生素C（来自甜椒）和钾（来自西葫芦和凤梨）的优秀来源。轻盈、风味丰富且营养丰富。',
+    menuAllergens11: ['酱油或塔玛里的大豆', '腰果中的坚果', '芝麻油中的芝麻'],
+
     menuItem12: '鳄梨卷',
     menuDesc12: '寿司卷内含鳄梨、黄瓜和腌萝卜，配以酱油。',
-    menuLD12: '我们的素食寿司卷是一道风味和口感丰富的鲜艳菜肴，特色是奶油鳄梨、脆黄瓜和甜酸腌萝卜，包裹在调味寿司米和海苔中。寿司卷上装饰着细切的红甘蓝、胡萝卜和西葫芦，增添更多色彩和酥脆感。配以酱油一起享用，这些卷是清新且轻盈的植物性寿司经典。',
+    menuLD12:
+      '我们的素食寿司卷是一道风味和口感丰富的鲜艳菜肴，特色是奶油鳄梨、脆黄瓜和甜酸腌萝卜，包裹在调味寿司米和海苔中。寿司卷上装饰着细切的红甘蓝、胡萝卜和西葫芦，增添更多色彩和酥脆感。配以酱油一起享用，这些卷是清新且轻盈的植物性寿司经典。',
     menuIngredients12: [
       '寿司米（用米醋、糖和盐调味）',
       '海苔片（海藻）',
@@ -2175,16 +2256,18 @@ const translations = {
       '芥末（可选装饰）',
       '腌姜（可选装饰）',
     ],
-    menuNutrition12: '每个寿司卷约提供200卡路里，含有4克蛋白质、3克纤维和5克来自鳄梨的健康脂肪。是维生素C（来自红甘蓝）、钾（来自鳄梨）和纤维（来自蔬菜和寿司米）的良好来源。这道菜清新、爽口，充满新鲜植物性食材。',
+    menuNutrition12:
+      '每个寿司卷约提供200卡路里，含有4克蛋白质、3克纤维和5克来自鳄梨的健康脂肪。是维生素C（来自红甘蓝）、钾（来自鳄梨）和纤维（来自蔬菜和寿司米）的良好来源。这道菜清新、爽口，充满新鲜植物性食材。',
     menuAllergens12: [
       '酱油中的大豆',
       '如果不使用无麸质酱油，则含有小麦',
       '鳄梨（某些人可能对鳄梨过敏）',
     ],
-  
+
     menuItem13: '甜阳塔可',
     menuDesc13: '柔软的玉米饼内装烤甜薯、黑豆、鳄梨和沙拉。',
-    menuLD13: '我们的甜薯塔可是一款美味的植物性选择，柔软的玉米饼内装有烤甜薯、调味黑豆和奶油鳄梨片。顶部配有鲜艳的红甘蓝沙拉和酸味柠檬奶油，带来绝妙的口感和平衡的风味。撒上新鲜香菜和柠檬角，增添新鲜感，是一个轻盈而满足的健康餐点。',
+    menuLD13:
+      '我们的甜薯塔可是一款美味的植物性选择，柔软的玉米饼内装有烤甜薯、调味黑豆和奶油鳄梨片。顶部配有鲜艳的红甘蓝沙拉和酸味柠檬奶油，带来绝妙的口感和平衡的风味。撒上新鲜香菜和柠檬角，增添新鲜感，是一个轻盈而满足的健康餐点。',
     menuIngredients13: [
       '玉米饼',
       '烤甜薯（用橄榄油、熏制红椒粉和孜然调味）',
@@ -2199,16 +2282,18 @@ const translations = {
       '柠檬角（装饰用）',
       '盐（调味用）',
     ],
-    menuNutrition13: '每个塔可约提供280卡路里，含有8克蛋白质、6克纤维和10克来自鳄梨和橄榄油的健康脂肪。富含维生素A（来自甜薯）、维生素C（来自甘蓝和柠檬）以及钾（来自鳄梨）。色彩缤纷且营养丰富，是一个既美味又健康的餐点。',
+    menuNutrition13:
+      '每个塔可约提供280卡路里，含有8克蛋白质、6克纤维和10克来自鳄梨和橄榄油的健康脂肪。富含维生素A（来自甜薯）、维生素C（来自甘蓝和柠檬）以及钾（来自鳄梨）。色彩缤纷且营养丰富，是一个既美味又健康的餐点。',
     menuAllergens13: [
       '豆腐碎片中的大豆',
       '玉米饼中的玉米',
       '香菜（某些人可能对香菜敏感）',
     ],
-  
+
     menuItem14: '乡村凯萨迪亚',
     menuDesc14: '酪梨奶酪、豆类和炒蔬菜填充的脆皮玉米饼。',
-    menuLD14: '我们的纯素凯萨迪亚是一款美味、植物性改良的经典选择。它以酥脆的小麦饼为基底，里面填满了调味黑豆、炒甜椒、烤玉米、新鲜番茄和红甘蓝的混合物，再加上融化的纯素奶酪和一丝辣味哈拉佩尼奥。经过完美的烤至金黄色，这个凯萨迪亚搭配莎莎酱和柠檬角一起享用，提供清新的结尾。',
+    menuLD14:
+      '我们的纯素凯萨迪亚是一款美味、植物性改良的经典选择。它以酥脆的小麦饼为基底，里面填满了调味黑豆、炒甜椒、烤玉米、新鲜番茄和红甘蓝的混合物，再加上融化的纯素奶酪和一丝辣味哈拉佩尼奥。经过完美的烤至金黄色，这个凯萨迪亚搭配莎莎酱和柠檬角一起享用，提供清新的结尾。',
     menuIngredients14: [
       '小麦饼',
       '纯素奶酪（切丝）',
@@ -2221,16 +2306,18 @@ const translations = {
       '烤制用的橄榄油',
       '柠檬角（装饰用）',
     ],
-    menuNutrition14: '每个凯萨迪亚约提供300卡路里，含有10克蛋白质、7克纤维和12克来自橄榄油和纯素奶酪的健康脂肪。是维生素C（来自甜椒和番茄）、钙（来自纯素奶酪）以及钾（来自黑豆）的良好来源。轻盈且令人满足，非常适合作为小吃或餐点。',
+    menuNutrition14:
+      '每个凯萨迪亚约提供300卡路里，含有10克蛋白质、7克纤维和12克来自橄榄油和纯素奶酪的健康脂肪。是维生素C（来自甜椒和番茄）、钙（来自纯素奶酪）以及钾（来自黑豆）的良好来源。轻盈且令人满足，非常适合作为小吃或餐点。',
     menuAllergens14: [
       '小麦饼中的小麦',
       '纯素奶酪中的大豆',
       '香菜（如果添加了装饰）',
     ],
-  
+
     menuItem15: '托斯坎扁豆汤',
     menuDesc15: '由扁豆、胡萝卜、芹菜和番茄制成的丰盛汤品。',
-    menuLD15: '我们的扁豆汤是一碗温暖且令人舒适的汤，特点是嫩滑的棕色扁豆在风味丰富的蔬菜高汤中煮熟。汤中包括切丁的胡萝卜、番茄和金色马铃薯，并加入新鲜的菠菜叶增添新鲜感和风味。用大蒜、孜然和熏制红椒粉调味，带来丰富且令人满足的味道。非常适合寒冷的日子，提供一顿舒适的餐点。',
+    menuLD15:
+      '我们的扁豆汤是一碗温暖且令人舒适的汤，特点是嫩滑的棕色扁豆在风味丰富的蔬菜高汤中煮熟。汤中包括切丁的胡萝卜、番茄和金色马铃薯，并加入新鲜的菠菜叶增添新鲜感和风味。用大蒜、孜然和熏制红椒粉调味，带来丰富且令人满足的味道。非常适合寒冷的日子，提供一顿舒适的餐点。',
     menuIngredients15: [
       '棕色扁豆（煮熟）',
       '蔬菜高汤',
@@ -2243,15 +2330,17 @@ const translations = {
       '熏制红椒粉（调味用）',
       '盐（调味用）',
     ],
-    menuNutrition15: '每份约提供250卡路里，含有12克蛋白质、8克纤维和4克来自椰奶和橄榄油的健康脂肪。汤富含铁（来自扁豆和菠菜）、维生素A（来自胡萝卜和菠菜）以及钾（来自马铃薯）。轻盈且营养丰富，非常适合健康餐点。',
+    menuNutrition15:
+      '每份约提供250卡路里，含有12克蛋白质、8克纤维和4克来自椰奶和橄榄油的健康脂肪。汤富含铁（来自扁豆和菠菜）、维生素A（来自胡萝卜和菠菜）以及钾（来自马铃薯）。轻盈且营养丰富，非常适合健康餐点。',
     menuAllergens15: [
       '芹菜（某些人可能对芹菜过敏）',
       '大蒜（某些人可能对大蒜过敏）',
     ],
-  
+
     menuItem16: '马萨拉烤花椰菜',
     menuDesc16: '用浓郁风味的番茄基酱汁烤制的花椰菜。',
-    menuLD16: '我们的花椰菜提卡马萨拉是一道大胆且风味丰富的印度风味植物性菜肴。柔软的烤花椰菜花朵在香料丰富的番茄和椰奶咖喱酱汁中慢炖，创造出奶油且芳香的基底。搭配蒸熟的巴斯马蒂米，撒上黑芝麻，并用新鲜香菜和碎黑胡椒装饰。丰富的香料和鲜明的风味完美结合，这道提卡马萨拉是经典植物性菜肴的绝佳变体。',
+    menuLD16:
+      '我们的花椰菜提卡马萨拉是一道大胆且风味丰富的印度风味植物性菜肴。柔软的烤花椰菜花朵在香料丰富的番茄和椰奶咖喱酱汁中慢炖，创造出奶油且芳香的基底。搭配蒸熟的巴斯马蒂米，撒上黑芝麻，并用新鲜香菜和碎黑胡椒装饰。丰富的香料和鲜明的风味完美结合，这道提卡马萨拉是经典植物性菜肴的绝佳变体。',
     menuIngredients16: [
       '烤花椰菜花朵（用橄榄油、熏制红椒粉和姜黄调味）',
       '番茄基咖喱酱汁（番茄酱、椰奶、蒜、姜、马萨拉、孜然、香菜、辣椒粉、盐）',
@@ -2265,13 +2354,14 @@ const translations = {
       '辣椒粉（香料用）',
       '盐（调味用）',
     ],
-    menuNutrition16: '每份约提供350卡路里，含有7克蛋白质、5克纤维和15克来自椰奶和橄榄油的健康脂肪。菜肴富含维生素C（来自番茄和花椰菜）、铁分（来自咖喱香料和花椰菜）以及抗氧化剂。令人满足且风味丰富的植物性餐点。',
+    menuNutrition16:
+      '每份约提供350卡路里，含有7克蛋白质、5克纤维和15克来自椰奶和橄榄油的健康脂肪。菜肴富含维生素C（来自番茄和花椰菜）、铁分（来自咖喱香料和花椰菜）以及抗氧化剂。令人满足且风味丰富的植物性餐点。',
     menuAllergens16: [
       '椰奶中的椰子',
       '黑芝麻籽中的芝麻',
       '大蒜（某些人可能对大蒜过敏）',
     ],
-  },  
+  },
   tw: {
     // header and page links
     menu: '選單',
@@ -2340,23 +2430,28 @@ const translations = {
     menuCTA: '探索我們的選單',
     learnMore: '了解更多',
     aboutHeader: '我們的理念',
-    aboutDesc: '在 Green Bites，我們相信同時滋養身體與心靈。我們選擇最新鮮的農產品，強調季節性食材，並製作風味十足的植物性料理。您每一次的品嚐，都在支持在地農民、永續努力，以及更健康的地球。',
+    aboutDesc:
+      '在 Green Bites，我們相信同時滋養身體與心靈。我們選擇最新鮮的農產品，強調季節性食材，並製作風味十足的植物性料理。您每一次的品嚐，都在支持在地農民、永續努力，以及更健康的地球。',
     aboutDesc2: '與我們一起重新定義飲食方式——從每一餐開始。',
     organic: '有機',
     years: '年',
     dishes: '道菜',
     sustainabilityHeader: '致力於永續發展',
-    sustainabilityDesc: '從農場到餐桌，我們確保每種食材皆以道德方式取得並盡量減少加工。我們對環境的承諾與我們的料理創意相互結合。讓我們一起邁向更綠色、更健康的未來——從每一口美味開始。',
+    sustainabilityDesc:
+      '從農場到餐桌，我們確保每種食材皆以道德方式取得並盡量減少加工。我們對環境的承諾與我們的料理創意相互結合。讓我們一起邁向更綠色、更健康的未來——從每一口美味開始。',
     wasteSaved: '更多廢棄物減量', // full thing is 80% More Waste Saved
     localSourcing: '在地採購',
     renewable: '可再生',
     featuredHeader: '精選料理',
     testimonialsHeader: '顧客評價',
-    testimonialsP1: '"這裡的純素墨西哥捲非常驚艷！新鮮食材與完美平衡的風味組合，是我從未嘗過的。每一口都充滿美味，讓人回味無窮。我從未想過植物性食物能如此令人滿足。"',
+    testimonialsP1:
+      '"這裡的純素墨西哥捲非常驚艷！新鮮食材與完美平衡的風味組合，是我從未嘗過的。每一口都充滿美味，讓人回味無窮。我從未想過植物性食物能如此令人滿足。"',
     testimonialsPer1: '- Alex Johnson',
-    testimonialsP2: '"Green Bites 完全改變了我對永續飲食的看法。他們對支持在地農夫與環保實踐的堅持讓人敬佩。而且食物極其美味——每道料理都像是在讚頌大自然的優質食材。每次用餐後，我都感到身心愉悅、飽足感十足。"',
+    testimonialsP2:
+      '"Green Bites 完全改變了我對永續飲食的看法。他們對支持在地農夫與環保實踐的堅持讓人敬佩。而且食物極其美味——每道料理都像是在讚頌大自然的優質食材。每次用餐後，我都感到身心愉悅、飽足感十足。"',
     testimonialsPer2: '- Maria Smith',
-    testimonialsP3: '"我對植物性餐點一直持懷疑態度，直到嘗試了 Green Bites。他們的料理真是顛覆性的體驗！食譜的創意與大膽的口味令人驚嘆。他們用簡單又健康的食材竟能做出如此精湛的料理。不論你是否是素食者，都極力推薦！"',
+    testimonialsP3:
+      '"我對植物性餐點一直持懷疑態度，直到嘗試了 Green Bites。他們的料理真是顛覆性的體驗！食譜的創意與大膽的口味令人驚嘆。他們用簡單又健康的食材竟能做出如此精湛的料理。不論你是否是素食者，都極力推薦！"',
     testimonialsPer3: '- David Lee',
     tDisclaimer: '免責聲明：這些人不存在，以上評論僅為比賽所創作。',
     bannerHeader: '準備好體驗不同了嗎？',
@@ -2385,55 +2480,74 @@ const translations = {
 
     // accessibility
     aTitle1: '我們的承諾',
-    aContent1: '在 Green Bites，我們致力於讓所有人（包含身心障礙者）都能使用我們的網站。我們會持續根據業界標準來提升無障礙與易用性。我們深信，無論能力如何，每個人都應該擁有平等的資訊與服務。',
+    aContent1:
+      '在 Green Bites，我們致力於讓所有人（包含身心障礙者）都能使用我們的網站。我們會持續根據業界標準來提升無障礙與易用性。我們深信，無論能力如何，每個人都應該擁有平等的資訊與服務。',
     aTitle2: '標準與指南',
-    aContent2: '我們依照《網頁內容無障礙指引 (WCAG) 2.1》來設計與開發網站，並力求達到 AA 級標準。我們也會定期對網站進行審核與測試，以偵測並修正任何無障礙問題。',
+    aContent2:
+      '我們依照《網頁內容無障礙指引 (WCAG) 2.1》來設計與開發網站，並力求達到 AA 級標準。我們也會定期對網站進行審核與測試，以偵測並修正任何無障礙問題。',
     aTitle3: '回饋與協助',
-    aContent3_1: '如果您在使用我們網站時遇到障礙或需要協助，請透過以下方式聯絡我們：',
+    aContent3_1:
+      '如果您在使用我們網站時遇到障礙或需要協助，請透過以下方式聯絡我們：',
     aContent3_2: '。我們重視您的回饋，並致力於改善您的使用體驗。',
 
     // apn
     apnTitle1: '我們收集的資訊',
-    apnContent1: '當您申請加入 Green Bites，我們會收集個人資訊，如姓名、聯絡方式、履歷、求職信與推薦人資訊。我們也可能收集額外資訊，包括背景調查資料及招聘過程中的通信記錄。',
+    apnContent1:
+      '當您申請加入 Green Bites，我們會收集個人資訊，如姓名、聯絡方式、履歷、求職信與推薦人資訊。我們也可能收集額外資訊，包括背景調查資料及招聘過程中的通信記錄。',
     apnTitle2: '我們如何使用應徵者資料',
-    apnContent2: '應徵者資料僅用於評估資歷、安排面試、評估聘用適合度，以及與就業機會相關的溝通。除非您要求刪除，否則我們可能會保留您的資料以便未來職缺參考。',
+    apnContent2:
+      '應徵者資料僅用於評估資歷、安排面試、評估聘用適合度，以及與就業機會相關的溝通。除非您要求刪除，否則我們可能會保留您的資料以便未來職缺參考。',
     apnTitle3: '資料保存與安全',
-    apnContent3: '您的資料將被安全儲存，只有授權人員能存取。我們會在合理期限內保留您的資訊，以符合法律規定並有效管理招聘流程。',
+    apnContent3:
+      '您的資料將被安全儲存，只有授權人員能存取。我們會在合理期限內保留您的資訊，以符合法律規定並有效管理招聘流程。',
     apnTitle4: '您的權利',
-    apnContent4_1: '作為應徵者，您有權存取、更正或要求刪除您的個人資訊。請聯絡 ',
+    apnContent4_1:
+      '作為應徵者，您有權存取、更正或要求刪除您的個人資訊。請聯絡 ',
     apnContent4_2: ' 瞭解相關諮詢或提出請求。',
 
     // privacy policy
-    privacyContent1: '我們會收集您提供的個人資訊，如姓名、電子郵件與支付資訊。此外，我們還透過分析工具收集非個人資料，例如 IP 位址、瀏覽器類型與網站使用情況。',
+    privacyContent1:
+      '我們會收集您提供的個人資訊，如姓名、電子郵件與支付資訊。此外，我們還透過分析工具收集非個人資料，例如 IP 位址、瀏覽器類型與網站使用情況。',
     privacyTitle2: '我們如何使用資訊',
-    privacyContent2: '我們使用您的資訊來處理交易、提供客戶支援，並優化您在本站的體驗，包括提供個人化內容與行銷訊息。',
+    privacyContent2:
+      '我們使用您的資訊來處理交易、提供客戶支援，並優化您在本站的體驗，包括提供個人化內容與行銷訊息。',
     privacyTitle3: '分享您的資訊',
-    privacyContent3: '為了完成服務，我們可能與值得信賴的第三方（如支付處理商和行銷平台）共享您的資訊。我們會確保合作方遵守隱私法規。',
+    privacyContent3:
+      '為了完成服務，我們可能與值得信賴的第三方（如支付處理商和行銷平台）共享您的資訊。我們會確保合作方遵守隱私法規。',
     privacyTitle4: '您的資料權利',
     privacyContent4_1: '您有權存取、修改或刪除您的個人資訊。請聯絡',
     privacyContent4_2: ' 以進行任何請求。',
 
     // terms of use
     touTitle1: '接受條款',
-    touContent1: '當您訪問或使用我們的網站，即表示同意遵守這些條款與條件。如果您不同意，請立即停止使用我們的服務。',
+    touContent1:
+      '當您訪問或使用我們的網站，即表示同意遵守這些條款與條件。如果您不同意，請立即停止使用我們的服務。',
     touTitle2: '使用者責任',
-    touContent2: '使用者有責任確保其行為符合相關法律。任何不當行為，包括試圖破壞我們平台的行為，均被嚴格禁止。',
+    touContent2:
+      '使用者有責任確保其行為符合相關法律。任何不當行為，包括試圖破壞我們平台的行為，均被嚴格禁止。',
     touTitle3: '責任限制',
-    touContent3: '對於因使用我們網站而導致的損害，包括但不限於服務中斷或資料遺失，Green Bites 概不負責。',
+    touContent3:
+      '對於因使用我們網站而導致的損害，包括但不限於服務中斷或資料遺失，Green Bites 概不負責。',
     touTitle4: '條款變更',
-    touContent4: '我們可能會不定期更新條款。若在更新後您持續使用本網站，即表示您接受更新後的條款。',
+    touContent4:
+      '我們可能會不定期更新條款。若在更新後您持續使用本網站，即表示您接受更新後的條款。',
 
     // process
     processT1: '道德農耕實踐',
-    processD1: '我們與當地農夫合作，採用可持續、環保的耕作方法，在最大限度保留營養和風味的同時，將對環境的影響降到最低。我們嚴格挑選合作夥伴，確保他們遵循有機耕作與健康土壤的理念。',
+    processD1:
+      '我們與當地農夫合作，採用可持續、環保的耕作方法，在最大限度保留營養和風味的同時，將對環境的影響降到最低。我們嚴格挑選合作夥伴，確保他們遵循有機耕作與健康土壤的理念。',
     processT2: '快速而潔淨的加工',
-    processD2: '在收成後的數小時內，我們會在先進設施中仔細處理食材。這樣的流程能最大程度保留營養，並確保每道菜都使用最新鮮的食材。',
+    processD2:
+      '在收成後的數小時內，我們會在先進設施中仔細處理食材。這樣的流程能最大程度保留營養，並確保每道菜都使用最新鮮的食材。',
     processT3: '環保包裝與運送',
-    processD3: '我們採用 100% 可堆肥包裝與碳中和的運送路線。先進的冷卻技術在減少環境影響的同時，也能保持食物的新鮮度。',
+    processD3:
+      '我們採用 100% 可堆肥包裝與碳中和的運送路線。先進的冷卻技術在減少環境影響的同時，也能保持食物的新鮮度。',
     processT4: '新鮮可口的餐點',
-    processD4: '通過我們的流程，廚師精心製作每道既美味又對地球更友善的餐點。每道料理都注重風味與營養的完美結合。',
+    processD4:
+      '通過我們的流程，廚師精心製作每道既美味又對地球更友善的餐點。每道料理都注重風味與營養的完美結合。',
     processHTitle: '從農場到您的餐桌',
-    processHDesc: '體驗您的食物從在地農場到餐盤的完整旅程。我們在每個步驟都遵循最高標準，確保您能享用到最美味、最健康的餐點。',
+    processHDesc:
+      '體驗您的食物從在地農場到餐盤的完整旅程。我們在每個步驟都遵循最高標準，確保您能享用到最美味、最健康的餐點。',
 
     // settings
     settings: '設定',
@@ -2449,7 +2563,8 @@ const translations = {
     username: '使用者名稱',
     pw: '密碼',
     whySI: '為何要登入？',
-    whySIHelp: '登入後，您可以獲得更個人化的購物體驗，充分利用您在本站的所有功能。',
+    whySIHelp:
+      '登入後，您可以獲得更個人化的購物體驗，充分利用您在本站的所有功能。',
     demoCred: '示範憑證',
     usernameF: '輸入使用者名稱',
     passwordF: '輸入密碼',
@@ -2457,24 +2572,28 @@ const translations = {
     // values
     valueT1: '可持續性',
     valueS1: '培育我們的地球',
-    valueC1: '我們對可持續性的承諾驅使我們在所做的一切中盡量減少對環境的影響。我們仔細選擇本地、有機的食材，以支持可持續農業並減少碳足跡，同時確保為客戶提供最高品質。',
+    valueC1:
+      '我們對可持續性的承諾驅使我們在所做的一切中盡量減少對環境的影響。我們仔細選擇本地、有機的食材，以支持可持續農業並減少碳足跡，同時確保為客戶提供最高品質。',
     valueSt1_1: '碳排放減少45%',
     valueSt1_2: '100%環保包裝',
     valueSt1_3: '零食品浪費',
     valueT2: '社區',
     valueS2: '共同成長',
-    valueC2: '我們一切工作的核心是建立持久的聯繫。我們以支持本地農民為榮，與他們合作將新鮮、高品質的產品帶給我們的社區。',
+    valueC2:
+      '我們一切工作的核心是建立持久的聯繫。我們以支持本地農民為榮，與他們合作將新鮮、高品質的產品帶給我們的社區。',
     valueSt2_1: '50+本地合作夥伴',
     valueSt2_2: '10K+會員',
     valueSt2_3: '25次社區活動',
     valueT3: '創新',
     valueS3: '塑造未來',
-    valueC3: '創新推動著我們所做的一切，我們不斷突破界限，創造出美味的植物性菜餚，滋養人們和地球。我們的熱情在於將創意與可持續性相結合。',
+    valueC3:
+      '創新推動著我們所做的一切，我們不斷突破界限，創造出美味的植物性菜餚，滋養人們和地球。我們的熱情在於將創意與可持續性相結合。',
     valueSt3_1: '每月10+道食譜',
     valueSt3_2: '3個研發實驗室',
     valueSt3_3: '全天候創新',
     valueHeader: '我們的核心價值',
-    valueSub: '在 Green Bites，我們的價值觀指導著我們的每一個決策。我們致力於通過可持續的實踐、社區參與和不斷的創新，為未來世代創造一個更美好的世界。',
+    valueSub:
+      '在 Green Bites，我們的價值觀指導著我們的每一個決策。我們致力於通過可持續的實踐、社區參與和不斷的創新，為未來世代創造一個更美好的世界。',
 
     // checkout consts
     usa: '美國',
@@ -2564,7 +2683,8 @@ const translations = {
     // menu consts
     menuItem1: '生命塔可',
     menuDesc1: '美味的植物性塔可，配有新鮮蔬菜和莎莎醬。',
-    menuLD1: '我們的純素塔可特色是軟玉米餅，裡面裝滿了調味黑豆、新鮮的皮科德加洛、脆生菜、奶油酪梨和酸辣的青檸香菜醬。最後撒上一些營養酵母，並配以檸檬角。完美平衡的風味和口感結合在一起，創造出一道令人愉悅的餐點，滿足您對豐富植物性食物的渴望。',
+    menuLD1:
+      '我們的純素塔可特色是軟玉米餅，裡面裝滿了調味黑豆、新鮮的皮科德加洛、脆生菜、奶油酪梨和酸辣的青檸香菜醬。最後撒上一些營養酵母，並配以檸檬角。完美平衡的風味和口感結合在一起，創造出一道令人愉悅的餐點，滿足您對豐富植物性食物的渴望。',
     menuIngredients1: [
       '玉米餅',
       '調味黑豆',
@@ -2586,15 +2706,14 @@ const translations = {
       '鹽',
       '黑胡椒',
     ],
-    menuNutrition1: '每個塔可約提供280卡路里，含有8克蛋白質、6克纖維和12克來自酪梨和橄欖油的健康脂肪。豐富的維生素C（來自甜椒和青檸）、維生素A（來自香菜和生菜）和鐵（來自黑豆和營養酵母）。此塔可完全植物性，使用的都是充滿風味且營養豐富的全食材。',
-    menuAllergens1: [
-      '營養酵母中的大豆',
-      '香菜（某些人可能對香菜敏感）',
-    ],
+    menuNutrition1:
+      '每個塔可約提供280卡路里，含有8克蛋白質、6克纖維和12克來自酪梨和橄欖油的健康脂肪。豐富的維生素C（來自甜椒和青檸）、維生素A（來自香菜和生菜）和鐵（來自黑豆和營養酵母）。此塔可完全植物性，使用的都是充滿風味且營養豐富的全食材。',
+    menuAllergens1: ['營養酵母中的大豆', '香菜（某些人可能對香菜敏感）'],
 
     menuItem2: '埃爾·哈爾丁·布里托',
     menuDesc2: '米飯、豆類和酪梨醬充實的豐盛布里托。',
-    menuLD2: '我們的素食布里托是一頓健康且充滿風味的餐點，包裹在柔軟的小麥餅中。裡面裝滿了調味黑豆、蓬鬆的青檸香菜米飯、烤甜椒和洋蔥、脆生菜、甜玉米以及酸辣莎莎醬。奶油酪梨基的西南醬汁將所有食材融合在一起，帶來充滿活力且滿足的每一口。無論是午餐、晚餐，還是您渴望一份美味植物性舒適食物時，都是完美的選擇。',
+    menuLD2:
+      '我們的素食布里托是一頓健康且充滿風味的餐點，包裹在柔軟的小麥餅中。裡面裝滿了調味黑豆、蓬鬆的青檸香菜米飯、烤甜椒和洋蔥、脆生菜、甜玉米以及酸辣莎莎醬。奶油酪梨基的西南醬汁將所有食材融合在一起，帶來充滿活力且滿足的每一口。無論是午餐、晚餐，還是您渴望一份美味植物性舒適食物時，都是完美的選擇。',
     menuIngredients2: [
       '小麥餅',
       '青檸香菜米飯（白米、香菜、青檸汁、橄欖油）',
@@ -2615,7 +2734,8 @@ const translations = {
       '調味用鹽',
       '裝飾用青檸角',
     ],
-    menuNutrition2: '每個布里托約提供450卡路里，含有15克蛋白質、10克纖維和18克來自酪梨和橄欖油的健康脂肪。富含鐵（來自黑豆）、維生素C（來自甜椒和青檸汁）以及葉酸（來自香菜和生菜）。布里托平衡了複雜的碳水化合物、蛋白質和脂肪，既讓人感到飽足，又營養豐富。',
+    menuNutrition2:
+      '每個布里托約提供450卡路里，含有15克蛋白質、10克纖維和18克來自酪梨和橄欖油的健康脂肪。富含鐵（來自黑豆）、維生素C（來自甜椒和青檸汁）以及葉酸（來自香菜和生菜）。布里托平衡了複雜的碳水化合物、蛋白質和脂肪，既讓人感到飽足，又營養豐富。',
     menuAllergens2: [
       '小麥（來自餅）',
       '大豆（黑豆或營養酵母可能有交叉污染）',
@@ -2624,7 +2744,8 @@ const translations = {
 
     menuItem3: '維爾德魯沙拉',
     menuDesc3: '混合綠葉、鷹嘴豆和芝麻醬的清新沙拉。',
-    menuLD3: '這道鮮豔的純素沙拉完美結合了新鮮綠葉、豐富的鷹嘴豆和彩色蔬菜，全部搭配上奶油芝麻檸檬醬。使用了混合的甘藍、嬰兒菠菜和脆羅曼生菜，並以絲狀胡蘿蔔、薄切甜菜、烤鷹嘴豆和脆杏仁作為配料。醬汁是由芝麻醬、檸檬汁、大蒜和少許楓糖漿混合而成，增添了酸辣微甜的風味。這是一個營養豐富且味道濃郁的輕盈滿足的選擇。',
+    menuLD3:
+      '這道鮮豔的純素沙拉完美結合了新鮮綠葉、豐富的鷹嘴豆和彩色蔬菜，全部搭配上奶油芝麻檸檬醬。使用了混合的甘藍、嬰兒菠菜和脆羅曼生菜，並以絲狀胡蘿蔔、薄切甜菜、烤鷹嘴豆和脆杏仁作為配料。醬汁是由芝麻醬、檸檬汁、大蒜和少許楓糖漿混合而成，增添了酸辣微甜的風味。這是一個營養豐富且味道濃郁的輕盈滿足的選擇。',
     menuIngredients3: [
       '嬰兒菠菜葉',
       '切碎的甘藍',
@@ -2642,7 +2763,8 @@ const translations = {
       '鹽（調味用）',
       '新鮮研磨的黑胡椒（調味用）',
     ],
-    menuNutrition3: '每份沙拉約提供300卡路里，含有10克蛋白質、8克纖維和12克來自芝麻醬和杏仁的健康脂肪。豐富的維生素A、C、K（來自綠葉蔬菜和胡蘿蔔）、鐵（來自鷹嘴豆和菠菜）以及鎂（來自杏仁）。醬汁中含有來自芝麻醬的鈣，並在不使用乳製品的情況下增添了奶油質地。',
+    menuNutrition3:
+      '每份沙拉約提供300卡路里，含有10克蛋白質、8克纖維和12克來自芝麻醬和杏仁的健康脂肪。豐富的維生素A、C、K（來自綠葉蔬菜和胡蘿蔔）、鐵（來自鷹嘴豆和菠菜）以及鎂（來自杏仁）。醬汁中含有來自芝麻醬的鈣，並在不使用乳製品的情況下增添了奶油質地。',
     menuAllergens3: [
       '芝麻醬中的芝麻',
       '杏仁中的堅果',
@@ -2651,7 +2773,8 @@ const translations = {
 
     menuItem4: '煙燻楓糖漢堡',
     menuDesc4: '美味的純素漢堡肉餅，配有生菜、番茄和煙燻醬汁。',
-    menuLD4: '我們的純素漢堡是一個風味豐富且飽滿的植物性選擇，非常適合漢堡愛好者。它以柔軟的全麥麵包為基底，搭配多汁的植物性漢堡肉餅。漢堡上覆蓋著脆生菜、成熟多汁的番茄片和焦糖化的洋蔥，增添了一絲甜味。亮點是用純素蛋黃醬、熏製紅椒粉、大蒜和一點檸檬汁製成的奶油煙燻醬汁，為每一口增添了深度和豐富感。簡單滿足且充滿植物性美味。',
+    menuLD4:
+      '我們的純素漢堡是一個風味豐富且飽滿的植物性選擇，非常適合漢堡愛好者。它以柔軟的全麥麵包為基底，搭配多汁的植物性漢堡肉餅。漢堡上覆蓋著脆生菜、成熟多汁的番茄片和焦糖化的洋蔥，增添了一絲甜味。亮點是用純素蛋黃醬、熏製紅椒粉、大蒜和一點檸檬汁製成的奶油煙燻醬汁，為每一口增添了深度和豐富感。簡單滿足且充滿植物性美味。',
     menuIngredients4: [
       '全麥漢堡麵包',
       '植物性漢堡肉餅（由豌豆蛋白、蘑菇和調味料製成）',
@@ -2663,7 +2786,8 @@ const translations = {
       '調味用鹽',
       '調味用胡椒',
     ],
-    menuNutrition4: '每個漢堡約提供350卡路里，含有15克蛋白質、5克纖維和10克來自橄欖油和植物性肉餅的健康脂肪。豐富的鐵（來自植物性肉餅和全麥麵包）和維生素C（來自番茄和煙燻醬汁）。這款漢堡既讓人感到滿足又平衡，提供了無負擔的美味享受。',
+    menuNutrition4:
+      '每個漢堡約提供350卡路里，含有15克蛋白質、5克纖維和10克來自橄欖油和植物性肉餅的健康脂肪。豐富的鐵（來自植物性肉餅和全麥麵包）和維生素C（來自番茄和煙燻醬汁）。這款漢堡既讓人感到滿足又平衡，提供了無負擔的美味享受。',
     menuAllergens4: [
       '全麥麵包中的小麥',
       '純素蛋黃醬中的大豆',
@@ -2672,7 +2796,8 @@ const translations = {
 
     menuItem5: '綠色番茄披薩',
     menuDesc5: '薄脆的薄餅底上覆蓋著馬里納拉醬、純素奶酪、蘑菇和菠菜。',
-    menuLD5: '我們的純素披薩以薄脆的餅皮為基底，搭配美味的植物性配料。豐富的烤番茄馬里納拉醬均勻地塗在餅皮上，然後覆蓋一層融化的純素莫札瑞拉奶酪。披薩上鋪滿新鮮的菠菜葉、炒蘑菇和撒上一些焦糖化洋蔥，增添了更多風味。每一口都帶來鹹香、奶酪味和新鮮的味道的完美結合，是披薩愛好者必試的經典純素選擇。',
+    menuLD5:
+      '我們的純素披薩以薄脆的餅皮為基底，搭配美味的植物性配料。豐富的烤番茄馬里納拉醬均勻地塗在餅皮上，然後覆蓋一層融化的純素莫札瑞拉奶酪。披薩上鋪滿新鮮的菠菜葉、炒蘑菇和撒上一些焦糖化洋蔥，增添了更多風味。每一口都帶來鹹香、奶酪味和新鮮的味道的完美結合，是披薩愛好者必試的經典純素選擇。',
     menuIngredients5: [
       '薄餅皮（由全麥麵粉、橄欖油、水和酵母製成）',
       '烤番茄馬里納拉醬（烤番茄、大蒜、橄欖油、鹽、牛至）',
@@ -2685,7 +2810,8 @@ const translations = {
       '牛至（調味醬汁用）',
       '鹽（調味）',
     ],
-    menuNutrition5: '每片約提供280卡路里，含有6克蛋白質、3克纖維和12克來自橄欖油和純素奶酪的健康脂肪。披薩富含維生素C（來自菠菜和番茄）、鈣（來自純素莫札瑞拉）和鐵（來自菠菜和蘑菇）。這是一個平衡、風味豐富且不妥協於味道或滿足感的植物性選擇。',
+    menuNutrition5:
+      '每片約提供280卡路里，含有6克蛋白質、3克纖維和12克來自橄欖油和純素奶酪的健康脂肪。披薩富含維生素C（來自菠菜和番茄）、鈣（來自純素莫札瑞拉）和鐵（來自菠菜和蘑菇）。這是一個平衡、風味豐富且不妥協於味道或滿足感的植物性選擇。',
     menuAllergens5: [
       '餅皮中的小麥',
       '純素莫札瑞拉中的大豆（可能有交叉污染）',
@@ -2694,7 +2820,8 @@ const translations = {
 
     menuItem6: '黃金腰果麥克',
     menuDesc6: '由腰果、營養酵母和薑黃製成的奶油、奶酪風味的舒適食物。',
-    menuLD6: '這款純素麥克和奶酪是終極的舒適食物，特點是柔軟的通心粉麵條覆蓋著濃郁絲滑的植物性奶酪醬。醬汁由腰果、營養酵母和少許薑黃製成，帶來天然的金黃色澤。上面撒上細碎的青蔥增添新鮮風味，再撒上些許粗磨黑胡椒平衡奶油感。這是一道豐盛、滿足且非常適合植物性飲食者的菜餚。',
+    menuLD6:
+      '這款純素麥克和奶酪是終極的舒適食物，特點是柔軟的通心粉麵條覆蓋著濃郁絲滑的植物性奶酪醬。醬汁由腰果、營養酵母和少許薑黃製成，帶來天然的金黃色澤。上面撒上細碎的青蔥增添新鮮風味，再撒上些許粗磨黑胡椒平衡奶油感。這是一道豐盛、滿足且非常適合植物性飲食者的菜餚。',
     menuIngredients6: [
       '通心粉（由杜蘭小麥製成）',
       '腰果奶酪醬（腰果、營養酵母、薑黃、蒜粉、檸檬汁、橄欖油、水）',
@@ -2703,7 +2830,8 @@ const translations = {
       '鹽（調味）',
       '橄欖油（用於醬汁）',
     ],
-    menuNutrition6: '每份約提供350卡路里，含有10克蛋白質、5克纖維和14克來自腰果和橄欖油的健康脂肪。這是維生素B12（來自營養酵母）、鎂（來自腰果）和鐵（來自通心粉和腰果）的良好來源。這道菜既 indulgent 又營養豐富，無需乳製品即可提供經典的奶酪風味。',
+    menuNutrition6:
+      '每份約提供350卡路里，含有10克蛋白質、5克纖維和14克來自腰果和橄欖油的健康脂肪。這是維生素B12（來自營養酵母）、鎂（來自腰果）和鐵（來自通心粉和腰果）的良好來源。這道菜既 indulgent 又營養豐富，無需乳製品即可提供經典的奶酪風味。',
     menuAllergens6: [
       '通心粉中的小麥',
       '腰果中的堅果',
@@ -2712,7 +2840,8 @@ const translations = {
 
     menuItem7: '佛羅倫丁寬麵條',
     menuDesc7: '麵條、里科塔、菠菜和馬里納拉醬的層次。',
-    menuLD7: '我們的素食寬麵條是一道舒適的經典，層層疊疊地排列著柔軟的寬麵條、奶油般的里科塔奶酪、豐富的馬里納拉醬和新鮮的綠葉蔬菜。這道菜最後撒上融化的莫札瑞拉奶酪，並用新鮮香菜裝飾，帶來獨特的風味。嬰兒菠菜和歐芹葉層層交織，增添了更多的新鮮感和風味。每一口都完美結合了奶酪味、鹽味和香草香味。',
+    menuLD7:
+      '我們的素食寬麵條是一道舒適的經典，層層疊疊地排列著柔軟的寬麵條、奶油般的里科塔奶酪、豐富的馬里納拉醬和新鮮的綠葉蔬菜。這道菜最後撒上融化的莫札瑞拉奶酪，並用新鮮香菜裝飾，帶來獨特的風味。嬰兒菠菜和歐芹葉層層交織，增添了更多的新鮮感和風味。每一口都完美結合了奶酪味、鹽味和香草香味。',
     menuIngredients7: [
       '寬麵條（由粗粒小麥製成）',
       '里科塔奶酪',
@@ -2727,7 +2856,8 @@ const translations = {
       '調味用鹽',
       '調味用黑胡椒',
     ],
-    menuNutrition7: '每片約提供400卡路里，含有15克蛋白質、4克纖維和12克脂肪。富含鈣（來自里科塔和莫札瑞拉）、維生素A（來自菠菜和歐芹）和鐵（來自菠菜和寬麵條）。這款寬麵條豐盛且令人滿足，是一個完美的選擇，提供滿足感的餐點。',
+    menuNutrition7:
+      '每片約提供400卡路里，含有15克蛋白質、4克纖維和12克脂肪。富含鈣（來自里科塔和莫札瑞拉）、維生素A（來自菠菜和歐芹）和鐵（來自菠菜和寬麵條）。這款寬麵條豐盛且令人滿足，是一個完美的選擇，提供滿足感的餐點。',
     menuAllergens7: [
       '寬麵條中的小麥',
       '里科塔和莫札瑞拉奶酪中的乳製品',
@@ -2736,7 +2866,8 @@ const translations = {
 
     menuItem8: '孟買鷹嘴豆咖哩',
     menuDesc8: '用鷹嘴豆、椰奶和香料混合製成的溫暖芳香咖哩。',
-    menuLD8: '我們的鷹嘴豆咖哩是一道令人心安的菜餚，特點是嫩滑的鷹嘴豆在濃郁香料的椰奶醬汁中慢燉。這款鮮豔的橙色醬汁充滿了溫暖的香料，最後撒上新鮮香菜和綠蔥，帶來明亮的風味。搭配檸檬角，增添酸味轉折，一旁還有烤玉米和新鮮莎莎醬，增添了獨特的口感和清新的對比。',
+    menuLD8:
+      '我們的鷹嘴豆咖哩是一道令人心安的菜餚，特點是嫩滑的鷹嘴豆在濃郁香料的椰奶醬汁中慢燉。這款鮮豔的橙色醬汁充滿了溫暖的香料，最後撒上新鮮香菜和綠蔥，帶來明亮的風味。搭配檸檬角，增添酸味轉折，一旁還有烤玉米和新鮮莎莎醬，增添了獨特的口感和清新的對比。',
     menuIngredients8: [
       '鷹嘴豆（煮熟）',
       '椰奶（全脂）',
@@ -2755,15 +2886,14 @@ const translations = {
       '鹽（調味用）',
       '黑胡椒（調味用）',
     ],
-    menuNutrition8: '每份約提供350卡路里，含有12克蛋白質、8克纖維和15克來自椰奶和橄欖油的健康脂肪。富含維生素C（來自檸檬和莎莎醬）、鉀（來自鷹嘴豆）以及鐵（來自香料和鷹嘴豆）。這道菜令人滿足，溫暖且充滿營養成分。',
-    menuAllergens8: [
-      '椰奶中的椰子',
-      '蒜（某些人可能對蒜敏感）',
-    ],
+    menuNutrition8:
+      '每份約提供350卡路里，含有12克蛋白質、8克纖維和15克來自椰奶和橄欖油的健康脂肪。富含維生素C（來自檸檬和莎莎醬）、鉀（來自鷹嘴豆）以及鐵（來自香料和鷹嘴豆）。這道菜令人滿足，溫暖且充滿營養成分。',
+    menuAllergens8: ['椰奶中的椰子', '蒜（某些人可能對蒜敏感）'],
 
     menuItem9: '弗雷斯卡布里托碗',
     menuDesc9: '米飯、黑豆、玉米、酪梨醬和莎莎醬的碗裝。',
-    menuLD9: '我們的純素布里托碗是一個拆解式布里托，盛裝在鮮豔而豐富的碗中。基底是蓬鬆的青檸香菜米飯，頂部覆蓋著調味黑豆、新鮮酪梨醬、色彩斑斕的烤蘆筍、烤甜椒、甜玉米和切丁番茄。最後撒上新鮮香菜和檸檬角，這碗完美結合了風味和口感。',
+    menuLD9:
+      '我們的純素布里托碗是一個拆解式布里托，盛裝在鮮豔而豐富的碗中。基底是蓬鬆的青檸香菜米飯，頂部覆蓋著調味黑豆、新鮮酪梨醬、色彩斑斕的烤蘆筍、烤甜椒、甜玉米和切丁番茄。最後撒上新鮮香菜和檸檬角，這碗完美結合了風味和口感。',
     menuIngredients9: [
       '青檸香菜米飯（白米、香菜、青檸汁、橄欖油）',
       '黑豆（孜然和蒜粉調味）',
@@ -2778,14 +2908,14 @@ const translations = {
       '黑胡椒（調味用）',
       '橄欖油（用於烤製和烹飪）',
     ],
-    menuNutrition9: '每碗約提供400卡路里，含有12克蛋白質、9克纖維和15克來自酪梨和橄欖油的健康脂肪。富含維生素C（來自甜椒和青檸）、鉀（來自蘆筍和酪梨）以及鐵（來自黑豆）。',
-    menuAllergens9: [
-      '酪梨（某些人可能對酪梨過敏）',
-    ],
+    menuNutrition9:
+      '每碗約提供400卡路里，含有12克蛋白質、9克纖維和15克來自酪梨和橄欖油的健康脂肪。富含維生素C（來自甜椒和青檸）、鉀（來自蘆筍和酪梨）以及鐵（來自黑豆）。',
+    menuAllergens9: ['酪梨（某些人可能對酪梨過敏）'],
 
     menuItem10: '托斯卡納烤串',
     menuDesc10: '醃製的蘆筍、甜椒、洋蔥和蘑菇串燒。',
-    menuLD10: '我們的烤蔬菜串燒是一道色彩繽紛、煙燻且美味的植物性菜餚。醃製的蘆筍、甜椒和蘑菇串在串燒上，烤至柔軟略微焦香。蔬菜裹上用橄欖油和蒜調味的醃料，並帶有熏製紅椒粉和意大利香草的香氣。這些串燒無論是作為主菜還是風味豐富的配菜都是完美的選擇。',
+    menuLD10:
+      '我們的烤蔬菜串燒是一道色彩繽紛、煙燻且美味的植物性菜餚。醃製的蘆筍、甜椒和蘑菇串在串燒上，烤至柔軟略微焦香。蔬菜裹上用橄欖油和蒜調味的醃料，並帶有熏製紅椒粉和意大利香草的香氣。這些串燒無論是作為主菜還是風味豐富的配菜都是完美的選擇。',
     menuIngredients10: [
       '蘆筍（切片成厚圓形）',
       '甜椒（紅色、黃色、綠色甜椒，切塊）',
@@ -2794,7 +2924,8 @@ const translations = {
       '新鮮歐芹（切碎，裝飾用）',
       '檸檬角（上桌用）',
     ],
-    menuNutrition10: '每份串燒約提供150卡路里，含有4克蛋白質、3克纖維和8克來自橄欖油的健康脂肪。串燒是維生素C（來自甜椒）、鉀（來自蘆筍）和抗氧化劑（來自蘑菇）的重要來源。輕盈且風味豐富，非常適合烤肉愛好者。',
+    menuNutrition10:
+      '每份串燒約提供150卡路里，含有4克蛋白質、3克纖維和8克來自橄欖油的健康脂肪。串燒是維生素C（來自甜椒）、鉀（來自蘆筍）和抗氧化劑（來自蘑菇）的重要來源。輕盈且風味豐富，非常適合烤肉愛好者。',
     menuAllergens10: [
       '蒜（某些人可能對蒜過敏）',
       '蘑菇（某些人可能對蘑菇過敏）',
@@ -2802,7 +2933,8 @@ const translations = {
 
     menuItem11: '照燒日出炒',
     menuDesc11: '新鮮蔬菜在鹹香的醬油基醬汁中炒製，配上茉莉米。',
-    menuLD11: '這道純素炒菜是色彩繽紛的蔬菜和豐富的糙米的完美結合，所有食材在鹹香的醬油基醬汁中炒至完美。這道菜包括嫩滑的蘆筍、甜甜的甜椒、豌豆、胡蘿蔔和鳳梨塊，並搭配烤腰果增添酥脆口感。香蒜、薑和泰式辣椒醬為每一口帶來愉悅的甜、酸、鹹味平衡。',
+    menuLD11:
+      '這道純素炒菜是色彩繽紛的蔬菜和豐富的糙米的完美結合，所有食材在鹹香的醬油基醬汁中炒至完美。這道菜包括嫩滑的蘆筍、甜甜的甜椒、豌豆、胡蘿蔔和鳳梨塊，並搭配烤腰果增添酥脆口感。香蒜、薑和泰式辣椒醬為每一口帶來愉悅的甜、酸、鹹味平衡。',
     menuIngredients11: [
       '煮熟的糙米',
       '蘆筍（半月切片）',
@@ -2820,16 +2952,14 @@ const translations = {
       '青蔥片（裝飾用）',
       '新鮮泰式羅勒（裝飾用）',
     ],
-    menuNutrition11: '每份約提供350卡路里，含有8克蛋白質、6克纖維和12克來自芝麻油和腰果的健康脂肪。這道炒菜是維生素A（來自胡蘿蔔）、維生素C（來自甜椒）和鉀（來自蘆筍和鳳梨）的優秀來源。輕盈、風味豐富且營養豐富。',
-    menuAllergens11: [
-      '醬油或塔瑪里中的大豆',
-      '腰果中的堅果',
-      '芝麻油中的芝麻',
-    ],
+    menuNutrition11:
+      '每份約提供350卡路里，含有8克蛋白質、6克纖維和12克來自芝麻油和腰果的健康脂肪。這道炒菜是維生素A（來自胡蘿蔔）、維生素C（來自甜椒）和鉀（來自蘆筍和鳳梨）的優秀來源。輕盈、風味豐富且營養豐富。',
+    menuAllergens11: ['醬油或塔瑪里中的大豆', '腰果中的堅果', '芝麻油中的芝麻'],
 
     menuItem12: '酪梨卷',
     menuDesc12: '內含酪梨、黃瓜和醃製蘿蔔的壽司卷，配以醬油。',
-    menuLD12: '我們的素食壽司卷是一道風味和口感豐富的鮮豔菜餚，特色是奶油酪梨、脆黃瓜和甜酸醃製蘿蔔，包裹在調味壽司米和海苔中。壽司卷上裝飾著細切的紅甘藍、胡蘿蔔和蘆筍，增添更多色彩和酥脆感。配以醬油一起享用，這些卷是清新且輕盈的植物性壽司經典。',
+    menuLD12:
+      '我們的素食壽司卷是一道風味和口感豐富的鮮豔菜餚，特色是奶油酪梨、脆黃瓜和甜酸醃製蘿蔔，包裹在調味壽司米和海苔中。壽司卷上裝飾著細切的紅甘藍、胡蘿蔔和蘆筍，增添更多色彩和酥脆感。配以醬油一起享用，這些卷是清新且輕盈的植物性壽司經典。',
     menuIngredients12: [
       '壽司米（用米醋、糖和鹽調味）',
       '海苔片（海藻）',
@@ -2843,7 +2973,8 @@ const translations = {
       '山葵（可選裝飾）',
       '醃薑（可選裝飾）',
     ],
-    menuNutrition12: '每個壽司卷約提供200卡路里，含有4克蛋白質、3克纖維和5克來自酪梨的健康脂肪。豐富的維生素C（來自紅甘藍）、鉀（來自酪梨）和纖維（來自蔬菜和壽司米）。這道菜清新、爽口，充滿新鮮植物性食材。',
+    menuNutrition12:
+      '每個壽司卷約提供200卡路里，含有4克蛋白質、3克纖維和5克來自酪梨的健康脂肪。豐富的維生素C（來自紅甘藍）、鉀（來自酪梨）和纖維（來自蔬菜和壽司米）。這道菜清新、爽口，充滿新鮮植物性食材。',
     menuAllergens12: [
       '醬油中的大豆',
       '如果不使用無麩質醬油，則含有小麥',
@@ -2852,7 +2983,8 @@ const translations = {
 
     menuItem13: '甜陽塔可',
     menuDesc13: '柔軟的玉米餅內裝烤甜薯、黑豆、酪梨和沙拉。',
-    menuLD13: '我們的甜薯塔可是一個美味的植物性選擇，柔軟的玉米餅內裝有烤甜薯、調味黑豆和奶油酪梨片。頂部配有鮮豔的紅甘藍沙拉和酸味檸檬奶油，帶來絕妙的口感和平衡的風味。撒上新鮮香菜和檸檬角，增添新鮮感，是一個輕盈而滿足的健康餐點。',
+    menuLD13:
+      '我們的甜薯塔可是一個美味的植物性選擇，柔軟的玉米餅內裝有烤甜薯、調味黑豆和奶油酪梨片。頂部配有鮮豔的紅甘藍沙拉和酸味檸檬奶油，帶來絕妙的口感和平衡的風味。撒上新鮮香菜和檸檬角，增添新鮮感，是一個輕盈而滿足的健康餐點。',
     menuIngredients13: [
       '玉米餅',
       '烤甜薯（用橄欖油、熏製紅椒粉和孜然調味）',
@@ -2867,7 +2999,8 @@ const translations = {
       '檸檬角（裝飾用）',
       '鹽（調味用）',
     ],
-    menuNutrition13: '每個塔可約提供280卡路里，含有8克蛋白質、6克纖維和10克來自酪梨和橄欖油的健康脂肪。富含維生素A（來自甜薯）、維生素C（來自甘藍和檸檬）以及鉀（來自酪梨）。色彩繽紛且營養豐富，是一個既美味又健康的餐點。',
+    menuNutrition13:
+      '每個塔可約提供280卡路里，含有8克蛋白質、6克纖維和10克來自酪梨和橄欖油的健康脂肪。富含維生素A（來自甜薯）、維生素C（來自甘藍和檸檬）以及鉀（來自酪梨）。色彩繽紛且營養豐富，是一個既美味又健康的餐點。',
     menuAllergens13: [
       '豆腐碎片中的大豆',
       '玉米餅中的玉米',
@@ -2876,7 +3009,8 @@ const translations = {
 
     menuItem14: '鄉村凱薩迪亞',
     menuDesc14: '酪梨奶酪、豆類和炒蔬菜填充的脆皮玉米餅。',
-    menuLD14: '我們的純素凱薩迪亞是一個美味、植物性改良的經典選擇。它以酥脆的小麥餅為基底，裡面填滿了調味黑豆、炒甜椒、烤玉米、鮮番茄和紅甘藍的混合物，再加上融化的純素奶酪和一絲辣味哈拉佩尼奧。經過完美的烤至金黃色，這個凱薩迪亞搭配莎莎醬和檸檬角一起享用，提供清新的結尾。',
+    menuLD14:
+      '我們的純素凱薩迪亞是一個美味、植物性改良的經典選擇。它以酥脆的小麥餅為基底，裡面填滿了調味黑豆、炒甜椒、烤玉米、鮮番茄和紅甘藍的混合物，再加上融化的純素奶酪和一絲辣味哈拉佩尼奧。經過完美的烤至金黃色，這個凱薩迪亞搭配莎莎醬和檸檬角一起享用，提供清新的結尾。',
     menuIngredients14: [
       '小麥餅',
       '純素奶酪（切絲）',
@@ -2889,7 +3023,8 @@ const translations = {
       '烤製用的橄欖油',
       '檸檬角（裝飾用）',
     ],
-    menuNutrition14: '每個凱薩迪亞約提供300卡路里，含有10克蛋白質、7克纖維和12克來自橄欖油和純素奶酪的健康脂肪。富含維生素C（來自甜椒和番茄）、鈣（來自純素奶酪）以及鉀（來自黑豆）。輕盈且令人滿足，非常適合作為小吃或餐點。',
+    menuNutrition14:
+      '每個凱薩迪亞約提供300卡路里，含有10克蛋白質、7克纖維和12克來自橄欖油和純素奶酪的健康脂肪。富含維生素C（來自甜椒和番茄）、鈣（來自純素奶酪）以及鉀（來自黑豆）。輕盈且令人滿足，非常適合作為小吃或餐點。',
     menuAllergens14: [
       '小麥餅中的小麥',
       '純素奶酪中的大豆',
@@ -2898,7 +3033,8 @@ const translations = {
 
     menuItem15: '托斯卡納扁豆湯',
     menuDesc15: '由扁豆、胡蘿蔔、芹菜和番茄製成的豐盛湯品。',
-    menuLD15: '我們的扁豆湯是一碗溫暖且令人舒適的湯，特點是嫩滑的棕色扁豆在風味豐富的蔬菜高湯中煮熟。湯中包括切丁的胡蘿蔔、番茄和金色馬鈴薯，並加入新鮮的菠菜葉增添新鮮感和風味。用蒜、孜然和熏製紅椒粉調味，帶來豐富且令人滿足的味道。非常適合寒冷的日子，提供一頓舒適的餐點。',
+    menuLD15:
+      '我們的扁豆湯是一碗溫暖且令人舒適的湯，特點是嫩滑的棕色扁豆在風味豐富的蔬菜高湯中煮熟。湯中包括切丁的胡蘿蔔、番茄和金色馬鈴薯，並加入新鮮的菠菜葉增添新鮮感和風味。用蒜、孜然和熏製紅椒粉調味，帶來豐富且令人滿足的味道。非常適合寒冷的日子，提供一頓舒適的餐點。',
     menuIngredients15: [
       '棕色扁豆（煮熟）',
       '蔬菜高湯',
@@ -2911,7 +3047,8 @@ const translations = {
       '熏製紅椒粉（調味用）',
       '鹽（調味用）',
     ],
-    menuNutrition15: '每份約提供250卡路里，含有12克蛋白質、8克纖維和4克來自椰奶和橄欖油的健康脂肪。湯富含鐵（來自扁豆和菠菜）、維生素A（來自胡蘿蔔和菠菜）以及鉀（來自馬鈴薯）。輕盈且營養豐富，非常適合健康餐點。',
+    menuNutrition15:
+      '每份約提供250卡路里，含有12克蛋白質、8克纖維和4克來自椰奶和橄欖油的健康脂肪。湯富含鐵（來自扁豆和菠菜）、維生素A（來自胡蘿蔔和菠菜）以及鉀（來自馬鈴薯）。輕盈且營養豐富，非常適合健康餐點。',
     menuAllergens15: [
       '芹菜（某些人可能對芹菜過敏）',
       '蒜（某些人可能對蒜過敏）',
@@ -2919,7 +3056,8 @@ const translations = {
 
     menuItem16: '馬薩拉烤花椰菜',
     menuDesc16: '用濃郁風味的番茄基醬汁烤製的花椰菜。',
-    menuLD16: '我們的花椰菜提卡馬薩拉是一道大膽且風味豐富的印度風味植物性菜餚。嫩滑的烤花椰菜花朵在香料豐富的番茄和椰奶咖哩醬汁中慢燉，創造出奶油且芳香的基底。搭配蒸熟的巴斯馬蒂米，撒上黑芝麻，並用新鮮香菜和碎黑胡椒裝飾。豐富的香料和鮮明的風味完美結合，這道提卡馬薩拉是經典植物性菜餚的絕佳變體。',
+    menuLD16:
+      '我們的花椰菜提卡馬薩拉是一道大膽且風味豐富的印度風味植物性菜餚。嫩滑的烤花椰菜花朵在香料豐富的番茄和椰奶咖哩醬汁中慢燉，創造出奶油且芳香的基底。搭配蒸熟的巴斯馬蒂米，撒上黑芝麻，並用新鮮香菜和碎黑胡椒裝飾。豐富的香料和鮮明的風味完美結合，這道提卡馬薩拉是經典植物性菜餚的絕佳變體。',
     menuIngredients16: [
       '烤花椰菜花朵（用橄欖油、熏製紅椒粉和薑黃調味）',
       '番茄基咖哩醬汁（番茄醬、椰奶、蒜、薑、馬薩拉、孜然、香菜、辣椒粉、鹽）',
@@ -2933,7 +3071,8 @@ const translations = {
       '辣椒粉（香料用）',
       '鹽（調味用）',
     ],
-    menuNutrition16: '每份約提供350卡路里，含有7克蛋白質、5克纖維和15克來自椰奶和橄欖油的健康脂肪。這道菜富含維生素C（來自番茄和花椰菜）、鐵（來自咖哩香料和花椰菜）以及抗氧化劑。這是一頓滿足且風味豐富的植物性餐點。',
+    menuNutrition16:
+      '每份約提供350卡路里，含有7克蛋白質、5克纖維和15克來自椰奶和橄欖油的健康脂肪。這道菜富含維生素C（來自番茄和花椰菜）、鐵（來自咖哩香料和花椰菜）以及抗氧化劑。這是一頓滿足且風味豐富的植物性餐點。',
     menuAllergens16: [
       '椰奶中的椰子',
       '黑芝麻籽中的芝麻',
@@ -3008,31 +3147,39 @@ const translations = {
     menuCTA: 'メニューを見る',
     learnMore: '詳細はこちら',
     aboutHeader: '私たちの理念',
-    aboutDesc: 'Green Bitesでは、身体と心の両方を豊かにすることを大切にしています。私たちは新鮮な農産物を厳選し、旬の食材を活かし、植物由来の風味豊かな料理を作り上げます。お客様が一口味わうたびに、地元の農家、持続可能性への取り組み、そしてより健康的な地球を支援していることになります。',
+    aboutDesc:
+      'Green Bitesでは、身体と心の両方を豊かにすることを大切にしています。私たちは新鮮な農産物を厳選し、旬の食材を活かし、植物由来の風味豊かな料理を作り上げます。お客様が一口味わうたびに、地元の農家、持続可能性への取り組み、そしてより健康的な地球を支援していることになります。',
     aboutDesc2: '一緒に、食のあり方を再定義してみませんか？—一度の食事から。',
     organic: 'オーガニック',
     years: '年',
     dishes: '品目',
     sustainabilityHeader: 'サステナビリティへの取り組み',
-    sustainabilityDesc: '畑から食卓まで、私たちは倫理的に調達された最小限に加工された食材を使用することを保証します。環境保護への取り組みは、私たちの料理の創造性と密接に関わっています。より緑豊かで健康的な未来を目指して、一緒に歩みましょう—一品の料理から。',
+    sustainabilityDesc:
+      '畑から食卓まで、私たちは倫理的に調達された最小限に加工された食材を使用することを保証します。環境保護への取り組みは、私たちの料理の創造性と密接に関わっています。より緑豊かで健康的な未来を目指して、一緒に歩みましょう—一品の料理から。',
     wasteSaved: 'より多くの廃棄物削減', // full thing is 80% More Waste Saved
     localSourcing: '地元での調達',
     renewable: '再生可能',
     featuredHeader: 'おすすめ料理',
     testimonialsHeader: 'お客様の声',
-    testimonialsP1: '"ここのヴィーガンタコスは本当に素晴らしいです！ 新鮮な食材と完璧なバランスの味わいは、これまでに味わったことのない感覚。 一口ごとに美味しさが弾けて、もっと欲しくなります。 植物性食品がこんなに満足できるとは思いませんでした。"',
+    testimonialsP1:
+      '"ここのヴィーガンタコスは本当に素晴らしいです！ 新鮮な食材と完璧なバランスの味わいは、これまでに味わったことのない感覚。 一口ごとに美味しさが弾けて、もっと欲しくなります。 植物性食品がこんなに満足できるとは思いませんでした。"',
     testimonialsPer1: '- Alex Johnson',
-    testimonialsP2: '"Green Bitesは、サステナブルな食事の概念を完全に変えてくれました。 地元農家を支援し、エコフレンドリーな取り組みを行っている姿勢は本当に尊敬に値します。 そのうえ料理も素晴らしく、どの一皿も自然の恵みを讃えるような味わい。 食事のたびに心もお腹も満たされます。"',
+    testimonialsP2:
+      '"Green Bitesは、サステナブルな食事の概念を完全に変えてくれました。 地元農家を支援し、エコフレンドリーな取り組みを行っている姿勢は本当に尊敬に値します。 そのうえ料理も素晴らしく、どの一皿も自然の恵みを讃えるような味わい。 食事のたびに心もお腹も満たされます。"',
     testimonialsPer2: '- Maria Smith',
-    testimonialsP3: '"植物性の食事には懐疑的だったのですが、Green Bitesを試したら考えが変わりました。 ここの料理はまさに衝撃的！ レシピの独創性と味の大胆さは他では味わえません。 シンプルかつ健康的な食材をこれほどまでに見事な料理に仕立て上げるなんて驚きです。 ヴィーガンでなくてもぜひ試してほしい！"',
+    testimonialsP3:
+      '"植物性の食事には懐疑的だったのですが、Green Bitesを試したら考えが変わりました。 ここの料理はまさに衝撃的！ レシピの独創性と味の大胆さは他では味わえません。 シンプルかつ健康的な食材をこれほどまでに見事な料理に仕立て上げるなんて驚きです。 ヴィーガンでなくてもぜひ試してほしい！"',
     testimonialsPer3: '- David Lee',
-    tDisclaimer: '免責事項：これらの人物は実在せず、上記の引用はコンテスト目的のみで作成されたものです。',
+    tDisclaimer:
+      '免責事項：これらの人物は実在せず、上記の引用はコンテスト目的のみで作成されたものです。',
     bannerHeader: '違いを体験する準備はできましたか？',
-    bannerP: 'ぜひ当店にお越しください、またはオンラインで注文してみてください。自然の恵みを味わいましょう。',
+    bannerP:
+      'ぜひ当店にお越しください、またはオンラインで注文してみてください。自然の恵みを味わいましょう。',
     bannerLink: '今すぐ注文',
 
     // menu
-    menuSub: '私たちの料理を探検してみませんか — ヴィーガンとベジタリアンのメニューを区別してご覧ください。',
+    menuSub:
+      '私たちの料理を探検してみませんか — ヴィーガンとベジタリアンのメニューを区別してご覧ください。',
     menuTooltip: '注文や配送を利用するにはサインインが必要です',
     addCart: 'カートに追加',
     added: '追加しました！',
@@ -3053,55 +3200,76 @@ const translations = {
 
     // accessibility
     aTitle1: '私たちの取り組み',
-    aContent1: 'Green Bitesは、障がいのある方を含め、すべての人が利用しやすいウェブサイトを目指しています。業界標準に沿ってアクセシビリティと使いやすさを継続的に向上させるよう努めています。私たちは、どのような能力の人でも情報やサービスに平等にアクセスできるべきだと考えています。',
+    aContent1:
+      'Green Bitesは、障がいのある方を含め、すべての人が利用しやすいウェブサイトを目指しています。業界標準に沿ってアクセシビリティと使いやすさを継続的に向上させるよう努めています。私たちは、どのような能力の人でも情報やサービスに平等にアクセスできるべきだと考えています。',
     aTitle2: '標準およびガイドライン',
-    aContent2: '当サイトは、WCAG（Web Content Accessibility Guidelines）2.1に準拠するよう設計・開発しており、レベルAAの達成を目指しています。定期的に監査やテストを行い、アクセシビリティ上の問題を特定・修正します。',
+    aContent2:
+      '当サイトは、WCAG（Web Content Accessibility Guidelines）2.1に準拠するよう設計・開発しており、レベルAAの達成を目指しています。定期的に監査やテストを行い、アクセシビリティ上の問題を特定・修正します。',
     aTitle3: 'フィードバックと支援',
-    aContent3_1: 'アクセシビリティに関する問題やサポートが必要な場合は、以下にご連絡ください：',
-    aContent3_2: '。皆様のご意見を大切にしており、より快適にご利用いただけるよう改善に取り組みます。',
+    aContent3_1:
+      'アクセシビリティに関する問題やサポートが必要な場合は、以下にご連絡ください：',
+    aContent3_2:
+      '。皆様のご意見を大切にしており、より快適にご利用いただけるよう改善に取り組みます。',
 
     // apn
     apnTitle1: '収集する情報',
-    apnContent1: 'Green Bitesのポジションに応募する際、お名前や連絡先、履歴書、カバーレター、リファレンスといった個人情報を収集します。また、採用手続き中のコミュニケーション履歴やバックグラウンドチェック情報など、追加情報を収集する場合があります。',
+    apnContent1:
+      'Green Bitesのポジションに応募する際、お名前や連絡先、履歴書、カバーレター、リファレンスといった個人情報を収集します。また、採用手続き中のコミュニケーション履歴やバックグラウンドチェック情報など、追加情報を収集する場合があります。',
     apnTitle2: '応募者データの利用方法',
-    apnContent2: '応募者データは、資格や面接の評価、雇用の適性を判断し、求人情報に関する連絡をするためだけに使用します。削除のご要望がない限り、将来的な求人のためにデータを保持する場合があります。',
+    apnContent2:
+      '応募者データは、資格や面接の評価、雇用の適性を判断し、求人情報に関する連絡をするためだけに使用します。削除のご要望がない限り、将来的な求人のためにデータを保持する場合があります。',
     apnTitle3: 'データの保持とセキュリティ',
-    apnContent3: '収集したデータは安全に保存され、許可されたスタッフのみがアクセスできます。法律上の義務を果たし、採用プロセスを適切に管理するため、一定期間データを保持します。',
+    apnContent3:
+      '収集したデータは安全に保存され、許可されたスタッフのみがアクセスできます。法律上の義務を果たし、採用プロセスを適切に管理するため、一定期間データを保持します。',
     apnTitle4: 'あなたの権利',
-    apnContent4_1: '応募者は個人情報へのアクセス、修正、削除を要求する権利を有します。詳しくは ',
+    apnContent4_1:
+      '応募者は個人情報へのアクセス、修正、削除を要求する権利を有します。詳しくは ',
     apnContent4_2: ' にお問い合わせください。',
 
     // privacy policy
-    privacyContent1: '私たちは、名前、メールアドレス、支払い情報など、あなたが提供する個人情報を収集します。加えて、IPアドレス、ブラウザの種類、サイト上でのアクティビティなど、分析ツールを通じて非個人情報も収集しています。',
+    privacyContent1:
+      '私たちは、名前、メールアドレス、支払い情報など、あなたが提供する個人情報を収集します。加えて、IPアドレス、ブラウザの種類、サイト上でのアクティビティなど、分析ツールを通じて非個人情報も収集しています。',
     privacyTitle2: '情報の利用方法',
-    privacyContent2: 'お預かりした情報は、取引処理、カスタマーサポートの提供、そしてウェブサイトでの体験向上のために利用します。これにはコンテンツやマーケティングコミュニケーションのパーソナライズが含まれます。',
+    privacyContent2:
+      'お預かりした情報は、取引処理、カスタマーサポートの提供、そしてウェブサイトでの体験向上のために利用します。これにはコンテンツやマーケティングコミュニケーションのパーソナライズが含まれます。',
     privacyTitle3: '情報の共有',
-    privacyContent3: '支払い処理やマーケティングプラットフォームなどの信頼できる第三者と、サービス提供を目的として情報を共有することがあります。共有先がプライバシー法を順守するよう徹底しています。',
+    privacyContent3:
+      '支払い処理やマーケティングプラットフォームなどの信頼できる第三者と、サービス提供を目的として情報を共有することがあります。共有先がプライバシー法を順守するよう徹底しています。',
     privacyTitle4: 'あなたのデータ権利',
-    privacyContent4_1: '個人情報へのアクセス、修正、削除を希望される場合は、こちらにご連絡ください：',
+    privacyContent4_1:
+      '個人情報へのアクセス、修正、削除を希望される場合は、こちらにご連絡ください：',
     privacyContent4_2: '。',
 
     // terms of use
     touTitle1: '利用規約への同意',
-    touContent1: '当サイトにアクセスまたは利用することにより、これらの利用規約に同意したものとみなします。もし同意されない場合は、ただちに当サービスの利用を中止してください。',
+    touContent1:
+      '当サイトにアクセスまたは利用することにより、これらの利用規約に同意したものとみなします。もし同意されない場合は、ただちに当サービスの利用を中止してください。',
     touTitle2: 'ユーザーの責任',
-    touContent2: 'ユーザーは、その行為が適用される法律に準拠していることを確認する責任があります。プラットフォームを損なう行為などの不正使用は固く禁じられています。',
+    touContent2:
+      'ユーザーは、その行為が適用される法律に準拠していることを確認する責任があります。プラットフォームを損なう行為などの不正使用は固く禁じられています。',
     touTitle3: '責任の制限',
-    touContent3: '当サイトの利用による損害（サービス停止やデータ損失など）について、Green Bitesは一切の責任を負いません。',
+    touContent3:
+      '当サイトの利用による損害（サービス停止やデータ損失など）について、Green Bitesは一切の責任を負いません。',
     touTitle4: '規約の変更',
-    touContent4: '私たちは随時、これらの規約を更新する場合があります。更新後もサイトの利用を継続される場合は、新しい規約に同意したものとみなされます。',
+    touContent4:
+      '私たちは随時、これらの規約を更新する場合があります。更新後もサイトの利用を継続される場合は、新しい規約に同意したものとみなされます。',
 
     // process
     processT1: '倫理的な農業の実践',
-    processD1: '地域の農家との連携により、環境負荷を最小限に抑えながら栄養と風味を最大限に引き出す、持続可能でエコフレンドリーな手法で作物を栽培しています。私たちは有機農法と土壌の健康への取り組みを重要視するパートナーを厳選しています。',
+    processD1:
+      '地域の農家との連携により、環境負荷を最小限に抑えながら栄養と風味を最大限に引き出す、持続可能でエコフレンドリーな手法で作物を栽培しています。私たちは有機農法と土壌の健康への取り組みを重要視するパートナーを厳選しています。',
     processT2: '迅速でクリーンな加工',
-    processD2: '収穫後わずか数時間以内に、先端技術を備えた施設で食材を丁寧に加工します。こうしたスピード感により栄養価を最大限に保ち、常に新鮮な味わいをお届けしています。',
+    processD2:
+      '収穫後わずか数時間以内に、先端技術を備えた施設で食材を丁寧に加工します。こうしたスピード感により栄養価を最大限に保ち、常に新鮮な味わいをお届けしています。',
     processT3: 'エコな包装と配達',
-    processD3: '私たちは100%堆肥化可能なパッケージとカーボンニュートラルな配達ルートを採用し、配達工程を革命的に進化させました。革新的な冷却技術によって環境への影響を抑えつつ、食品の鮮度を保っています。',
+    processD3:
+      '私たちは100%堆肥化可能なパッケージとカーボンニュートラルな配達ルートを採用し、配達工程を革命的に進化させました。革新的な冷却技術によって環境への影響を抑えつつ、食品の鮮度を保っています。',
     processT4: '新鮮で美味しい食事',
-    processD4: 'この工程の成果として、シェフが丹念に作る栄養満点のメニューを楽しめます。美味しさだけでなく、地球にも優しい食事を提供し、風味と栄養の完璧なバランスを実現しています。',
+    processD4:
+      'この工程の成果として、シェフが丹念に作る栄養満点のメニューを楽しめます。美味しさだけでなく、地球にも優しい食事を提供し、風味と栄養の完璧なバランスを実現しています。',
     processHTitle: '農場からあなたのテーブルへ',
-    processHDesc: '地元の農場から食卓までの道のりを体感してみてください。私たちはあらゆる工程で最高水準の品質と持続可能性を守り、もっとも美味しくて栄養価の高い食事をお届けします。',
+    processHDesc:
+      '地元の農場から食卓までの道のりを体感してみてください。私たちはあらゆる工程で最高水準の品質と持続可能性を守り、もっとも美味しくて栄養価の高い食事をお届けします。',
 
     // settings
     settings: '設定',
@@ -3117,33 +3285,38 @@ const translations = {
     username: 'ユーザー名',
     pw: 'パスワード',
     whySI: 'なぜサインインするのですか？',
-    whySIHelp: 'サインインすると、よりパーソナライズされたショッピング体験を得られ、サイトの利用を最大限に活かせます。',
+    whySIHelp:
+      'サインインすると、よりパーソナライズされたショッピング体験を得られ、サイトの利用を最大限に活かせます。',
     demoCred: 'デモ用認証情報',
     usernameF: 'ユーザー名を入力',
     passwordF: 'パスワードを入力',
-  
+
     // values
     valueT1: '持続可能性',
     valueS1: '地球を育む',
-    valueC1: '持続可能性への取り組みは、私たちが行うすべてのことの原動力です。私たちは地元の有機食材を慎重に調達し、炭素排出量を削減しつつ、お客様に最高品質を提供しています。',
+    valueC1:
+      '持続可能性への取り組みは、私たちが行うすべてのことの原動力です。私たちは地元の有機食材を慎重に調達し、炭素排出量を削減しつつ、お客様に最高品質を提供しています。',
     valueSt1_1: '炭素削減45%',
     valueSt1_2: 'エコパッケージ100%',
     valueSt1_3: '食品廃棄ゼロ',
     valueT2: 'コミュニティ',
     valueS2: '共に成長する',
-    valueC2: '私たちのすべての活動の中心には、持続的なつながりを築くことがあります。私たちは地元農家を支援し、彼らとパートナーシップを組んで新鮮で高品質な商品をコミュニティに提供することに誇りを持っています。',
+    valueC2:
+      '私たちのすべての活動の中心には、持続的なつながりを築くことがあります。私たちは地元農家を支援し、彼らとパートナーシップを組んで新鮮で高品質な商品をコミュニティに提供することに誇りを持っています。',
     valueSt2_1: '50以上の地元パートナー',
     valueSt2_2: '10K以上のメンバー',
     valueSt2_3: '25のコミュニティイベント',
     valueT3: 'イノベーション',
     valueS3: '明日を形作る',
-    valueC3: 'イノベーションは私たちが行うすべてのことの原動力であり、常に境界を押し広げて人々と地球を養うおいしい植物由来の料理を創作しています。私たちの情熱は、創造性と持続可能性を融合することにあります。',
+    valueC3:
+      'イノベーションは私たちが行うすべてのことの原動力であり、常に境界を押し広げて人々と地球を養うおいしい植物由来の料理を創作しています。私たちの情熱は、創造性と持続可能性を融合することにあります。',
     valueSt3_1: '月10以上のレシピ',
     valueSt3_2: '3つの研究開発ラボ',
     valueSt3_3: '24/7のイノベーション',
     valueHeader: '私たちのコアバリュー',
-    valueSub: 'グリーンバイツでは、私たちの価値観がすべての意思決定を導きます。持続可能な慣行、コミュニティの関与、そして絶え間ないイノベーションを通じて、将来世代のためにより良い世界を創造することに専念しています。',
-  
+    valueSub:
+      'グリーンバイツでは、私たちの価値観がすべての意思決定を導きます。持続可能な慣行、コミュニティの関与、そして絶え間ないイノベーションを通じて、将来世代のためにより良い世界を創造することに専念しています。',
+
     // checkout consts
     usa: 'アメリカ合衆国',
     canada: 'カナダ',
@@ -3166,7 +3339,7 @@ const translations = {
     sl: 'セントルシア',
     svadtg: 'セントビンセント・グレナディーン',
     tat: 'トリニダード・トバゴ',
-  
+
     alabama: 'アラバマ州',
     alaska: 'アラスカ州',
     arizona: 'アリゾナ州',
@@ -3218,21 +3391,22 @@ const translations = {
     westVirginia: 'ウェストバージニア州',
     wisconsin: 'ウィスコンシン州',
     wyoming: 'ワイオミング州',
-  
+
     ontario: 'オンタリオ州',
     quebec: 'ケベック州',
     britishColumbia: 'ブリティッシュコロンビア州',
     alberta: 'アルバータ州',
-  
+
     jalisco: 'ハリスコ州',
     nuevoLeon: 'ヌエボレオン州',
     chihuahua: 'チワワ州',
     yucatan: 'ユカタン州',
-  
+
     // menu consts
     menuItem1: '生命のタコス',
     menuDesc1: '新鮮な野菜とサルサを使用したおいしい植物ベースのタコス。',
-    menuLD1: '私たちのヴィーガンタコスは、柔らかいトウモロコシのトルティーヤに、味付けされた黒豆、新鮮なピコ・デ・ガロ、シャキシャキしたレタス、クリーミーなアボカド、そして爽やかなシラントロライムソースをたっぷりと詰めています。栄養酵母を振りかけ、ライムのくし切りを添えて仕上げています。完璧にバランスの取れた味と食感が、満足感を与える植物ベースの食事を作り出します。',
+    menuLD1:
+      '私たちのヴィーガンタコスは、柔らかいトウモロコシのトルティーヤに、味付けされた黒豆、新鮮なピコ・デ・ガロ、シャキシャキしたレタス、クリーミーなアボカド、そして爽やかなシラントロライムソースをたっぷりと詰めています。栄養酵母を振りかけ、ライムのくし切りを添えて仕上げています。完璧にバランスの取れた味と食感が、満足感を与える植物ベースの食事を作り出します。',
     menuIngredients1: [
       'トウモロコシのトルティーヤ',
       '味付けされた黒豆',
@@ -3254,15 +3428,17 @@ const translations = {
       '塩',
       'コショウ',
     ],
-    menuNutrition1: '各タコスは約280 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪12g（アボカドとオリーブオイルから）を含みます。ビタミンC（カラーペッパーとライムから）、ビタミンA（シラントロとレタスから）、鉄分（黒豆と栄養酵母から）が豊富です。このタコスは完全に植物ベースで、風味豊かで栄養価の高いホールフードを使用しています。',
+    menuNutrition1:
+      '各タコスは約280 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪12g（アボカドとオリーブオイルから）を含みます。ビタミンC（カラーペッパーとライムから）、ビタミンA（シラントロとレタスから）、鉄分（黒豆と栄養酵母から）が豊富です。このタコスは完全に植物ベースで、風味豊かで栄養価の高いホールフードを使用しています。',
     menuAllergens1: [
       '栄養酵母に由来する大豆',
       'シラントロ（敏感な方には注意が必要です）',
     ],
-  
+
     menuItem2: 'エル・ジャルディン・ブリトー',
     menuDesc2: '米、豆、グアカモーレが詰まったボリューム満点のブリトー。',
-    menuLD2: '私たちのベジタリアンブリトーは、柔らかい小麦のトルティーヤに、味付けされた黒豆、ふわふわのシラントロライムライス、ローストしたピーマンと玉ねぎ、シャキシャキのレタス、甘いコーン、そしてピリ辛のサルサを詰め込んだ、健康的で風味豊かな食事です。クリーミーなアボカドベースのサウスウェストソースが全体をまとめ、鮮やかで満足感のある一口を提供します。ランチやディナー、あるいは美味しい植物ベースのコンフォートフードが欲しい時に最適です。',
+    menuLD2:
+      '私たちのベジタリアンブリトーは、柔らかい小麦のトルティーヤに、味付けされた黒豆、ふわふわのシラントロライムライス、ローストしたピーマンと玉ねぎ、シャキシャキのレタス、甘いコーン、そしてピリ辛のサルサを詰め込んだ、健康的で風味豊かな食事です。クリーミーなアボカドベースのサウスウェストソースが全体をまとめ、鮮やかで満足感のある一口を提供します。ランチやディナー、あるいは美味しい植物ベースのコンフォートフードが欲しい時に最適です。',
     menuIngredients2: [
       '小麦のトルティーヤ',
       'シラントロライムライス（白米、シラントロ、ライムジュース、オリーブオイル）',
@@ -3283,16 +3459,19 @@ const translations = {
       '風味付け用の塩',
       '飾り用のライムくし切り',
     ],
-    menuNutrition2: '各ブリトーは約450 kcalを提供し、タンパク質15g、食物繊維10g、健康的な脂肪18g（アボカドとオリーブオイルから）を含みます。鉄分（黒豆から）、ビタミンC（ピーマンとライムジュースから）、葉酸（シラントロとレタスから）が豊富です。複雑な炭水化物、タンパク質、脂肪がバランス良く含まれており、満足感があり栄養価が高いです。',
+    menuNutrition2:
+      '各ブリトーは約450 kcalを提供し、タンパク質15g、食物繊維10g、健康的な脂肪18g（アボカドとオリーブオイルから）を含みます。鉄分（黒豆から）、ビタミンC（ピーマンとライムジュースから）、葉酸（シラントロとレタスから）が豊富です。複雑な炭水化物、タンパク質、脂肪がバランス良く含まれており、満足感があり栄養価が高いです。',
     menuAllergens2: [
       '小麦に由来するトルティーヤ',
       '黒豆や栄養酵母による大豆（交差汚染の可能性）',
       'シラントロ（敏感な方には注意が必要です）',
     ],
-  
+
     menuItem3: 'ヴェルデューレサラダ',
-    menuDesc3: '混合グリーン、ヒヨコ豆、タヒニドレッシングのフレッシュなサラダ。',
-    menuLD3: 'この鮮やかなヴィーガンサラダは、新鮮なグリーン、しっかりとしたヒヨコ豆、そして色とりどりの野菜をクリーミーなタヒニレモンドレッシングで組み合わせた完璧な一品です。ケール、ベビースピナッチ、シャキシャキのロメインをミックスし、細切りの人参、薄切りのビート、ローストしたヒヨコ豆、そしてカリカリのカシューナッツをトッピングしています。ドレッシングは、タヒニ、レモンジュース、ニンニク、メープルシロップ、オリーブオイル、水、塩を豊かにブレンドし、爽やかでわずかに甘い味わいを加えています。軽くて満足感のある栄養豊富な選択肢です。',
+    menuDesc3:
+      '混合グリーン、ヒヨコ豆、タヒニドレッシングのフレッシュなサラダ。',
+    menuLD3:
+      'この鮮やかなヴィーガンサラダは、新鮮なグリーン、しっかりとしたヒヨコ豆、そして色とりどりの野菜をクリーミーなタヒニレモンドレッシングで組み合わせた完璧な一品です。ケール、ベビースピナッチ、シャキシャキのロメインをミックスし、細切りの人参、薄切りのビート、ローストしたヒヨコ豆、そしてカリカリのカシューナッツをトッピングしています。ドレッシングは、タヒニ、レモンジュース、ニンニク、メープルシロップ、オリーブオイル、水、塩を豊かにブレンドし、爽やかでわずかに甘い味わいを加えています。軽くて満足感のある栄養豊富な選択肢です。',
     menuIngredients3: [
       'ベビースピナッチの葉',
       '刻んだケール',
@@ -3310,16 +3489,19 @@ const translations = {
       '塩（味付け用）',
       '挽きたての黒コショウ（味付け用）',
     ],
-    menuNutrition3: '各サラダは約300 kcalを提供し、タンパク質10g、食物繊維8g、健康的な脂肪12g（タヒニとカシューナッツから）を含みます。ビタミンA、C、K（葉野菜と人参から）、鉄分（ヒヨコ豆とスピナッチから）、マグネシウム（カシューナッツから）が豊富です。ドレッシングにはタヒニからのカルシウムが含まれており、乳製品を使用せずにクリーミーな食感を加えています。',
+    menuNutrition3:
+      '各サラダは約300 kcalを提供し、タンパク質10g、食物繊維8g、健康的な脂肪12g（タヒニとカシューナッツから）を含みます。ビタミンA、C、K（葉野菜と人参から）、鉄分（ヒヨコ豆とスピナッチから）、マグネシウム（カシューナッツから）が豊富です。ドレッシングにはタヒニからのカルシウムが含まれており、乳製品を使用せずにクリーミーな食感を加えています。',
     menuAllergens3: [
       'タヒニに由来するセサミ',
       'カシューナッツによる木の実',
       'ヒヨコ豆（敏感な方には注意が必要です）',
     ],
-  
+
     menuItem4: 'スモーキーマープルバーガー',
-    menuDesc4: 'レタス、トマト、スモーキーソースを添えたおいしいヴィーガンパティ。',
-    menuLD4: '私たちのヴィーガンバーガーは、風味豊かでボリュームのある植物ベースのオプションです。柔らかい全粒パンに、ジューシーな植物ベースのパティを挟んでいます。バーガーにはシャキシャキのロメインレタス、熟したトマトスライス、カラメル化した玉ねぎがトッピングされ、甘みを加えます。ハイライトは、ヴィーガンマヨネーズ、スモークパプリカ、ニンニク、レモンジュースを使用したクリーミーでスモーキーなソースで、すべての一口に深みと豊かさを加えています。シンプルで満足感があり、植物ベースの美味しさが詰まっています。',
+    menuDesc4:
+      'レタス、トマト、スモーキーソースを添えたおいしいヴィーガンパティ。',
+    menuLD4:
+      '私たちのヴィーガンバーガーは、風味豊かでボリュームのある植物ベースのオプションです。柔らかい全粒パンに、ジューシーな植物ベースのパティを挟んでいます。バーガーにはシャキシャキのロメインレタス、熟したトマトスライス、カラメル化した玉ねぎがトッピングされ、甘みを加えます。ハイライトは、ヴィーガンマヨネーズ、スモークパプリカ、ニンニク、レモンジュースを使用したクリーミーでスモーキーなソースで、すべての一口に深みと豊かさを加えています。シンプルで満足感があり、植物ベースの美味しさが詰まっています。',
     menuIngredients4: [
       '全粒パン',
       '植物ベースのバーガーパティ（エンドウタンパク質、キノコ、調味料で作られています）',
@@ -3331,16 +3513,19 @@ const translations = {
       '味付け用の塩',
       '味付け用のコショウ',
     ],
-    menuNutrition4: '各バーガーは約350 kcalを提供し、タンパク質15g、食物繊維5g、健康的な脂肪10g（オリーブオイルと植物ベースのパティから）を含みます。鉄分（植物ベースのパティと全粒パンから）とビタミンC（トマトとスモーキースソースから）が豊富です。バーガーは満足感がありバランスが取れており、罪悪感のないご褒美を提供します。',
+    menuNutrition4:
+      '各バーガーは約350 kcalを提供し、タンパク質15g、食物繊維5g、健康的な脂肪10g（オリーブオイルと植物ベースのパティから）を含みます。鉄分（植物ベースのパティと全粒パンから）とビタミンC（トマトとスモーキースソースから）が豊富です。バーガーは満足感がありバランスが取れており、罪悪感のないご褒美を提供します。',
     menuAllergens4: [
       '全粒パンに由来する小麦',
       'ヴィーガンマヨネーズによる大豆',
       '植物ベースのパティによるエンドウタンパク質（一般的なアレルゲン）',
     ],
-  
+
     menuItem5: 'ポモドーロヴェルデピザ',
-    menuDesc5: 'マリナーラ、ヴィーガンチーズ、キノコ、ほうれん草をトッピングしたクリスピィな薄焼き生地。',
-    menuLD5: '私たちのヴィーガンピザは、薄くてクリスピィな生地をベースに、美味しい植物ベースのトッピングを組み合わせたものです。豊かなローストトマトマリナーラソースを生地全体にたっぷりと広げ、その上に溶けるヴィーガンモッツァレラチーズの層を重ねます。ピザは新鮮なほうれん草の葉、ソテーしたキノコ、そして風味を加えるキャラメリゼした玉ねぎをトッピングして仕上げます。各一口は、塩味、チーズ味、そして新鮮な味の完璧な組み合わせを提供し、ピザ愛好者にとって必見の一品です。',
+    menuDesc5:
+      'マリナーラ、ヴィーガンチーズ、キノコ、ほうれん草をトッピングしたクリスピィな薄焼き生地。',
+    menuLD5:
+      '私たちのヴィーガンピザは、薄くてクリスピィな生地をベースに、美味しい植物ベースのトッピングを組み合わせたものです。豊かなローストトマトマリナーラソースを生地全体にたっぷりと広げ、その上に溶けるヴィーガンモッツァレラチーズの層を重ねます。ピザは新鮮なほうれん草の葉、ソテーしたキノコ、そして風味を加えるキャラメリゼした玉ねぎをトッピングして仕上げます。各一口は、塩味、チーズ味、そして新鮮な味の完璧な組み合わせを提供し、ピザ愛好者にとって必見の一品です。',
     menuIngredients5: [
       '薄焼き生地（全粒粉、オリーブオイル、水、イーストで作られています）',
       'ローストトマトマリナーラソース（ローストトマト、ニンニク、オリーブオイル、塩、オレガノ）',
@@ -3353,16 +3538,19 @@ const translations = {
       'オレガノ（ソースの味付け用）',
       '塩（風味付け用）',
     ],
-    menuNutrition5: '各スライスは約280 kcalを提供し、タンパク質6g、食物繊維3g、健康的な脂肪12gを含みます。ピザはビタミンC（ほうれん草とトマトから）、カルシウム（ヴィーガンモッツァレラから）、鉄分（ほうれん草とキノコから）が豊富です。これは、味や満足感を損なわない、バランスの取れた風味豊かな植物ベースのオプションです。',
+    menuNutrition5:
+      '各スライスは約280 kcalを提供し、タンパク質6g、食物繊維3g、健康的な脂肪12gを含みます。ピザはビタミンC（ほうれん草とトマトから）、カルシウム（ヴィーガンモッツァレラから）、鉄分（ほうれん草とキノコから）が豊富です。これは、味や満足感を損なわない、バランスの取れた風味豊かな植物ベースのオプションです。',
     menuAllergens5: [
       '生地に由来する小麦',
       'ヴィーガンモッツァレラによる大豆（交差汚染の可能性）',
       'ヴィーガンモッツァレラからのココナッツ',
     ],
-  
+
     menuItem6: 'ゴールデンカシューマック',
-    menuDesc6: 'カシューナッツ、栄養酵母、ターメリックを使用したクリーミーでチーズ風味のコンフォートフード。',
-    menuLD6: 'このヴィーガンマックアンドチーズは究極のコンフォートフードで、柔らかいマカロニにリッチでなめらかな植物ベースのチーズソースが絡んでいます。ソースはカシューナッツ、栄養酵母、そして天然のゴールデン色を出すためにターメリックを少し加えています。新鮮な緑のネギを細かく刻んでトッピングし、クリーミーさをバランスするために砕いた黒コショウを振りかけています。心地よく、満足感があり、植物ベースの食事者に最適な一品です。',
+    menuDesc6:
+      'カシューナッツ、栄養酵母、ターメリックを使用したクリーミーでチーズ風味のコンフォートフード。',
+    menuLD6:
+      'このヴィーガンマックアンドチーズは究極のコンフォートフードで、柔らかいマカロニにリッチでなめらかな植物ベースのチーズソースが絡んでいます。ソースはカシューナッツ、栄養酵母、そして天然のゴールデン色を出すためにターメリックを少し加えています。新鮮な緑のネギを細かく刻んでトッピングし、クリーミーさをバランスするために砕いた黒コショウを振りかけています。心地よく、満足感があり、植物ベースの食事者に最適な一品です。',
     menuIngredients6: [
       'マカロニパスタ（デュラム小麦で作られています）',
       'カシューナッツベースのチーズソース（カシューナッツ、栄養酵母、ターメリック、ニンニクパウダー、レモンジュース、オリーブオイル、水）',
@@ -3371,16 +3559,18 @@ const translations = {
       '塩（味付け用）',
       'オリーブオイル（ソース用）',
     ],
-    menuNutrition6: '各サービングは約350 kcalを提供し、タンパク質10g、食物繊維5g、健康的な脂肪14g（カシューナッツとオリーブオイルから）を含みます。ビタミンB12（栄養酵母から）、マグネシウム（カシューナッツから）、鉄分（パスタとカシューナッツから）の良い供給源です。この料理は indulgent ですが、栄養価が高く、乳製品なしでクラシックなチーズ風味を提供します。',
+    menuNutrition6:
+      '各サービングは約350 kcalを提供し、タンパク質10g、食物繊維5g、健康的な脂肪14g（カシューナッツとオリーブオイルから）を含みます。ビタミンB12（栄養酵母から）、マグネシウム（カシューナッツから）、鉄分（パスタとカシューナッツから）の良い供給源です。この料理は indulgent ですが、栄養価が高く、乳製品なしでクラシックなチーズ風味を提供します。',
     menuAllergens6: [
       'パスタに由来する小麦',
       'カシューナッツによる木の実',
       '栄養酵母による大豆（交差汚染の可能性）',
     ],
-  
+
     menuItem7: 'フロレンティーンラザニア',
     menuDesc7: '麺、リコッタ、ほうれん草、マリナーラソースの層。',
-    menuLD7: '私たちのベジタリアンラザニアは、柔らかいラザニア麺、クリーミーなリコッタチーズ、リッチなマリナーラソース、そして新鮮な葉物野菜を層状に重ねた、心地よいクラシックです。料理は溶けるモッツァレラチーズで覆われ、独自のひねりを加えるために新鮮なシラントロで飾られています。ベビースピナッチとパセリが全体に層をなして新鮮さと風味を加えています。一口ごとに、チーズ味、塩味、そしてハーブの香りが絶妙に組み合わさっています。',
+    menuLD7:
+      '私たちのベジタリアンラザニアは、柔らかいラザニア麺、クリーミーなリコッタチーズ、リッチなマリナーラソース、そして新鮮な葉物野菜を層状に重ねた、心地よいクラシックです。料理は溶けるモッツァレラチーズで覆われ、独自のひねりを加えるために新鮮なシラントロで飾られています。ベビースピナッチとパセリが全体に層をなして新鮮さと風味を加えています。一口ごとに、チーズ味、塩味、そしてハーブの香りが絶妙に組み合わさっています。',
     menuIngredients7: [
       'ラザニア麺（セモリナ小麦で作られています）',
       'リコッタチーズ',
@@ -3395,16 +3585,19 @@ const translations = {
       '味付け用の塩',
       '味付け用の黒コショウ',
     ],
-    menuNutrition7: '各スライスは約400 kcalを提供し、タンパク質15g、食物繊維4g、脂肪12gを含みます。カルシウム（リコッタとモッツァレラから）、ビタミンA（ほうれん草とパセリから）、鉄分（ほうれん草とラザニア麺から）が優れた供給源です。このラザニアはボリュームがあり、満足感があり、満足のいく食事として最適です。',
+    menuNutrition7:
+      '各スライスは約400 kcalを提供し、タンパク質15g、食物繊維4g、脂肪12gを含みます。カルシウム（リコッタとモッツァレラから）、ビタミンA（ほうれん草とパセリから）、鉄分（ほうれん草とラザニア麺から）が優れた供給源です。このラザニアはボリュームがあり、満足感があり、満足のいく食事として最適です。',
     menuAllergens7: [
       'ラザニア麺に由来する小麦',
       'リコッタとモッツァレラチーズによる乳製品',
       'ソースに使用するニンニク（敏感な方には注意が必要です）',
     ],
-  
+
     menuItem8: 'ボンベイチックピーカレー',
-    menuDesc8: 'ヒヨコ豆、ココナッツミルク、スパイスのブレンドで作られた温かく芳香なカレー。',
-    menuLD8: '私たちのヒヨコ豆カレーは、柔らかいヒヨコ豆をクリーミーでスパイシーなココナッツミルクソースで煮込んだ、心地よい一品です。鮮やかなオレンジ色のソースは温かみのあるスパイスがたっぷりで、新鮮なシラントロとグリーンオニオンを振りかけて爽やかさを加えています。ライムのくし切りをトッピングして酸味を加え、スモークコーンと新鮮なサルサを添えて独特の食感とリフレッシュ感を提供します。クリーミーで塩味があり、柑橘系の風味が絶妙にバランスを取ったカレーです。',
+    menuDesc8:
+      'ヒヨコ豆、ココナッツミルク、スパイスのブレンドで作られた温かく芳香なカレー。',
+    menuLD8:
+      '私たちのヒヨコ豆カレーは、柔らかいヒヨコ豆をクリーミーでスパイシーなココナッツミルクソースで煮込んだ、心地よい一品です。鮮やかなオレンジ色のソースは温かみのあるスパイスがたっぷりで、新鮮なシラントロとグリーンオニオンを振りかけて爽やかさを加えています。ライムのくし切りをトッピングして酸味を加え、スモークコーンと新鮮なサルサを添えて独特の食感とリフレッシュ感を提供します。クリーミーで塩味があり、柑橘系の風味が絶妙にバランスを取ったカレーです。',
     menuIngredients8: [
       'ヒヨコ豆（調理済み）',
       'ココナッツミルク（フルファット）',
@@ -3423,15 +3616,17 @@ const translations = {
       '味付け用の塩',
       '味付け用の黒コショウ',
     ],
-    menuNutrition8: '各サービングは約350 kcalを提供し、タンパク質12g、食物繊維8g、健康的な脂肪15g（ココナッツミルクとオリーブオイルから）を含みます。ビタミンC（ライムとサルサから）、カリウム（ヒヨコ豆から）、鉄分（スパイスとヒヨコ豆から）の豊富な供給源です。この料理は満足感があり、温かく、栄養豊富な食材がたっぷりと詰まっています。',
+    menuNutrition8:
+      '各サービングは約350 kcalを提供し、タンパク質12g、食物繊維8g、健康的な脂肪15g（ココナッツミルクとオリーブオイルから）を含みます。ビタミンC（ライムとサルサから）、カリウム（ヒヨコ豆から）、鉄分（スパイスとヒヨコ豆から）の豊富な供給源です。この料理は満足感があり、温かく、栄養豊富な食材がたっぷりと詰まっています。',
     menuAllergens8: [
       'ココナッツミルクに由来するココナッツ',
       'ニンニク（敏感な方にはアレルゲンの可能性）',
     ],
-  
+
     menuItem9: 'ブリトーボウルフレスカ',
     menuDesc9: '米、黒豆、コーン、グアカモーレ、サルサのボウル。',
-    menuLD9: '私たちのヴィーガンブリトーボウルは、デコンストラクテッドなブリトーを鮮やかでボリュームのあるボウルに盛り付けたものです。ベースにはふわふわのシラントロライムライスがあり、味付けされた黒豆、新鮮なグアカモーレ、色とりどりのグリルズッキーニ、ローストピーマン、甘いコーン、ダイスカットトマトがトッピングされています。新鮮なシラントロとライムのくし切りで飾られたこのボウルは、味と食感の完璧なバランスを提供します。',
+    menuLD9:
+      '私たちのヴィーガンブリトーボウルは、デコンストラクテッドなブリトーを鮮やかでボリュームのあるボウルに盛り付けたものです。ベースにはふわふわのシラントロライムライスがあり、味付けされた黒豆、新鮮なグアカモーレ、色とりどりのグリルズッキーニ、ローストピーマン、甘いコーン、ダイスカットトマトがトッピングされています。新鮮なシラントロとライムのくし切りで飾られたこのボウルは、味と食感の完璧なバランスを提供します。',
     menuIngredients9: [
       'シラントロライムライス（白米、シラントロ、ライムジュース、オリーブオイル）',
       '黒豆（クミンとニンニクパウダーで味付け）',
@@ -3446,14 +3641,14 @@ const translations = {
       'コショウ（味付け用）',
       'オリーブオイル（グリルと調理に使用）',
     ],
-    menuNutrition9: '各ボウルは約400 kcalを提供し、タンパク質12g、食物繊維9g、健康的な脂肪15g（アボカドとオリーブオイルから）を含みます。ビタミンC（ピーマンとライムから）、カリウム（ズッキーニとアボカドから）、鉄分（黒豆から）が豊富です。',
-    menuAllergens9: [
-      'アボカド（特定の個人にはアレルゲンの可能性）',
-    ],
-  
+    menuNutrition9:
+      '各ボウルは約400 kcalを提供し、タンパク質12g、食物繊維9g、健康的な脂肪15g（アボカドとオリーブオイルから）を含みます。ビタミンC（ピーマンとライムから）、カリウム（ズッキーニとアボカドから）、鉄分（黒豆から）が豊富です。',
+    menuAllergens9: ['アボカド（特定の個人にはアレルゲンの可能性）'],
+
     menuItem10: 'トスカングリルドスキュワーズ',
     menuDesc10: 'マリネしたズッキーニ、ピーマン、玉ねぎ、キノコのスキュワー。',
-    menuLD10: '私たちのグリルドベジースキュワーは、カラフルでスモーキーな美味しい植物ベースの一品です。マリネしたズッキーニ、ピーマン、キノコを串に刺し、柔らかく少し焦げるまでグリルしています。野菜は、オリーブオイルとニンニクのマリネード、スモークパプリカとイタリアンハーブの風味でコーティングされています。これらのスキュワーは、メインコースや風味豊かなサイドディッシュとして最適です。',
+    menuLD10:
+      '私たちのグリルドベジースキュワーは、カラフルでスモーキーな美味しい植物ベースの一品です。マリネしたズッキーニ、ピーマン、キノコを串に刺し、柔らかく少し焦げるまでグリルしています。野菜は、オリーブオイルとニンニクのマリネード、スモークパプリカとイタリアンハーブの風味でコーティングされています。これらのスキュワーは、メインコースや風味豊かなサイドディッシュとして最適です。',
     menuIngredients10: [
       'ズッキーニ（厚めの輪切り）',
       'ピーマン（赤、黄、緑のピーマン、塊にカット）',
@@ -3462,15 +3657,18 @@ const translations = {
       '新鮮なパセリ（刻み、飾り用）',
       'レモンくし切り（提供用）',
     ],
-    menuNutrition10: '各スキュワーは約150 kcalを提供し、タンパク質4g、食物繊維3g、健康的な脂肪8g（オリーブオイルから）を含みます。ピーマンからのビタミンC、ズッキーニからのカリウム、キノコからの抗酸化物質が豊富です。軽くて風味豊かで、グリル愛好家に最適です。',
+    menuNutrition10:
+      '各スキュワーは約150 kcalを提供し、タンパク質4g、食物繊維3g、健康的な脂肪8g（オリーブオイルから）を含みます。ピーマンからのビタミンC、ズッキーニからのカリウム、キノコからの抗酸化物質が豊富です。軽くて風味豊かで、グリル愛好家に最適です。',
     menuAllergens10: [
       'ニンニク（敏感な方にはアレルゲンの可能性）',
       'キノコ（敏感な方にはアレルゲンの可能性）',
     ],
-  
+
     menuItem11: '照り焼きサンライズ炒め',
-    menuDesc11: '新鮮な野菜をソイベースのソースで炒め、ジャスミンライスの上にのせた一品。',
-    menuLD11: 'このヴィーガン炒めは、色とりどりの野菜としっかりとした玄米をサイザンベースのソースで完璧に炒めた鮮やかな一品です。ズッキーニ、甘いピーマン、エンドウ豆、人参、パイナップルの角切りを特徴とし、ローストカシューナッツが加わってカリカリの食感を提供します。ニンニク、ジンジャー、タイチリペーストが香りを豊かにし、一口ごとに甘み、酸味、塩味が絶妙にバランスを取っています。',
+    menuDesc11:
+      '新鮮な野菜をソイベースのソースで炒め、ジャスミンライスの上にのせた一品。',
+    menuLD11:
+      'このヴィーガン炒めは、色とりどりの野菜としっかりとした玄米をサイザンベースのソースで完璧に炒めた鮮やかな一品です。ズッキーニ、甘いピーマン、エンドウ豆、人参、パイナップルの角切りを特徴とし、ローストカシューナッツが加わってカリカリの食感を提供します。ニンニク、ジンジャー、タイチリペーストが香りを豊かにし、一口ごとに甘み、酸味、塩味が絶妙にバランスを取っています。',
     menuIngredients11: [
       '調理済み玄米',
       'ズッキーニ（半月切り）',
@@ -3488,16 +3686,19 @@ const translations = {
       'スカロン（スライス、飾り用）',
       '新鮮なタイバジル（飾り用）',
     ],
-    menuNutrition11: '各サービングは約350 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪12g（ゴマ油とカシューナッツから）を含みます。炒めはビタミンA（人参から）、ビタミンC（ピーマンから）、カリウム（ズッキーニとパイナップルから）の優れた供給源です。軽くて風味豊かで栄養価が高いです。',
+    menuNutrition11:
+      '各サービングは約350 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪12g（ゴマ油とカシューナッツから）を含みます。炒めはビタミンA（人参から）、ビタミンC（ピーマンから）、カリウム（ズッキーニとパイナップルから）の優れた供給源です。軽くて風味豊かで栄養価が高いです。',
     menuAllergens11: [
       'ソイソースまたはタマリによる大豆',
       'カシューナッツによる木の実',
       'ゴマ油によるゴマ',
     ],
-  
+
     menuItem12: 'アボカド巻き',
-    menuDesc12: 'アボカド、キュウリ、ピクルスラディッシュを巻いた寿司ロール、ソイソースと一緒に提供。',
-    menuLD12: '私たちのベジタリアン寿司ロールは、クリーミーなアボカド、シャキシャキのキュウリ、甘酸っぱいピクルスラディッシュを調味された寿司米と海苔で包み合わせた、風味と食感が豊かな鮮やかな一品です。ロールには細切りの赤キャベツ、人参、ズッキーニが飾られ、色とりどりでカリカリの食感を加えています。ソイソースを添えて提供されるこのロールは、爽やかで軽やかな植物ベースの寿司クラシックです。',
+    menuDesc12:
+      'アボカド、キュウリ、ピクルスラディッシュを巻いた寿司ロール、ソイソースと一緒に提供。',
+    menuLD12:
+      '私たちのベジタリアン寿司ロールは、クリーミーなアボカド、シャキシャキのキュウリ、甘酸っぱいピクルスラディッシュを調味された寿司米と海苔で包み合わせた、風味と食感が豊かな鮮やかな一品です。ロールには細切りの赤キャベツ、人参、ズッキーニが飾られ、色とりどりでカリカリの食感を加えています。ソイソースを添えて提供されるこのロールは、爽やかで軽やかな植物ベースの寿司クラシックです。',
     menuIngredients12: [
       '寿司米（米酢、砂糖、塩で調味）',
       '海苔シート（海藻）',
@@ -3511,16 +3712,19 @@ const translations = {
       'ワサビ（オプショナル飾り）',
       'ピクルスジンジャー（オプショナル飾り）',
     ],
-    menuNutrition12: '各寿司ロールは約200 kcalを提供し、タンパク質4g、食物繊維3g、健康的な脂肪5gを含みます。ビタミンC（赤キャベツから）、カリウム（アボカドから）、食物繊維（野菜と寿司米から）が豊富です。この料理は軽くて爽やかで、新鮮な植物ベースの食材がたっぷりと含まれています。',
+    menuNutrition12:
+      '各寿司ロールは約200 kcalを提供し、タンパク質4g、食物繊維3g、健康的な脂肪5gを含みます。ビタミンC（赤キャベツから）、カリウム（アボカドから）、食物繊維（野菜と寿司米から）が豊富です。この料理は軽くて爽やかで、新鮮な植物ベースの食材がたっぷりと含まれています。',
     menuAllergens12: [
       'ソイソースによる大豆',
       'ソイソースがグルテンフリーでない場合、グルテン',
       'アボカド（特定の個人にはアレルゲンの可能性）',
     ],
-  
+
     menuItem13: 'スイートソルタコス',
-    menuDesc13: 'ローストしたスイートポテト、黒豆、アボカド、そしてスローが詰まった柔らかいトルティーヤ。',
-    menuLD13: '私たちのスイートポテトタコスは、柔らかいトウモロコシのトルティーヤに、ローストしたスイートポテト、味付けされた黒豆、クリーミーなアボカドスライスを詰め込んだ美味しい植物ベースのオプションです。鮮やかな赤キャベツのスローと酸味のあるライムクレマでトッピングされ、食感と味の絶妙なバランスを楽しめます。新鮮なシラントロとライムのくし切りで飾られ、軽くて満足感のある食事に最適です。',
+    menuDesc13:
+      'ローストしたスイートポテト、黒豆、アボカド、そしてスローが詰まった柔らかいトルティーヤ。',
+    menuLD13:
+      '私たちのスイートポテトタコスは、柔らかいトウモロコシのトルティーヤに、ローストしたスイートポテト、味付けされた黒豆、クリーミーなアボカドスライスを詰め込んだ美味しい植物ベースのオプションです。鮮やかな赤キャベツのスローと酸味のあるライムクレマでトッピングされ、食感と味の絶妙なバランスを楽しめます。新鮮なシラントロとライムのくし切りで飾られ、軽くて満足感のある食事に最適です。',
     menuIngredients13: [
       'トウモロコシのトルティーヤ',
       'ローストしたスイートポテト（オリーブオイル、スモークパプリカ、クミンで味付け）',
@@ -3535,16 +3739,19 @@ const translations = {
       'ライムくし切り（飾り用）',
       '塩（味付け用）',
     ],
-    menuNutrition13: '各タコスは約280 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪10gを含みます。ビタミンA（スイートポテトから）、ビタミンC（キャベツとライムから）、カリウム（アボカドから）が豊富です。カラフルで栄養価の高い食事で、風味豊かで健康的です。',
+    menuNutrition13:
+      '各タコスは約280 kcalを提供し、タンパク質8g、食物繊維6g、健康的な脂肪10gを含みます。ビタミンA（スイートポテトから）、ビタミンC（キャベツとライムから）、カリウム（アボカドから）が豊富です。カラフルで栄養価の高い食事で、風味豊かで健康的です。',
     menuAllergens13: [
       '豆腐クランブルに由来する大豆',
       'トルティーヤに由来するコーン',
       'シラントロ（敏感な方には注意が必要です）',
     ],
-  
+
     menuItem14: 'ケサディーヤデルカンポ',
-    menuDesc14: 'ヴィーガンチーズ、豆、ソテーした野菜が詰まったクリスピィなトルティーヤ。',
-    menuLD14: '私たちのヴィーガンケサディーヤは、クラシックな人気メニューを美味しく、植物ベースにアレンジしたものです。サクサクの小麦のトルティーヤに、味付けされた黒豆、ソテーしたピーマン、ローストしたコーン、新鮮なトマトと赤キャベツのブレンドを詰め込みます。溶けるヴィーガンチーズが全体をまとめ、ハラペーニョのひとさじがピリ辛のアクセントを加えています。黄金色にグリルされたケサディーヤは、爽やかな仕上げのサルサとライムくし切りを添えて提供されます。',
+    menuDesc14:
+      'ヴィーガンチーズ、豆、ソテーした野菜が詰まったクリスピィなトルティーヤ。',
+    menuLD14:
+      '私たちのヴィーガンケサディーヤは、クラシックな人気メニューを美味しく、植物ベースにアレンジしたものです。サクサクの小麦のトルティーヤに、味付けされた黒豆、ソテーしたピーマン、ローストしたコーン、新鮮なトマトと赤キャベツのブレンドを詰め込みます。溶けるヴィーガンチーズが全体をまとめ、ハラペーニョのひとさじがピリ辛のアクセントを加えています。黄金色にグリルされたケサディーヤは、爽やかな仕上げのサルサとライムくし切りを添えて提供されます。',
     menuIngredients14: [
       '小麦のトルティーヤ',
       'ヴィーガンチーズ（シュレッド）',
@@ -3557,16 +3764,19 @@ const translations = {
       'グリル用のオリーブオイル',
       'ライムくし切り（飾り用）',
     ],
-    menuNutrition14: '各ケサディーヤは約300 kcalを提供し、タンパク質10g、食物繊維7g、健康的な脂肪12g（オリーブオイルとヴィーガンチーズから）を含みます。ビタミンC（ピーマンとトマトから）、カルシウム（ヴィーガンチーズから）、カリウム（黒豆から）が豊富です。軽くて満足感があり、スナックや食事に最適です。',
+    menuNutrition14:
+      '各ケサディーヤは約300 kcalを提供し、タンパク質10g、食物繊維7g、健康的な脂肪12g（オリーブオイルとヴィーガンチーズから）を含みます。ビタミンC（ピーマンとトマトから）、カルシウム（ヴィーガンチーズから）、カリウム（黒豆から）が豊富です。軽くて満足感があり、スナックや食事に最適です。',
     menuAllergens14: [
       '小麦に由来するトルティーヤ',
       'ヴィーガンチーズによる大豆',
       'シラントロ（オプショナル飾りの場合）',
     ],
-  
+
     menuItem15: 'トスカンレンズ豆スープ',
-    menuDesc15: 'レンズ豆、人参、セロリ、トマトを使ったボリュームのあるスープ。',
-    menuLD15: '私たちのレンズ豆スープは、温かく心地よい一杯で、柔らかいブラウンレンズ豆が風味豊かな野菜ブロスで煮込まれています。スープにはダイスカット人参、トマト、ゴールデンポテトが入っており、爽やかさを加えるために新鮮なほうれん草の葉が混ぜ込まれています。ニンニク、クミン、スモークパプリカで味付けされており、豊かで満足感のある味わいを提供します。寒い日にぴったりの居心地の良い食事です。',
+    menuDesc15:
+      'レンズ豆、人参、セロリ、トマトを使ったボリュームのあるスープ。',
+    menuLD15:
+      '私たちのレンズ豆スープは、温かく心地よい一杯で、柔らかいブラウンレンズ豆が風味豊かな野菜ブロスで煮込まれています。スープにはダイスカット人参、トマト、ゴールデンポテトが入っており、爽やかさを加えるために新鮮なほうれん草の葉が混ぜ込まれています。ニンニク、クミン、スモークパプリカで味付けされており、豊かで満足感のある味わいを提供します。寒い日にぴったりの居心地の良い食事です。',
     menuIngredients15: [
       'ブラウンレンズ豆（調理済み）',
       '野菜ブロス',
@@ -3579,15 +3789,18 @@ const translations = {
       'スモークパプリカ（味付け用）',
       '塩（味付け用）',
     ],
-    menuNutrition15: '各サービングは約250 kcalを提供し、タンパク質12g、食物繊維8g、健康的な脂肪4gを含みます。スープは鉄分（レンズ豆とほうれん草から）、ビタミンA（人参とほうれん草から）、カリウム（ポテトから）が豊富です。軽くて栄養価が高く、健康的な食事に最適です。',
+    menuNutrition15:
+      '各サービングは約250 kcalを提供し、タンパク質12g、食物繊維8g、健康的な脂肪4gを含みます。スープは鉄分（レンズ豆とほうれん草から）、ビタミンA（人参とほうれん草から）、カリウム（ポテトから）が豊富です。軽くて栄養価が高く、健康的な食事に最適です。',
     menuAllergens15: [
       'セロリ（敏感な方にはアレルゲンの可能性）',
       'ニンニク（敏感な方にはアレルゲンの可能性）',
     ],
-  
+
     menuItem16: 'マサラローストカリフラワー',
-    menuDesc16: 'リッチで風味豊かなトマトベースのソースでローストしたカリフラワー。',
-    menuLD16: '私たちのカリフラワーティッカマサラは、ボールドで風味豊かなインド風の一品です。柔らかいローストカリフラワーフローレットをスパイス入りのトマトとココナッツミルクのカレースープで煮込んだクリーミーで芳香なベースを作り出しています。蒸しバスマティライスに黒ゴマを振りかけて提供し、新鮮なシラントロと砕いた黒コショウを少し加えて飾っています。豊かなスパイスと鮮やかな風味の完璧な組み合わせで、このティッカマサラはクラシックな人気メニューを植物ベースにアレンジした一品です。',
+    menuDesc16:
+      'リッチで風味豊かなトマトベースのソースでローストしたカリフラワー。',
+    menuLD16:
+      '私たちのカリフラワーティッカマサラは、ボールドで風味豊かなインド風の一品です。柔らかいローストカリフラワーフローレットをスパイス入りのトマトとココナッツミルクのカレースープで煮込んだクリーミーで芳香なベースを作り出しています。蒸しバスマティライスに黒ゴマを振りかけて提供し、新鮮なシラントロと砕いた黒コショウを少し加えて飾っています。豊かなスパイスと鮮やかな風味の完璧な組み合わせで、このティッカマサラはクラシックな人気メニューを植物ベースにアレンジした一品です。',
     menuIngredients16: [
       'ローストカリフラワーフローレット（オリーブオイル、スモークパプリカ、ターメリックで味付け）',
       'トマトベースのカレースープ（トマトピューレ、ココナッツミルク、ニンニク、ジンジャー、ガラムマサラ、クミン、コリアンダー、カイエンペッパー、塩）',
@@ -3601,13 +3814,14 @@ const translations = {
       'スパイス用のカイエンペッパー',
       '味付け用の塩',
     ],
-    menuNutrition16: '各サービングは約350 kcalを提供し、タンパク質7g、食物繊維5g、健康的な脂肪15g（ココナッツミルクとオリーブオイルから）を含みます。料理はビタミンC（トマトとカリフラワーから）、鉄分（カレースパイスとカリフラワーから）、抗酸化物質が豊富です。満足感があり風味豊かな植物ベースの食事です。',
+    menuNutrition16:
+      '各サービングは約350 kcalを提供し、タンパク質7g、食物繊維5g、健康的な脂肪15g（ココナッツミルクとオリーブオイルから）を含みます。料理はビタミンC（トマトとカリフラワーから）、鉄分（カレースパイスとカリフラワーから）、抗酸化物質が豊富です。満足感があり風味豊かな植物ベースの食事です。',
     menuAllergens16: [
       'ココナッツミルクに由来するココナッツ',
       '黒ゴマに由来するゴマ',
       'ニンニク（敏感な方にはアレルゲンの可能性）',
     ],
-  },  
+  },
 };
 
 export default translations;

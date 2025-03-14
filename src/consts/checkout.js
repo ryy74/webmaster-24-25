@@ -26,7 +26,7 @@ export const useCountries = () => {
     t('svadtg'),
     t('tat'),
   ];
-}
+};
 
 export const useUSStates = () => {
   const { t } = useLanguage();
@@ -143,5 +143,4 @@ export const useMexicoStates = () => {
     t('yucatan'),
     t('zacatecas'),
   ];
-  
 };

@@ -23,5 +23,8 @@ more image updates
 ### 1.2.5
 images done except menu
 
+### 1.2.6
+everything done but images and minor bugfixes
+
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).

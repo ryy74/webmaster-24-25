@@ -1,11 +1,11 @@
 .confirmation-page {
   align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef1f5 100%);
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 122px);
-  background: linear-gradient(135deg, #f5f7fa 0%, #eef1f5 100%);
-  padding: 2rem;
   margin-top: 60px;
+  min-height: calc(100vh - 122px);
+  padding: 2rem;
 }
 
 html.dark-mode .confirmation-page {
@@ -13,22 +13,26 @@ html.dark-mode .confirmation-page {
 }
 
 .loading-container {
+  align-items: center;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  padding: 3rem;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  max-width: 400px;
+  padding: 3rem;
+  text-align: center;
+  width: 90%;
 }
 
 html.dark-mode .loading-container {
   background: #1a1a1a;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .loading-spinner {
@@ -36,8 +40,8 @@ html.dark-mode .loading-container {
 }
 
 .loading-icon {
-  font-size: 3rem;
   color: #3498db;
+  font-size: 3rem;
 }
 
 html.dark-mode .loading-icon {
@@ -45,8 +49,8 @@ html.dark-mode .loading-icon {
 }
 
 .loading-container p {
-  font-size: 1.2rem;
   color: #555;
+  font-size: 1.2rem;
 }
 
 html.dark-mode .loading-container p {
@@ -54,26 +58,30 @@ html.dark-mode .loading-container p {
 }
 
 .confirmation-container {
+  align-items: center;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  padding: 3rem;
-  text-align: center;
-  max-width: 600px;
-  width: 90%;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  padding: 3rem;
+  text-align: center;
+  width: 90%;
 }
 
 html.dark-mode .confirmation-container {
   background: #1a1a1a;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .success-icon {
-  font-size: 4rem;
   color: #2ecc71;
+  font-size: 4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -82,13 +90,13 @@ html.dark-mode .success-icon {
 }
 
 .confirmation-container h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
   background: linear-gradient(45deg, #2ecc71, #3498db);
   -webkit-background-clip: text;
   background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
   -webkit-text-fill-color: transparent;
 }
 
@@ -99,14 +107,14 @@ html.dark-mode .confirmation-container h1 {
 }
 
 .address-container {
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
   background: rgba(0, 0, 0, 0.02);
-  padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
 }
 
 html.dark-mode .address-container {
@@ -135,25 +143,29 @@ html.dark-mode .delivery-address {
 }
 
 .order-summary-container {
-  width: 100%;
   background: rgba(52, 152, 219, 0.02);
   border-radius: 15px;
-  padding: 1.5rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
   margin-bottom: 2rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  padding: 1.5rem;
+  width: 100%;
 }
 
 html.dark-mode .order-summary-container {
   background: rgba(84, 169, 238, 0.05);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.15),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .order-summary-header {
-  display: flex;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding-bottom: 0.75rem;
 }
 
@@ -184,22 +196,22 @@ html.dark-mode .confirmation-container h2 {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  width: 100%;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .confirmation-summary-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  color: #555;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  color: #555;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
   padding-bottom: 0.8rem;
 }
 
 html.dark-mode .confirmation-summary-item {
-  color: #aaa;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  color: #aaa;
 }
 
 .confirmation-summary-item:last-child {
@@ -208,15 +220,15 @@ html.dark-mode .confirmation-summary-item {
 
 .confirmation-summary-item span:first-child {
   flex: 1;
-  text-align: left;
   overflow: hidden;
+  text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .confirmation-summary-item span:last-child {
-  font-weight: 600;
   color: #333;
+  font-weight: 600;
 }
 
 html.dark-mode .confirmation-summary-item span:last-child {
@@ -224,29 +236,29 @@ html.dark-mode .confirmation-summary-item span:last-child {
 }
 
 .confirmation-total-price {
-  text-align: right;
-  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  color: #333;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #333;
   margin: 0;
   padding-top: 0.5rem;
-  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  text-align: right;
+  width: 100%;
 }
 
 html.dark-mode .confirmation-total-price {
-  color: #e0e0e0;
   border-top: 2px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
 }
 
 .delivery-time-container {
-  display: flex;
   align-items: center;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 50px;
+  display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  background: rgba(46, 204, 113, 0.1);
   padding: 0.8rem 1.5rem;
-  border-radius: 50px;
 }
 
 html.dark-mode .delivery-time-container {
@@ -273,10 +285,10 @@ html.dark-mode .estimated-time {
 }
 
 .thanks {
-  font-size: 1.1rem;
   color: #555;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 html.dark-mode .thanks {
@@ -284,19 +296,19 @@ html.dark-mode .thanks {
 }
 
 .back-to-menu {
-  background: linear-gradient(45deg, #2ecc71, #3498db);
-  color: white;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  border-radius: 50px;
   box-shadow: 0 4px 6px rgba(52, 152, 219, 0.3);
-  position: relative;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 0.5rem;
   overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
 }
 
 html.dark-mode .back-to-menu {
@@ -305,14 +317,19 @@ html.dark-mode .back-to-menu {
 }
 
 .back-to-menu::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
   content: '';
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   transform: translateX(-100%);
+  width: 100%;
 }
 
 .back-to-menu:hover::after {
@@ -333,13 +350,15 @@ html.dark-mode .back-to-menu {
 .cart-right,
 .confirmation-container,
 .loading-container {
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 @media (max-width: 768px) {
   .confirmation-page {
-    padding: 1rem;
     min-height: calc(100vh - 60px);
+    padding: 1rem;
   }
 
   .confirmation-container {
@@ -350,23 +369,23 @@ html.dark-mode .back-to-menu {
   .confirmation-container h1 {
     font-size: 2rem;
   }
-  
+
   .success-icon {
     font-size: 3rem;
   }
-  
+
   .order-summary-container {
     padding: 1.2rem;
   }
-  
+
   .address-container,
   .delivery-time-container {
     padding: 0.7rem 1.2rem;
   }
-  
+
   .back-to-menu {
+    justify-content: center;
     padding: 0.8rem 1.5rem;
     width: 100%;
-    justify-content: center;
   }
 }

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Values.css';
@@ -60,23 +60,20 @@ const Values = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="values-container"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="content-wrapper">
-        <motion.div 
-          className="values-header"
-          variants={itemVariants}
-        >
+        <motion.div className="values-header" variants={itemVariants}>
           <h1 className="main-heading">{t('valueHeader')}</h1>
           <p className="header-description">{t('valueSub')}</p>
         </motion.div>
@@ -91,11 +88,11 @@ const Values = () => {
               style={{
                 opacity: Math.min(
                   1,
-                  Math.max(0.3, 1 - (scrollPosition - 400 * index) * 0.001)
+                  Math.max(0.3, 1 - (scrollPosition - 400 * index) * 0.001),
                 ),
               }}
             >
-              <motion.div 
+              <motion.div
                 className="v-image-container"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -109,7 +106,7 @@ const Values = () => {
               </motion.div>
 
               <div className="card-content">
-                <motion.div 
+                <motion.div
                   className="title-group"
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -119,7 +116,7 @@ const Values = () => {
                   <h2 className="value-title">{value.title}</h2>
                 </motion.div>
 
-                <motion.p 
+                <motion.p
                   className="value-description"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -128,18 +125,18 @@ const Values = () => {
                   {value.description}
                 </motion.p>
 
-                <motion.div 
+                <motion.div
                   className="stats-grid"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   {value.stats.map((stat, i) => (
-                    <motion.div 
-                      key={i} 
+                    <motion.div
+                      key={i}
                       className="stat-card"
                       whileHover={{ y: -8, scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <p className="stat-text">{stat}</p>
                     </motion.div>

@@ -10,9 +10,7 @@ const maintenanceMode = false;
 
 ReactDOM.render(
   <React.StrictMode>
-    <Providers>
-      {maintenanceMode ? <Maintenance /> : <App />}
-    </Providers>
+    <Providers>{maintenanceMode ? <Maintenance /> : <App />}</Providers>
   </React.StrictMode>,
   document.getElementById('root'),
 );

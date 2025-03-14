@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiTrash2, FiMinus, FiPlus, FiAlertTriangle } from 'react-icons/fi';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { FiAlertTriangle, FiMinus, FiPlus, FiTrash2 } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -13,7 +13,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
 
   const handleQuantityChange = (e) => {
     const newValue = e.target.value.replace(/[^0-9]/g, '');
-    
+
     if (newValue === '' || parseInt(newValue) === 0) {
       setShowWarning(true);
     } else {
@@ -45,9 +45,9 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{
-        type: "spring",
+        type: 'spring',
         stiffness: 500,
-        damping: 30
+        damping: 30,
       }}
       layout
     >
@@ -91,7 +91,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
           className="cart-item-remove"
           onClick={() => setShowWarning(true)}
           title="Remove Item"
-          whileHover={{ scale: 1.1, color: "#e74c3c" }}
+          whileHover={{ scale: 1.1, color: '#e74c3c' }}
           whileTap={{ scale: 0.9 }}
         >
           <FiTrash2 />
@@ -117,7 +117,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
                 onChangeQuantity(item.id, 1);
               }
             }}
-            whileFocus={{ boxShadow: "0 0 0 2px rgba(52, 152, 219, 0.3)" }}
+            whileFocus={{ boxShadow: '0 0 0 2px rgba(52, 152, 219, 0.3)' }}
           />
 
           <motion.button
@@ -156,11 +156,11 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <motion.div 
+              <motion.div
                 className="warning-icon"
                 initial={{ rotate: -10 }}
                 animate={{ rotate: 0 }}
-                transition={{ type: "spring", stiffness: 500 }}
+                transition={{ type: 'spring', stiffness: 500 }}
               >
                 <FiAlertTriangle size={24} />
               </motion.div>
@@ -171,7 +171,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
               >
                 {t('removeConfirm')}
               </motion.h4>
-              <motion.div 
+              <motion.div
                 className="warning-buttons"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -188,7 +188,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
                 <motion.button
                   className="warning-button confirm"
                   onClick={handleConfirmRemove}
-                  whileHover={{ scale: 1.05, backgroundColor: "#c0392b" }}
+                  whileHover={{ scale: 1.05, backgroundColor: '#c0392b' }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {t('remove')}

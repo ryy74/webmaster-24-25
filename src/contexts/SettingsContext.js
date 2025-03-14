@@ -1,10 +1,12 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const SettingsContext = createContext();
 
 export const SettingsProvider = ({ children }) => {
   const savedSettings = localStorage.getItem('settings');
-  const initialSettings = savedSettings ? JSON.parse(savedSettings) : { isDarkMode: false };
+  const initialSettings = savedSettings
+    ? JSON.parse(savedSettings)
+    : { isDarkMode: false };
 
   const [settings, setSettings] = useState(initialSettings);
 

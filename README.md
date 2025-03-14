@@ -10,6 +10,7 @@ Current improvements planned:
 Photo Sources:
 
 LANDING
+
 1. https://www.istockphoto.com/photo/olive-trees-on-sunset-gm515678332-88607763?searchscope=image%2Cfilm
 2. https://www.istockphoto.com/photo/farmers-market-interaction-gm1479535214-507492404?searchscope=image%2Cfilm
 3. https://www.istockphoto.com/photo/food-background-with-assortment-of-fresh-organic-fruits-and-vegetables-gm1203599963-345994239?searchscope=image%2Cfilm
@@ -17,11 +18,13 @@ LANDING
 5. https://www.istockphoto.com/photo/a-view-up-into-the-trees-direction-sky-gm1659684092-534864893?searchscope=image%2Cfilm
 
 VALUES
+
 1. https://www.istockphoto.com/photo/farmer-examining-sunflower-seedlings-at-sunset-gm1501984364-522588602?searchscope=image%2Cfilm
 2. https://www.istockphoto.com/photo/blurred-picture-of-a-weekend-festival-gm1397391644-451837987?searchscope=image%2Cfilm
 3. https://www.istockphoto.com/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-gm1344939844-423152159?searchscope=image%2Cfilm
 
 MENU
+
 1. https://www.istockphoto.com/photo/vegan-tacos-and-guacamole-served-in-tulum-mexico-closeup-gm1298809774-391605152?searchscope=image%2Cfilm
 2. https://www.istockphoto.com/photo/vegan-tortilla-wraps-with-tofu-cucumber-carrots-and-avocado-copy-space-gm1212760834-352178517?searchscope=image%2Cfilm
 3. https://www.istockphoto.com/photo/colourful-vegan-bowl-with-quinoa-and-sweet-potato-gm1416818056-464335672?searchscope=image%2Cfilm
@@ -44,6 +47,7 @@ MENU
 20. https://www.istockphoto.com/photo/vegetarian-vegan-mince-chili-con-carne-served-in-cast-iron-skillet-pan-gm1294269000-388321746?searchscope=image%2Cfilm
 
 PROCESS
+
 1. https://www.istockphoto.com/photo/open-soybean-field-at-sunset-gm1363571533-435079483?searchscope=image%2Cfilm
 2. https://www.istockphoto.com/photo/variety-of-fresh-organic-vegetables-and-fruits-in-the-garden-gm1280856062-379049862?searchscope=image%2Cfilm
 3. https://www.istockphoto.com/photo/last-straw-gm516329534-88945127?searchscope=image%2Cfilm

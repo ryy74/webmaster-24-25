@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiUser, FiMail, FiPhone, FiFileText, FiPaperclip, FiCheckCircle, FiLoader } from 'react-icons/fi';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import {
+  FiCheckCircle,
+  FiFileText,
+  FiLoader,
+  FiMail,
+  FiPaperclip,
+  FiPhone,
+  FiUser,
+} from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Apply.css';
 
-const ApplicationForm = () => {
+function ApplicationForm() {
   const [formState, setFormState] = useState({
     firstName: '',
     lastName: '',
@@ -17,7 +25,7 @@ const ApplicationForm = () => {
     resume: null,
     coverLetter: null,
     portfolio: null,
-    message: ''
+    message: '',
   });
   const [resumeFileName, setResumeFileName] = useState('');
   const [coverLetterFileName, setCoverLetterFileName] = useState('');
@@ -29,14 +37,14 @@ const ApplicationForm = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
+    setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
     if (files.length > 0) {
-      setFormState(prev => ({ ...prev, [name]: files[0] }));
-      
+      setFormState((prev) => ({ ...prev, [name]: files[0] }));
+
       if (name === 'resume') {
         setResumeFileName(files[0].name);
       } else if (name === 'coverLetter') {
@@ -50,7 +58,7 @@ const ApplicationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -61,7 +69,7 @@ const ApplicationForm = () => {
     <div className="application-container">
       <AnimatePresence mode="wait">
         {!isSubmitted ? (
-          <motion.div 
+          <motion.div
             className="application-form-container"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,8 +84,8 @@ const ApplicationForm = () => {
             >
               {t('joinTeam')}
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               className="form-description"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -85,8 +93,8 @@ const ApplicationForm = () => {
             >
               {t('applySub')}
             </motion.p>
-            
-            <motion.form 
+
+            <motion.form
               className="application-form"
               onSubmit={handleSubmit}
               initial={{ opacity: 0 }}
@@ -108,7 +116,7 @@ const ApplicationForm = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="lastName">
                     <FiUser className="form-icon" />
@@ -124,7 +132,7 @@ const ApplicationForm = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="email">
@@ -140,7 +148,7 @@ const ApplicationForm = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="phone">
                     <FiPhone className="form-icon" />
@@ -155,7 +163,7 @@ const ApplicationForm = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="position">
                   <FiFileText className="form-icon" />
@@ -169,15 +177,19 @@ const ApplicationForm = () => {
                   required
                 >
                   <option value="">{t('selectTitle')}</option>
-                  <option value="software-engineer">{t('softwareEngineer')}</option>
+                  <option value="software-engineer">
+                    {t('softwareEngineer')}
+                  </option>
                   <option value="product-designer">{t('productDesign')}</option>
                   <option value="marketing-specialist">{t('marketing')}</option>
-                  <option value="customer-support">{t('customerSupport')}</option>
+                  <option value="customer-support">
+                    {t('customerSupport')}
+                  </option>
                   <option value="in-person">{t('inPerson')}</option>
                   <option value="other">{t('otherRole')}</option>
                 </select>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="experience">
                   <FiFileText className="form-icon" />
@@ -198,7 +210,7 @@ const ApplicationForm = () => {
                   <option value="10+">{t('expFive')}</option>
                 </select>
               </div>
-              
+
               <div className="form-group file-upload-group">
                 <label htmlFor="resume">
                   <FiPaperclip className="form-icon" />
@@ -214,16 +226,14 @@ const ApplicationForm = () => {
                     required
                     className="file-input"
                   />
-                  <div className="file-upload-button">
-                    {t('chooseFile')}
-                  </div>
+                  <div className="file-upload-button">{t('chooseFile')}</div>
                   <div className="file-name">
-                    {resumeFileName || "No file chosen"}
+                    {resumeFileName || 'No file chosen'}
                   </div>
                 </div>
                 <div className="file-format-hint">{t('acceptPDD')}</div>
               </div>
-              
+
               <div className="form-group file-upload-group">
                 <label htmlFor="coverLetter">
                   <FiPaperclip className="form-icon" />
@@ -238,16 +248,14 @@ const ApplicationForm = () => {
                     accept=".pdf,.doc,.docx"
                     className="file-input"
                   />
-                  <div className="file-upload-button">
-                    {t('chooseFile')}
-                  </div>
+                  <div className="file-upload-button">{t('chooseFile')}</div>
                   <div className="file-name">
-                    {coverLetterFileName || "No file chosen"}
+                    {coverLetterFileName || 'No file chosen'}
                   </div>
                 </div>
                 <div className="file-format-hint">{t('acceptPDD')}</div>
               </div>
-              
+
               <div className="form-group file-upload-group">
                 <label htmlFor="portfolio">
                   <FiPaperclip className="form-icon" />
@@ -262,16 +270,14 @@ const ApplicationForm = () => {
                     accept=".pdf,.zip,.jpg,.png"
                     className="file-input"
                   />
-                  <div className="file-upload-button">
-                    {t('chooseFile')}
-                  </div>
+                  <div className="file-upload-button">{t('chooseFile')}</div>
                   <div className="file-name">
-                    {portfolioFileName || "No file chosen"}
+                    {portfolioFileName || 'No file chosen'}
                   </div>
                 </div>
                 <div className="file-format-hint">{t('acceptPZJP')}</div>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="message">
                   <FiFileText className="form-icon" />
@@ -286,7 +292,7 @@ const ApplicationForm = () => {
                   placeholder={t('placeholder')}
                 ></textarea>
               </div>
-              
+
               <motion.button
                 type="submit"
                 className="submit-button"
@@ -306,18 +312,18 @@ const ApplicationForm = () => {
             </motion.form>
           </motion.div>
         ) : (
-          <motion.div 
+          <motion.div
             className="success-container"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, type: "spring" }}
+            transition={{ duration: 0.4, type: 'spring' }}
             key="success"
           >
-            <motion.div 
+            <motion.div
               className="success-icon"
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+              transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
             >
               <FiCheckCircle />
             </motion.div>
@@ -351,6 +357,6 @@ const ApplicationForm = () => {
       </AnimatePresence>
     </div>
   );
-};
+}
 
 export default ApplicationForm;

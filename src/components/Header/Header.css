@@ -38,11 +38,14 @@
 }
 
 .header-link {
-  display: flex;
+  background-color: transparent;
+  border: none;
   border-radius: 5px;
   color: white;
+  display: flex;
   font-size: 1rem;
   font-weight: 400;
+  justify-content: flex-start;
   margin: 0 0.1rem;
   padding: 5px 17px;
   text-decoration: none;
@@ -50,9 +53,6 @@
     color 0.3s,
     background-color 0.3s;
   user-select: none;
-  background-color: transparent;
-  border: none;
-  justify-content: flex-start;
 }
 
 .header-link:hover {
@@ -60,24 +60,24 @@
 }
 
 .settings-link {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
   background: transparent;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   padding: 5px;
+  transition: transform 0.3s ease;
 }
 
 .settings-link:hover {
-  transform: scale(1.1);;
+  transform: scale(1.1);
 }
 
 .settings-icon {
   height: 20px;
-  width: 20px;
   transition: transform 0.5s ease;
+  width: 20px;
 }
 
 .settings-link:hover .settings-icon {
@@ -123,10 +123,6 @@
 }
 
 @media screen and (max-width: 878px) {
-  .hamburger {
-    display: flex;
-  }
-
   .nav-links {
     background-color: rgba(16, 15, 15, 0.95);
     border-radius: 8px;
@@ -146,7 +142,11 @@
 
   .nav-links.active {
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: flex;
   }
 }

@@ -1,11 +1,11 @@
 .checkout-page {
   align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef1f5 100%);
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 122px);
-  background: linear-gradient(135deg, #f5f7fa 0%, #eef1f5 100%);
-  padding: 2rem;
   margin-top: 60px;
+  min-height: calc(100vh - 122px);
+  padding: 2rem;
   transition: background 0.3s ease;
 }
 
@@ -16,19 +16,25 @@ html.dark-mode .checkout-page {
 .checkout-inner {
   background: white;
   border-radius: 20px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: row;
   max-width: 1200px;
   overflow: hidden;
-  width: 90%;
   position: relative;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 90%;
 }
 
 html.dark-mode .checkout-inner {
   background: #1a1a1a;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .checkout-left,
@@ -42,8 +48,8 @@ html.dark-mode .checkout-inner {
 .checkout-left {
   background: white;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
-  flex: 3;
   display: flex;
+  flex: 3;
   flex-direction: column;
 }
 
@@ -54,19 +60,19 @@ html.dark-mode .checkout-left {
 
 .checkout-right {
   background: rgba(52, 152, 219, 0.02);
-  flex: 1.5;
   display: flex;
+  flex: 1.5;
   flex-direction: column;
 }
 
 .checkout-left h1 {
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  -webkit-background-clip: text;
+  background-clip: text;
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   margin-top: 0;
-  background: linear-gradient(45deg, #2ecc71, #3498db);
-  -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -77,30 +83,32 @@ html.dark-mode .checkout-left h1 {
 }
 
 .checkout-instructions {
+  background: rgba(52, 152, 219, 0.05);
+  border-left: 4px solid #3498db;
+  border-radius: 10px;
   color: #555;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  background: rgba(52, 152, 219, 0.05);
   padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid #3498db;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 html.dark-mode .checkout-instructions {
-  color: #aaa;
   background: rgba(84, 169, 238, 0.1);
   border-left: 4px solid #54a9ee;
+  color: #aaa;
 }
 
 .checkout-instructions .credential-value {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
   font-family: monospace;
   font-size: 1.1rem;
-  background: rgba(0, 0, 0, 0.03);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
   margin-left: 5px;
+  padding: 0.25rem 0.75rem;
   transition: background 0.3s ease;
 }
 
@@ -122,8 +130,8 @@ html.dark-mode .checkout-instructions .credential-value {
 }
 
 .input-group-row .input-group {
-  margin-bottom: 0;
   flex: 1;
+  margin-bottom: 0;
 }
 
 .input-group label {
@@ -140,9 +148,9 @@ html.dark-mode .input-group label {
 }
 
 .input-wrapper {
-  position: relative;
-  display: flex;
   align-items: center;
+  display: flex;
+  position: relative;
 }
 
 .input-wrapper option {
@@ -150,10 +158,10 @@ html.dark-mode .input-group label {
 }
 
 .input-icon {
-  position: absolute;
-  left: 1rem;
   color: #888;
   font-size: 1.1rem;
+  left: 1rem;
+  position: absolute;
   transition: color 0.3s ease;
 }
 
@@ -163,14 +171,14 @@ html.dark-mode .input-icon {
 
 .payment-form input,
 .payment-form select {
+  background: rgba(0, 0, 0, 0.02);
   border: none;
   border-radius: 50px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
   font-size: 1rem;
   padding: 1rem 1rem 1rem 2.8rem;
-  width: 100%;
   transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.02);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .payment-form select {
@@ -188,15 +196,19 @@ html.dark-mode .payment-form select {
 
 .payment-form input:focus,
 .payment-form select:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.05);
   background: white;
+  box-shadow:
+    0 0 0 2px rgba(52, 152, 219, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  outline: none;
 }
 
 html.dark-mode .payment-form input:focus,
 html.dark-mode .payment-form select:focus {
-  box-shadow: 0 0 0 2px rgba(84, 169, 238, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 2px rgba(84, 169, 238, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .payment-form h2 {
@@ -204,8 +216,8 @@ html.dark-mode .payment-form select:focus {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
-  position: relative;
   padding-bottom: 0.5rem;
+  position: relative;
   transition: color 0.3s ease;
 }
 
@@ -214,15 +226,15 @@ html.dark-mode .payment-form h2 {
 }
 
 .payment-form h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
   background: linear-gradient(45deg, #2ecc71, #3498db);
   border-radius: 2px;
+  bottom: 0;
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
   transition: background 0.3s ease;
+  width: 50px;
 }
 
 html.dark-mode .payment-form h2::after {
@@ -232,55 +244,65 @@ html.dark-mode .payment-form h2::after {
 .checkout-card {
   background: white;
   border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  height: 100%;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  padding: 2rem;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 html.dark-mode .checkout-card {
   background: #1f1f1f;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 .checkout-right h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   color: #333;
   font-size: 1.8rem;
-  margin-top: 0;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 0;
   padding-bottom: 1rem;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
 }
 
 html.dark-mode .checkout-right h2 {
-  color: #e0e0e0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
 }
 
 .checkout-summary-list {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 1.5rem;
-  flex: 1;
 }
 
 .checkout-summary-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 0;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
   color: #555;
+  display: flex;
   font-size: 1rem;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
 }
 
 html.dark-mode .checkout-summary-item {
-  color: #aaa;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  color: #aaa;
 }
 
 .checkout-summary-item:last-child {
@@ -288,25 +310,27 @@ html.dark-mode .checkout-summary-item {
 }
 
 .tax-line {
-  font-weight: 600;
-  color: #333;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: 600;
   margin-top: 0.5rem;
   padding-top: 1rem;
-  transition: color 0.3s ease, border-top 0.3s ease;
+  transition:
+    color 0.3s ease,
+    border-top 0.3s ease;
 }
 
 html.dark-mode .tax-line {
-  color: #e0e0e0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
 }
 
 .checkout-total {
   background: rgba(46, 204, 113, 0.1);
-  padding: 1rem;
   border-radius: 10px;
-  margin-top: auto;
   margin-bottom: 1.5rem;
+  margin-top: auto;
+  padding: 1rem;
   transition: background 0.3s ease;
 }
 
@@ -315,12 +339,12 @@ html.dark-mode .checkout-total {
 }
 
 .checkout-total-price {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   color: #333;
+  display: flex;
   font-size: 1.1rem;
   font-weight: bold;
+  justify-content: space-between;
   margin: 0;
   transition: color 0.3s ease;
 }
@@ -330,8 +354,8 @@ html.dark-mode .checkout-total-price {
 }
 
 .final-price {
-  font-size: 1.3rem;
   color: #2ecc71;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
@@ -344,9 +368,9 @@ html.dark-mode .final-price {
   border-left: 4px solid #ff5252;
   border-radius: 4px;
   color: #ff5252;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 
@@ -360,10 +384,10 @@ html.dark-mode .region-error {
   border-left: 4px solid #ff5252;
   border-radius: 4px;
   color: #ff5252;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
   font-weight: 500;
+  margin-bottom: 1.5rem;
   overflow: hidden;
+  padding: 1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -373,22 +397,22 @@ html.dark-mode .error-message {
 }
 
 .pay-btn {
+  align-items: center;
   background: linear-gradient(45deg, #2ecc71, #3498db);
   border: none;
   border-radius: 50px;
   color: white;
   cursor: pointer;
+  display: flex;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  position: relative;
+  justify-content: center;
   overflow: hidden;
+  padding: 1rem;
+  position: relative;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 html.dark-mode .pay-btn {
@@ -396,14 +420,19 @@ html.dark-mode .pay-btn {
 }
 
 .pay-btn::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
   content: '';
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   transform: translateX(-100%);
+  width: 100%;
 }
 
 .pay-btn:hover::after {
@@ -432,19 +461,19 @@ html.dark-mode .pay-btn.processing {
 }
 
 .processing-text {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 10px;
 }
 
 .processing-spinner {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  animation: spin 1s ease-in-out infinite;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
 }
 
 .btn-icon {
@@ -463,19 +492,20 @@ html.dark-mode .pay-btn.processing {
     width: 95%;
   }
 
-  .checkout-left, .checkout-right {
+  .checkout-left,
+  .checkout-right {
     padding: 2rem;
   }
 
   .checkout-right {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
     border-right: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
-  
+
   html.dark-mode .checkout-right {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
-  
+
   .checkout-card {
     height: auto;
   }
@@ -483,16 +513,17 @@ html.dark-mode .pay-btn.processing {
 
 @media (max-width: 600px) {
   .checkout-page {
-    padding: 1rem;
     min-height: calc(100vh - 60px);
+    padding: 1rem;
   }
 
   .checkout-inner {
-    width: 100%;
     border-radius: 15px;
+    width: 100%;
   }
 
-  .checkout-left, .checkout-right {
+  .checkout-left,
+  .checkout-right {
     padding: 1.5rem;
   }
 
@@ -504,11 +535,11 @@ html.dark-mode .pay-btn.processing {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .checkout-instructions {
     padding: 1rem;
   }
-  
+
   .checkout-card {
     padding: 1.5rem;
   }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
@@ -66,6 +66,6 @@ function App() {
       {isSettingsOpen && <Settings onClose={closeSettings} />}
     </Router>
   );
-};
+}
 
 export default App;

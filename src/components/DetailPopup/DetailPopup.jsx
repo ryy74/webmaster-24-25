@@ -1,5 +1,5 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -42,7 +42,7 @@ function DetailPopup({ menuItem, onClose }) {
 
   return (
     <AnimatePresence>
-      <motion.div 
+      <motion.div
         className="popup-backdrop"
         onClick={handleBackdropClick}
         initial={{ opacity: 0 }}
@@ -50,18 +50,18 @@ function DetailPopup({ menuItem, onClose }) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <motion.div 
+        <motion.div
           className="popup-content"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          transition={{ 
-            type: "spring", 
-            stiffness: 300, 
-            damping: 25 
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 25,
           }}
         >
-          <motion.button 
+          <motion.button
             className="popup-close"
             onClick={onClose}
             whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
@@ -71,27 +71,28 @@ function DetailPopup({ menuItem, onClose }) {
           </motion.button>
 
           <div className="popup-grid">
-            <motion.div 
+            <motion.div
               className="popup-left-column"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <motion.div 
+              <motion.div
                 className="popup-image-container"
-                whileHover={{ 
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                whileHover={{
+                  boxShadow:
+                    '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
                 }}
               >
-                <img 
-                  src={menuItem.image} 
-                  alt={menuItem.name} 
-                  className="popup-image" 
+                <img
+                  src={menuItem.image}
+                  alt={menuItem.name}
+                  className="popup-image"
                 />
               </motion.div>
 
               {menuItem.nutritionalInfo && (
-                <motion.div 
+                <motion.div
                   className="popup-section"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -103,7 +104,7 @@ function DetailPopup({ menuItem, onClose }) {
               )}
 
               {menuItem.allergens && menuItem.allergens.length > 0 && (
-                <motion.div 
+                <motion.div
                   className="popup-section"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -115,7 +116,7 @@ function DetailPopup({ menuItem, onClose }) {
               )}
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="popup-details"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -129,7 +130,7 @@ function DetailPopup({ menuItem, onClose }) {
                 {menuItem.name}
               </motion.h2>
 
-              <motion.div 
+              <motion.div
                 className="popup-section"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -139,7 +140,7 @@ function DetailPopup({ menuItem, onClose }) {
                 <p>{menuItem.longDescription}</p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="popup-section"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -149,11 +150,11 @@ function DetailPopup({ menuItem, onClose }) {
                 <ul className="ingredients-list">
                   {menuItem.ingredients &&
                     menuItem.ingredients.map((ingredient, index) => (
-                      <motion.li 
+                      <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -5 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.6 + (index * 0.05) }}
+                        transition={{ delay: 0.6 + index * 0.05 }}
                       >
                         {ingredient}
                       </motion.li>
