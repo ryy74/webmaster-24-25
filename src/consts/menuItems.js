@@ -392,6 +392,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition30'),
       allergens: t('menuAllergens30'),
       category: 'o',
+      type: 'n',
     },
   ];
 
