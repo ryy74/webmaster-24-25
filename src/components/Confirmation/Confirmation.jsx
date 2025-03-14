@@ -1,13 +1,19 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import {
+  FiCheckCircle,
+  FiChevronRight,
+  FiClock,
+  FiMapPin,
+  FiShoppingBag,
+} from 'react-icons/fi';
 import { Link, Navigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiCheckCircle, FiClock, FiMapPin, FiShoppingBag, FiChevronRight } from 'react-icons/fi';
 
+import useMenuItems from '../../consts/menuItems';
 import { useAddress } from '../../contexts/AddressContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import useMenuItems from '../../consts/menuItems';
 
 import './Confirmation.css';
 
@@ -44,7 +50,7 @@ function Confirmation() {
     const randomMinutes = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
     const now = new Date();
     now.setMinutes(now.getMinutes() + randomMinutes);
-    
+
     setTimeout(() => {
       setDeliveryTime(now);
       setIsLoading(false);
@@ -62,13 +68,15 @@ function Confirmation() {
     return <Navigate to="/cart" replace />;
   }
 
-  const deliveryTimeString = deliveryTime ? deliveryTime.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-  }) : '';
+  const deliveryTimeString = deliveryTime
+    ? deliveryTime.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+      })
+    : '';
 
   return (
-    <motion.div 
+    <motion.div
       className="confirmation-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -76,24 +84,24 @@ function Confirmation() {
     >
       <AnimatePresence>
         {isLoading ? (
-          <motion.div 
+          <motion.div
             className="loading-container"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ 
-              type: "spring",
+            transition={{
+              type: 'spring',
               stiffness: 200,
-              damping: 20
+              damping: 20,
             }}
           >
-            <motion.div 
+            <motion.div
               className="loading-spinner"
               animate={{ rotate: 360 }}
-              transition={{ 
-                repeat: Infinity, 
+              transition={{
+                repeat: Infinity,
                 duration: 1.5,
-                ease: "linear"
+                ease: 'linear',
               }}
             >
               <FiClock className="loading-icon" />
@@ -107,30 +115,30 @@ function Confirmation() {
             </motion.p>
           </motion.div>
         ) : (
-          <motion.div 
+          <motion.div
             className="confirmation-container"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ 
-              type: "spring",
+            transition={{
+              type: 'spring',
               stiffness: 100,
-              damping: 20
+              damping: 20,
             }}
           >
             <motion.div
               className="success-icon"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ 
+              transition={{
                 delay: 0.2,
-                type: "spring",
+                type: 'spring',
                 stiffness: 200,
-                damping: 15
+                damping: 15,
               }}
             >
               <FiCheckCircle />
             </motion.div>
-            
+
             <motion.h1
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -138,8 +146,8 @@ function Confirmation() {
             >
               {t('orderConfirmed')}
             </motion.h1>
-            
-            <motion.div 
+
+            <motion.div
               className="address-container"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -150,7 +158,7 @@ function Confirmation() {
                 {t('deliverTo')} {savedAddress}
               </p>
             </motion.div>
-            
+
             <motion.div
               className="order-summary-container"
               initial={{ y: 20, opacity: 0 }}
@@ -161,15 +169,15 @@ function Confirmation() {
                 <FiShoppingBag className="order-icon" />
                 <h2>{t('yourOrder')}</h2>
               </div>
-              
+
               <div className="confirmation-summary-list">
                 {savedSummaryItems.map((item, index) => (
-                  <motion.div 
-                    className="confirmation-summary-item" 
+                  <motion.div
+                    className="confirmation-summary-item"
                     key={item.id}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.6 + (index * 0.1) }}
+                    transition={{ delay: 0.6 + index * 0.1 }}
                   >
                     <span>
                       {item.quantity} x {item.name}
@@ -178,42 +186,42 @@ function Confirmation() {
                   </motion.div>
                 ))}
               </div>
-              
-              <motion.p 
+
+              <motion.p
                 className="confirmation-total-price"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 + (savedSummaryItems.length * 0.1) }}
+                transition={{ delay: 0.6 + savedSummaryItems.length * 0.1 }}
               >
                 {t('cartTotal')} ${savedTotalPrice.toFixed(2)}
               </motion.p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="delivery-time-container"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7 + (savedSummaryItems.length * 0.1) }}
+              transition={{ delay: 0.7 + savedSummaryItems.length * 0.1 }}
             >
               <FiClock className="time-icon" />
               <p className="estimated-time">
                 {t('estDelivery')} {deliveryTimeString}
               </p>
             </motion.div>
-            
-            <motion.p 
+
+            <motion.p
               className="thanks"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.8 + (savedSummaryItems.length * 0.1) }}
+              transition={{ delay: 0.8 + savedSummaryItems.length * 0.1 }}
             >
               {t('orderThanks')}
             </motion.p>
-            
+
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.9 + (savedSummaryItems.length * 0.1) }}
+              transition={{ delay: 0.9 + savedSummaryItems.length * 0.1 }}
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
