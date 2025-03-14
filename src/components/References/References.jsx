@@ -139,7 +139,7 @@ function References() {
                 >
                   <h3>Copyright Checklist</h3>
                   <motion.a
-                    href="/assets/user-manual.pdf"
+                    href="/copyrightList.pdf"
                     className="doc-link"
                     target="_blank"
                     rel="noopener noreferrer"
