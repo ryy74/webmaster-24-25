@@ -1,8 +1,11 @@
-### web/2.1.0
+### web/2.1.1
 
 ### notes
 ### 2.1.0
 another node fix
+
+### 2.1.1
+bugfixes
 
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
