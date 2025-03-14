@@ -5,9 +5,9 @@ import {
   FiArrowDown,
   FiArrowUp,
   FiCheck,
+  FiFilter,
   FiShoppingCart,
   FiSliders,
-  FiFilter,
 } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
@@ -157,9 +157,8 @@ function Menu() {
     }
   });
 
-  const activeDietaryFiltersCount = Object.values(dietaryFilters).filter(
-    Boolean
-  ).length;
+  const activeDietaryFiltersCount =
+    Object.values(dietaryFilters).filter(Boolean).length;
 
   return (
     <div className="menu-wrapper" ref={menuRef}>
@@ -263,7 +262,9 @@ function Menu() {
               >
                 <FiFilter />
                 {activeDietaryFiltersCount > 0 && (
-                  <span className="filter-badge">{activeDietaryFiltersCount}</span>
+                  <span className="filter-badge">
+                    {activeDietaryFiltersCount}
+                  </span>
                 )}
               </motion.button>
 
@@ -276,7 +277,9 @@ function Menu() {
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="filter-dropdown-header">{t('dietaryPreferences')}</div>
+                    <div className="filter-dropdown-header">
+                      {t('dietaryPreferences')}
+                    </div>
                     <div
                       className={`filter-option ${
                         dietaryFilters.vegetarian ? 'active' : ''
@@ -295,7 +298,9 @@ function Menu() {
                       onClick={() => handleDietaryFilterChange('vegan')}
                     >
                       <span>{t('vegan')}</span>
-                      {dietaryFilters.vegan && <FiCheck className="filter-check" />}
+                      {dietaryFilters.vegan && (
+                        <FiCheck className="filter-check" />
+                      )}
                     </div>
                     {activeDietaryFiltersCount > 0 && (
                       <button
@@ -399,7 +404,9 @@ function Menu() {
                         <span className="badge vegan-badge">{t('vegan')}</span>
                       )}
                       {item.type === 't' && (
-                        <span className="badge vegetarian-badge">{t('vegetarian')}</span>
+                        <span className="badge vegetarian-badge">
+                          {t('vegetarian')}
+                        </span>
                       )}
                     </div>
                     <div className="menu-card-price">${item.price}</div>
