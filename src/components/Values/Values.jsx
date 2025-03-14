@@ -15,7 +15,7 @@ const Values = () => {
       subtitle: t('valueS1'),
       description: t('valueC1'),
       stats: [t('valueSt1_1'), t('valueSt1_2'), t('valueSt1_3')],
-      image: '/assets/Sustainability.jpg',
+      image: '/assets/values-1.jpg',
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Values = () => {
       subtitle: t('valueS2'),
       description: t('valueC2'),
       stats: [t('valueSt2_1'), t('valueSt2_2'), t('valueSt2_3')],
-      image: '/assets/Community.jpg',
+      image: '/assets/values-2.jpg',
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Values = () => {
       subtitle: t('valueS3'),
       description: t('valueC3'),
       stats: [t('valueSt3_1'), t('valueSt3_2'), t('valueSt3_3')],
-      image: '/assets/innovation.jpg',
+      image: '/assets/values-3.jpg',
     },
   ];
 
@@ -96,7 +96,7 @@ const Values = () => {
               }}
             >
               <motion.div 
-                className="image-container"
+                className="v-image-container"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >

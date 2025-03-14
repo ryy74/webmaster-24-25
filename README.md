@@ -11,11 +11,15 @@ Photo Sources:
 
 LANDING
 1. https://www.istockphoto.com/photo/olive-trees-on-sunset-gm515678332-88607763?searchscope=image%2Cfilm
-2. https://www.istockphoto.com/photo/sunny-plantation-with-growing-soya-gm1401722160-454867953?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/farmers-market-interaction-gm1479535214-507492404?searchscope=image%2Cfilm
 3. https://www.istockphoto.com/photo/food-background-with-assortment-of-fresh-organic-fruits-and-vegetables-gm1203599963-345994239?searchscope=image%2Cfilm
 4. https://www.istockphoto.com/photo/variety-of-vegan-plant-based-protein-food-gm1369489882-439239443?searchscope=image%2Cfilm
 5. https://www.istockphoto.com/photo/a-view-up-into-the-trees-direction-sky-gm1659684092-534864893?searchscope=image%2Cfilm
 
+VALUES
+1. https://www.istockphoto.com/photo/farmer-examining-sunflower-seedlings-at-sunset-gm1501984364-522588602?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/blurred-picture-of-a-weekend-festival-gm1397391644-451837987?searchscope=image%2Cfilm
+3. https://www.istockphoto.com/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-gm1344939844-423152159?searchscope=image%2Cfilm
 
 MENU
 1. https://www.istockphoto.com/photo/vegan-tacos-and-guacamole-served-in-tulum-mexico-closeup-gm1298809774-391605152?searchscope=image%2Cfilm

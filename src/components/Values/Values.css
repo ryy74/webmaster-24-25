@@ -101,7 +101,7 @@ html.dark-mode .value-card:hover {
   flex-direction: row-reverse;
 }
 
-.image-container {
+.v-image-container {
   flex: 0 0 40%;
   position: relative;
   border-radius: 15px;
