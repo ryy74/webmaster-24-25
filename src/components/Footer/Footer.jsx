@@ -26,6 +26,9 @@ function Footer({ onSettingsClick }) {
           <Link to="/privacynotice" className="footer-link">
             {t('apn')}
           </Link>
+          <Link to="/apply" className="footer-link">
+            {t('apply')}
+          </Link>
           <button
             className="footer-link"
             onClick={() => {

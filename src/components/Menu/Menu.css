@@ -197,7 +197,7 @@ html.dark-mode .results-count {
 
 .sort-container {
   position: relative;
-  z-index: 10;
+  z-index: 3;
 }
 
 .sort-icon-button {
@@ -416,8 +416,8 @@ html.dark-mode .menu-card-price {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: space-between;
+  flex: 1;
 }
 
 .menu-card-details h3 {
