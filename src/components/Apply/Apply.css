@@ -1,0 +1,353 @@
+.application-container {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+}
+
+.application-container:has(.success-container) {
+  align-items: center;
+  height: calc(100vh - 122px);
+}
+
+.application-form-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  overflow: hidden;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+}
+
+html.dark-mode .application-form-container {
+  background: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.application-form-container h2 {
+  color: #333;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+html.dark-mode .application-form-container h2 {
+  color: #e0e0e0;
+}
+
+.form-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+html.dark-mode .form-description {
+  color: #aaa;
+}
+
+.application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.form-group label {
+  align-items: center;
+  color: #555;
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+html.dark-mode .form-group label {
+  color: #bbb;
+}
+
+.form-icon {
+  color: #3498db;
+  margin-right: 8px;
+}
+
+html.dark-mode .form-icon {
+  color: #54a9ee;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #333;
+  font-size: 1rem;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+html.dark-mode .form-group input,
+html.dark-mode .form-group select,
+html.dark-mode .form-group textarea {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+html.dark-mode .form-group input:focus,
+html.dark-mode .form-group select:focus,
+html.dark-mode .form-group textarea:focus {
+  border-color: #54a9ee;
+  box-shadow: 0 0 0 2px rgba(84, 169, 238, 0.3);
+}
+
+.form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.file-upload-group {
+  margin-bottom: 10px;
+}
+
+.file-upload-container {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.file-input {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.file-upload-button {
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+html.dark-mode .file-upload-button {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+}
+
+.file-name {
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 8px 8px 0;
+  color: #666;
+  flex: 1;
+  font-size: 0.9rem;
+  margin-left: -8px;
+  overflow: hidden;
+  padding: 10px 16px 10px 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html.dark-mode .file-name {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
+.file-format-hint {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+html.dark-mode .file-format-hint {
+  color: #888;
+}
+
+.submit-button {
+  align-items: center;
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+html.dark-mode .submit-button {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+}
+
+.submit-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+html.dark-mode .submit-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+html.dark-mode .submit-button:disabled {
+  background: #555;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.success-container {
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  padding: 60px 40px;
+  text-align: center;
+  width: 100%;
+}
+
+html.dark-mode .success-container {
+  background: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+  color: #2ecc71;
+  font-size: 72px;
+  margin-bottom: 24px;
+}
+
+html.dark-mode .success-icon {
+  color: #4eda8e;
+}
+
+.success-container h2 {
+  color: #333;
+  font-size: 2.4rem;
+  margin: 0 0 20px 0;
+}
+
+html.dark-mode .success-container h2 {
+  color: #e0e0e0;
+}
+
+.success-container p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  max-width: 480px;
+}
+
+html.dark-mode .success-container p {
+  color: #aaa;
+}
+
+.reset-button {
+  background: #f1f1f1;
+  border: none;
+  border-radius: 12px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+html.dark-mode .reset-button {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.reset-button:hover {
+  background: #e6e6e6;
+}
+
+html.dark-mode .reset-button:hover {
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  .application-form-container {
+    padding: 30px 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  .success-container {
+    padding: 40px 20px;
+  }
+
+  .success-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .success-icon {
+    font-size: 60px;
+  }
+}

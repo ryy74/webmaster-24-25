@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { FiFileText } from 'react-icons/fi';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Footer.css';
@@ -26,6 +26,9 @@ function Footer({ onSettingsClick }) {
           <Link to="/privacynotice" className="footer-link">
             {t('apn')}
           </Link>
+          <Link to="/apply" className="footer-link">
+            {t('apply')}
+          </Link>
           <button
             className="footer-link"
             onClick={() => {
@@ -35,6 +38,12 @@ function Footer({ onSettingsClick }) {
             {t('settings')}
           </button>
         </div>
+      </div>
+      <div className="footer-right">
+        <Link to="/references" className="references-link">
+          <FiFileText className="references-icon" />
+          <span>References</span>
+        </Link>
       </div>
     </footer>
   );

@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
+import Apply from './components/Apply/Apply';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Confirmation from './components/Confirmation/Confirmation';
@@ -18,6 +19,7 @@ import ApplicantPrivacyNotice from './components/Policies/ApplicantPrivacyNotice
 import PrivacyPolicy from './components/Policies/PrivacyPolicy';
 import TermsOfUse from './components/Policies/TermsOfUse';
 import Settings from './components/Settings/Settings';
+import References from './components/References/References';
 
 import { useSettings } from './contexts/SettingsContext';
 
@@ -54,16 +56,18 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
 
+          <Route path="/apply" element={<Apply />} />
           <Route path="/accessibility" element={<AccessibilityStatement />} />
           <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
+          <Route path="/references" element={<References />} />
         </Routes>
       </div>
       <Footer onSettingsClick={openSettings} />
       {isSettingsOpen && <Settings onClose={closeSettings} />}
     </Router>
   );
-};
+}
 
 export default App;

@@ -1,11 +1,14 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const SettingsContext = createContext();
 
 export const SettingsProvider = ({ children }) => {
-  const [settings, setSettings] = useState({
-    isDarkMode: false,
-  });
+  const savedSettings = localStorage.getItem('settings');
+  const initialSettings = savedSettings
+    ? JSON.parse(savedSettings)
+    : { isDarkMode: false };
+
+  const [settings, setSettings] = useState(initialSettings);
 
   const toggleDarkMode = () => {
     setSettings((prevSettings) => ({
@@ -14,6 +17,10 @@ export const SettingsProvider = ({ children }) => {
     }));
   };
 
+  useEffect(() => {
+    localStorage.setItem('settings', JSON.stringify(settings));
+  }, [settings]);
+
   return (
     <SettingsContext.Provider value={{ settings, toggleDarkMode }}>
       {children}
@@ -21,4 +28,10 @@ export const SettingsProvider = ({ children }) => {
   );
 };
 
-export const useSettings = () => useContext(SettingsContext);
+export const useSettings = () => {
+  const context = useContext(SettingsContext);
+  if (!context) {
+    throw new Error('useSettings must be used within a SettingsProvider');
+  }
+  return context;
+};

@@ -1,17 +1,17 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FiCreditCard,
-  FiCalendar,
-  FiShield,
-  FiHome,
-  FiMapPin,
-  FiGlobe,
-  FiMap,
-  FiArrowRight,
   FiArrowLeft,
+  FiArrowRight,
+  FiCalendar,
+  FiCreditCard,
+  FiGlobe,
+  FiHome,
+  FiMap,
+  FiMapPin,
+  FiShield,
 } from 'react-icons/fi';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 import useMenuItems from '../../consts/menuItems';
 
@@ -21,10 +21,10 @@ import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext.js';
 
 import {
-  useCountries,
-  useUSStates,
   useCanadaProvinces,
+  useCountries,
   useMexicoStates,
+  useUSStates,
 } from '../../consts/checkout.js';
 
 import './Checkout.css';
@@ -95,6 +95,7 @@ function Checkout() {
     const item = menuItems.find((m) => m.id === parseInt(id));
     const quantity = cart[id];
     const itemTotal = item.price * quantity;
+
     return (
       <motion.div
         className="checkout-summary-item"
@@ -139,13 +140,13 @@ function Checkout() {
         expiration !== REQUIRED_EXPIRATION ||
         cvv !== REQUIRED_CVV
       ) {
-        setErrorMessage('Invalid card details.');
+        setErrorMessage(t('invalidCard'));
         setIsProcessing(false);
         return;
       }
 
       if (!zipCode || zipCode.length < 5) {
-        setErrorMessage('Please enter a valid zip code.');
+        setErrorMessage(t('invalidZip'));
         setIsProcessing(false);
         return;
       }
@@ -233,8 +234,7 @@ function Checkout() {
             {t('expirationD')}{' '}
             <span className="credential-value">{REQUIRED_EXPIRATION}</span>
             <br />
-            {t('sec')}{' '}
-            <span className="credential-value">{REQUIRED_CVV}</span>
+            {t('sec')} <span className="credential-value">{REQUIRED_CVV}</span>
           </motion.p>
 
           <AnimatePresence>

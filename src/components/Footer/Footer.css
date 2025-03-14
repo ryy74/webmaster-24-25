@@ -1,15 +1,15 @@
 .app-footer {
-  position: relative;
-  width: 100%;
+  align-items: center;
   background: rgba(16, 15, 15);
+  box-sizing: border-box;
   color: #fff;
   display: flex;
-  align-items: center;
+  flex-shrink: 0;
   justify-content: space-between;
   padding: 5px 20px;
-  box-sizing: border-box;
+  position: relative;
+  width: 100%;
   z-index: 2;
-  flex-shrink: 0;
 }
 
 .footer-left {
@@ -36,21 +36,50 @@
 
 .footer-link {
   align-self: center;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
   background: transparent;
   border: none;
+  color: #fff;
   cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .footer-link:hover {
   text-decoration: underline;
 }
 
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.references-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.references-link:hover {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.references-icon {
+  font-size: 16px;
+}
+
 @media (max-width: 1300px) {
   .footer-link {
     display: none;
+  }
+  
+  .references-link {
+    display: flex;
   }
 }
 

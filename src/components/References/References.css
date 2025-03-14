@@ -1,0 +1,464 @@
+.references-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.1),
+    0 10px 10px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  margin-top: 75px;
+  max-width: 1100px;
+  padding: 30px;
+  align-self: center;
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 142px);
+}
+
+html.dark-mode .references-container {
+  background: #1a1a1a;
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.references-title {
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  text-align: center;
+}
+
+html.dark-mode .references-title {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.references-title::after {
+  background: linear-gradient(to right, #2ecc7100, #2ecc71, #3498db, #3498db00);
+  bottom: 0;
+  content: '';
+  height: 3px;
+  left: 25%;
+  position: absolute;
+  width: 50%;
+}
+
+html.dark-mode .references-title::after {
+  background: linear-gradient(to right, #4eda8e00, #4eda8e, #54a9ee, #54a9ee00);
+}
+
+.references-tabs {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+}
+
+.references-tabs::-webkit-scrollbar {
+  height: 5px;
+}
+
+.references-tabs::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+html.dark-mode .references-tabs {
+  border-bottom-color: #333;
+}
+
+html.dark-mode .references-tabs::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.tab-button {
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 8px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+html.dark-mode .tab-button {
+  color: #aaa;
+}
+
+.tab-button.active {
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  color: white;
+}
+
+html.dark-mode .tab-button.active {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+  color: white;
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.references-content-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.references-content {
+  height: 100%;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;    
+  padding-right: 5px;
+}
+
+.references-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.references-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+html.dark-mode .references-content::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.references-content h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+html.dark-mode .references-content h2 {
+  color: #eee;
+}
+
+.references-content h2::before {
+  background: linear-gradient(to right, #2ecc71, #3498db);
+  border-radius: 4px;
+  content: '';
+  height: 100%;
+  left: -15px;
+  position: absolute;
+  top: 0;
+  width: 5px;
+}
+
+html.dark-mode .references-content h2::before {
+  background: linear-gradient(to right, #4eda8e, #54a9ee);
+}
+
+.documentation-links {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.doc-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+html.dark-mode .doc-card {
+  background: #2a2a2a;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.doc-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+}
+
+html.dark-mode .doc-card h3 {
+  color: #eee;
+}
+
+.doc-card p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+html.dark-mode .doc-card p {
+  color: #bbb;
+}
+
+.doc-link {
+  align-items: center;
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  border-radius: 30px;
+  color: white;
+  display: inline-flex;
+  font-weight: 500;
+  gap: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+html.dark-mode .doc-link {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+}
+
+.link-icon {
+  font-size: 1.1rem;
+}
+
+.site-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: #f9f9f9;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #2ecc71, #3498db) 1;
+  border-radius: 0 8px 8px 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html.dark-mode .info-card {
+  background: #2a2a2a;
+  border-image: linear-gradient(to bottom, #4eda8e, #54a9ee) 1;
+}
+
+.info-card h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+html.dark-mode .info-card h3 {
+  color: #eee;
+}
+
+.info-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+html.dark-mode .info-card p {
+  color: #bbb;
+}
+
+.feature-list,
+.credit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.credit-list-container {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  scrollbar-width: thin;
+}
+
+.credit-list-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.credit-list-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+html.dark-mode .credit-list-container::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.feature-list li,
+.credit-list li {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+  word-break: break-word;
+}
+
+html.dark-mode .feature-list li,
+html.dark-mode .credit-list li {
+  color: #bbb;
+}
+
+.feature-list li::before,
+.credit-list li::before {
+  color: #3498db;
+  content: '•';
+  font-size: 18px;
+  left: 8px;
+  position: absolute;
+}
+
+html.dark-mode .feature-list li::before,
+html.dark-mode .credit-list li::before {
+  color: #54a9ee;
+}
+
+.libraries-table-wrapper {
+  overflow-x: auto;
+  padding-bottom: 5px;
+  scrollbar-width: thin;
+}
+
+.libraries-table-wrapper::-webkit-scrollbar {
+  height: 5px;
+}
+
+.libraries-table-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+html.dark-mode .libraries-table-wrapper::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.libraries-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 600px;
+}
+
+.libraries-table th,
+.libraries-table td {
+  border-bottom: 1px solid #eee;
+  padding: 16px;
+  text-align: left;
+}
+
+html.dark-mode .libraries-table th,
+html.dark-mode .libraries-table td {
+  border-bottom-color: #333;
+}
+
+.libraries-table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+html.dark-mode .libraries-table th {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+.libraries-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.libraries-table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+html.dark-mode .libraries-table tbody tr:hover {
+  background-color: rgba(84, 169, 238, 0.1);
+}
+
+.libraries-table td {
+  color: #555;
+}
+
+html.dark-mode .libraries-table td {
+  color: #bbb;
+}
+
+.code-font {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.image-credits {  
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .references-title {
+    font-size: 2rem;
+  }
+
+  .references-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .tab-icon {
+    font-size: 1rem;
+  }
+
+  .doc-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .references-container {
+    padding: 20px;
+  }
+
+  .references-title {
+    font-size: 1.8rem;
+  }
+
+  .references-tabs {
+    padding-bottom: 5px;
+  }
+
+  .tab-button {
+    padding: 6px 10px;
+  }
+
+  .doc-card,
+  .info-card {
+    padding: 15px;
+  }
+}

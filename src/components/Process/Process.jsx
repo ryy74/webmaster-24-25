@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { ChevronRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -14,37 +14,37 @@ function Process() {
   const processIndexRef = useRef(0);
 
   const { t } = useLanguage();
-  
+
   const processes = [
     {
       id: 'farming',
       title: t('processT1'),
       description: t('processD1'),
-      image: '/assets/farmingImg.jpg',
+      image: '/assets/process-1-farm.jpg',
     },
     {
       id: 'processing',
       title: t('processT2'),
       description: t('processD2'),
-      image: '/assets/processingImg.jpg',
+      image: '/assets/process-2-processing.jpg',
     },
     {
       id: 'cooking',
       title: t('processT3'),
       description: t('processD3'),
-      image: '/assets/cookingImg.jpg',
+      image: '/assets/process-3-cooking.jpg',
     },
     {
       id: 'delivery',
       title: t('processT4'),
       description: t('processD4'),
-      image: '/assets/deliveryImg.png',
+      image: '/assets/process-4-delivery.jpg',
     },
     {
       id: 'meal',
       title: t('processT5'),
       description: t('processD5'),
-      image: '/assets/mealImg.jpg',
+      image: '/assets/process-5-meal.jpg',
     },
   ];
 
@@ -56,25 +56,25 @@ function Process() {
   }, []);
 
   const handleProcessClick = (id) => {
-    const newIndex = processes.findIndex(process => process.id === id);
+    const newIndex = processes.findIndex((process) => process.id === id);
     processIndexRef.current = newIndex;
     setActiveProcess(id);
   };
 
   const handleScroll = (e) => {
     e.preventDefault();
-    
+
     const currentIndex = processIndexRef.current;
-    
+
     const isScrollingDown = e.deltaY > 0;
-    
+
     let newIndex;
     if (isScrollingDown) {
       newIndex = Math.min(currentIndex + 1, processes.length - 1);
     } else {
       newIndex = Math.max(currentIndex - 1, 0);
     }
-    
+
     if (newIndex !== currentIndex) {
       processIndexRef.current = newIndex;
       setActiveProcess(processes[newIndex].id);
@@ -83,11 +83,13 @@ function Process() {
 
   useEffect(() => {
     const showcaseElement = showcaseRef.current;
-    
+
     if (showcaseElement) {
       const handleWheel = (e) => handleScroll(e);
-      showcaseElement.addEventListener('wheel', handleWheel, { passive: false });
-      
+      showcaseElement.addEventListener('wheel', handleWheel, {
+        passive: false,
+      });
+
       return () => {
         showcaseElement.removeEventListener('wheel', handleWheel);
       };
@@ -95,7 +97,9 @@ function Process() {
     // eslint-disable-next-line
   }, []);
 
-  const currentIndex = processes.findIndex(process => process.id === activeProcess);
+  const currentIndex = processes.findIndex(
+    (process) => process.id === activeProcess,
+  );
 
   return (
     <div className="process-wrapper">
@@ -128,7 +132,7 @@ function Process() {
       </motion.div>
 
       <div className="process-content-container">
-        <motion.div 
+        <motion.div
           className="process-navigation"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -150,13 +154,13 @@ function Process() {
                 <ChevronRight className="process-nav-icon" />
               </div>
               {index < processes.length - 1 && (
-                <div className="process-nav-connector"></div>
+                <div className="process-nav-connector" />
               )}
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="process-showcase"
           ref={showcaseRef}
           initial={{ opacity: 0 }}
@@ -179,16 +183,17 @@ function Process() {
                   key={process.id}
                   className={`process-detail ${positionClass} ${activeProcess === process.id ? 'active' : ''}`}
                   initial={{ opacity: 0 }}
-                  animate={{ 
+                  animate={{
                     opacity: activeProcess === process.id ? 1 : 0,
-                    transition: { duration: 0.5 }
+                    transition: { duration: 0.5 },
                   }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="detail-image-container"
                     whileHover={{
                       y: -10,
-                      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                      boxShadow:
+                        '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
                     }}
                   >
                     <motion.img
@@ -198,9 +203,9 @@ function Process() {
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     />
-                    <div className="image-overlay"></div>
+                    <div className="image-overlay" />
                   </motion.div>
-                  
+
                   <div className="detail-content">
                     <motion.h2
                       initial={{ opacity: 0, y: 20 }}
@@ -235,82 +240,93 @@ function Process() {
             key={process.id}
             className="mobile-process-item"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ 
+            animate={{
               opacity: visible ? 1 : 0,
-              y: visible ? 0 : 30
+              y: visible ? 0 : 30,
             }}
-            transition={{ 
-              duration: 0.5, 
+            transition={{
+              duration: 0.5,
               delay: 0.2 * index,
-              type: "spring",
+              type: 'spring',
               stiffness: 300,
-              damping: 20
+              damping: 20,
             }}
           >
-            <div className="mobile-process-header" onClick={() => handleProcessClick(process.id)}>
+            <div
+              className="mobile-process-header"
+              onClick={() => handleProcessClick(process.id)}
+            >
               <div className="mobile-process-number">{index + 1}</div>
               <h3 className="mobile-process-title">{process.title}</h3>
-              <ChevronDown className={`mobile-process-icon ${activeProcess === process.id ? 'active' : ''}`} />
+              <ChevronDown
+                className={`mobile-process-icon ${activeProcess === process.id ? 'active' : ''}`}
+              />
             </div>
-            
+
             <motion.div
               className="mobile-process-content"
               initial={{ height: 0, opacity: 0 }}
-              animate={{ 
+              animate={{
                 height: activeProcess === process.id ? 'auto' : 0,
-                opacity: activeProcess === process.id ? 1 : 0
+                opacity: activeProcess === process.id ? 1 : 0,
               }}
               transition={{ duration: 0.3 }}
             >
-              <img src={process.image} alt={process.title} className="mobile-process-image" />
-              <p className="mobile-process-description">{process.description}</p>
+              <img
+                src={process.image}
+                alt={process.title}
+                className="mobile-process-image"
+              />
+              <p className="mobile-process-description">
+                {process.description}
+              </p>
             </motion.div>
-            
+
             {index < processes.length - 1 && (
-              <div className="mobile-process-connector"></div>
+              <div className="mobile-process-connector" />
             )}
           </motion.div>
         ))}
       </motion.div>
 
       <div className="background-elements">
-        <div className="bg-line"></div>
-        <motion.div 
+        <div className="bg-line" />
+        <motion.div
           className="bg-circle circle-1"
-          animate={{ 
+          animate={{
             scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
-          transition={{ 
-            duration: 8, 
+          transition={{
+            duration: 8,
             repeat: Infinity,
-            ease: "easeInOut" 
+            ease: 'easeInOut',
           }}
         />
-        <motion.div 
+        <motion.div
           className="bg-circle circle-2"
-          animate={{ 
+          animate={{
             scale: [1, 1.15, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.2, 0.4, 0.2],
           }}
-          transition={{ 
-            duration: 10, 
+          transition={{
+            duration: 10,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
+            ease: 'easeInOut',
+            delay: 2,
           }}
         />
-        <motion.div 
+        <motion.div
           className="bg-circle circle-3"
-          animate={{ 
+          animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.25, 0.45, 0.25]
+            opacity: [0.25, 0.45, 0.25],
           }}
-          transition={{ 
-            duration: 12, 
+          transition={{
+            duration: 12,
             repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
+            ease: 'easeInOut',
+            delay: 1,
           }}
         />
       </div>

@@ -9,40 +9,57 @@ Current improvements planned:
 
 Photo Sources:
 
-https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Kale-salad-1b22634.jpg?quality=90&webp=true&resize=600,545
-https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSjsiYc8e1LE8j3YHAb2zShjSV1ixozltdCVuoU-w1zq40_94sx
-https://heyrooted.com/cdn/shop/articles/emre-9SDh6PF2g_U-unsplash.jpg?v=1684449237&width=3000
-https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjzNzBbKjPaN_0xqB3tKrxHTmOIZfpfbR3B5We8CKcd2yus8EA
-https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRzryXc5YJU_Au2q0yWAIH3Kc8Icyj4g_mwqY-bQTAb4OmAiez3
-https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEwk_aRm9WToE3UtjU3VtHisE7TGa6WACarHXemD9_vdlaM6iM
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ11evsqdvAR7zpTQ89k-ZrvEEh1giRhzoUB8zbmKCKUnuZ_R-B
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQPRt1kcjLUnmJXDwfRZLUN82XKh_xrwj5Wb9gfEiUrYBjVeT34
-https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNfZChKTYnOS6MVuwUmNgirDGguELEYR7jLKVEHkyySOtXcW3Z
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQd7sTKOuumrxC3Mr38joaLVV4ePFRMWmZybLMsfF8t2TJx_ozE
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOH6-c_eIILlNn-8ysPXso1hrGbORxNb9fTLnNwynhPHPXrkIh
-https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTzOk0Kh2yFo0fWauU3QgALyU4KabGi9KcK6xz-HS90nSnc9hHZ
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbHudkzvg4YDxmdtqS-4piFTjZcv25cuvAhkUDG1CHO7fFF8X2
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQdxhimbEWz88EVm4ucxX1CVen8ctcqIp1Jeo8Gq14txUAdE8BZ
-https://www.afarmgirlsdabbles.com/wp-content/uploads/2023/09/vegan-sushi-afarmgirlsdabbles-01s.jpg
-https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT5DnYZsA3Eqq7-YuMbxVMoShfH4nCIQ2KDFaAUCMPCQ6I1P4ic
-https://www.capecrystalbrands.com/cdn/shop/articles/the-latest-modernist-cooking-techniques-496899.jpg?v=1699238453
-https://img.freepik.com/premium-photo/cartoon-illustration-farmers-market-with-vendors-shoppers_36682-219699.jpg
-https://images.squarespace-cdn.com/content/v1/62e7a92f066fa3730dcd4604/1720121617905-HFFD8J33WWV4U475O49M/v2-e64qf-oc4of.jpg
-https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRcAVYymAVEcIZsW7Um6yf2MWcMZwfmf60haCegQnasITQl-usS
-https://keifscatering.com/executive-vegan-catering-experience/
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ0G32uxHYOgXzNGGIvwGyrynfxjPRIMHAgu5OVpon5Kx2cPeKB
-https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRHOZc7yr49T2Jx2ETbi5O6PmJqMUp2W8Mj0S2XiEEa8Udfsf_m
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT0S9otYMkdg2CY5gsXXUhFmWy7B6PChEVHcfPJlfi--tdcc0IX
-https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQhtE2ghOMJE_LjRERSx6FzPifMR3gX9zdvKhFSrtVutg_8X2G2
-https://feelgoodfoodie.net/wp-content/uploads/2022/01/Roasted-Vegetable-Quinoa-Bowl-06.jpg
-https://zardyplants.com/wp-content/uploads/2021/03/Vegan-Chicken-Salad-Sandwich-03-683x1024.jpg
-https://www.allrecipes.com/thmb/gFOCpYBvbiSqi32FWMK_Y-RzHn4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/331821-6faa2203cce54da68d9fcfc33ac82e68.jpg
-https://hips.hearstapps.com/hmg-prod/images/vegetarian-chili-lead-6568d216a75ad.jpg?resize=1200:*
-https://zardyplants.com/wp-content/uploads/2020/04/Vegan-Tofu-Scramble-2023-11-683x1024.jpg
-https://www.allrecipes.com/thmb/reguaI7eWdgQvmWnhYNeZBHzcKI=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/231514-vegetarian-mexican-inspired-stuffed-peppers-DDMFS-4x3-5be7a1f8b64d4465848ddb9a3aef4084.jpg
-https://cdn.loveandlemons.com/wp-content/uploads/2023/12/lentil-soup-recipe-580x779.jpg
-https://gutrevivalnutrition.com/wp-content/uploads/2021/02/IMG_7427-768x836.jpeg
-https://www.fannetasticfood.com/wp-content/uploads/2020/05/IMG_9221-scaled-720x720.jpg
-https://rainbowplantlife.com/wp-content/uploads/2021/05/stack-of-vegan-breakfast-burritos-closeup-500x500.jpg
-https://i0.wp.com/izzysvegetarianrecipes.co.uk/wp-content/uploads/2023/01/IMG_7347.jpeg?resize=880%2C1024&ssl=1
-https://www.istockphoto.com/photo/last-straw-gm516329534-88945127
+LANDING
+
+1. https://www.istockphoto.com/photo/olive-trees-on-sunset-gm515678332-88607763?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/farmers-market-interaction-gm1479535214-507492404?searchscope=image%2Cfilm
+3. https://www.istockphoto.com/photo/food-background-with-assortment-of-fresh-organic-fruits-and-vegetables-gm1203599963-345994239?searchscope=image%2Cfilm
+4. https://www.istockphoto.com/photo/variety-of-vegan-plant-based-protein-food-gm1369489882-439239443?searchscope=image%2Cfilm
+5. https://www.istockphoto.com/photo/a-view-up-into-the-trees-direction-sky-gm1659684092-534864893?searchscope=image%2Cfilm
+
+VALUES
+
+1. https://www.istockphoto.com/photo/farmer-examining-sunflower-seedlings-at-sunset-gm1501984364-522588602?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/blurred-picture-of-a-weekend-festival-gm1397391644-451837987?searchscope=image%2Cfilm
+3. https://www.istockphoto.com/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-gm1344939844-423152159?searchscope=image%2Cfilm
+
+MENU
+
+1. https://www.istockphoto.com/photo/vegan-tacos-and-guacamole-served-in-tulum-mexico-closeup-gm1298809774-391605152?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/vegan-tortilla-wraps-with-tofu-cucumber-carrots-and-avocado-copy-space-gm1212760834-352178517?searchscope=image%2Cfilm
+3. https://www.istockphoto.com/photo/colourful-vegan-bowl-with-quinoa-and-sweet-potato-gm1416818056-464335672?searchscope=image%2Cfilm
+4. https://www.istockphoto.com/photo/close-up-of-a-veggie-burger-with-copy-space-gm1331109186-414341251?searchscope=image%2Cfilm
+5. https://www.istockphoto.com/photo/homemade-vegan-cauliflower-crust-pizza-gm523044922-91854591?searchscope=image%2Cfilm
+6. https://www.istockphoto.com/photo/parmesan-spinach-macaroni-and-cheese-gm1205080549-346998587?searchscope=image%2Cfilm
+7. https://www.istockphoto.com/photo/italian-lasagna-with-tomato-sauce-and-cheese-served-with-tomatoes-and-spinach-light-gm1303741768-395110339?searchscope=image%2Cfilm
+8. https://www.istockphoto.com/photo/sweet-potato-and-cauliflower-curry-made-with-coconut-milk-top-view-gm1405969710-457687882?searchscope=image%2Cfilm
+9. https://www.istockphoto.com/photo/southwest-burrito-bowl-gm1180029350-330428096?searchscope=image%2Cfilm
+10. https://www.istockphoto.com/photo/vegetarian-skewers-with-organic-vegetables-on-a-white-plate-gm537630734-95425029?searchscope=image%2Cfilm
+11. https://www.istockphoto.com/photo/asian-vegan-stir-fry-food-teriyaki-noodle-bowls-gm1263862652-370012852?searchscope=image%2Cfilm
+12. https://www.istockphoto.com/photo/vegan-sushi-roll-gm1361568589-433932138?searchscope=image%2Cfilm
+13. https://www.istockphoto.com/photo/colorful-and-flavorful-tacos-typical-mexican-food-as-seen-from-above-gm1350219683-426417002?searchscope=image%2Cfilm
+14. https://www.istockphoto.com/photo/vegetarian-quesadilla-with-vegetables-and-cheese-on-a-wooden-board-gm881775802-245464617?searchscope=image%2Cfilm
+15. https://www.istockphoto.com/photo/bean-soup-in-a-black-bowl-grey-background-close-up-top-view-gm1276749217-376160840?searchscope=image%2Cfilm
+16. https://www.istockphoto.com/photo/vegan-curry-with-cauliflower-chickpeas-and-butternut-squash-gm1443993599-482812937?searchscope=image%2Cfilm
+17. https://www.istockphoto.com/photo/healthy-high-protein-vegan-plant-based-lunch-bowl-with-mushrooms-roasted-cauliflower-gm1978755098-558890498?searchscope=image%2Cfilm
+18. https://www.istockphoto.com/photo/sandwich-of-rye-bread-with-cereals-with-crushed-avocado-chickpeas-and-sprouts-of-gm954758870-260682551?searchscope=image%2Cfilm
+19. https://www.istockphoto.com/photo/closeup-view-of-delicious-creamy-black-bean-mexican-quesadillas-with-sweet-corn-gm1329925685-413510142?searchscope=image%2Cfilm
+20. https://www.istockphoto.com/photo/vegetarian-vegan-mince-chili-con-carne-served-in-cast-iron-skillet-pan-gm1294269000-388321746?searchscope=image%2Cfilm
+21. https://www.istockphoto.com/photo/scrambled-tofu-gm1456377470-491424869?searchscope=image%2Cfilm
+22. https://www.istockphoto.com/photo/stuffed-peppers-with-olive-oil-gm1302748444-394389684?searchscope=image%2Cfilm
+23. https://www.istockphoto.com/photo/homemade-red-lentil-soup-with-naan-bread-gm1457757175-492485480?searchscope=image%2Cfilm
+24. https://www.istockphoto.com/photo/vegetarian-gluten-free-breakfast-quinoa-coconut-milk-banana-apple-peanut-butter-bowl-gm954046894-260465244?searchscope=image%2Cfilm
+25. https://www.istockphoto.com/photo/tasty-oatmeal-porridge-with-toppings-served-on-light-grey-table-gm1398078936-452326567?searchscope=image%2Cfilm
+26. https://www.istockphoto.com/photo/tasty-fresh-vegan-vegetarian-wrap-with-spinach-tomato-avocado-served-on-plate-gm1331272218-414458285?searchscope=image%2Cfilm
+27. https://www.istockphoto.com/photo/vegan-oatmeal-pancakes-gm1350022590-426308239?searchscope=image%2Cfilm
+28. https://www.istockphoto.com/photo/spinach-smoothie-with-mint-gm640980032-116028539?searchscope=image%2Cfilm
+29. https://www.istockphoto.com/photo/green-avocado-smoothie-with-black-coffee-and-coconut-chips-during-the-morning-gm1458018626-492683966?searchscope=image%2Cfilm
+30. https://www.istockphoto.com/photo/spring-or-summer-cold-cocktail-raspberry-lemonade-gm1395736637-450742982?searchscope=image%2Cfilm
+
+PROCESS
+
+1. https://www.istockphoto.com/photo/open-soybean-field-at-sunset-gm1363571533-435079483?searchscope=image%2Cfilm
+2. https://www.istockphoto.com/photo/variety-of-fresh-organic-vegetables-and-fruits-in-the-garden-gm1280856062-379049862?searchscope=image%2Cfilm
+3. https://www.istockphoto.com/photo/last-straw-gm516329534-88945127?searchscope=image%2Cfilm
+4. https://www.istockphoto.com/photo/a-set-of-round-paper-containers-for-food-on-the-background-of-paper-utensils-and-gm1395017501-450280909?searchscope=image%2Cfilm
+5. https://www.istockphoto.com/photo/vegan-lunch-chocolate-smoothie-bowl-buddha-bowl-with-tofu-chickpeas-and-quinoa-gm1186938002-335086090?searchscope=image%2Cfilm
