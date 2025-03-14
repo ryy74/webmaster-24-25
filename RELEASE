@@ -1,9 +1,12 @@
-### web/2.0.0
+### web/2.0.1
 
 ### notes
 ### 2.0.0
 functionally, site is ready for state
 still lacking references pdf upload and bug review
+
+### 2.0.1
+node package update
 
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
