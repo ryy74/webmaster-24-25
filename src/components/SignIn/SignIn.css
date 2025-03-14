@@ -369,14 +369,14 @@ html.dark-mode .signedin-container p {
   color: #aaa;
 }
 
-.nav-buttons {
+.s-nav-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.nav-button {
+.s-nav-button {
   padding: 1rem 3rem;
   border-radius: 50px;
   font-size: 1rem;
@@ -465,11 +465,11 @@ html.dark-mode .menu-button:hover {
     font-size: 1.5rem;
   }
 
-  .nav-buttons {
+  .s-nav-buttons {
     flex-direction: column;
   }
   
-  .nav-button {
+  .s-nav-button {
     width: 100%;
   }
   

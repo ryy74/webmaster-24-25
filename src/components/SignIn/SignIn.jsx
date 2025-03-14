@@ -94,13 +94,13 @@ function SignInPage() {
           </motion.p>
           
           <motion.div 
-            className="nav-buttons"
+            className="s-nav-buttons"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
             <motion.button 
-              className="nav-button home-button"
+              className="s-nav-button home-button"
               onClick={navigateHome}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -109,7 +109,7 @@ function SignInPage() {
             </motion.button>
             
             <motion.button 
-              className="nav-button menu-button"
+              className="s-nav-button menu-button"
               onClick={navigateMenu}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

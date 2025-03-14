@@ -380,7 +380,6 @@ html.dark-mode .image-wrapper {
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-top: -50px;
   z-index: 1;
 }
 
@@ -781,6 +780,7 @@ html.dark-mode .testimonial p {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  align-self: flex-end;
 }
 
 .testimonial-avatar {
@@ -831,9 +831,9 @@ html.dark-mode .testimonial-role {
 .testimonial-navigation {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: calc(100% + 60px);
-  left: -30px;
+  transform: translateY(-24px);
+  width: calc(100% + 40px);
+  left: -20px;
   display: flex;
   justify-content: space-between;
   z-index: 2;
@@ -1095,6 +1095,10 @@ html.dark-mode .banner-blob.secondary {
     font-size: 2rem;
   }
 
+  .featured-section {
+    padding: 4rem 2rem;
+  }
+
   .preview-items {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1112,6 +1116,10 @@ html.dark-mode .banner-blob.secondary {
   .hero__title {
     font-size: 2.5rem;
   }
+
+  .decorative-line {
+    display: none;
+  }
   
   .hero-content p {
     font-size: 1.2rem;
@@ -1123,25 +1131,78 @@ html.dark-mode .banner-blob.secondary {
   }
   
   .hero-cta {
-    width: 100%;
+    width: 50%;
+    min-width: 250px; 
   }
   
   .about-section {
     margin-top: -50px;
     padding: 3rem 1.5rem;
   }
-  
-  .preview-items {
+
+  .about-container {
+    margin-top: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.8rem;
+  }
+
+  .about-image-container {
+    margin-top: 30px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  } 
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .image-grid {
     grid-template-columns: 1fr;
+  }
+
+  .image-wrapper.span-2 {
+    display: none;
   }
   
   .sustainability-section {
     padding: 5rem 1.5rem;
   }
+
+  .sustainability-content h2 {
+    font-size: 2rem;
+  }
+
+  .sustainability-content p {
+    font-size: 0.8rem;
+  }
   
   .eco-stats {
-    flex-direction: column;
     gap: 2rem;
+  }
+
+  .eco-stat-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .eco-stat-value {
+    font-size: 1.5rem;
+  }
+
+  .featured-section {
+    padding: 2rem;
+  }
+
+  .preview-items {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .testimonial {
@@ -1183,22 +1244,22 @@ html.dark-mode .banner-blob.secondary {
     gap: 1rem;
     align-items: center;
   }
-  
-  .about-image-grid {
+
+  .about-container {
     grid-template-columns: 1fr;
   }
   
-  .about-image:first-child {
-    grid-column: auto;
+  .about-image-container {
+    display: none;
   }
   
   .about-stats {
     flex-direction: column;
     gap: 2rem;
   }
-  
-  .stat-number {
-    font-size: 2rem;
+
+  .preview-item p {
+    display: none;
   }
   
   .testimonial p {
