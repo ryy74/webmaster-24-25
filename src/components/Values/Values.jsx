@@ -148,7 +148,7 @@ const Values = () => {
         </div>
       </div>
 
-      <div className="corner-decoration"></div>
+      <div className="corner-decoration" />
     </motion.div>
   );
 };

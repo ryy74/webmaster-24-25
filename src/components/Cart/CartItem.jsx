@@ -1,13 +1,16 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiAlertTriangle, FiMinus, FiPlus, FiTrash2 } from 'react-icons/fi';
+import { FiAlertTriangle, FiMinus, FiPlus, FiTrash2, FiEdit3 } from 'react-icons/fi';
+
+import CustomizationPopup from '../CustomizationPopup/CustomizationPopup';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './CartItem.css';
 
-function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
+function CartItem({ item, quantity, cartItemKey, customizations, onChangeQuantity, onUpdateItem, onRemove }) {
   const [showWarning, setShowWarning] = useState(false);
+  const [showCustomizationPopup, setShowCustomizationPopup] = useState(false);
 
   const { t } = useLanguage();
 
@@ -17,20 +20,28 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
     if (newValue === '' || parseInt(newValue) === 0) {
       setShowWarning(true);
     } else {
-      onChangeQuantity(item.id, parseInt(newValue));
+      onChangeQuantity(cartItemKey, parseInt(newValue));
     }
+  };
+
+  const handleEditClick = () => {
+    setShowCustomizationPopup(true);
+  };
+
+  const handleCustomizationPopupClose = () => {
+    setShowCustomizationPopup(false);
   };
 
   const handleDecrease = () => {
     if (quantity <= 1) {
       setShowWarning(true);
     } else {
-      onChangeQuantity(item.id, quantity - 1);
+      onChangeQuantity(cartItemKey, quantity - 1);
     }
   };
 
   const handleConfirmRemove = () => {
-    onRemove(item.id);
+    onRemove(cartItemKey);
     setShowWarning(false);
   };
 
@@ -76,6 +87,60 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
           >
             {item.description}
           </motion.p>
+          
+          {(customizations?.specialInstructions || 
+            customizations?.removedIngredients?.length > 0 || 
+            customizations?.includeUtensils !== undefined) && (
+            <motion.div 
+              className="cart-item-customizations"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+            >
+              {customizations.specialInstructions && (
+                <p className="customization-item">
+                  <span className="customization-label">{t('specialInstructions')}: </span> 
+                  {customizations.specialInstructions}
+                </p>
+              )}
+              
+              {customizations.removedIngredients?.length > 0 && (
+                <p className="customization-item">
+                  <span className="customization-label">{t('removedIngredients')}: </span> 
+                  {customizations.removedIngredients.join(', ')}
+                </p>
+              )}
+              
+              {customizations.includeUtensils !== undefined && (
+                <p className="customization-item">
+                  <span className="customization-label">{t('utensils')}: </span> 
+                  {customizations.includeUtensils ? t('included') : t('notIncluded')}
+                </p>
+              )}
+              
+              <button 
+                className="edit-customizations-btn"
+                onClick={handleEditClick}
+              >
+                <FiEdit3 /> {t('edit')}
+              </button>
+
+              {showCustomizationPopup && (
+                <CustomizationPopup
+                  menuItem={item}
+                  initialCustomizations={customizations}
+                  cartItemKey={cartItemKey}
+                  isEditing={true}
+                  onClose={handleCustomizationPopupClose}
+                  onSave={(updatedCustomizations) => {
+                    onUpdateItem(cartItemKey, updatedCustomizations);
+                    handleCustomizationPopupClose();
+                  }}
+                />
+              )}
+            </motion.div>
+          )}
+          
           <motion.p
             className="cart-item-price-single"
             initial={{ opacity: 0 }}
@@ -114,7 +179,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
             onChange={handleQuantityChange}
             onBlur={() => {
               if (!quantity) {
-                onChangeQuantity(item.id, 1);
+                onChangeQuantity(cartItemKey, 1);
               }
             }}
             whileFocus={{ boxShadow: '0 0 0 2px rgba(52, 152, 219, 0.3)' }}
@@ -122,7 +187,7 @@ function CartItem({ item, quantity, onChangeQuantity, onRemove }) {
 
           <motion.button
             className="quantity-btn increase"
-            onClick={() => onChangeQuantity(item.id, quantity + 1)}
+            onClick={() => onChangeQuantity(cartItemKey, quantity + 1)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

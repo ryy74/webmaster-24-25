@@ -5,7 +5,9 @@ const CartContext = createContext({
   setCartCount: () => {},
   cart: {},
   addToCart: () => {},
+  addToCartWithCustomizations: () => {},
   updateCartQuantity: () => {},
+  updateCartItem: () => {},
   removeFromCart: () => {},
   clearCart: () => {},
 });
@@ -14,33 +16,104 @@ export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
   const [cart, setCart] = useState({});
 
-  const addToCart = (itemId) => {
-    setCart((prevCart) => {
-      const newQuantity = (prevCart[itemId] || 0) + 1;
-      return { ...prevCart, [itemId]: newQuantity };
+  const generateCartItemKey = (itemId, customizations) => {
+    if (!customizations) return itemId;
+    const customizationString = JSON.stringify({
+      specialInstructions: customizations.specialInstructions || '',
+      includeUtensils: customizations.includeUtensils,
+      removedIngredients: customizations.removedIngredients || []
     });
-    setCartCount((prevCount) => prevCount + 1);
+    return `${itemId}_${btoa(customizationString)}`;
   };
 
-  const updateCartQuantity = (itemId, quantity) => {
+  const addToCart = (itemId) => {
+    addToCartWithCustomizations(itemId, { quantity: 1 });
+  };
+
+  const addToCartWithCustomizations = (itemId, customizations = {}) => {
+    const quantity = customizations.quantity || 1;
+    const cartItemKey = generateCartItemKey(itemId, customizations);
+    
     setCart((prevCart) => {
-      const oldQuantity = prevCart[itemId] || 0;
-      const diff = quantity - oldQuantity;
-      const updatedCart = { ...prevCart, [itemId]: quantity };
-      if (quantity === 0) {
-        delete updatedCart[itemId];
+      if (prevCart[cartItemKey]) {
+        const updatedItem = {
+          ...prevCart[cartItemKey],
+          quantity: prevCart[cartItemKey].quantity + quantity
+        };
+        return { ...prevCart, [cartItemKey]: updatedItem };
+      } 
+
+      else {
+        return { 
+          ...prevCart, 
+          [cartItemKey]: {
+            itemId,
+            quantity,
+            specialInstructions: customizations.specialInstructions || '',
+            includeUtensils: customizations.includeUtensils !== undefined ? customizations.includeUtensils : true,
+            removedIngredients: customizations.removedIngredients || []
+          } 
+        };
       }
+    });
+    
+    setCartCount((prevCount) => prevCount + quantity);
+  };
+
+  const updateCartQuantity = (cartItemKey, quantity) => {
+    setCart((prevCart) => {
+      if (!prevCart[cartItemKey]) return prevCart;
+      
+      const oldQuantity = prevCart[cartItemKey].quantity;
+      const diff = quantity - oldQuantity;
+      
+      if (quantity <= 0) {
+        const updatedCart = { ...prevCart };
+        delete updatedCart[cartItemKey];
+        setCartCount((prevCount) => prevCount + diff);
+        return updatedCart;
+      }
+      
+      const updatedCart = {
+        ...prevCart,
+        [cartItemKey]: {
+          ...prevCart[cartItemKey],
+          quantity
+        }
+      };
+      
       setCartCount((prevCount) => prevCount + diff);
       return updatedCart;
     });
   };
 
-  const removeFromCart = (itemId) => {
+  const updateCartItem = (cartItemKey, updates) => {
     setCart((prevCart) => {
-      if (!(itemId in prevCart)) return prevCart;
-      const removedQuantity = prevCart[itemId];
+      if (!prevCart[cartItemKey]) return prevCart;
+      
+      if (updates.quantity !== undefined && updates.quantity !== prevCart[cartItemKey].quantity) {
+        const diff = updates.quantity - prevCart[cartItemKey].quantity;
+        setCartCount((prevCount) => prevCount + diff);
+      }
+      
+      return {
+        ...prevCart,
+        [cartItemKey]: {
+          ...prevCart[cartItemKey],
+          ...updates
+        }
+      };
+    });
+  };
+
+  const removeFromCart = (cartItemKey) => {
+    setCart((prevCart) => {
+      if (!(cartItemKey in prevCart)) return prevCart;
+      
+      const removedQuantity = prevCart[cartItemKey].quantity;
       const updatedCart = { ...prevCart };
-      delete updatedCart[itemId];
+      delete updatedCart[cartItemKey];
+      
       setCartCount((prevCount) => prevCount - removedQuantity);
       return updatedCart;
     });
@@ -58,7 +131,9 @@ export const CartProvider = ({ children }) => {
         setCartCount,
         cart,
         addToCart,
+        addToCartWithCustomizations,
         updateCartQuantity,
+        updateCartItem,
         removeFromCart,
         clearCart,
       }}

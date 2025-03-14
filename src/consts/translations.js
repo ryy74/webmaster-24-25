@@ -1,5 +1,21 @@
 const translations = {
   en: {
+    // customization
+    customize: 'Customize',
+    quantity: 'Quantity',
+    removeIngredients: 'Remove Ingredients',
+    removedIngredients: 'Removed Ingredients',
+    specialInstructions: 'Special Instructions',
+    specialInstructionsPlaceholder: 'Any special requests...',
+    includeUtensils: 'Include Utensils',
+    utensils: 'Utensils',
+    included: 'Included',
+    notIncluded: 'Not Included',
+    edit: 'Edit',
+    editCustomizations: 'Edit Customizations',
+    saveChanges: 'Save Changes',
+    updated: 'Updated!',
+
     // header and page links
     menu: 'Menu',
     checkout: 'Checkout',
@@ -960,6 +976,22 @@ const translations = {
     menuAllergens30: [],
   },
   es: {
+    // customization
+    customize: 'Personalizar',
+    quantity: 'Cantidad',
+    removeIngredients: 'Quitar ingredientes',
+    removedIngredients: 'Ingredientes removidos',
+    specialInstructions: 'Instrucciones especiales',
+    specialInstructionsPlaceholder: 'Cualquier solicitud especial...',
+    includeUtensils: 'Incluir utensilios',
+    utensils: 'Utensilios',
+    included: 'Incluido',
+    notIncluded: 'No incluido',
+    edit: 'Editar',
+    editCustomizations: 'Editar personalizaciones',
+    saveChanges: 'Guardar cambios',
+    updated: '¡Actualizado!',
+
     // header and page links
     menu: 'Menú',
     checkout: 'Pagar',
@@ -1920,6 +1952,22 @@ const translations = {
     menuAllergens30: [],
   },  
   ch: {
+    // customization
+    customize: '自定义',
+    quantity: '数量',
+    removeIngredients: '移除原料',
+    removedIngredients: '已移除的原料',
+    specialInstructions: '特别说明',
+    specialInstructionsPlaceholder: '有任何特殊要求……',
+    includeUtensils: '包括餐具',
+    utensils: '餐具',
+    included: '已包含',
+    notIncluded: '未包含',
+    edit: '编辑',
+    editCustomizations: '编辑自定义',
+    saveChanges: '保存更改',
+    updated: '已更新！',
+
     // header and page links
     menu: '菜单',
     checkout: '结账',
@@ -2880,6 +2928,22 @@ const translations = {
     menuAllergens30: [],
   },
   tw: {
+    // customization
+    customize: '自訂',
+    quantity: '數量',
+    removeIngredients: '移除成分',
+    removedIngredients: '已移除的成分',
+    specialInstructions: '特別指示',
+    specialInstructionsPlaceholder: '有任何特殊要求……',
+    includeUtensils: '包含餐具',
+    utensils: '餐具',
+    included: '已包含',
+    notIncluded: '未包含',
+    edit: '編輯',
+    editCustomizations: '編輯自訂項目',
+    saveChanges: '儲存變更',
+    updated: '已更新！',
+
     // header and page links
     menu: '選單',
     checkout: '結帳',
@@ -3840,6 +3904,22 @@ const translations = {
     menuAllergens30: [],
   },  
   jp: {
+    // customization
+    customize: 'カスタマイズ',
+    quantity: '数量',
+    removeIngredients: '材料を削除',
+    removedIngredients: '削除済みの材料',
+    specialInstructions: '特別な指示',
+    specialInstructionsPlaceholder: '特別なリクエストがあれば…',
+    includeUtensils: '食器を含む',
+    utensils: '食器',
+    included: '含まれる',
+    notIncluded: '含まれない',
+    edit: '編集',
+    editCustomizations: 'カスタマイズを編集',
+    saveChanges: '変更を保存',
+    updated: '更新済み！',
+
     // header and page links
     menu: 'メニュー',
     checkout: 'チェックアウト',
@@ -4800,6 +4880,22 @@ const translations = {
     menuAllergens30: [],
   },
   fr: {
+    // customization
+    customize: 'Personnaliser',
+    quantity: 'Quantité',
+    removeIngredients: 'Retirer les ingrédients',
+    removedIngredients: 'Ingrédients retirés',
+    specialInstructions: 'Instructions spéciales',
+    specialInstructionsPlaceholder: 'Toute demande spéciale...',
+    includeUtensils: 'Inclure les ustensiles',
+    utensils: 'Ustensiles',
+    included: 'Inclus',
+    notIncluded: 'Non inclus',
+    edit: 'Modifier',
+    editCustomizations: 'Modifier les personnalisations',
+    saveChanges: 'Enregistrer les modifications',
+    updated: 'Mis à jour !',
+
     // header and page links
     menu: 'Menu',
     checkout: 'Caisse',
@@ -5760,6 +5856,22 @@ const translations = {
     menuAllergens30: [],
   },  
   kr: {
+    // customization
+    customize: '사용자 정의',
+    quantity: '수량',
+    removeIngredients: '재료 제거',
+    removedIngredients: '제거된 재료',
+    specialInstructions: '특별 지시 사항',
+    specialInstructionsPlaceholder: '특별 요청 사항이 있으면...',
+    includeUtensils: '식기도 포함',
+    utensils: '식기',
+    included: '포함됨',
+    notIncluded: '포함되지 않음',
+    edit: '수정',
+    editCustomizations: '커스터마이즈 수정',
+    saveChanges: '변경 사항 저장',
+    updated: '업데이트됨!',
+
     // header and page links
     menu: '메뉴',
     checkout: '결제하기',

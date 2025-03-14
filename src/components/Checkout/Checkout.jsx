@@ -76,41 +76,48 @@ function Checkout() {
     }
   };
 
-  const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
+  const cartItemKeys = Object.keys(cart).filter((key) => {
+    const cartItem = cart[key];
+    return cartItem.quantity && cartItem.quantity > 0;
+  });
 
   if (!isSignedIn) {
     return <Navigate to="/signin" replace />;
   }
 
-  if (itemsInCart.length === 0) {
+  if (cartItemKeys.length === 0) {
     return <Navigate to="/cart" replace />;
   }
 
-  const totalPrice = itemsInCart.reduce((acc, id) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    return acc + item.price * cart[id];
+  const totalPrice = cartItemKeys.reduce((acc, key) => {
+    const cartItem = cart[key];
+    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+    if (!menuItem) return acc;
+    return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = itemsInCart.map((id, index) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    const quantity = cart[id];
-    const itemTotal = item.price * quantity;
+  const summaryItems = cartItemKeys.map((key, index) => {
+    const cartItem = cart[key];
+    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+    if (!menuItem) return null;
+
+    const itemTotal = menuItem.price * cartItem.quantity;
 
     return (
       <motion.div
         className="checkout-summary-item"
-        key={id}
+        key={key}
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 + index * 0.1 }}
       >
         <span>
-          {quantity} x {item.name}
+          {cartItem.quantity} x {menuItem.name}
         </span>
         <span>${itemTotal.toFixed(2)}</span>
       </motion.div>
     );
-  });
+  }).filter(Boolean);
 
   const isUS = country === 'USA';
   const isWA = state === 'Washington';

@@ -1,8 +1,8 @@
-### web/2.2.0
+### web/2.3.0
 
 ### notes
-### 2.2.0
-header revamp
+### 2.3.0
+customization in ordering
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).

@@ -24,19 +24,32 @@ function Confirmation() {
   const { t } = useLanguage();
   const menuItems = useMenuItems();
 
-  const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
+  const cartEntries = Object.entries(cart).filter(
+    ([, cartItem]) => cartItem.quantity > 0
+  );
 
-  const totalPrice = itemsInCart.reduce((acc, id) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    return acc + item.price * cart[id];
+  const totalPrice = cartEntries.reduce((acc, [cartItemKey, cartItem]) => {
+    const menuItem = menuItems.find(
+      (m) => m.id === parseInt(cartItem.itemId, 10)
+    );
+    if (!menuItem) return acc;
+    return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = itemsInCart.map((id) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    const quantity = cart[id];
-    const itemTotal = item.price * quantity;
-    return { id, name: item.name, quantity, itemTotal };
-  });
+  const summaryItems = cartEntries.map(([cartItemKey, cartItem]) => {
+    const menuItem = menuItems.find(
+      (m) => m.id === parseInt(cartItem.itemId, 10)
+    );
+    if (!menuItem) return null;
+
+    const itemTotal = menuItem.price * cartItem.quantity;
+    return {
+      cartItemKey,
+      name: menuItem.name,
+      quantity: cartItem.quantity,
+      itemTotal,
+    };
+  }).filter(Boolean);
 
   const [savedAddress, setSavedAddress] = useState('');
   const [savedSummaryItems] = useState(summaryItems);
@@ -45,8 +58,8 @@ function Confirmation() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    clearCart();
     setSavedAddress(address);
+
     const randomMinutes = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
     const now = new Date();
     now.setMinutes(now.getMinutes() + randomMinutes);
@@ -57,6 +70,7 @@ function Confirmation() {
     }, 800);
 
     clearCart();
+
     // eslint-disable-next-line
   }, []);
 
@@ -174,7 +188,7 @@ function Confirmation() {
                 {savedSummaryItems.map((item, index) => (
                   <motion.div
                     className="confirmation-summary-item"
-                    key={item.id}
+                    key={item.cartItemKey}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
@@ -223,10 +237,7 @@ function Confirmation() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 + savedSummaryItems.length * 0.1 }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link to="/menu" className="back-to-menu">
                   {t('returnMenu')}
                   <FiChevronRight className="menu-icon" />

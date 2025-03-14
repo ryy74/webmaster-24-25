@@ -280,15 +280,34 @@ html.dark-mode .cart-summary-item {
   color: #ccc;
 }
 
-.cart-summary-item span:first-child {
+.cart-summary-item-details {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  overflow: hidden;
+}
+
+.cart-summary-item-name {
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.cart-summary-item span:last-child {
+.cart-summary-item-customizations {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html.dark-mode .cart-summary-item-customizations {
+  color: #999;
+}
+
+.cart-summary-item-price {
   font-weight: 600;
   margin-left: 1rem;
   white-space: nowrap;
@@ -428,5 +447,9 @@ html.dark-mode .checkout-btn.disabled {
 
   .empty-cart-icon {
     font-size: 4rem;
+  }
+  
+  .cart-summary-item-details {
+    max-width: 70%;
   }
 }
