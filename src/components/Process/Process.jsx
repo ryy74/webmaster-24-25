@@ -20,31 +20,31 @@ function Process() {
       id: 'farming',
       title: t('processT1'),
       description: t('processD1'),
-      image: '/assets/farmingImg.jpg',
+      image: '/assets/process-1-farm.jpg',
     },
     {
       id: 'processing',
       title: t('processT2'),
       description: t('processD2'),
-      image: '/assets/processingImg.jpg',
+      image: '/assets/process-2-processing.jpg',
     },
     {
       id: 'cooking',
       title: t('processT3'),
       description: t('processD3'),
-      image: '/assets/cookingImg.jpg',
+      image: '/assets/process-3-cooking.jpg',
     },
     {
       id: 'delivery',
       title: t('processT4'),
       description: t('processD4'),
-      image: '/assets/deliveryImg.png',
+      image: '/assets/process-4-delivery.jpg',
     },
     {
       id: 'meal',
       title: t('processT5'),
       description: t('processD5'),
-      image: '/assets/mealImg.jpg',
+      image: '/assets/process-5-meal.jpg',
     },
   ];
 

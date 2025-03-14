@@ -1,4 +1,4 @@
-### web/1.2.3
+### web/1.2.4
 
 ### notes
 ### 1.2
@@ -16,6 +16,9 @@ revamped first 12 menu items
 various display bugfixes:
 - sort on menu z index too high
 - sign-in state not persisted to localStorage
+
+### 1.2.4
+more image updates
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).

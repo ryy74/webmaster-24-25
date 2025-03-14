@@ -54,7 +54,7 @@ function Home() {
         className="hero-section"
       >
         <motion.img 
-          src='/assets/home-bg.jpg' 
+          src='/assets/landing-1-hero.jpg' 
           alt="" 
           className="hero-background" 
         />
@@ -261,9 +261,9 @@ function Home() {
           >
             <div className="image-grid">
               {[
-                { src: '/assets/farm.jpg', alt: 'Farm', span: true },
-                { src: '/assets/produce.jpg', alt: 'Fresh Salad' },
-                { src: '/assets/vegan.jpg', alt: 'Vegan Burger' }
+                { src: '/assets/landing-2-about1.jpg', alt: 'Farm', span: true },
+                { src: '/assets/landing-3-about2.jpg', alt: 'Fresh Salad' },
+                { src: '/assets/landing-4-about3.jpg', alt: 'Vegan Burger' }
               ].map((img, index) => (
                 <motion.div 
                   key={img.alt}
@@ -293,7 +293,7 @@ function Home() {
       <motion.div
         className="sustainability-section"
         style={{
-          backgroundImage: `url('/assets/sustainability-bg.jpg')`,
+          backgroundImage: `url('/assets/landing-5-sustainability.jpg')`,
         }}
       >
         <div 
