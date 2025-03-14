@@ -20,12 +20,12 @@ function Settings({ onClose }) {
   const languages = [
     { code: 'en', name: 'English' },
     { code: 'es', name: 'Español' },
-    { code: 'fr', name: 'Français'},
+    { code: 'fr', name: 'Français' },
     { code: 'ch', name: '中文（简体）' },
     { code: 'tw', name: '中文（繁體）' },
     { code: 'jp', name: '日本語' },
     { code: 'kr', name: '한국어' },
-  ];  
+  ];
 
   const handleLanguageChange = (langCode) => {
     setLanguage(langCode);

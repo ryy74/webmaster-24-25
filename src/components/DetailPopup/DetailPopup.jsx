@@ -24,7 +24,7 @@ function DetailPopup({ menuItem, onClose }) {
     e.stopPropagation();
     addToCart(menuItem.id);
     setJustAdded(true);
-    
+
     setTimeout(() => {
       setJustAdded(false);
     }, 2000);
