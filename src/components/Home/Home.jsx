@@ -225,7 +225,7 @@ function Home() {
               {[
                 { number: '100%', label: t('organic') },
                 { number: '10+', label: t('years') },
-                { number: '50+', label: t('dishes') },
+                { number: '30+', label: t('dishes') },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
