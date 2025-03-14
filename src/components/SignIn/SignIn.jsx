@@ -216,7 +216,7 @@ function SignInPage() {
                   className="password-toggle"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? "Hide" : "Show"}
+                  {showPassword ? t('hide') : t('show')}
                 </div>
               </div>
             </motion.div>

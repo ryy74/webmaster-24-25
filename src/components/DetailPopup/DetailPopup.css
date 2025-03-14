@@ -242,6 +242,7 @@ html.dark-mode .ingredients-list li::before {
     gap: 24px;
     grid-template-columns: 1fr;
     padding: 24px;
+    margin-top: 50px;
   }
 
   .popup-image-container {

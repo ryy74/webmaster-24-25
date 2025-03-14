@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
+import Apply from './components/Apply/Apply';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Confirmation from './components/Confirmation/Confirmation';
@@ -54,6 +55,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
 
+          <Route path="/apply" element={<Apply />} />
           <Route path="/accessibility" element={<AccessibilityStatement />} />
           <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />

@@ -145,6 +145,10 @@ html.dark-mode .input-group label {
   align-items: center;
 }
 
+.input-wrapper option {
+  color: black;
+}
+
 .input-icon {
   position: absolute;
   left: 1rem;
@@ -167,6 +171,12 @@ html.dark-mode .input-icon {
   transition: all 0.3s ease;
   background: rgba(0, 0, 0, 0.02);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.payment-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 html.dark-mode .payment-form input,
