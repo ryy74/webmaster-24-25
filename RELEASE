@@ -1,30 +1,8 @@
-### web/1.2.5
+### web/1.3.0
 
 ### notes
-### 1.2
-landing page overhaul
-
-### 1.2.1
-home page scaling fixes
-
-### 1.2.2
-added apply page
-also finished most visual updates for state
-
-### 1.2.3
-revamped first 12 menu items
-various display bugfixes:
-- sort on menu z index too high
-- sign-in state not persisted to localStorage
-
-### 1.2.4
-more image updates
-
-### 1.2.5
-images done except menu
-
-### 1.2.6
-everything done but images and minor bugfixes
+### 1.3
+references page, will fix current issues tmr
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).

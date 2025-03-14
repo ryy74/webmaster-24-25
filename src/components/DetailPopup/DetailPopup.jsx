@@ -1,18 +1,33 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { FiX } from 'react-icons/fi';
+import { useEffect, useState } from 'react';
+import { FiCheck, FiShoppingCart, FiX } from 'react-icons/fi';
 
+import { useAuth } from '../../contexts/AuthContext';
+import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './DetailPopup.css';
 
 function DetailPopup({ menuItem, onClose }) {
   const { t } = useLanguage();
+  const { isSignedIn } = useAuth();
+  const { addToCart } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
+  };
+
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
+    addToCart(menuItem.id);
+    setJustAdded(true);
+    
+    setTimeout(() => {
+      setJustAdded(false);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -163,6 +178,34 @@ function DetailPopup({ menuItem, onClose }) {
               </motion.div>
             </motion.div>
           </div>
+
+          {isSignedIn && (
+            <motion.div
+              className="popup-cart-button-container"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+            >
+              <motion.button
+                className={`popup-cart-button ${justAdded ? 'added' : ''}`}
+                onClick={handleAddToCart}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {justAdded ? (
+                  <>
+                    <FiCheck className="icon" />
+                    <span>{t('added')}</span>
+                  </>
+                ) : (
+                  <>
+                    <FiShoppingCart className="icon" />
+                    <span>{t('addCart')}</span>
+                  </>
+                )}
+              </motion.button>
+            </motion.div>
+          )}
         </motion.div>
       </motion.div>
     </AnimatePresence>

@@ -106,6 +106,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition8'),
       allergens: t('menuAllergens8'),
       category: 'd',
+      type: 'n',
     },
     {
       id: 9,
@@ -118,6 +119,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition9'),
       allergens: t('menuAllergens9'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 10,
@@ -130,6 +132,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition10'),
       allergens: t('menuAllergens10'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 11,
@@ -142,6 +145,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition11'),
       allergens: t('menuAllergens11'),
       category: 'd',
+      type: 'n',
     },
     {
       id: 12,
@@ -154,6 +158,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition12'),
       allergens: t('menuAllergens12'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 13,
@@ -166,6 +171,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition13'),
       allergens: t('menuAllergens13'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 14,
@@ -178,6 +184,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition14'),
       allergens: t('menuAllergens14'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 15,
@@ -190,6 +197,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition15'),
       allergens: t('menuAllergens15'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 16,
@@ -202,6 +210,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition16'),
       allergens: t('menuAllergens16'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 17,
@@ -214,6 +223,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition17'),
       allergens: t('menuAllergens17'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 18,
@@ -226,6 +236,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition18'),
       allergens: t('menuAllergens18'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 19,
@@ -238,6 +249,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition19'),
       allergens: t('menuAllergens19'),
       category: 'l',
+      type: 'n',
     },
     {
       id: 20,
@@ -250,6 +262,7 @@ const useMenuItems = () => {
       nutritionalInfo: t('menuNutrition20'),
       allergens: t('menuAllergens20'),
       category: 'd',
+      type: 'n',
     },
     {
       id: 21,

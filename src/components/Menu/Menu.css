@@ -176,7 +176,6 @@ html.dark-mode .category-tab.active {
   padding: 2rem;
 }
 
-/* Options bar - new section */
 .menu-options-bar {
   align-items: center;
   display: flex;
@@ -525,6 +524,193 @@ html.dark-mode .no-results h3 {
   color: #e0e0e0;
 }
 
+.options-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.filter-container {
+  position: relative;
+  z-index: 3;
+}
+
+.filter-icon-button {
+  align-items: center;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.15rem;
+  height: 42px;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 42px;
+}
+
+html.dark-mode .filter-icon-button {
+  background: #2a2a2a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #aaa;
+}
+
+.filter-icon-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  color: #3498db;
+  transform: translateY(-2px);
+}
+
+html.dark-mode .filter-icon-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  color: #54a9ee;
+}
+
+.filter-icon-button.active {
+  background: linear-gradient(45deg, #2ecc71, #3498db);
+  color: white;
+}
+
+html.dark-mode .filter-icon-button.active {
+  background: linear-gradient(45deg, #4eda8e, #54a9ee);
+}
+
+.filter-badge {
+  align-items: center;
+  background: #e74c3c;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 0.7rem;
+  font-weight: bold;
+  height: 18px;
+  justify-content: center;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 18px;
+}
+
+html.dark-mode .filter-badge {
+  background: #ff6b5e;
+}
+
+.filter-dropdown {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 220px;
+  z-index: 100;
+}
+
+html.dark-mode .filter-dropdown {
+  background: #2a2a2a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.filter-dropdown-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.85rem 1.25rem;
+}
+
+html.dark-mode .filter-dropdown-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.filter-option {
+  align-items: center;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  transition: all 0.2s ease;
+}
+
+html.dark-mode .filter-option {
+  color: #aaa;
+}
+
+.filter-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html.dark-mode .filter-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-option.active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+html.dark-mode .filter-option.active {
+  color: #54a9ee;
+}
+
+.filter-check {
+  color: #2ecc71;
+}
+
+html.dark-mode .filter-check {
+  color: #4eda8e;
+}
+
+.clear-filters-button {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 4px;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0.85rem 1.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  width: calc(100% - 2.5rem);
+}
+
+html.dark-mode .clear-filters-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaa;
+}
+
+.clear-filters-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+html.dark-mode .clear-filters-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.vegan-badge {
+  background: #27ae60;
+  color: white;
+}
+
+html.dark-mode .vegan-badge {
+  background: #2ecc71;
+}
+
+.vegetarian-badge {
+  background: #f39c12;
+  color: white;
+}
+
+html.dark-mode .vegetarian-badge {
+  background: #f1c40f;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -608,5 +794,21 @@ html.dark-mode .no-results h3 {
 
   .menu-options-bar {
     padding: 0 0 1rem;
+  }
+
+  .options-controls {
+    gap: 0.5rem;
+  }
+  
+  .filter-icon-button,
+  .sort-icon-button {
+    height: 36px;
+    width: 36px;
+    font-size: 1rem;
+  }
+  
+  .filter-dropdown,
+  .sort-dropdown {
+    width: 180px;
   }
 }

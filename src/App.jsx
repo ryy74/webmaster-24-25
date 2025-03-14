@@ -19,6 +19,7 @@ import ApplicantPrivacyNotice from './components/Policies/ApplicantPrivacyNotice
 import PrivacyPolicy from './components/Policies/PrivacyPolicy';
 import TermsOfUse from './components/Policies/TermsOfUse';
 import Settings from './components/Settings/Settings';
+import References from './components/References/References';
 
 import { useSettings } from './contexts/SettingsContext';
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/privacynotice" element={<ApplicantPrivacyNotice />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
+          <Route path="/references" element={<References />} />
         </Routes>
       </div>
       <Footer onSettingsClick={openSettings} />

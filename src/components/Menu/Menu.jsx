@@ -7,6 +7,7 @@ import {
   FiCheck,
   FiShoppingCart,
   FiSliders,
+  FiFilter,
 } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
@@ -27,9 +28,15 @@ function Menu() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOption, setSortOption] = useState('default');
   const [showSortDropdown, setShowSortDropdown] = useState(false);
+  const [showFilterDropdown, setShowFilterDropdown] = useState(false);
+  const [dietaryFilters, setDietaryFilters] = useState({
+    vegetarian: false,
+    vegan: false,
+  });
 
   const menuRef = useRef(null);
   const sortRef = useRef(null);
+  const filterRef = useRef(null);
 
   const navigate = useNavigate();
 
@@ -69,11 +76,31 @@ function Menu() {
 
   const toggleSortDropdown = () => {
     setShowSortDropdown(!showSortDropdown);
+    if (showFilterDropdown) setShowFilterDropdown(false);
+  };
+
+  const toggleFilterDropdown = () => {
+    setShowFilterDropdown(!showFilterDropdown);
+    if (showSortDropdown) setShowSortDropdown(false);
   };
 
   const handleSortChange = (option) => {
     setSortOption(option);
     setShowSortDropdown(false);
+  };
+
+  const handleDietaryFilterChange = (filterType) => {
+    setDietaryFilters((prev) => ({
+      ...prev,
+      [filterType]: !prev[filterType],
+    }));
+  };
+
+  const clearDietaryFilters = () => {
+    setDietaryFilters({
+      vegetarian: false,
+      vegan: false,
+    });
   };
 
   const handleSignIn = () => {
@@ -83,6 +110,9 @@ function Menu() {
   const handleClickOutside = (e) => {
     if (sortRef.current && !sortRef.current.contains(e.target)) {
       setShowSortDropdown(false);
+    }
+    if (filterRef.current && !filterRef.current.contains(e.target)) {
+      setShowFilterDropdown(false);
     }
   };
 
@@ -101,7 +131,15 @@ function Menu() {
       item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.description.toLowerCase().includes(searchTerm.toLowerCase());
 
-    return catMatch && searchMatch;
+    let dietaryMatch = true;
+    if (dietaryFilters.vegetarian && item.type !== 't' && item.type !== 'n') {
+      dietaryMatch = false;
+    }
+    if (dietaryFilters.vegan && item.type !== 'n') {
+      dietaryMatch = false;
+    }
+
+    return catMatch && searchMatch && dietaryMatch;
   });
 
   const sortedItems = [...filteredItems].sort((a, b) => {
@@ -118,6 +156,10 @@ function Menu() {
         return 0;
     }
   });
+
+  const activeDietaryFiltersCount = Object.values(dietaryFilters).filter(
+    Boolean
+  ).length;
 
   return (
     <div className="menu-wrapper" ref={menuRef}>
@@ -208,49 +250,110 @@ function Menu() {
             {filteredItems.length === 1 ? t('item') : t('items')}
           </div>
 
-          <div className="sort-container" ref={sortRef}>
-            <motion.button
-              className="sort-icon-button"
-              onClick={toggleSortDropdown}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              title={t('sortOptions')}
-            >
-              <FiSliders />
-            </motion.button>
+          <div className="options-controls">
+            <div className="filter-container" ref={filterRef}>
+              <motion.button
+                className={`filter-icon-button ${
+                  activeDietaryFiltersCount > 0 ? 'active' : ''
+                }`}
+                onClick={toggleFilterDropdown}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                title={t('filterOptions')}
+              >
+                <FiFilter />
+                {activeDietaryFiltersCount > 0 && (
+                  <span className="filter-badge">{activeDietaryFiltersCount}</span>
+                )}
+              </motion.button>
 
-            <AnimatePresence>
-              {showSortDropdown && (
-                <motion.div
-                  className="sort-dropdown"
-                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="sort-dropdown-header">{t('sortBy')}</div>
-                  {sortOptions.map((option) => (
-                    <motion.div
-                      key={option.id}
-                      className={`sort-option ${
-                        sortOption === option.id ? 'active' : ''
+              <AnimatePresence>
+                {showFilterDropdown && (
+                  <motion.div
+                    className="filter-dropdown"
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="filter-dropdown-header">{t('dietaryPreferences')}</div>
+                    <div
+                      className={`filter-option ${
+                        dietaryFilters.vegetarian ? 'active' : ''
                       }`}
-                      onClick={() => handleSortChange(option.id)}
-                      whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
+                      onClick={() => handleDietaryFilterChange('vegetarian')}
                     >
-                      <span className="sort-option-icon">{option.icon}</span>
-                      <span>{option.label}</span>
-                      {sortOption === option.id && (
-                        <motion.div
-                          className="active-indicator"
-                          layoutId="activeIndicator"
-                        />
+                      <span>{t('vegetarian')}</span>
+                      {dietaryFilters.vegetarian && (
+                        <FiCheck className="filter-check" />
                       )}
-                    </motion.div>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+                    </div>
+                    <div
+                      className={`filter-option ${
+                        dietaryFilters.vegan ? 'active' : ''
+                      }`}
+                      onClick={() => handleDietaryFilterChange('vegan')}
+                    >
+                      <span>{t('vegan')}</span>
+                      {dietaryFilters.vegan && <FiCheck className="filter-check" />}
+                    </div>
+                    {activeDietaryFiltersCount > 0 && (
+                      <button
+                        className="clear-filters-button"
+                        onClick={clearDietaryFilters}
+                      >
+                        {t('clearFilters')}
+                      </button>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="sort-container" ref={sortRef}>
+              <motion.button
+                className="sort-icon-button"
+                onClick={toggleSortDropdown}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                title={t('sortOptions')}
+              >
+                <FiSliders />
+              </motion.button>
+
+              <AnimatePresence>
+                {showSortDropdown && (
+                  <motion.div
+                    className="sort-dropdown"
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="sort-dropdown-header">{t('sortBy')}</div>
+                    {sortOptions.map((option) => (
+                      <motion.div
+                        key={option.id}
+                        className={`sort-option ${
+                          sortOption === option.id ? 'active' : ''
+                        }`}
+                        onClick={() => handleSortChange(option.id)}
+                        whileHover={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
+                      >
+                        <span className="sort-option-icon">{option.icon}</span>
+                        <span>{option.label}</span>
+                        {sortOption === option.id && (
+                          <motion.div
+                            className="active-indicator"
+                            layoutId="activeIndicator"
+                          />
+                        )}
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
         </div>
 
@@ -291,6 +394,12 @@ function Menu() {
                         <span className="badge popular-badge">
                           {t('popular')}
                         </span>
+                      )}
+                      {item.type === 'n' && (
+                        <span className="badge vegan-badge">{t('vegan')}</span>
+                      )}
+                      {item.type === 't' && (
+                        <span className="badge vegetarian-badge">{t('vegetarian')}</span>
                       )}
                     </div>
                     <div className="menu-card-price">${item.price}</div>

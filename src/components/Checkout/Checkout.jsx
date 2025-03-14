@@ -140,13 +140,13 @@ function Checkout() {
         expiration !== REQUIRED_EXPIRATION ||
         cvv !== REQUIRED_CVV
       ) {
-        setErrorMessage('Invalid card details.');
+        setErrorMessage(t('invalidCard'));
         setIsProcessing(false);
         return;
       }
 
       if (!zipCode || zipCode.length < 5) {
-        setErrorMessage('Please enter a valid zip code.');
+        setErrorMessage(t('invalidZip'));
         setIsProcessing(false);
         return;
       }

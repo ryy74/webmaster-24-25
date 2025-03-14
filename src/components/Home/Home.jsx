@@ -264,11 +264,11 @@ function Home() {
               {[
                 {
                   src: '/assets/landing-2-about1.jpg',
-                  alt: 'Farm',
+                  alt: '',
                   span: true,
                 },
-                { src: '/assets/landing-3-about2.jpg', alt: 'Fresh Salad' },
-                { src: '/assets/landing-4-about3.jpg', alt: 'Vegan Burger' },
+                { src: '/assets/landing-3-about2.jpg', alt: '' },
+                { src: '/assets/landing-4-about3.jpg', alt: '' },
               ].map((img, index) => (
                 <motion.div
                   key={img.alt}
@@ -276,7 +276,6 @@ function Home() {
                   custom={index}
                   initial="hidden"
                   whileInView="visible"
-                  whileHover="hover"
                   viewport={{ once: true, margin: '-50px' }}
                 >
                   <img src={img.src} alt={img.alt} className="about-image" />
