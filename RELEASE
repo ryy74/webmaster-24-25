@@ -1,8 +1,10 @@
-### web/1.2.0
+### web/2.0.0
 
 ### notes
-### 1.2
-landing page overhaul
+### 2.0.0
+functionally, site is ready for state
+still lacking references pdf upload and bug review
+
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.
 **You should always use an IPFS gateway that enforces origin separation**, or our hosted deployment of the latest release at [green-bites.vercel.app/](https://green-bites.vercel.app/).

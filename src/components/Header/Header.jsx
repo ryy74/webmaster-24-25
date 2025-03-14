@@ -45,20 +45,16 @@ function Header({ onSettingsClick }) {
         </Link>
         {isSignedIn && (
           <>
-            <Link
-              to="/cart"
-              className="header-link cart-link"
-              onClick={closeDropdown}
-            >
+            <Link to="/cart" className="header-link" onClick={closeDropdown}>
               {t('cart')} ({cartCount})
             </Link>
-            <Link 
-              to="/" 
-              className="header-link" 
+            <Link
+              to="/"
+              className="header-link"
               onClick={() => {
                 closeDropdown();
                 setIsSignedIn(false);
-              }}              
+              }}
             >
               {t('signOut')}
             </Link>
@@ -77,7 +73,11 @@ function Header({ onSettingsClick }) {
               onSettingsClick();
             }}
           >
-            <img src='/assets/settings.svg' className="settings-icon" alt="Settings" />
+            <img
+              src="/assets/settings.svg"
+              className="settings-icon"
+              alt="Settings"
+            />
           </button>
         ) : (
           <button

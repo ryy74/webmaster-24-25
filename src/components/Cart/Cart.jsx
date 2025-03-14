@@ -1,7 +1,12 @@
-import { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import {
+  FiArrowLeft,
+  FiCheckCircle,
+  FiClock,
+  FiShoppingCart,
+} from 'react-icons/fi';
 import { Link, Navigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiShoppingCart, FiClock, FiArrowLeft, FiCheckCircle } from 'react-icons/fi';
 
 import CartItem from './CartItem';
 
@@ -19,18 +24,18 @@ function Cart() {
   const { cart, updateCartQuantity, removeFromCart } = useCart();
   const menuItems = useMenuItems();
   const [time, setTime] = useState(new Date());
-  
+
   useEffect(() => {
     const interval = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(interval);
   }, []);
-  
+
   if (!isSignedIn) {
     return <Navigate to="/signin" replace />;
   }
-  
+
   const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
-  
+
   const cartItems = itemsInCart
     .map((id) => {
       const item = menuItems.find((m) => m.id === parseInt(id));
@@ -47,19 +52,20 @@ function Cart() {
       );
     })
     .filter(Boolean);
-    
+
   const totalPrice = itemsInCart.reduce((acc, id) => {
     const item = menuItems.find((m) => m.id === parseInt(id));
     return acc + item.price * cart[id];
   }, 0);
-  
+
   const summaryItems = itemsInCart.map((id, index) => {
     const item = menuItems.find((m) => m.id === parseInt(id));
     const quantity = cart[id];
     const itemTotal = item.price * quantity;
+
     return (
-      <motion.div 
-        className="cart-summary-item" 
+      <motion.div
+        className="cart-summary-item"
         key={id}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -72,27 +78,27 @@ function Cart() {
       </motion.div>
     );
   });
-  
+
   const isEmpty = cartItems.length === 0;
-  
+
   return (
-    <motion.div 
+    <motion.div
       className="cart-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      <motion.div 
+      <motion.div
         className="cart-inner"
         initial={{ y: 30 }}
         animate={{ y: 0 }}
-        transition={{ 
-          type: "spring",
+        transition={{
+          type: 'spring',
           stiffness: 100,
-          damping: 15
+          damping: 15,
         }}
       >
-        <motion.div 
+        <motion.div
           className={`cart-left ${isEmpty ? 'empty' : ''}`}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -106,7 +112,7 @@ function Cart() {
             <FiShoppingCart className="cart-icon" />
             {t('yourCart')}
           </motion.h1>
-          
+
           <AnimatePresence>
             {isEmpty ? (
               <motion.div
@@ -115,15 +121,15 @@ function Cart() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <motion.div 
+                <motion.div
                   className="empty-cart-icon"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ 
+                  transition={{
                     delay: 0.5,
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 200,
-                    damping: 15
+                    damping: 15,
                   }}
                 >
                   <FiShoppingCart />
@@ -141,65 +147,59 @@ function Cart() {
               </motion.div>
             ) : (
               <>
-                <motion.div 
+                <motion.div
                   className="cart-items-container"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <AnimatePresence>
-                    {cartItems}
-                  </AnimatePresence>
+                  <AnimatePresence>{cartItems}</AnimatePresence>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="cart-total"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <motion.h2
-                    whileHover={{ scale: 1.03 }}
-                  >
-                    {t('cartTotal')} <span className="price-highlight">${totalPrice.toFixed(2)}</span>
+                  <motion.h2 whileHover={{ scale: 1.03 }}>
+                    {t('cartTotal')}{' '}
+                    <span className="price-highlight">
+                      ${totalPrice.toFixed(2)}
+                    </span>
                   </motion.h2>
                 </motion.div>
               </>
             )}
           </AnimatePresence>
-          
-          <motion.div 
+
+          <motion.div
             className="return-to-menu"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <motion.div
-              whileHover={{ x: -5 }}
-              whileTap={{ scale: 0.97 }}
-            >
+            <motion.div whileHover={{ x: -5 }} whileTap={{ scale: 0.97 }}>
               <Link to="/menu" className="menu-return-link">
                 <FiArrowLeft className="return-icon" /> {t('returnMenu')}
               </Link>
             </motion.div>
           </motion.div>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="cart-right"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <motion.div 
+          <motion.div
             className="cart-summary-header"
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <motion.h2>
-              {t('yourOrder')}
-            </motion.h2>
-            <motion.div 
+            <motion.h2>{t('yourOrder')}</motion.h2>
+            <motion.div
               className="cart-time"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -208,31 +208,30 @@ function Cart() {
               <FiClock className="clock-icon" /> {time.toLocaleTimeString()}
             </motion.div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="cart-summary-list"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <AnimatePresence>
-              {summaryItems}
-            </AnimatePresence>
+            <AnimatePresence>{summaryItems}</AnimatePresence>
           </motion.div>
-          
-          <motion.p 
+
+          <motion.p
             className="cart-total-price"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            {t('orderTotal')} <span className="price-amount">${totalPrice.toFixed(2)}</span>
+            {t('orderTotal')}{' '}
+            <span className="price-amount">${totalPrice.toFixed(2)}</span>
           </motion.p>
-          
+
           <AnimatePresence>
             {isEmpty ? (
-              <motion.button 
-                className="checkout-btn disabled" 
+              <motion.button
+                className="checkout-btn disabled"
                 disabled
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -245,9 +244,10 @@ function Cart() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.03,
-                  boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+                  boxShadow:
+                    '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
                 }}
                 whileTap={{ scale: 0.97 }}
               >
