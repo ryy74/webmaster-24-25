@@ -1,11 +1,6 @@
-TSA Washington Webmaster 24-25
+Washington State TSA, Webmaster-HS 24-25
 Ryan Li, Lucas Huang, Wesley Lu, Ansh Mohindru, Rain Jia
 
-Current improvements planned:
--> map implementation upon confirmation page
--> cookies to save sign-in state
--> better landing styling overall
--> extended menu and more detailed descriptions
 
 Photo Sources:
 

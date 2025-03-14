@@ -204,13 +204,13 @@ html.dark-mode .language-dropdown-button:hover {
   background: white;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  font-size: 0.9rem;
+  max-height: 230px;
   overflow-y: scroll;
   position: absolute;
   right: 0;
   top: calc(100% + 8px);
   width: 100%;
-  font-size: 0.9rem;
-  max-height: 230px;
 }
 
 html.dark-mode .language-dropdown {

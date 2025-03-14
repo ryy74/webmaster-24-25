@@ -1,4 +1,4 @@
-### web/2.0.1
+### web/2.0.2
 
 ### notes
 ### 2.0.0
@@ -7,6 +7,9 @@ still lacking references pdf upload and bug review
 
 ### 2.0.1
 node package update
+
+### 2.0.2
+added work log, updated references
 
 
 **BEWARE**: The site uses [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to remember your settings, such as your language choice.

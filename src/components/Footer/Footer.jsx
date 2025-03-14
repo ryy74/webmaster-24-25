@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import { FiFileText } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Footer.css';
