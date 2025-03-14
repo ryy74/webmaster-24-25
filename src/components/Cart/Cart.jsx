@@ -21,7 +21,7 @@ import './Cart.css';
 function Cart() {
   const { t } = useLanguage();
   const { isSignedIn } = useAuth();
-  const { cart, updateCartQuantity, removeFromCart } = useCart();
+  const { cart, updateCartQuantity, updateCartItem, removeFromCart } = useCart();
   const menuItems = useMenuItems();
   const [time, setTime] = useState(new Date());
 
@@ -34,52 +34,78 @@ function Cart() {
     return <Navigate to="/signin" replace />;
   }
 
-  const itemsInCart = Object.keys(cart).filter((itemId) => cart[itemId] > 0);
+  const cartItemKeys = Object.keys(cart);
+  const isEmpty = cartItemKeys.length === 0;
 
-  const cartItems = itemsInCart
-    .map((id) => {
-      const item = menuItems.find((m) => m.id === parseInt(id));
-      if (!item) return null;
-      const quantity = cart[id];
+  const cartItems = cartItemKeys
+    .map((cartItemKey) => {
+      const cartItem = cart[cartItemKey];
+      const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+      if (!menuItem) return null;
+      
       return (
         <CartItem
-          key={id}
-          item={item}
-          quantity={quantity}
-          onChangeQuantity={(itemId, q) => updateCartQuantity(itemId, q)}
-          onRemove={(itemId) => removeFromCart(itemId)}
+          key={cartItemKey}
+          item={menuItem}
+          quantity={cartItem.quantity}
+          customizations={cartItem}
+          cartItemKey={cartItemKey}
+          onChangeQuantity={(key, q) => updateCartQuantity(key, q)}
+          onUpdateItem={(key, updates) => updateCartItem(key, updates)}
+          onRemove={(key) => removeFromCart(key)}
         />
       );
     })
     .filter(Boolean);
 
-  const totalPrice = itemsInCart.reduce((acc, id) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    return acc + item.price * cart[id];
+  const totalPrice = cartItemKeys.reduce((acc, key) => {
+    const cartItem = cart[key];
+    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+    if (!menuItem) return acc;
+    return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = itemsInCart.map((id, index) => {
-    const item = menuItems.find((m) => m.id === parseInt(id));
-    const quantity = cart[id];
-    const itemTotal = item.price * quantity;
+  const summaryItems = cartItemKeys.map((cartItemKey, index) => {
+    const cartItem = cart[cartItemKey];
+    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+    if (!menuItem) return null;
+    
+    const quantity = cartItem.quantity;
+    const itemTotal = menuItem.price * quantity;
+
+    let customizationDetails = [];
+    if (cartItem.specialInstructions) {
+      customizationDetails.push(`Special: ${cartItem.specialInstructions.slice(0, 15)}${cartItem.specialInstructions.length > 15 ? '...' : ''}`);
+    }
+    if (cartItem.removedIngredients && cartItem.removedIngredients.length > 0) {
+      customizationDetails.push(`No: ${cartItem.removedIngredients.join(', ')}`);
+    }
+    if (cartItem.includeUtensils === false) {
+      customizationDetails.push('No utensils');
+    }
 
     return (
       <motion.div
         className="cart-summary-item"
-        key={id}
+        key={cartItemKey}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.1 + index * 0.05 }}
       >
-        <span>
-          {quantity} x {item.name}
-        </span>
-        <span>${itemTotal.toFixed(2)}</span>
+        <div className="cart-summary-item-details">
+          <span className="cart-summary-item-name">
+            {quantity} x {menuItem.name}
+          </span>
+          {customizationDetails.length > 0 && (
+            <span className="cart-summary-item-customizations">
+              {customizationDetails.join(' • ')}
+            </span>
+          )}
+        </div>
+        <span className="cart-summary-item-price">${itemTotal.toFixed(2)}</span>
       </motion.div>
     );
-  });
-
-  const isEmpty = cartItems.length === 0;
+  }).filter(Boolean);
 
   return (
     <motion.div

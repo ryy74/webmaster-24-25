@@ -26,7 +26,6 @@ html.dark-mode .popup-backdrop {
   max-height: 95vh;
   max-width: 1200px;
   min-width: 300px;
-  overflow: hidden;
   position: relative;
   width: calc(100% - 40px);
 }
@@ -314,11 +313,13 @@ html.dark-mode .popup-cart-button.added {
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media(max-height: 800px) {
   .popup-content {
     overflow-y: auto;
   }
+}
 
+@media (max-width: 768px) {
   .popup-grid {
     gap: 24px;
     grid-template-columns: 1fr;

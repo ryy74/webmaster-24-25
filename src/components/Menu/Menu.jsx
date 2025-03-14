@@ -12,9 +12,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 import DetailPopup from '../DetailPopup/DetailPopup';
+import CustomizationPopup from '../CustomizationPopup/CustomizationPopup.jsx';
 
 import { useAuth } from '../../contexts/AuthContext';
-import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import useMenuItems from '../../consts/menuItems.js';
@@ -23,12 +23,12 @@ import './Menu.css';
 
 function Menu() {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [justAddedMap, setJustAddedMap] = useState({});
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOption, setSortOption] = useState('default');
   const [showSortDropdown, setShowSortDropdown] = useState(false);
   const [showFilterDropdown, setShowFilterDropdown] = useState(false);
+  const [itemToCustomize, setItemToCustomize] = useState(null);
   const [dietaryFilters, setDietaryFilters] = useState({
     vegetarian: false,
     vegan: false,
@@ -41,7 +41,6 @@ function Menu() {
   const navigate = useNavigate();
 
   const { isSignedIn } = useAuth();
-  const { addToCart } = useCart();
   const { t } = useLanguage();
   const menuItems = useMenuItems();
 
@@ -65,13 +64,8 @@ function Menu() {
 
   const handleAddToCart = (e, itemId) => {
     e.stopPropagation();
-    addToCart(itemId);
-
-    setJustAddedMap((prev) => ({ ...prev, [itemId]: true }));
-
-    setTimeout(() => {
-      setJustAddedMap((prev) => ({ ...prev, [itemId]: false }));
-    }, 2000);
+    const itemToAdd = menuItems.find(item => item.id === itemId);
+    setItemToCustomize(itemToAdd);
   };
 
   const toggleSortDropdown = () => {
@@ -114,6 +108,10 @@ function Menu() {
     if (filterRef.current && !filterRef.current.contains(e.target)) {
       setShowFilterDropdown(false);
     }
+  };
+
+  const handleCustomizationClose = () => {
+    setItemToCustomize(null);
   };
 
   useEffect(() => {
@@ -364,7 +362,6 @@ function Menu() {
 
         <motion.div className="menu-grid">
           {sortedItems.map((item) => {
-            const justAdded = justAddedMap[item.id];
             return (
               <motion.div
                 key={item.id}
@@ -418,22 +415,15 @@ function Menu() {
 
                     {isSignedIn && (
                       <motion.button
-                        className={`cart-button ${justAdded ? 'added' : ''}`}
+                        className={`cart-button`}
                         onClick={(e) => handleAddToCart(e, item.id)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        {justAdded ? (
-                          <>
-                            <FiCheck className="icon" />
-                            <span>{t('added')}</span>
-                          </>
-                        ) : (
-                          <>
-                            <FiShoppingCart className="icon" />
-                            <span>{t('addCart')}</span>
-                          </>
-                        )}
+                        <>
+                          <FiShoppingCart className="icon" />
+                          <span>{t('addCart')}</span>
+                        </>
                       </motion.button>
                     )}
                   </div>
@@ -459,8 +449,19 @@ function Menu() {
         <DetailPopup
           menuItem={selectedItem}
           onClose={() => setSelectedItem(null)}
+          onAddToCart={(item) => {
+            setSelectedItem(null);
+            setItemToCustomize(item);
+          }}
         />
       )}
+
+      {itemToCustomize && (
+        <CustomizationPopup
+          menuItem={itemToCustomize}
+          onClose={handleCustomizationClose}
+        />
+      )}  
     </div>
   );
 }

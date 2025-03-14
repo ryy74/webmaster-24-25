@@ -3,15 +3,13 @@ import { useEffect, useState } from 'react';
 import { FiCheck, FiShoppingCart, FiX } from 'react-icons/fi';
 
 import { useAuth } from '../../contexts/AuthContext';
-import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './DetailPopup.css';
 
-function DetailPopup({ menuItem, onClose }) {
+function DetailPopup({ menuItem, onClose, onAddToCart }) {
   const { t } = useLanguage();
   const { isSignedIn } = useAuth();
-  const { addToCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
 
   const handleBackdropClick = (e) => {
@@ -22,7 +20,7 @@ function DetailPopup({ menuItem, onClose }) {
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
-    addToCart(menuItem.id);
+    onAddToCart(menuItem);
     setJustAdded(true);
 
     setTimeout(() => {
