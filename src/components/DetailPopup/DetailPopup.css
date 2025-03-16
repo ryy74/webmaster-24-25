@@ -313,7 +313,7 @@ html.dark-mode .popup-cart-button.added {
   font-size: 1.2rem;
 }
 
-@media(max-height: 800px) {
+@media (max-height: 800px) {
   .popup-content {
     overflow-y: auto;
   }

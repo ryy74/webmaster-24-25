@@ -11,8 +11,8 @@ import {
 } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
-import DetailPopup from '../DetailPopup/DetailPopup';
 import CustomizationPopup from '../CustomizationPopup/CustomizationPopup.jsx';
+import DetailPopup from '../DetailPopup/DetailPopup';
 
 import { useAuth } from '../../contexts/AuthContext';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -64,7 +64,7 @@ function Menu() {
 
   const handleAddToCart = (e, itemId) => {
     e.stopPropagation();
-    const itemToAdd = menuItems.find(item => item.id === itemId);
+    const itemToAdd = menuItems.find((item) => item.id === itemId);
     setItemToCustomize(itemToAdd);
   };
 
@@ -461,7 +461,7 @@ function Menu() {
           menuItem={itemToCustomize}
           onClose={handleCustomizationClose}
         />
-      )}  
+      )}
     </div>
   );
 }

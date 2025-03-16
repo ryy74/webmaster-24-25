@@ -96,3 +96,7 @@ html.dark-mode body {
   flex: 1 0 auto;
   flex-direction: column;
 }
+
+.main-content:has(.references-container) {
+  margin-top: 60px;
+}

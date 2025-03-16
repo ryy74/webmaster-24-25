@@ -1,28 +1,43 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { FiCheck, FiMinus, FiPlus, FiShoppingCart, FiX, FiEdit3 } from 'react-icons/fi';
+import { useEffect, useState } from 'react';
+import {
+  FiCheck,
+  FiEdit3,
+  FiMinus,
+  FiPlus,
+  FiShoppingCart,
+  FiX,
+} from 'react-icons/fi';
 
 import { useCart } from '../../contexts/CartContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 import './CustomizationPopup.css';
 
-function CustomizationPopup({ 
-  menuItem, 
-  onClose, 
+function CustomizationPopup({
+  menuItem,
+  onClose,
   onAddToCart,
   initialCustomizations = null,
   cartItemKey = null,
-  isEditing = false
+  isEditing = false,
 }) {
   const { t } = useLanguage();
   const { addToCartWithCustomizations, updateCartItem } = useCart();
-  const [quantity, setQuantity] = useState(initialCustomizations?.quantity || 1);
-  const [specialInstructions, setSpecialInstructions] = useState(initialCustomizations?.specialInstructions || '');
-  const [includeUtensils, setIncludeUtensils] = useState(
-    initialCustomizations?.includeUtensils !== undefined ? initialCustomizations.includeUtensils : true
+  const [quantity, setQuantity] = useState(
+    initialCustomizations?.quantity || 1,
   );
-  const [removedIngredients, setRemovedIngredients] = useState(initialCustomizations?.removedIngredients || []);
+  const [specialInstructions, setSpecialInstructions] = useState(
+    initialCustomizations?.specialInstructions || '',
+  );
+  const [includeUtensils, setIncludeUtensils] = useState(
+    initialCustomizations?.includeUtensils !== undefined
+      ? initialCustomizations.includeUtensils
+      : true,
+  );
+  const [removedIngredients, setRemovedIngredients] = useState(
+    initialCustomizations?.removedIngredients || [],
+  );
   const [justAdded, setJustAdded] = useState(false);
   const [justUpdated, setJustUpdated] = useState(false);
 
@@ -51,25 +66,25 @@ function CustomizationPopup({
     const customizations = {
       specialInstructions: specialInstructions.trim(),
       includeUtensils,
-      removedIngredients
+      removedIngredients,
     };
-  
+
     if (!isEditing) {
       customizations.quantity = quantity;
     }
-    
+
     if (isEditing && cartItemKey) {
       updateCartItem(cartItemKey, customizations);
       setJustUpdated(true);
       onClose();
-      
+
       setTimeout(() => {
         setJustUpdated(false);
       }, 300);
     } else {
       addToCartWithCustomizations(menuItem.id, { ...customizations, quantity });
       setJustAdded(true);
-      
+
       setTimeout(() => {
         setJustAdded(false);
         onClose();
@@ -130,7 +145,10 @@ function CustomizationPopup({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h2>{isEditing ? t('editCustomizations') : t('customize')}: {menuItem.name}</h2>
+            <h2>
+              {isEditing ? t('editCustomizations') : t('customize')}:{' '}
+              {menuItem.name}
+            </h2>
           </motion.div>
 
           <div className="customization-body">

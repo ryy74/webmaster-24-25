@@ -121,6 +121,10 @@ function Home() {
                   repeatType: 'mirror',
                   ease: 'easeInOut',
                 }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
               >
                 <FiArrowRight className="cta-icon" />
               </motion.span>

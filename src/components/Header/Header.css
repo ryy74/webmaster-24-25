@@ -1,7 +1,11 @@
 .app-header {
   align-items: center;
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, rgba(16, 15, 15, 0.9), rgba(30, 30, 30, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(16, 15, 15, 0.9),
+    rgba(30, 30, 30, 0.9)
+  );
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   height: 60px;
@@ -23,16 +27,18 @@
   background: linear-gradient(45deg, #2ecc71, #3498db);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-decoration: none;
+  -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
 }
 
 .header-title:hover {
-  text-shadow: 0 0 10px rgba(46, 204, 113, 0.5), 0 0 20px rgba(52, 152, 219, 0.3);
+  text-shadow:
+    0 0 10px rgba(46, 204, 113, 0.5),
+    0 0 20px rgba(52, 152, 219, 0.3);
   transform: translateY(-1px);
 }
 
@@ -157,7 +163,11 @@
 
 @media screen and (max-width: 878px) {
   .nav-links {
-    background: linear-gradient(135deg, rgba(16, 15, 15, 0.97), rgba(30, 30, 30, 0.97));
+    background: linear-gradient(
+      135deg,
+      rgba(16, 15, 15, 0.97),
+      rgba(30, 30, 30, 0.97)
+    );
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     flex-direction: column;
@@ -171,17 +181,17 @@
     transform: translateY(-20px);
     transition: all 0.3s ease;
   }
-  
+
   .nav-links.active {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
-  
+
   .hamburger {
     display: flex;
   }
-  
+
   .header-link {
     width: 100%;
   }

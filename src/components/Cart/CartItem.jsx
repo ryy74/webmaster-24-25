@@ -1,6 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiAlertTriangle, FiMinus, FiPlus, FiTrash2, FiEdit3 } from 'react-icons/fi';
+import {
+  FiAlertTriangle,
+  FiEdit3,
+  FiMinus,
+  FiPlus,
+  FiTrash2,
+} from 'react-icons/fi';
 
 import CustomizationPopup from '../CustomizationPopup/CustomizationPopup';
 
@@ -8,7 +14,15 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 import './CartItem.css';
 
-function CartItem({ item, quantity, cartItemKey, customizations, onChangeQuantity, onUpdateItem, onRemove }) {
+function CartItem({
+  item,
+  quantity,
+  cartItemKey,
+  customizations,
+  onChangeQuantity,
+  onUpdateItem,
+  onRemove,
+}) {
   const [showWarning, setShowWarning] = useState(false);
   const [showCustomizationPopup, setShowCustomizationPopup] = useState(false);
 
@@ -87,11 +101,11 @@ function CartItem({ item, quantity, cartItemKey, customizations, onChangeQuantit
           >
             {item.description}
           </motion.p>
-          
-          {(customizations?.specialInstructions || 
-            customizations?.removedIngredients?.length > 0 || 
+
+          {(customizations?.specialInstructions ||
+            customizations?.removedIngredients?.length > 0 ||
             customizations?.includeUtensils !== undefined) && (
-            <motion.div 
+            <motion.div
               className="cart-item-customizations"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -99,26 +113,32 @@ function CartItem({ item, quantity, cartItemKey, customizations, onChangeQuantit
             >
               {customizations.specialInstructions && (
                 <p className="customization-item">
-                  <span className="customization-label">{t('specialInstructions')}: </span> 
+                  <span className="customization-label">
+                    {t('specialInstructions')}:{' '}
+                  </span>
                   {customizations.specialInstructions}
                 </p>
               )}
-              
+
               {customizations.removedIngredients?.length > 0 && (
                 <p className="customization-item">
-                  <span className="customization-label">{t('removedIngredients')}: </span> 
+                  <span className="customization-label">
+                    {t('removedIngredients')}:{' '}
+                  </span>
                   {customizations.removedIngredients.join(', ')}
                 </p>
               )}
-              
+
               {customizations.includeUtensils !== undefined && (
                 <p className="customization-item">
-                  <span className="customization-label">{t('utensils')}: </span> 
-                  {customizations.includeUtensils ? t('included') : t('notIncluded')}
+                  <span className="customization-label">{t('utensils')}: </span>
+                  {customizations.includeUtensils
+                    ? t('included')
+                    : t('notIncluded')}
                 </p>
               )}
-              
-              <button 
+
+              <button
                 className="edit-customizations-btn"
                 onClick={handleEditClick}
               >
@@ -140,7 +160,7 @@ function CartItem({ item, quantity, cartItemKey, customizations, onChangeQuantit
               )}
             </motion.div>
           )}
-          
+
           <motion.p
             className="cart-item-price-single"
             initial={{ opacity: 0 }}

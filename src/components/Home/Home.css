@@ -724,7 +724,7 @@ html.dark-mode .arrow-trail {
 
 .testimonials-section {
   background-color: #f8f9fa;
-  height: 800px;
+  height: 850px;
   padding: 3rem 2rem;
   position: relative;
   text-align: center;
@@ -755,7 +755,7 @@ html.dark-mode .testimonials-section h2 {
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  height: 400px;
+  min-height: 400px;
   overflow: hidden;
   padding: 3rem;
   position: relative;
@@ -923,7 +923,7 @@ html.dark-mode .testimonial-dot.active {
 .testimonial-disclaimer {
   color: #a0aec0;
   font-size: 0.9rem;
-  margin: 2rem auto 0;
+  margin: 2rem auto 1rem;
   max-width: 600px;
 }
 
@@ -1315,8 +1315,16 @@ html.dark-mode .banner-blob.secondary {
     display: none;
   }
 
+  .preview-item h3 {
+    font-size: 1.2rem;
+  }
+
   .testimonial p {
     font-size: 1rem;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.8rem;
   }
 
   .testimonial-avatar {

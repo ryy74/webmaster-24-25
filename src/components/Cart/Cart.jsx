@@ -21,7 +21,8 @@ import './Cart.css';
 function Cart() {
   const { t } = useLanguage();
   const { isSignedIn } = useAuth();
-  const { cart, updateCartQuantity, updateCartItem, removeFromCart } = useCart();
+  const { cart, updateCartQuantity, updateCartItem, removeFromCart } =
+    useCart();
   const menuItems = useMenuItems();
   const [time, setTime] = useState(new Date());
 
@@ -42,7 +43,7 @@ function Cart() {
       const cartItem = cart[cartItemKey];
       const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
       if (!menuItem) return null;
-      
+
       return (
         <CartItem
           key={cartItemKey}
@@ -65,47 +66,58 @@ function Cart() {
     return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = cartItemKeys.map((cartItemKey, index) => {
-    const cartItem = cart[cartItemKey];
-    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
-    if (!menuItem) return null;
-    
-    const quantity = cartItem.quantity;
-    const itemTotal = menuItem.price * quantity;
+  const summaryItems = cartItemKeys
+    .map((cartItemKey, index) => {
+      const cartItem = cart[cartItemKey];
+      const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+      if (!menuItem) return null;
 
-    let customizationDetails = [];
-    if (cartItem.specialInstructions) {
-      customizationDetails.push(`Special: ${cartItem.specialInstructions.slice(0, 15)}${cartItem.specialInstructions.length > 15 ? '...' : ''}`);
-    }
-    if (cartItem.removedIngredients && cartItem.removedIngredients.length > 0) {
-      customizationDetails.push(`No: ${cartItem.removedIngredients.join(', ')}`);
-    }
-    if (cartItem.includeUtensils === false) {
-      customizationDetails.push('No utensils');
-    }
+      const quantity = cartItem.quantity;
+      const itemTotal = menuItem.price * quantity;
 
-    return (
-      <motion.div
-        className="cart-summary-item"
-        key={cartItemKey}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.1 + index * 0.05 }}
-      >
-        <div className="cart-summary-item-details">
-          <span className="cart-summary-item-name">
-            {quantity} x {menuItem.name}
-          </span>
-          {customizationDetails.length > 0 && (
-            <span className="cart-summary-item-customizations">
-              {customizationDetails.join(' • ')}
+      let customizationDetails = [];
+      if (cartItem.specialInstructions) {
+        customizationDetails.push(
+          `Special: ${cartItem.specialInstructions.slice(0, 15)}${cartItem.specialInstructions.length > 15 ? '...' : ''}`,
+        );
+      }
+      if (
+        cartItem.removedIngredients &&
+        cartItem.removedIngredients.length > 0
+      ) {
+        customizationDetails.push(
+          `No: ${cartItem.removedIngredients.join(', ')}`,
+        );
+      }
+      if (cartItem.includeUtensils === false) {
+        customizationDetails.push('No utensils');
+      }
+
+      return (
+        <motion.div
+          className="cart-summary-item"
+          key={cartItemKey}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1 + index * 0.05 }}
+        >
+          <div className="cart-summary-item-details">
+            <span className="cart-summary-item-name">
+              {quantity} x {menuItem.name}
             </span>
-          )}
-        </div>
-        <span className="cart-summary-item-price">${itemTotal.toFixed(2)}</span>
-      </motion.div>
-    );
-  }).filter(Boolean);
+            {customizationDetails.length > 0 && (
+              <span className="cart-summary-item-customizations">
+                {customizationDetails.join(' • ')}
+              </span>
+            )}
+          </div>
+          <span className="cart-summary-item-price">
+            ${itemTotal.toFixed(2)}
+          </span>
+        </motion.div>
+      );
+    })
+    .filter(Boolean);
 
   return (
     <motion.div

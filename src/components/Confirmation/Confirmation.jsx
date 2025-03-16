@@ -25,31 +25,33 @@ function Confirmation() {
   const menuItems = useMenuItems();
 
   const cartEntries = Object.entries(cart).filter(
-    ([, cartItem]) => cartItem.quantity > 0
+    ([, cartItem]) => cartItem.quantity > 0,
   );
 
   const totalPrice = cartEntries.reduce((acc, [cartItemKey, cartItem]) => {
     const menuItem = menuItems.find(
-      (m) => m.id === parseInt(cartItem.itemId, 10)
+      (m) => m.id === parseInt(cartItem.itemId, 10),
     );
     if (!menuItem) return acc;
     return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = cartEntries.map(([cartItemKey, cartItem]) => {
-    const menuItem = menuItems.find(
-      (m) => m.id === parseInt(cartItem.itemId, 10)
-    );
-    if (!menuItem) return null;
+  const summaryItems = cartEntries
+    .map(([cartItemKey, cartItem]) => {
+      const menuItem = menuItems.find(
+        (m) => m.id === parseInt(cartItem.itemId, 10),
+      );
+      if (!menuItem) return null;
 
-    const itemTotal = menuItem.price * cartItem.quantity;
-    return {
-      cartItemKey,
-      name: menuItem.name,
-      quantity: cartItem.quantity,
-      itemTotal,
-    };
-  }).filter(Boolean);
+      const itemTotal = menuItem.price * cartItem.quantity;
+      return {
+        cartItemKey,
+        name: menuItem.name,
+        quantity: cartItem.quantity,
+        itemTotal,
+      };
+    })
+    .filter(Boolean);
 
   const [savedAddress, setSavedAddress] = useState('');
   const [savedSummaryItems] = useState(summaryItems);
@@ -237,7 +239,10 @@ function Confirmation() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 + savedSummaryItems.length * 0.1 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link to="/menu" className="back-to-menu">
                   {t('returnMenu')}
                   <FiChevronRight className="menu-icon" />

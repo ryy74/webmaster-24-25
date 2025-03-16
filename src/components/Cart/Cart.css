@@ -282,8 +282,8 @@ html.dark-mode .cart-summary-item {
 
 .cart-summary-item-details {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -448,7 +448,7 @@ html.dark-mode .checkout-btn.disabled {
   .empty-cart-icon {
     font-size: 4rem;
   }
-  
+
   .cart-summary-item-details {
     max-width: 70%;
   }

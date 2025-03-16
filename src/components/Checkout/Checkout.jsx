@@ -96,28 +96,30 @@ function Checkout() {
     return acc + menuItem.price * cartItem.quantity;
   }, 0);
 
-  const summaryItems = cartItemKeys.map((key, index) => {
-    const cartItem = cart[key];
-    const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
-    if (!menuItem) return null;
+  const summaryItems = cartItemKeys
+    .map((key, index) => {
+      const cartItem = cart[key];
+      const menuItem = menuItems.find((m) => m.id === cartItem.itemId);
+      if (!menuItem) return null;
 
-    const itemTotal = menuItem.price * cartItem.quantity;
+      const itemTotal = menuItem.price * cartItem.quantity;
 
-    return (
-      <motion.div
-        className="checkout-summary-item"
-        key={key}
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2 + index * 0.1 }}
-      >
-        <span>
-          {cartItem.quantity} x {menuItem.name}
-        </span>
-        <span>${itemTotal.toFixed(2)}</span>
-      </motion.div>
-    );
-  }).filter(Boolean);
+      return (
+        <motion.div
+          className="checkout-summary-item"
+          key={key}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 + index * 0.1 }}
+        >
+          <span>
+            {cartItem.quantity} x {menuItem.name}
+          </span>
+          <span>${itemTotal.toFixed(2)}</span>
+        </motion.div>
+      );
+    })
+    .filter(Boolean);
 
   const isUS = country === 'USA';
   const isWA = state === 'Washington';
