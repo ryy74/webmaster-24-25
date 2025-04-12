@@ -334,13 +334,6 @@ function ApplicationForm() {
             >
               {t('appReceived')}
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-            >
-              {t('appReceivedSubtitle')}
-            </motion.p>
             <motion.button
               className="reset-button"
               onClick={() => setIsSubmitted(false)}

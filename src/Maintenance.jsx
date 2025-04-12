@@ -15,7 +15,7 @@ export default function Maintenance() {
         Site Under Maintenance
       </h1>
       <p style={{ fontSize: '1.2rem', color: '#666' }}>
-        We’re currently improving your experience. Please check back later!
+        See you at nationals!
       </p>
     </div>
   );

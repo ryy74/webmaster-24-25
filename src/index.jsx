@@ -6,7 +6,7 @@ import Maintenance from './Maintenance';
 
 import Providers from './Providers';
 
-const maintenanceMode = false;
+const maintenanceMode = true;
 
 ReactDOM.render(
   <React.StrictMode>

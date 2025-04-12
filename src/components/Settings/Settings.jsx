@@ -65,10 +65,6 @@ function Settings({ onClose }) {
     return lang ? lang.name : 'English';
   };
 
-  useEffect(() => {
-    console.log(isDarkMode);
-  }, [isDarkMode]);
-
   return (
     <motion.div className="settings-overlay">
       <motion.div
