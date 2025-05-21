@@ -1,0 +1,43 @@
+.ai-waiter-container {
+  position: fixed;
+  bottom: 250px;
+  right: 40px;
+  z-index: 9998;
+  text-align: center;
+}
+
+.ai-waiter-label {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  font-size: 14px;
+}
+
+.ai-waiter-loading {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+}
+
+html.dark-mode .ai-waiter-label,
+html.dark-mode .ai-waiter-loading {
+  background: rgba(26, 26, 26, 0.9);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+} 

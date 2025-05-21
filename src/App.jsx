@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import AIWaiter from './components/AIWaiter/AIWaiter';
 
 import Apply from './components/Apply/Apply';
 import Cart from './components/Cart/Cart';
@@ -66,6 +67,7 @@ function App() {
       </div>
       <Footer onSettingsClick={openSettings} />
       {isSettingsOpen && <Settings onClose={closeSettings} />}
+      <AIWaiter />
     </Router>
   );
 }

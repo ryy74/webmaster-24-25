@@ -50,11 +50,12 @@ function Home() {
 
   return (
     <div className="home-container">
-      <motion.div className="hero-section">
+      <motion.div className="hero-section" key="hero-section">
         <motion.img
           src="/assets/landing-1-hero.jpg"
           alt=""
           className="hero-background"
+          key="hero-background"
         />
 
         <motion.div
@@ -62,16 +63,18 @@ function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
+          key="hero-overlay"
         />
 
-        <motion.div className="decorative-line left" />
-        <motion.div className="decorative-line right" />
+        <motion.div className="decorative-line left" key="decorative-line-left" />
+        <motion.div className="decorative-line right" key="decorative-line-right" />
 
         <motion.div
           className="hero-content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
+          key="hero-content"
         >
           <motion.h1
             className="hero__title"
@@ -160,28 +163,32 @@ function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
+          key="corner-accent-top-left"
         />
         <motion.div
           className="corner-accent top-right"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1.7 }}
+          key="corner-accent-top-right"
         />
         <motion.div
           className="corner-accent bottom-left"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1.9 }}
+          key="corner-accent-bottom-left"
         />
         <motion.div
           className="corner-accent bottom-right"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 2.1 }}
+          key="corner-accent-bottom-right"
         />
       </motion.div>
 
-      <motion.section id="about" className="about-section" ref={aboutRef}>
+      <motion.section id="about" className="about-section" ref={aboutRef} key="about-section">
         <div className="about-container">
           <motion.div
             className="about-content"
@@ -189,6 +196,7 @@ function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8 }}
+            key="about-content"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
