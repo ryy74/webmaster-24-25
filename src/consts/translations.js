@@ -102,12 +102,18 @@ const translations = {
     unsupportedRegion: 'Unsupported Region',
     invalidCard: 'Invalid Card Details',
     invalidZip: 'Invalid Zip Code',
+    applyPoints: 'Apply Points',
+    ptsAvail: 'points available',
+    pointsDiscount: 'Rewards Discount',
 
     // confirmation
     orderConfirmed: 'Order Confirmed!',
     deliverTo: 'Delivering to:',
     estDelivery: 'Estimated Delivery:',
     orderThanks: 'Thanks for ordering!',
+    pointsEarned: 'Points Earned',
+    total: 'Total',
+    subtotal: 'Subtotal',
 
     // detail popup
     nutritionInfo: 'Nutritional Information',

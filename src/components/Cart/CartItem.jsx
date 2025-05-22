@@ -167,7 +167,7 @@ function CartItem({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            ${item.price.toFixed(2)} each
+            ${item.price.toFixed(2)}
           </motion.p>
         </div>
       </div>

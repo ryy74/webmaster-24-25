@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -10,6 +10,7 @@ import {
   FiMap,
   FiMapPin,
   FiShield,
+  FiGift,
 } from 'react-icons/fi';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
@@ -33,6 +34,7 @@ const REQUIRED_CARD_NUMBER_DISPLAY = '4112 8197 5823 2024';
 const REQUIRED_CARD_NUMBER_NORMALIZED = '4112819758232024';
 const REQUIRED_EXPIRATION = '06/27';
 const REQUIRED_CVV = '074';
+const CENTS_PER_POINT = 0.001;
 
 function Checkout() {
   const [cardNumber, setCardNumber] = useState('');
@@ -44,9 +46,11 @@ function Checkout() {
   const [zipCode, setZipCode] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
+  const [pointsBalance, setPointsBalance] = useState(0);
+  const [pointsToApply, setPointsToApply] = useState('');
 
   const navigate = useNavigate();
-  const { isSignedIn } = useAuth();
+  const { isSignedIn, user } = useAuth();
   const { cart } = useCart();
   const { t } = useLanguage();
   const { setAddress } = useAddress();
@@ -56,6 +60,20 @@ function Checkout() {
   const countries = useCountries();
   const mexicoStates = useMexicoStates();
   const usStates = useUSStates();
+
+  useEffect(() => {
+    fetch('https://webmaster-backend-production.up.railway.app/users/me', {
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-User': user.username,
+      },
+    })
+      .then((r) => r.json())
+      .then((data) => setPointsBalance(data.Profile.points ?? 0))
+      .catch(() => setPointsBalance(0));
+    // eslint-disable-next-line
+  }, []);
 
   function formatAddressLists(countryVal) {
     if (countryVal === 'USA') return usStates;
@@ -127,7 +145,9 @@ function Checkout() {
 
   const taxRate = isSupportedRegion ? 0.085 : 0;
   const taxAmount = totalPrice * taxRate;
-  const finalTotal = totalPrice + taxAmount;
+  const usablePoints   = Math.min(Number(pointsToApply || 0), pointsBalance);
+  const pointsDiscount = usablePoints * CENTS_PER_POINT;
+  const finalTotal = Math.max(0, totalPrice + taxAmount - pointsDiscount);
 
   const statesList = formatAddressLists(country);
 
@@ -136,6 +156,12 @@ function Checkout() {
     setErrorMessage('');
     setIsProcessing(true);
 
+    if (Number(pointsToApply || 0 ) > pointsBalance) {
+      setErrorMessage(t('pointsTooHigh'));
+      setIsProcessing(false);
+      return;
+    }
+
     if (!isSupportedRegion) {
       setIsProcessing(false);
       return;
@@ -143,7 +169,7 @@ function Checkout() {
 
     const normalizedCardNumber = cardNumber.replace(/\s+/g, '');
 
-    setTimeout(() => {
+    setTimeout(async () => {
       if (
         normalizedCardNumber !== REQUIRED_CARD_NUMBER_NORMALIZED ||
         expiration !== REQUIRED_EXPIRATION ||
@@ -163,7 +189,34 @@ function Checkout() {
       const fullAddress = `${address}, ${state}, ${country}, ${zipCode}`;
       setAddress(fullAddress);
 
-      navigate('/confirmation');
+      if (usablePoints > 0) {
+        await fetch(
+          'https://webmaster-backend-production.up.railway.app/rewards/spend',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-User': user.username,
+            },
+            credentials: 'include',
+            body: JSON.stringify({ points: usablePoints }),
+          }
+        ).then(async (r) => {
+          if (!r.ok) {
+            const msg = (await r.json()).detail ?? 'Failed to spend points';
+            throw new Error(msg);
+          }
+        });
+      }
+
+      navigate('/confirmation', {
+        state: {
+          subtotal: totalPrice,
+          taxAmount,
+          pointsDiscount,
+          usablePoints,
+        },
+      });
     }, 1500);
   };
 
@@ -266,6 +319,33 @@ function Checkout() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
+            <motion.div
+              className="input-group"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.55 }}
+            >
+              <label htmlFor="points">{t('applyPoints')}</label>
+              <div className="input-wrapper">
+                <FiGift className="input-icon" />
+                <input
+                  id="points"
+                  type="number"
+                  min="0"
+                  max={pointsBalance}
+                  value={pointsToApply}
+                  onChange={(e) => {
+                    const raw = e.target.value.replace(/\D/g, '');
+                    setPointsToApply(raw ? Math.min(Number(raw), pointsBalance) : '');
+                  }}
+                  placeholder={`0 – ${pointsBalance}`}
+                />
+              </div>
+              <small className="hint">
+                {pointsBalance} {t('ptsAvail')}
+              </small>
+            </motion.div>
+
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -483,6 +563,18 @@ function Checkout() {
                 </motion.div>
               )}
             </div>
+
+            {pointsDiscount > 0 && (
+              <motion.div
+                className="checkout-summary-item discount-line"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.25 + (summaryItems.length + 1) * 0.1 }}
+              >
+                <span>{t('pointsDiscount')}</span>
+                <span>-${pointsDiscount.toFixed(2)}</span>
+              </motion.div>
+            )}
 
             <motion.div
               className="checkout-total"

@@ -7,7 +7,7 @@ import {
   FiMapPin,
   FiShoppingBag,
 } from 'react-icons/fi';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
 
 import useMenuItems from '../../consts/menuItems';
 import { useAddress } from '../../contexts/AddressContext';
@@ -25,6 +25,11 @@ function Confirmation() {
   const { address } = useAddress();
   const { t } = useLanguage();
   const menuItems = useMenuItems();
+  const { state: navState } = useLocation();
+
+  const subtotalFromNav = navState?.subtotal ?? null;
+  const taxAmountFromNav = navState?.taxAmount ?? 0;
+  const pointsDiscount = navState?.pointsDiscount ?? 0;
 
   const cartEntries = Object.entries(cart).filter(
     ([, cartItem]) => cartItem.quantity > 0,
@@ -59,20 +64,24 @@ function Confirmation() {
   const [savedAddress, setSavedAddress] = useState('');
   const [savedSummaryItems] = useState(summaryItems);
   const [savedTotalPrice] = useState(totalPrice);
+  const [pointsEarned, setPointsEarned] = useState(0);
   const [deliveryTime, setDeliveryTime] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [pointsEarned, setPointsEarned] = useState(0);
+
+  const finalTotal = (subtotalFromNav ?? savedTotalPrice) + taxAmountFromNav - pointsDiscount;
 
   useEffect(() => {
     setSavedAddress(address);
-    setPointsEarned(Math.floor(savedTotalPrice * 100));
+    setPointsEarned(Math.floor(finalTotal * 100));
 
     const payload = {
       items_json: JSON.stringify(
         savedSummaryItems.map(({ itemId, quantity }) => ({ itemId, quantity }))
       ),
-      subtotal: savedTotalPrice,
+      subtotal: finalTotal,
     };
+
+    console.log(payload);
 
     fetch(`${BASE_URL}/orders`, {
       method: 'POST',
@@ -232,20 +241,38 @@ function Confirmation() {
                 ))}
               </div>
 
-              <motion.p
-                className="confirmation-total-price"
+              <motion.div
+                className="order-breakdown"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 + savedSummaryItems.length * 0.1 }}
               >
-                {t('cartTotal')} ${savedTotalPrice.toFixed(2)}
-              </motion.p>
+                <div className="breakdown-row">
+                  <span>{t('subtotal')} ${(subtotalFromNav ?? savedTotalPrice).toFixed(2)}</span>
+                </div>
+                
+                {taxAmountFromNav > 0 && (
+                  <div className="breakdown-row">
+                    <span>{t('tax')} ${taxAmountFromNav.toFixed(2)}</span>
+                  </div>
+                )}
+                
+                {pointsDiscount > 0 && (
+                  <div className="breakdown-row discount-row">
+                    <span>{t('pointsDiscount')} -${pointsDiscount.toFixed(2)}</span>
+                  </div>
+                )}
+                
+                <div className="breakdown-row total-row">
+                  <span>{t('total')} ${finalTotal.toFixed(2)}</span>
+                </div>
+              </motion.div>
 
               <motion.p
                 className="confirmation-points-earned"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 + savedSummaryItems.length * 0.1 }}
+                transition={{ delay: 0.7 + savedSummaryItems.length * 0.1 }}
               >
                 {t('pointsEarned')}: {pointsEarned}
               </motion.p>
