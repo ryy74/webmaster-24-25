@@ -106,8 +106,10 @@ const translations = {
     ptsAvail: 'points available',
     pointsDiscount: 'Rewards Discount',
     giftCards: 'Gift Cards',
+    giftCardCode: 'Gift Card Code',
+    insufficientBalance: 'Insufficient Balance',
+    includesGiftCards: 'Includes Gift Cards',
     
-
     // confirmation
     orderConfirmed: 'Order Confirmed!',
     deliverTo: 'Delivering to:',
@@ -116,6 +118,7 @@ const translations = {
     pointsEarned: 'Points Earned',
     total: 'Total',
     subtotal: 'Subtotal',
+    yourGiftCodes: 'Your Gift Codes',
 
     // detail popup
     nutritionInfo: 'Nutritional Information',

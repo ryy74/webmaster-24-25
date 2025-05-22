@@ -405,6 +405,7 @@ function Checkout() {
                 <input
                   value={street}
                   onChange={(e) => setStreet(e.target.value)}
+                  placeholder={"400 NE 228th Ave"}
                 />
               </div>
             </div>
@@ -417,6 +418,7 @@ function Checkout() {
                   onChange={(e) =>
                     setZip(e.target.value.replace(/\D/g, "").slice(0, 5))
                   }
+                  placeholder={98074}
                 />
               </div>
             </div>
