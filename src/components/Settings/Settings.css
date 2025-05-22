@@ -263,86 +263,9 @@ html.dark-mode .active-indicator {
   background: linear-gradient(to bottom, #4eda8e, #54a9ee);
 }
 
-.settings-section.order-history {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  background: rgba(235, 237, 240, 0.7);
-  border-radius: 10px;
-}
-
-html.dark-mode .settings-section.order-history {
-  background: rgba(40, 42, 45, 0.7);
-}
-
-.section-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #333;
-}
-
-html.dark-mode .section-title {
-  color: #e0e0e0;
-}
-
-.order-history-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.order-history-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-html.dark-mode .order-history-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.order-history-item:last-child {
-  border-bottom: none;
-}
-
-.order-date {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-html.dark-mode .order-date {
-  color: #aaa;
-}
-
-.order-total {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #333;
-}
-
-html.dark-mode .order-total {
-  color: #e0e0e0;
-}
-
-.loading-text,
-.error-text {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0.5rem 0;
-}
-
-html.dark-mode .loading-text,
-html.dark-mode .error-text {
-  color: #aaa;
-}
-
 @media (max-width: 480px) {
   .settings-popup {
     padding: 1.5rem;
-    min-width: 350px;
   }
 
   .settings-title {
@@ -363,13 +286,5 @@ html.dark-mode .error-text {
   .language-dropdown-button {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
-  }
-
-  .settings-section.order-history {
-    padding: 0.75rem 1rem;
-  }
-
-  .order-history-item {
-    padding: 0.6rem 0;
   }
 }

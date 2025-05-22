@@ -4,23 +4,15 @@ import { FiChevronDown, FiGlobe, FiMoon, FiSun } from 'react-icons/fi';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useSettings } from '../../contexts/SettingsContext';
-import { useAuth } from '../../contexts/AuthContext';
 
 import './Settings.css';
-
-const BASE_URL = 'https://webmaster-backend-production.up.railway.app';
 
 function Settings({ onClose }) {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
 
   const { t, language, setLanguage } = useLanguage();
   const { settings, toggleDarkMode } = useSettings();
-  const { isSignedIn, user } = useAuth();
   const isDarkMode = settings.isDarkMode;
-
-  const [orders, setOrders] = useState([]);
-  const [ordersLoading, setOrdersLoading] = useState(false);
-  const [ordersError, setOrdersError] = useState('');
 
   const languageDropdownRef = useRef(null);
   const popupRef = useRef(null);
@@ -34,25 +26,6 @@ function Settings({ onClose }) {
     { code: 'jp', name: '日本語' },
     { code: 'kr', name: '한국어' },
   ];
-
-  useEffect(() => {
-    if (!isSignedIn || !user) return;
-
-    setOrdersLoading(true);
-    fetch(`${BASE_URL}/orders/mine`, {
-      headers: {
-        'Content-Type': 'application/json',
-        'X-User': user.username,
-      },
-    })
-      .then(async (res) => {
-        if (!res.ok) throw new Error(`status ${res.status}`);
-        return res.json();
-      })
-      .then(setOrders)
-      .catch(() => setOrdersError(t('couldNotLoadOrders')))
-      .finally(() => setOrdersLoading(false));
-  }, [isSignedIn, user, t]);
 
   const handleLanguageChange = (langCode) => {
     setLanguage(langCode);
@@ -100,7 +73,11 @@ function Settings({ onClose }) {
         initial={{ scale: 0.8, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.8, y: 20 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+        transition={{
+          type: 'spring',
+          stiffness: 300,
+          damping: 25,
+        }}
       >
         <motion.h2
           className="settings-title"
@@ -137,8 +114,14 @@ function Settings({ onClose }) {
             <div className="toggle-slider">
               <motion.div
                 className="toggle-circle"
-                animate={{ x: isDarkMode ? '24px' : 0 }}
-                transition={{ type: 'tween', duration: 0.2, ease: [0.32, 0, 0.67, 1] }}
+                animate={{
+                  x: isDarkMode ? '24px' : 0,
+                }}
+                transition={{
+                  type: 'tween',
+                  duration: 0.2,
+                  ease: [0.32, 0, 0.67, 1],
+                }}
               />
             </div>
           </motion.button>
@@ -164,7 +147,10 @@ function Settings({ onClose }) {
             >
               <FiGlobe />
               <span>{getCurrentLanguageName()}</span>
-              <motion.div animate={{ rotate: showLanguageDropdown ? 180 : 0 }} transition={{ duration: 0.3 }}>
+              <motion.div
+                animate={{ rotate: showLanguageDropdown ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <FiChevronDown />
               </motion.div>
             </motion.button>
@@ -187,7 +173,10 @@ function Settings({ onClose }) {
                     >
                       <span>{lang.name}</span>
                       {language === lang.code && (
-                        <motion.div className="active-indicator" layoutId="activeLanguageIndicator" />
+                        <motion.div
+                          className="active-indicator"
+                          layoutId="activeLanguageIndicator"
+                        />
                       )}
                     </motion.div>
                   ))}
@@ -195,32 +184,6 @@ function Settings({ onClose }) {
               )}
             </AnimatePresence>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className="settings-section order-history"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          <h3 className="section-title">{t('orderHistory')}</h3>
-
-          {ordersLoading && <p className="loading-text">{t('loading')}</p>}
-          {ordersError && <p className="error-text">{ordersError}</p>}
-          {!ordersLoading && !ordersError && (
-            <ul className="order-history-list">
-              {orders.map((order) => (
-                <li key={order.id} className="order-history-item">
-                  <span className="order-date">
-                    {new Date(order.created_at).toLocaleString()}
-                  </span>
-                  <span className="order-total">
-                    ${order.subtotal.toFixed(2)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )}
         </motion.div>
       </motion.div>
     </motion.div>
