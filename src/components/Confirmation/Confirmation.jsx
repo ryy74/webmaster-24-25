@@ -17,8 +17,10 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Confirmation.css';
 
+const BASE_URL = 'https://webmaster-backend-production.up.railway.app';
+
 function Confirmation() {
-  const { isSignedIn } = useAuth();
+  const { isSignedIn, user } = useAuth();
   const { cart, clearCart } = useCart();
   const { address } = useAddress();
   const { t } = useLanguage();
@@ -28,7 +30,7 @@ function Confirmation() {
     ([, cartItem]) => cartItem.quantity > 0,
   );
 
-  const totalPrice = cartEntries.reduce((acc, [cartItemKey, cartItem]) => {
+  const totalPrice = cartEntries.reduce((acc, [, cartItem]) => {
     const menuItem = menuItems.find(
       (m) => m.id === parseInt(cartItem.itemId, 10),
     );
@@ -46,6 +48,7 @@ function Confirmation() {
       const itemTotal = menuItem.price * cartItem.quantity;
       return {
         cartItemKey,
+        itemId: menuItem.id,
         name: menuItem.name,
         quantity: cartItem.quantity,
         itemTotal,
@@ -58,9 +61,35 @@ function Confirmation() {
   const [savedTotalPrice] = useState(totalPrice);
   const [deliveryTime, setDeliveryTime] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [pointsEarned, setPointsEarned] = useState(0);
 
   useEffect(() => {
     setSavedAddress(address);
+    setPointsEarned(Math.floor(savedTotalPrice * 100));
+
+    const payload = {
+      items_json: JSON.stringify(
+        savedSummaryItems.map(({ itemId, quantity }) => ({ itemId, quantity }))
+      ),
+      subtotal: savedTotalPrice,
+    };
+
+    fetch(`${BASE_URL}/orders`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-User': user.username,
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error(`Order failed ${res.status}`);
+        return res.json();
+      })
+      .then((order) => {
+        console.log('Order created:', order);
+      })
+      .catch((err) => console.error('Order error:', err));
 
     const randomMinutes = Math.floor(Math.random() * (45 - 15 + 1)) + 15;
     const now = new Date();
@@ -210,6 +239,15 @@ function Confirmation() {
                 transition={{ delay: 0.6 + savedSummaryItems.length * 0.1 }}
               >
                 {t('cartTotal')} ${savedTotalPrice.toFixed(2)}
+              </motion.p>
+
+              <motion.p
+                className="confirmation-points-earned"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 + savedSummaryItems.length * 0.1 }}
+              >
+                {t('pointsEarned')}: {pointsEarned}
               </motion.p>
             </motion.div>
 

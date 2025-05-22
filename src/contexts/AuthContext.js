@@ -1,21 +1,25 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const AuthContext = createContext({
   isSignedIn: false,
+  user: null,
   setIsSignedIn: () => {},
+  setUser: () => {},
 });
 
 export const AuthProvider = ({ children }) => {
-  const storedAuth = localStorage.getItem('isSignedIn');
+  const stored = localStorage.getItem('auth');
+  const initial = stored ? JSON.parse(stored) : { isSignedIn: false, user: null };
 
-  const [isSignedIn, setIsSignedIn] = useState(storedAuth === 'true');
+  const [isSignedIn, setIsSignedIn] = useState(initial.isSignedIn);
+  const [user, setUser] = useState(initial.user);
 
   useEffect(() => {
-    localStorage.setItem('isSignedIn', isSignedIn);
-  }, [isSignedIn]);
+    localStorage.setItem('auth', JSON.stringify({ isSignedIn, user }));
+  }, [isSignedIn, user]);
 
   return (
-    <AuthContext.Provider value={{ isSignedIn, setIsSignedIn }}>
+    <AuthContext.Provider value={{ isSignedIn, user, setIsSignedIn, setUser }}>
       {children}
     </AuthContext.Provider>
   );

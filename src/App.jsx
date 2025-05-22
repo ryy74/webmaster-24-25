@@ -14,6 +14,7 @@ import Menu from './components/Menu/Menu';
 import Process from './components/Process/Process';
 import SignIn from './components/SignIn/SignIn';
 import Values from './components/Values/Values';
+import Rewards from './components/Rewards/Rewards';
 
 import AccessibilityStatement from './components/Policies/AccessibilityStatement';
 import ApplicantPrivacyNotice from './components/Policies/ApplicantPrivacyNotice';
@@ -56,6 +57,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/rewards" element={<Rewards />} />
 
           <Route path="/apply" element={<Apply />} />
           <Route path="/accessibility" element={<AccessibilityStatement />} />

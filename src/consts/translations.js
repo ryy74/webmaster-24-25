@@ -248,6 +248,15 @@ const translations = {
     passwordF: 'Enter Password',
     show: 'Show',
     hide: 'Hide',
+    signUp: 'Sign Up',
+    signUpPrompt: 'Create your account to get started',
+    loginPrompt: 'Welcome back! Please sign in to continue',
+    alreadyAccount: 'Already have an account?',
+    noAccount: 'Don\'t have an account?',
+    createReason: 'Create an account to access exclusive features, save your progress, and connect with other users.',
+    cReason1: 'Access to all features',
+    cReason2: 'Save your progress',
+    cReason3: 'Personalized experience',
 
     // values
     valueT1: 'Sustainability',
