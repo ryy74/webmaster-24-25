@@ -51,12 +51,7 @@ function Home() {
   return (
     <div className="home-container">
       <motion.div className="hero-section" key="hero-section">
-        <motion.img
-          src="/assets/landing-1-hero.jpg"
-          alt=""
-          className="hero-background"
-          key="hero-background"
-        />
+
 
         <motion.div
           className="hero-overlay"
@@ -65,10 +60,7 @@ function Home() {
           transition={{ duration: 1.2 }}
           key="hero-overlay"
         />
-
-        <motion.div className="decorative-line left" key="decorative-line-left" />
-        <motion.div className="decorative-line right" key="decorative-line-right" />
-
+        
         <motion.div
           className="hero-content"
           initial={{ opacity: 0 }}
@@ -76,6 +68,32 @@ function Home() {
           transition={{ duration: 1, delay: 0.3 }}
           key="hero-content"
         >
+   <motion.div
+          className="hero-bowl-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 0.6, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.5 }}
+        >
+          <img src="/assets/heropagebowl1.png" alt="" />
+        </motion.div>
+
+        <motion.div
+          className="hero-bowl-bottom-left"
+          initial={{ opacity: 0, x: -100, y: 100 }}
+          animate={{ opacity: 0.4, x: 0, y: 0 }}
+          transition={{ duration: 1.8, delay: 1 }}
+        >
+          <img src="/assets/heropagebowl2.png" alt="" />
+        </motion.div>
+
+        <motion.div
+          className="hero-bowl-bottom-right"
+          initial={{ opacity: 0, x: 100, y: 100 }}
+          animate={{ opacity: 0.4, x: 0, y: 0 }}
+          transition={{ duration: 1.8, delay: 1.2 }}
+        >
+          <img src="/assets/heropagebowl3.png" alt="" />
+        </motion.div>
           <motion.h1
             className="hero__title"
             initial={{ opacity: 0, y: -20 }}
@@ -84,13 +102,6 @@ function Home() {
           >
             {t('title')}
           </motion.h1>
-
-          <motion.div
-            className="title-underline"
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: '80px', opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +140,6 @@ function Home() {
                   alignItems: 'center',
                 }}
               >
-                <FiArrowRight className="cta-icon" />
               </motion.span>
             </motion.a>
 
@@ -158,34 +168,7 @@ function Home() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="corner-accent top-left"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          key="corner-accent-top-left"
-        />
-        <motion.div
-          className="corner-accent top-right"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.7 }}
-          key="corner-accent-top-right"
-        />
-        <motion.div
-          className="corner-accent bottom-left"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.9 }}
-          key="corner-accent-bottom-left"
-        />
-        <motion.div
-          className="corner-accent bottom-right"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 2.1 }}
-          key="corner-accent-bottom-right"
-        />
+
       </motion.div>
 
       <motion.section id="about" className="about-section" ref={aboutRef} key="about-section">
@@ -207,13 +190,7 @@ function Home() {
               {t('aboutHeader')}
             </motion.h2>
 
-            <motion.div
-              className="text-highlight"
-              initial={{ width: 0 }}
-              whileInView={{ width: '120px' }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' }}
-            />
+
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -306,7 +283,135 @@ function Home() {
         </div>
       </motion.section>
 
-      <motion.div
+
+
+      <div className="featured-section" ref={featuredRef}>
+        <motion.div
+          className="section-badge gradient-badge"
+          initial={{ opacity: 0, scale: 0.8 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        />
+        <motion.h2
+          className="section-flavor-tip"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          {t('featuredTip')}
+        </motion.h2>
+        <motion.h2
+          className="section-heading"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          {t('featuredHeader')}
+        </motion.h2>
+
+        <motion.div
+          className="text-highlight centered"
+          initial={{ width: 0 }}
+          whileInView={{ width: '120px' }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        />
+
+        <motion.div
+          className="preview-items"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+        >
+          {menuItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              className="preview-item"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.2 + index * 0.1,
+                duration: 0.5,
+                type: 'spring',
+                stiffness: 100,
+                damping: 15,
+              }}
+              whileHover={{
+                y: -10,
+                boxShadow:
+                  '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+              }}
+            >
+              <motion.a
+                href="/menu"
+                className="image-container"
+                whileHover="hover"
+              >
+                <motion.img
+                  src={item.image}
+                  alt={item.name}
+                  className="preview-item-image"
+                  variants={{
+                    hover: { scale: 1.1, transition: { duration: 0.5 } },
+                  }}
+                />
+                <motion.div
+                  className="preview-item-overlay"
+                  variants={{
+                    hover: { opacity: 0.4, transition: { duration: 0.3 } },
+                  }}
+                  initial={{ opacity: 0 }}
+                >
+                  <motion.div
+                    className="view-details"
+                    variants={{
+                      hover: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.3, delay: 0.1 },
+                      },
+                    }}
+                    initial={{ opacity: 0, y: 20 }}
+                  >
+                    {t('viewDetails')}
+                  </motion.div>
+                </motion.div>
+                <div className="preview-item-price">${item.price}</div>
+              </motion.a>
+
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="menu-link-container"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+        >
+          <motion.a href="/menu" className="menu-redirect" whileHover="hover">
+            <motion.span
+              className="menu-redirect-text"
+              variants={{
+                hover: {
+                  backgroundPosition: '0 100%',
+                  transition: { duration: 0.6 },
+                },
+              }}
+            >
+              {t('bannerLink')}
+            </motion.span>
+          </motion.a>
+        </motion.div>
+      </div>
+      {/* <motion.div
         className="sustainability-section"
         style={{
           backgroundImage: `url('/assets/landing-5-sustainability.jpg')`,
@@ -450,170 +555,7 @@ function Home() {
             </div>
           </motion.div>
         </motion.div>
-      </motion.div>
-
-      <div className="featured-section" ref={featuredRef}>
-        <motion.div
-          className="section-badge gradient-badge"
-          initial={{ opacity: 0, scale: 0.8 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        />
-
-        <motion.h2
-          className="section-heading"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          {t('featuredHeader')}
-        </motion.h2>
-
-        <motion.div
-          className="text-highlight centered"
-          initial={{ width: 0 }}
-          whileInView={{ width: '120px' }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        />
-
-        <motion.div
-          className="preview-items"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-        >
-          {menuItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              className="preview-item"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                delay: 0.2 + index * 0.1,
-                duration: 0.5,
-                type: 'spring',
-                stiffness: 100,
-                damping: 15,
-              }}
-              whileHover={{
-                y: -10,
-                boxShadow:
-                  '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-              }}
-            >
-              <motion.a
-                href="/menu"
-                className="image-container"
-                whileHover="hover"
-              >
-                <motion.img
-                  src={item.image}
-                  alt={item.name}
-                  className="preview-item-image"
-                  variants={{
-                    hover: { scale: 1.1, transition: { duration: 0.5 } },
-                  }}
-                />
-                <motion.div
-                  className="preview-item-overlay"
-                  variants={{
-                    hover: { opacity: 0.4, transition: { duration: 0.3 } },
-                  }}
-                  initial={{ opacity: 0 }}
-                >
-                  <motion.div
-                    className="view-details"
-                    variants={{
-                      hover: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.3, delay: 0.1 },
-                      },
-                    }}
-                    initial={{ opacity: 0, y: 20 }}
-                  >
-                    {t('viewDetails')}
-                  </motion.div>
-                </motion.div>
-                <div className="preview-item-price">${item.price}</div>
-              </motion.a>
-
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div
-          className="menu-link-container"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-        >
-          <motion.a href="/menu" className="menu-redirect" whileHover="hover">
-            <motion.span
-              className="menu-redirect-text"
-              variants={{
-                hover: {
-                  backgroundPosition: '0 100%',
-                  transition: { duration: 0.6 },
-                },
-              }}
-            >
-              {t('bannerLink')}
-            </motion.span>
-            <motion.div
-              className="arrow-container"
-              variants={{
-                hover: {
-                  x: 8,
-                  transition: { type: 'spring', stiffness: 400, damping: 10 },
-                },
-              }}
-            >
-              <motion.span
-                className="arrow-icon"
-                initial={{ rotate: 0 }}
-                variants={{
-                  hover: {
-                    rotate: [0, -10, 0, -10, 0],
-                    transition: {
-                      delay: 0.2,
-                      duration: 0.6,
-                      ease: 'easeInOut',
-                    },
-                  },
-                }}
-              >
-                <FiArrowRight size={22} />
-              </motion.span>
-              <motion.span
-                className="arrow-trail"
-                variants={{
-                  hover: {
-                    width: '20px',
-                    opacity: [0, 0.5, 0],
-                    transition: {
-                      delay: 0.2,
-                      duration: 0.6,
-                      ease: 'easeInOut',
-                      repeat: Infinity,
-                      repeatDelay: 0.5,
-                    },
-                  },
-                }}
-                initial={{ width: '0px', opacity: 0 }}
-              />
-            </motion.div>
-          </motion.a>
-        </motion.div>
-      </div>
-
+      </motion.div> */}
       <section className="testimonials-section">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -622,6 +564,13 @@ function Home() {
         >
           {t('testimonialsHeader')}
         </motion.h2>
+          <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          {t('testimonialsSubtitle')}
+        </motion.p>
 
         <motion.div
           className="testimonials-container"
@@ -699,35 +648,6 @@ function Home() {
               </div>
             </motion.div>
           </AnimatePresence>
-
-          <div className="testimonial-navigation">
-            <motion.button
-              className="nav-button prev"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                setActiveTestimonial((prev) =>
-                  prev === 0 ? testimonials.length - 1 : prev - 1,
-                )
-              }
-              aria-label="Previous testimonial"
-            >
-              ‹
-            </motion.button>
-            <motion.button
-              className="nav-button next"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                setActiveTestimonial((prev) =>
-                  prev === testimonials.length - 1 ? 0 : prev + 1,
-                )
-              }
-              aria-label="Next testimonial"
-            >
-              ›
-            </motion.button>
-          </div>
 
           <div className="testimonial-dots">
             {testimonials.map((testimonial, index) => (

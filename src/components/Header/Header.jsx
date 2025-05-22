@@ -63,24 +63,15 @@ function Header({ onSettingsClick }) {
             </Link>
           </>
         )}
-        {!isSignedIn && (
-          <Link to="/signin" className="header-link" onClick={closeDropdown}>
-            {t('signIn')}
-          </Link>
-        )}
-        {isDesktop ? (
+                {isDesktop ? (
           <button
-            className="settings-link"
+            className="header-link"
             onClick={() => {
               closeDropdown();
               onSettingsClick();
             }}
           >
-            <img
-              src="/assets/settings.svg"
-              className="settings-icon"
-              alt="Settings"
-            />
+            {t("settings")}
           </button>
         ) : (
           <button
@@ -93,6 +84,12 @@ function Header({ onSettingsClick }) {
             {t('settings')}
           </button>
         )}
+        {!isSignedIn && (
+          <Link to="/signin" className="header-link-sign-in" onClick={closeDropdown}>
+            {t('signIn')}
+          </Link>
+        )}
+
       </>
     );
   };
@@ -101,7 +98,7 @@ function Header({ onSettingsClick }) {
     <header className="app-header">
       <div className="left-header">
         <Link to="/" className="header-title" onClick={closeDropdown}>
-          Green Bites
+          GREEN BITES
         </Link>
       </div>
       <div className="right-header">

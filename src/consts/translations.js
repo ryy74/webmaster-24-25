@@ -17,17 +17,17 @@ const translations = {
     updated: 'Updated!',
 
     // header and page links
-    menu: 'Menu',
+    menu: 'MENU',
     checkout: 'Checkout',
     accessibility: 'Accessibility Statement',
     tou: 'Terms of Use',
     privacy: 'Privacy Policy',
     apn: 'Applicant Privacy Notice',
-    values: 'Our Values',
+    values: 'OUR VALUES',
     apply: 'Apply',
-    process: 'Process',
+    process: 'PROCESS',
     cart: 'Cart',
-    signIn: 'Sign In',
+    signIn: 'SIGN IN',
     signOut: 'Sign Out',
 
     // apply
@@ -125,7 +125,7 @@ const translations = {
     copyright: '© 2025 Green Bites. All rights reserved.',
 
     // home
-    title: 'Welcome to Green Bites!',
+    title: 'Your One Stop Shop for Plant-Based Goodness',
     subTitle: 'Fresh, sustainable, and delicious vegan and vegetarian meals.',
     menuCTA: 'Explore Our Menu',
     learnMore: 'Learn More',
@@ -140,7 +140,7 @@ const translations = {
     wasteSaved: 'More Waste Saved',
     localSourcing: 'Locally Sourced',
     renewable: 'Renewable',
-    featuredHeader: 'Featured Dishes',
+    featuredHeader: 'FEATURED DISHES',
     viewDetails: 'View Details',
     testimonialsHeader: 'What Our Customers Say',
     testimonialsP1: '"The vegan tacos here are absolutely phenomenal! The combination of fresh ingredients and perfectly balanced flavors is unlike anything I\'ve ever had. Every bite is a burst of deliciousness that leaves you wanting more. I never thought plant-based food could be this satisfying."',
@@ -153,6 +153,8 @@ const translations = {
     bannerHeader: 'Ready to Experience the Difference?',
     bannerP: 'Visit us or order online today and taste what nature has to offer.',
     bannerLink: 'Order Now',
+    featuredTip: "This Week's Favorites",
+    testimonialsSubtitle: "Don't Just Take Our Word For It, Hear from Our Customers",
 
     // menu
     menuSub: 'Explore our creations -- please take note of which are vegan and which are vegetarian.',
@@ -237,7 +239,7 @@ const translations = {
     
 
     // settings
-    settings: 'Settings',
+    settings: 'SETTINGS',
     siteSettings: 'Site Settings',
     darkMode: 'Dark Mode',
     language: 'Language',
