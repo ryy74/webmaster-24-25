@@ -232,6 +232,10 @@ const translations = {
     processHTitle: 'From Farm to Your Table',
     processHDesc: 'Experience the journey of your food from local farms to your plate. We maintain the highest standards of quality and sustainability at every step, making sure you get the most delicious and nutritious meals possible.',
 
+    // rewards
+    rewards: 'Rewards',
+    
+
     // settings
     settings: 'Settings',
     siteSettings: 'Site Settings',

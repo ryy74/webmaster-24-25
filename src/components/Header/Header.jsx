@@ -45,6 +45,9 @@ function Header({ onSettingsClick }) {
         </Link>
         {isSignedIn && (
           <>
+            <Link to="/rewards" className="header-link" onClick={closeDropdown}>
+              {t('rewards')}
+            </Link>
             <Link to="/cart" className="header-link" onClick={closeDropdown}>
               {t('cart')} ({cartCount})
             </Link>
