@@ -81,8 +81,6 @@ function Confirmation() {
       subtotal: finalTotal,
     };
 
-    console.log(payload);
-
     fetch(`${BASE_URL}/orders`, {
       method: 'POST',
       headers: {
