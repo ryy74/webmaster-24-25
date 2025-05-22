@@ -1,8 +1,6 @@
-// src/components/Settings/Settings.jsx
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown, FiGlobe, FiMoon, FiSun } from 'react-icons/fi';
-import { useNavigate } from 'react-router-dom';
 
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useSettings } from '../../contexts/SettingsContext';
@@ -37,7 +35,6 @@ function Settings({ onClose }) {
     { code: 'kr', name: '한국어' },
   ];
 
-  // fetch order history once when settings opens
   useEffect(() => {
     if (!isSignedIn || !user) return;
 
@@ -114,7 +111,6 @@ function Settings({ onClose }) {
           {t('siteSettings')}
         </motion.h2>
 
-        {/* dark mode toggle */}
         <motion.div
           className="settings-row"
           initial={{ opacity: 0, x: -20 }}
@@ -148,7 +144,6 @@ function Settings({ onClose }) {
           </motion.button>
         </motion.div>
 
-        {/* language dropdown */}
         <motion.div
           className="settings-row"
           initial={{ opacity: 0, x: -20 }}
