@@ -105,6 +105,8 @@ const translations = {
     applyPoints: 'Apply Points',
     ptsAvail: 'points available',
     pointsDiscount: 'Rewards Discount',
+    giftCards: 'Gift Cards',
+    
 
     // confirmation
     orderConfirmed: 'Order Confirmed!',

@@ -4,6 +4,7 @@ const CartContext = createContext({
   cartCount: 0,
   setCartCount: () => {},
   cart: {},
+  addItem: () => {},
   addToCart: () => {},
   addToCartWithCustomizations: () => {},
   updateCartQuantity: () => {},
@@ -16,110 +17,96 @@ export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
   const [cart, setCart] = useState({});
 
-  const generateCartItemKey = (itemId, customizations) => {
-    if (!customizations) return itemId;
-    const customizationString = JSON.stringify({
-      specialInstructions: customizations.specialInstructions || '',
-      includeUtensils: customizations.includeUtensils,
-      removedIngredients: customizations.removedIngredients || [],
+  const generateCartItemKey = (itemId, custom = {}) => {
+    if (!custom) return itemId;             
+    const payload = JSON.stringify({
+      specialInstructions: custom.specialInstructions || '',
+      includeUtensils    : custom.includeUtensils,
+      removedIngredients : custom.removedIngredients || [],
     });
-    return `${itemId}_${btoa(customizationString)}`;
+    return `${itemId}_${btoa(payload)}`;
   };
 
-  const addToCart = (itemId) => {
-    addToCartWithCustomizations(itemId, { quantity: 1 });
+  const addItem = (item) => {
+    const key = item.cartItemKey ?? generateCartItemKey(item.itemId);
+    const qty = item.quantity ?? 1;
+
+    setCart(prev => ({
+      ...prev,
+      [key]: prev[key]
+        ? { ...prev[key], quantity: prev[key].quantity + qty }
+        : { ...item, quantity: qty },
+    }));
+    setCartCount(c => c + qty);
   };
 
-  const addToCartWithCustomizations = (itemId, customizations = {}) => {
-    const quantity = customizations.quantity || 1;
-    const cartItemKey = generateCartItemKey(itemId, customizations);
+  const addToCart = (itemId) => addToCartWithCustomizations(itemId, { quantity: 1 });
 
-    setCart((prevCart) => {
-      if (prevCart[cartItemKey]) {
-        const updatedItem = {
-          ...prevCart[cartItemKey],
-          quantity: prevCart[cartItemKey].quantity + quantity,
-        };
-        return { ...prevCart, [cartItemKey]: updatedItem };
-      } else {
+  const addToCartWithCustomizations = (itemId, custom = {}) => {
+    const qty  = custom.quantity || 1;
+    const key  = generateCartItemKey(itemId, custom);
+
+    setCart(prev => {
+      if (prev[key]) {
         return {
-          ...prevCart,
-          [cartItemKey]: {
-            itemId,
-            quantity,
-            specialInstructions: customizations.specialInstructions || '',
-            includeUtensils:
-              customizations.includeUtensils !== undefined
-                ? customizations.includeUtensils
-                : true,
-            removedIngredients: customizations.removedIngredients || [],
-          },
+          ...prev,
+          [key]: { ...prev[key], quantity: prev[key].quantity + qty },
         };
       }
-    });
-
-    setCartCount((prevCount) => prevCount + quantity);
-  };
-
-  const updateCartQuantity = (cartItemKey, quantity) => {
-    setCart((prevCart) => {
-      if (!prevCart[cartItemKey]) return prevCart;
-
-      const oldQuantity = prevCart[cartItemKey].quantity;
-      const diff = quantity - oldQuantity;
-
-      if (quantity <= 0) {
-        const updatedCart = { ...prevCart };
-        delete updatedCart[cartItemKey];
-        setCartCount((prevCount) => prevCount + diff);
-        return updatedCart;
-      }
-
-      const updatedCart = {
-        ...prevCart,
-        [cartItemKey]: {
-          ...prevCart[cartItemKey],
-          quantity,
+      return {
+        ...prev,
+        [key]: {
+          itemId,
+          quantity   : qty,
+          specialInstructions: custom.specialInstructions || '',
+          includeUtensils    : custom.includeUtensils !== undefined ? custom.includeUtensils : true,
+          removedIngredients : custom.removedIngredients || [],
         },
       };
+    });
+    setCartCount(c => c + qty);
+  };
 
-      setCartCount((prevCount) => prevCount + diff);
-      return updatedCart;
+  const updateCartQuantity = (key, quantity) => {
+    setCart(prev => {
+      if (!prev[key]) return prev;
+
+      const diff = quantity - prev[key].quantity;
+      let next   = { ...prev };
+
+      if (quantity <= 0) {
+        delete next[key];
+      } else {
+        next[key] = { ...prev[key], quantity };
+      }
+      setCartCount(c => c + diff);
+      return next;
     });
   };
 
-  const updateCartItem = (cartItemKey, updates) => {
-    setCart((prevCart) => {
-      if (!prevCart[cartItemKey]) return prevCart;
+  const updateCartItem = (key, updates) => {
+    setCart(prev => {
+      if (!prev[key]) return prev;
 
       if (
         updates.quantity !== undefined &&
-        updates.quantity !== prevCart[cartItemKey].quantity
+        updates.quantity !== prev[key].quantity
       ) {
-        const diff = updates.quantity - prevCart[cartItemKey].quantity;
-        setCartCount((prevCount) => prevCount + diff);
+        const diff = updates.quantity - prev[key].quantity;
+        setCartCount(c => c + diff);
       }
-
-      return {
-        ...prevCart,
-        [cartItemKey]: {
-          ...prevCart[cartItemKey],
-          ...updates,
-        },
-      };
+      return { ...prev, [key]: { ...prev[key], ...updates } };
     });
   };
 
-  const removeFromCart = (cartItemKey) => {
-    setCart((prevCart) => {
-      if (!(cartItemKey in prevCart)) return prevCart;
-
-      const removedQuantity = prevCart[cartItemKey].quantity;
-      const updatedCart = { ...prevCart };
-      delete updatedCart[cartItemKey];
-
-      setCartCount((prevCount) => prevCount - removedQuantity);
-      return updatedCart;
+  const removeFromCart = (key) => {
+    setCart(prev => {
+      if (!prev[key]) return prev;
+      const qty = prev[key].quantity;
+      const next = { ...prev };
+      delete next[key];
+      setCartCount(c => c - qty);
+      return next;
     });
   };
 
@@ -129,19 +116,13 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider
-      value={{
-        cartCount,
-        setCartCount,
-        cart,
-        addToCart,
-        addToCartWithCustomizations,
-        updateCartQuantity,
-        updateCartItem,
-        removeFromCart,
-        clearCart,
-      }}
-    >
+    <CartContext.Provider value={{
+      cartCount, setCartCount, cart,
+      addItem,
+      addToCart, addToCartWithCustomizations,
+      updateCartQuantity, updateCartItem,
+      removeFromCart, clearCart,
+    }}>
       {children}
     </CartContext.Provider>
   );
