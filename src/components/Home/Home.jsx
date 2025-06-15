@@ -210,6 +210,19 @@ function Home() {
               {t('aboutDesc2')}
             </motion.p>
 
+            <motion.a
+              href="/values"
+              className="read-more-btn"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t('readMore')}
+            </motion.a>
+
             <motion.div className="about-stats">
               {[
                 { number: '100%', label: t('organic') },

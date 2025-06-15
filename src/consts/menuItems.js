@@ -394,6 +394,14 @@ const useMenuItems = () => {
       category: 'o',
       type: 'n',
     },
+    {
+      id: 'custom-bowl',
+      name: 'Custom Bowl',
+      description: 'A bowl you built yourself!',
+      price: 0,
+      image: '/assets/bowl-placeholder.png',
+      category: 'custom',
+    },
   ];
 
   return menuItems;

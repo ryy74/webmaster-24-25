@@ -4,6 +4,9 @@
   right: 40px;
   z-index: 9998;
   text-align: center;
+  width: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .ai-waiter-label {
@@ -15,6 +18,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
   font-size: 14px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .ai-waiter-loading {

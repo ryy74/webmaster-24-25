@@ -140,7 +140,8 @@ function Checkout() {
   const foodSubtotal = foodKeys.reduce((s, k) => {
     const ci = cart[k];
     const mi = menuItems.find((m) => m.id === ci.itemId);
-    return mi ? s + mi.price * ci.quantity : s;
+    const price = ci.price ?? (mi ? mi.price : 0);
+    return s + price * ci.quantity;
   }, 0);
   const giftSubtotal = giftKeys.reduce(
     (s, k) => s + cart[k].price * cart[k].quantity,
@@ -496,7 +497,7 @@ function Checkout() {
                     <span>
                       {ci.quantity} × {mi.name}
                     </span>
-                    <span>${(mi.price * ci.quantity).toFixed(2)}</span>
+                    <span>${(ci.price ?? (mi ? mi.price : 0) * ci.quantity).toFixed(2)}</span>
                   </div>
                 );
               })}

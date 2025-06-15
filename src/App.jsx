@@ -22,6 +22,7 @@ import PrivacyPolicy from './components/Policies/PrivacyPolicy';
 import TermsOfUse from './components/Policies/TermsOfUse';
 import References from './components/References/References';
 import Settings from './components/Settings/Settings';
+import BuildBowl from './components/BuildBowl/BuildBowl';
 
 import { useSettings } from './contexts/SettingsContext';
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
           <Route path="/references" element={<References />} />
+          <Route path="/build-bowl" element={<BuildBowl />} />
         </Routes>
       </div>
       <Footer onSettingsClick={openSettings} />

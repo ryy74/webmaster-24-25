@@ -86,7 +86,8 @@ function Cart() {
     }
 
     const mi = menuItems.find((m) => m.id === ci.itemId);
-    return mi ? sum + mi.price * ci.quantity : sum;
+    const price = ci.price ?? (mi ? mi.price : 0);
+    return sum + price * ci.quantity;
   }, 0);
 
   const summaryRows = keys
@@ -127,6 +128,7 @@ function Cart() {
       }
       if (ci.includeUtensils === false) details.push(t("noUtensils"));
 
+      const price = ci.price ?? mi.price;
       return (
         <motion.div
           key={key}
@@ -146,7 +148,7 @@ function Cart() {
             )}
           </div>
           <span className="cart-summary-item-price">
-            ${(mi.price * ci.quantity).toFixed(2)}
+            ${(price * ci.quantity).toFixed(2)}
           </span>
         </motion.div>
       );

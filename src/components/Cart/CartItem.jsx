@@ -101,6 +101,13 @@ function CartItem({
           >
             {item.description}
           </motion.p>
+          {Array.isArray(customizations?.selectedIngredients) && customizations.selectedIngredients.length > 0 && (
+            <ul className="cart-item-ingredients" style={{ margin: '0.5rem 0 0.5rem 0', paddingLeft: '1.2rem', fontSize: '0.95rem', color: '#555' }}>
+              {customizations.selectedIngredients.map((ing, idx) => (
+                <li key={idx}>{ing}</li>
+              ))}
+            </ul>
+          )}
 
           {(customizations?.specialInstructions ||
             customizations?.removedIngredients?.length > 0 ||
@@ -167,7 +174,7 @@ function CartItem({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            ${item.price.toFixed(2)}
+            ${(customizations.price ?? item.price).toFixed(2)}
           </motion.p>
         </div>
       </div>

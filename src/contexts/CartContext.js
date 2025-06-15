@@ -61,6 +61,12 @@ export const CartProvider = ({ children }) => {
           specialInstructions: custom.specialInstructions || '',
           includeUtensils    : custom.includeUtensils !== undefined ? custom.includeUtensils : true,
           removedIngredients : custom.removedIngredients || [],
+          selectedIngredients: custom.selectedIngredients || [],
+          price: custom.price,
+          name: custom.name,
+          description: custom.description,
+          image: custom.image,
+          time: custom.time,
         },
       };
     });

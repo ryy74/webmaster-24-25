@@ -34,6 +34,9 @@ function Header({ onSettingsClick }) {
   const renderLinks = () => {
     return (
       <>
+        <Link to="/build-bowl" className="header-link" onClick={closeDropdown}>
+          Build Your Bowl
+        </Link>
         <Link to="/menu" className="header-link" onClick={closeDropdown}>
           {t('menu')}
         </Link>
