@@ -220,7 +220,7 @@ function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {t('readMore')}
+              Read More
             </motion.a>
 
             <motion.div className="about-stats">

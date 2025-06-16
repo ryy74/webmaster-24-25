@@ -42,6 +42,22 @@ function Cart() {
     .map((key) => {
       const ci = cart[key];
 
+      if (ci.rewardRedemption) {
+        return (
+          <CartItem
+            key={key}
+            item={ci}
+            quantity={ci.quantity}
+            customizations={ci}
+            cartItemKey={key}
+            onChangeQuantity={updateCartQuantity}
+            onUpdateItem={updateCartItem}
+            onRemove={removeFromCart}
+            isRewardItem={true}
+          />
+        );
+      }
+
       if (!isGiftCard(ci.itemId)) {
         const mi = menuItems.find((m) => m.id === ci.itemId);
         if (!mi) return null;
@@ -81,7 +97,7 @@ function Cart() {
   const total = keys.reduce((sum, k) => {
     const ci = cart[k];
 
-    if (isGiftCard(ci.itemId)) {
+    if (isGiftCard(ci.itemId) || ci.rewardRedemption) {
       return sum + ci.price * ci.quantity;
     }
 

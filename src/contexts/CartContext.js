@@ -67,6 +67,7 @@ export const CartProvider = ({ children }) => {
           description: custom.description,
           image: custom.image,
           time: custom.time,
+          rewardRedemption: custom.rewardRedemption || false,
         },
       };
     });

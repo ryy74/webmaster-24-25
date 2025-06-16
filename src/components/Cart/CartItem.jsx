@@ -22,6 +22,7 @@ function CartItem({
   onChangeQuantity,
   onUpdateItem,
   onRemove,
+  isRewardItem = false,
 }) {
   const [showWarning, setShowWarning] = useState(false);
   const [showCustomizationPopup, setShowCustomizationPopup] = useState(false);
@@ -174,7 +175,7 @@ function CartItem({
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            ${(customizations.price ?? item.price).toFixed(2)}
+            ${((customizations.price !== undefined ? customizations.price : item.price)).toFixed(2)}
           </motion.p>
         </div>
       </div>
