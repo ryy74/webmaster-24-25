@@ -140,6 +140,7 @@ function Checkout() {
   const foodSubtotal = foodKeys.reduce((s, k) => {
     const ci = cart[k];
     const mi = menuItems.find((m) => m.id === ci.itemId);
+    const name = mi ? mi.name : ci.name;
     const price = ci.price ?? (mi ? mi.price : 0);
     return s + price * ci.quantity;
   }, 0);
@@ -492,12 +493,14 @@ function Checkout() {
               {foodKeys.map((k) => {
                 const ci = cart[k];
                 const mi = menuItems.find((m) => m.id === ci.itemId);
+                const name = mi ? mi.name : ci.name;
+                const price = ci.price ?? (mi ? mi.price : 0);
                 return (
                   <div key={k} className="checkout-summary-item">
                     <span>
-                      {ci.quantity} × {mi.name}
+                      {ci.quantity} × {name}
                     </span>
-                    <span>${(ci.price ?? (mi ? mi.price : 0) * ci.quantity).toFixed(2)}</span>
+                    <span>${(price * ci.quantity).toFixed(2)}</span>
                   </div>
                 );
               })}
