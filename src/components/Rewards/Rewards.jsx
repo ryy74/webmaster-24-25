@@ -85,13 +85,51 @@ const menuItems = [
   }
 ];
 
+// Define reward tiers with menu items and gift cards
+const createRewardTiers = (rewardItems) => [
+  {
+    points: 1000,
+    label: '1000 Points',
+    description: 'Choose one of these rewards:',
+    items: rewardItems.slice(0, 3),
+  },
+  {
+    points: 3000,
+    label: '3000 Points',
+    description: 'Choose one of these rewards or a $10 Gift Card:',
+    items: [
+      ...rewardItems.slice(3, 6),
+      { id: 'gift-10', name: '$10 Gift Card', image: '/assets/giftcard-10.png' },
+    ],
+  },
+  {
+    points: 4000,
+    label: '4000 Points',
+    description: 'Choose one of these rewards or a $50 Gift Card:',
+    items: [
+      ...rewardItems.slice(6, 9),
+      { id: 'gift-50', name: '$50 Gift Card', image: '/assets/giftcard-50.png' },
+    ],
+  },
+  {
+    points: 5000,
+    label: '5000 Points',
+    description: 'Choose one of these rewards or a $100 Gift Card:',
+    items: [
+      ...rewardItems.slice(9, 12),
+      { id: 'gift-100', name: '$100 Gift Card', image: '/assets/giftcard-100.png' },
+    ],
+  },
+];
+
 export default function Rewards() {
   const { user }      = useAuth();
-  const { addItem }   = useCart();              
+  const { addItem, cart, removeFromCart }   = useCart();              
   const { t }         = useLanguage();
 
   const [catalog, setCatalog] = useState([]);   
   const [points,  setPoints]  = useState(0);
+  const [spentPoints, setSpentPoints] = useState(0);
   const [loading, setLoading] = useState(true);
   const [err,     setErr]     = useState('');
   const [sel,     setSel]     = useState(null); 
@@ -112,62 +150,41 @@ export default function Rewards() {
     setRewardItems(items);
   }, []);
 
-  // Define reward tiers with menu items and gift cards
-  const rewardTiers = [
-    {
-      points: 1000,
-      label: '1000 Points',
-      description: 'Choose one of these rewards:',
-      items: rewardItems.slice(0, 3),
-    },
-    {
-      points: 3000,
-      label: '3000 Points',
-      description: 'Choose one of these rewards or a $10 Gift Card:',
-      items: [
-        ...rewardItems.slice(3, 6),
-        { id: 'gift-10', name: '$10 Gift Card', image: '/assets/giftcard-10.png' },
-      ],
-    },
-    {
-      points: 4000,
-      label: '4000 Points',
-      description: 'Choose one of these rewards or a $50 Gift Card:',
-      items: [
-        ...rewardItems.slice(6, 9),
-        { id: 'gift-50', name: '$50 Gift Card', image: '/assets/giftcard-50.png' },
-      ],
-    },
-    {
-      points: 5000,
-      label: '5000 Points',
-      description: 'Choose one of these rewards or a $100 Gift Card:',
-      items: [
-        ...rewardItems.slice(9, 12),
-        { id: 'gift-100', name: '$100 Gift Card', image: '/assets/giftcard-100.png' },
-      ],
-    },
-  ];
+  // Create reward tiers based on reward items
+  const rewardTiers = createRewardTiers(rewardItems);
+
+  // Calculate available points
+  const availablePoints = Math.max(0, points - spentPoints);
+
+  // Update spent points when cart changes
+  useEffect(() => {
+    const rewardItems = Object.values(cart).filter(item => item.rewardRedemption);
+    const totalSpent = rewardItems.reduce((sum, item) => {
+      const tier = rewardTiers.find(t => t.items.some(i => i.id === item.itemId.replace('reward-', '')));
+      return sum + (tier ? tier.points : 0);
+    }, 0);
+    setSpentPoints(totalSpent);
+  }, [cart, rewardTiers]);
 
   // Handle reward redemption
   const [redeeming, setRedeeming] = useState(false);
   const fetchPointsAndCatalog = async () => {
-    try {
-      const [catR, meR] = await Promise.all([
-        fetch(`${BASE}/rewards`, { credentials:'include' }),
-        fetch(`${BASE}/users/me`, {
-          credentials:'include',
-          headers:{ 'X-User': user.username },
-        }),
-      ]);
-      setCatalog(await catR.json());
-      setPoints((await meR.json()).Profile.points ?? 0);
-    } catch {
-      setErr(t('genericError'));
-    } finally {
-      setLoading(false);
-    }
-  };
+      try {
+        const [catR, meR] = await Promise.all([
+          fetch(`${BASE}/rewards`, { credentials:'include' }),
+          fetch(`${BASE}/users/me`, {
+            credentials:'include',
+            headers:{ 'X-User': user.username },
+          }),
+        ]);
+        setCatalog(await catR.json());
+        setPoints((await meR.json()).Profile.points ?? 0);
+      } catch {
+        setErr(t('genericError'));
+      } finally {
+        setLoading(false);
+      }
+    };
 
   useEffect(() => {
     fetchPointsAndCatalog();
@@ -183,12 +200,28 @@ export default function Rewards() {
       quantity: 1,
       rewardRedemption: true,
       image: item.image,
+      tierPoints: tierPoints
     });
+    setPoints(prev => prev - tierPoints);
     setPopupMessage(`${item.name} added to cart!`);
     setTimeout(() => setPopupMessage(null), 2000);
-    await fetchPointsAndCatalog();
     setRedeeming(false);
   };
+
+  // Keep track of points spent based on items in cart
+  useEffect(() => {
+    const rewardItems = Object.values(cart).filter(item => item.rewardRedemption);
+    const totalSpent = rewardItems.reduce((sum, item) => sum + (item.tierPoints || 0), 0);
+    fetch(`${BASE}/users/me`, {
+      credentials: 'include',
+      headers: { 'X-User': user.username },
+    })
+    .then(r => r.json())
+    .then(data => {
+      const basePoints = data.Profile.points;
+      setPoints(basePoints - totalSpent);
+    });
+  }, [cart]);
 
   if (loading) return <div className="rewards-wrapper">{t('processing')}…</div>;
   if (err)      return <div className="rewards-wrapper error">{err}</div>;
@@ -197,17 +230,17 @@ export default function Rewards() {
     <div className="rewards-wrapper">
       <header className="rw-head">
         <FiGift size={24}/>
-        <h1>{t('rewardsStore')}</h1>
+        <h1>Reward Store</h1>
         <span className="points-tag">{points} pts</span>
       </header>
 
       <section className="rewards-progress-section" style={{ margin: '2.5rem 0', background: '#f8f8f8', borderRadius: '18px', padding: '3rem', boxShadow: '0 6px 32px rgba(0,0,0,0.07)' }}>
-        <h2 style={{ marginBottom: '2rem', fontWeight: 800, fontSize: '2.2rem' }}>Your Rewards Progress</h2>
+        <h2 style={{ marginBottom: '2rem', fontWeight: 800, fontSize: '2.2rem', color: '#000' }}>Your Rewards Progress</h2>
         <div style={{ marginBottom: '2.5rem' }}>
           <div style={{ background: '#eee', borderRadius: '14px', height: '32px', width: '100%', overflow: 'hidden' }}>
             <div style={{ background: '#4CAF50', width: `${Math.min(points / 5000 * 100, 100)}%`, height: '100%', borderRadius: '14px' }} />
           </div>
-          <div style={{ textAlign: 'right', fontSize: '1.3rem', marginTop: '0.5rem', fontWeight: 600 }}>{points} / 5000 pts</div>
+          <div style={{ textAlign: 'right', fontSize: '1.3rem', marginTop: '0.5rem', fontWeight: 700, color: '#000' }}>{points} / 5000 pts</div>
         </div>
         {rewardTiers.map(tier => (
           <div key={tier.points} style={{ marginBottom: '2.5rem', padding: '2rem', background: points >= tier.points ? '#e0ffe0' : '#f4f4f4', borderRadius: '14px', border: points >= tier.points ? '3px solid #4CAF50' : '2px solid #ccc', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
@@ -312,4 +345,4 @@ export default function Rewards() {
       )}
     </div>
   );
-} 
+}
