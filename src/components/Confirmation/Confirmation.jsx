@@ -11,7 +11,7 @@ import { useLanguage } from "../../contexts/LanguageContext";
 
 import "./Confirmation.css";
 
-const API = "https://webmaster-backend-production.up.railway.app";
+const API = "https://webmaster.railway.internal";
 
 export default function Confirmation() {
   const { isSignedIn, user } = useAuth();

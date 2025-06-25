@@ -8,7 +8,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 import './SignIn.css';
 
-const BASE_URL = 'https://webmaster-backend-production.up.railway.app';
+const BASE_URL = 'https://webmaster.railway.internal';
 
 function SignInPage() {
   const [username, setUsername] = useState('');
