@@ -7,7 +7,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 import './Rewards.css';
 
-const BASE = 'https://webmaster.railway.internal';
+const BASE = 'https://webmaster-production.up.railway.app';
 
 // Static menu items for rewards
 const menuItems = [
